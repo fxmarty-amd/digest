@@ -4464,6 +4464,747 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | --- | --- | --- | --- | --- |
 | P0 | [#3040](https://github.com/ROCm/ATOM/pull/3040) `fix(dspark): allocate the draft block's last KV row (lookahead mtp_k, not mtp_k - 1)` | bug | main | - |
 
+### rocm-systems — Merged / closed (423 items)
+
+| # | item | tags | base | claim |
+| --- | --- | --- | --- | --- |
+| - | [#7891](https://github.com/ROCm/rocm-systems/issues/7891) `[Task]: Add tests to rocjitsu CI` | infra | ? | - |
+| - | [#8303](https://github.com/ROCm/rocm-systems/issues/8303) `[rocprofiler-sdk] CI: device_counting_service_test fails — gfx942_agent_kernels.hsaco not built or installed i` | infra,rocm | ? | - |
+| - | [#8401](https://github.com/ROCm/rocm-systems/pull/8401) `feat(rocr/clr): Add support for ext dispatch packet 4` | rocm | ? | - |
+| - | [#8467](https://github.com/ROCm/rocm-systems/pull/8467) `docs(rocprofiler-compute): HLD for JAX Tracing` | rocm | ? | - |
+| - | [#8755](https://github.com/ROCm/rocm-systems/pull/8755) `[CLR] Add -Werror and -Wall while resolving warnings` | rocm | ? | - |
+| - | [#10046](https://github.com/ROCm/rocm-systems/issues/10046) `[Issue] Linux : `rocprofiler-systems roctx/transpose tests fail` — runtime_instrument timeout + ROCpd kernel n` | bug,infra,perf,rocm | ? | - |
+| - | [#10549](https://github.com/ROCm/rocm-systems/pull/10549) `fix(rccl/net_ib_cast): Address CTS FIFO inline data handling gaps for AINIC (#8277)` | bug,rocm | ? | - |
+| - | [#10924](https://github.com/ROCm/rocm-systems/issues/10924) `[Issue]: [Windows gfx1201] hipLaunchKernel crashes with 0xC0000005 in hipProfilerRegisterChunkCallbackExt — co` | bug,risk,rocm | ? | - |
+| - | [#11006](https://github.com/ROCm/rocm-systems/pull/11006) `fix(amdsmi): return real values from pm-metrics and reg-table APIs` | bug,rocm | ? | - |
+| - | [#11170](https://github.com/ROCm/rocm-systems/pull/11170) `perf(rocr): back off BusyWaitSignal::WaitRelaxed to a yielding poll` | perf | ? | - |
+| - | [#11698](https://github.com/ROCm/rocm-systems/issues/11698) `[Issue] [hip-tests] `*SameDevice_SyncInvalidates` tests crash across all architectures (gfx950, gfx94X, gfx110` | bug,infra,rocm | ? | - |
+| - | [#11701](https://github.com/ROCm/rocm-systems/pull/11701) `fix(rccl): key the cached GDR verdict on the network plugin` | bug,rocm | ? | - |
+| - | [#12023](https://github.com/ROCm/rocm-systems/pull/12023) `fix(rocprofv3): validate custom MPI rank and size variables` | bug,rocm | ? | - |
+| - | [#12278](https://github.com/ROCm/rocm-systems/pull/12278) `feat(rocshmem/net): transport-neutral net/ layer, verbs ABI shim, RC control plane` | rocm | ? | - |
+| - | [#12281](https://github.com/ROCm/rocm-systems/pull/12281) `feat(rocshmem/net): shared verbs RMA work-request builder (RmaEngine)` | rocm | ? | - |
+| - | [#12365](https://github.com/ROCm/rocm-systems/pull/12365) `fix(amdsmi): name the missing driver for every device type` | bug,rocm | ? | - |
+| - | [#12512](https://github.com/ROCm/rocm-systems/pull/12512) `fix(rccl): fall back to ibv_reg_dmabuf_mr when mlx5 data-direct is unavailable ` | bug,rocm | ? | - |
+| - | [#12522](https://github.com/ROCm/rocm-systems/pull/12522) `test(rccl): add NCCL_RUN_DIAGNOSTICS tests and docs` | rocm | ? | - |
+| - | [#12579](https://github.com/ROCm/rocm-systems/pull/12579) `feat(rocprofiler-compute): Add SoL, memory chart, and roofline options` | perf,rocm | ? | - |
+| - | [#12611](https://github.com/ROCm/rocm-systems/issues/12611) `[rocjitsu] Collect longer benchmark candidates and local runtimes for V1` | perf | ? | - |
+| - | [#12621](https://github.com/ROCm/rocm-systems/pull/12621) `feat(rccl): AMD remediation advice in NCCL_RUN_DIAGNOSTICS P2P report` | rocm | ? | - |
+| - | [#12644](https://github.com/ROCm/rocm-systems/pull/12644) `test(rccl): check profiler API events carry the communicator rank` | rocm | ? | - |
+| - | [#12645](https://github.com/ROCm/rocm-systems/pull/12645) `test(rccl): validate the profiler overhead fix with no plugin loaded` | bug,rocm | ? | - |
+| - | [#12646](https://github.com/ROCm/rocm-systems/pull/12646) `test(rccl): cover P2P IPC registration reuse across cuMem segments` | rocm | ? | - |
+| - | [#12648](https://github.com/ROCm/rocm-systems/pull/12648) `test(rccl): check config parsers keep the caller's strtok state` | rocm | ? | - |
+| - | [#12649](https://github.com/ROCm/rocm-systems/pull/12649) `test(rccl): check the GIN shared-memory descriptor fits a proxy GFD` | rocm | ? | - |
+| - | [#12650](https://github.com/ROCm/rocm-systems/pull/12650) `test(rccl): check tuner plugins receive initialized cost-model constants` | perf,rocm | ? | - |
+| - | [#12651](https://github.com/ROCm/rocm-systems/pull/12651) `test(rccl): cover nccl4py window registration inside group()` | rocm | ? | - |
+| - | [#12664](https://github.com/ROCm/rocm-systems/pull/12664) `fix(rccl): make per-call algSelection effective on the default path, with cost model docs and tests` | bug,rocm | ? | - |
+| - | [#12707](https://github.com/ROCm/rocm-systems/pull/12707) `fix(cli): check device availability before accessing in ras` | bug,rocm | ? | - |
+| - | [#12724](https://github.com/ROCm/rocm-systems/pull/12724) `feat(amdsmi): replace the lspci NIC stack, add NIC statistics, logging and type` | rocm | ? | - |
+| - | [#12766](https://github.com/ROCm/rocm-systems/pull/12766) `fix(amdsmi): initialize Rust telemetry output buffers` | bug,rocm | ? | - |
+| - | [#12767](https://github.com/ROCm/rocm-systems/pull/12767) `feat(amdsmi): expose GPU enumeration in Rust` | rocm | ? | - |
+| - | [#12810](https://github.com/ROCm/rocm-systems/pull/12810) `feat(rocprofiler-compute): Move diagnostic options to --debug options` | rocm | ? | - |
+| - | [#12811](https://github.com/ROCm/rocm-systems/pull/12811) `test(rccl): add NCCL_RUN_RAS_DIAGNOSTICS tests and docs` | rocm | ? | - |
+| - | [#12812](https://github.com/ROCm/rocm-systems/pull/12812) `feat(rccl): read RAS diagnostics GPU checks from AMD SMI` | rocm | ? | - |
+| - | [#12837](https://github.com/ROCm/rocm-systems/pull/12837) `docs(rocprofiler-compute): Publish CLI option guidelines` | rocm | ? | - |
+| - | [#12838](https://github.com/ROCm/rocm-systems/pull/12838) `feat(rocprofiler-compute): Add guideline help notation` | rocm | ? | - |
+| - | [#12839](https://github.com/ROCm/rocm-systems/pull/12839) `feat(rocprofiler-compute): Add DeprecatedAction and rename profile roofline options` | perf,rocm | ? | - |
+| - | [#12840](https://github.com/ROCm/rocm-systems/pull/12840) `fix(rocprofiler-compute): Make roofline selection consistent` | bug,perf,rocm | ? | - |
+| - | [#12966](https://github.com/ROCm/rocm-systems/pull/12966) `fix(rocshmem): skip RO proxy fence when no network NBI op is outstanding` | bug,rocm | ? | - |
+| - | [#13023](https://github.com/ROCm/rocm-systems/pull/13023) `fix(rocshmem): restore rocprofiler-register integration broken by cmake refactor` | bug,rocm | ? | - |
+| - | [#13025](https://github.com/ROCm/rocm-systems/issues/13025) `[rocjitsu] Tracking: unimplemented AMDGPU instructions on CDNA3 / CDNA4` | rocm | ? | - |
+| - | [#13033](https://github.com/ROCm/rocm-systems/pull/13033) `docs(rccl): document that graph mixing is off by default` | rocm | ? | - |
+| - | [#13034](https://github.com/ROCm/rocm-systems/pull/13034) `fix(rccl): return an error when /proc/version cannot be read` | bug,rocm | ? | - |
+| - | [#13063](https://github.com/ROCm/rocm-systems/pull/13063) `[hipfile] Allow fastpath IO on NFSoRDMA.` | rocm | ? | - |
+| - | [#13099](https://github.com/ROCm/rocm-systems/pull/13099) `profiler-hub(build,ci): Windows/MSVC support and CI` | infra,rocm | ? | - |
+| - | [#13119](https://github.com/ROCm/rocm-systems/pull/13119) `test(rccl): cover communicator configs that set only minCTAs or maxCTAs` | rocm | ? | - |
+| - | [#13123](https://github.com/ROCm/rocm-systems/pull/13123) `test(rccl): cover rejected ncclDevCommCreate calls releasing the requirements copy` | infra,rocm | ? | - |
+| - | [#13164](https://github.com/ROCm/rocm-systems/pull/13164) `fix(rocprofiler-sdk): stop rocpd summing kernel-replay passes of a repeated counter` | bug,perf,rocm | ? | - |
+| - | [#13197](https://github.com/ROCm/rocm-systems/pull/13197) `fix(clr): report PAL device faults from waits, not just submissions` | bug,rocm | ? | - |
+| - | [#13220](https://github.com/ROCm/rocm-systems/pull/13220) `fix(rocshmem): [gda/mlx5] fix dmabuf-backed umem registrations` | bug,rocm | ? | - |
+| - | [#13234](https://github.com/ROCm/rocm-systems/issues/13234) `[Issue]: [clr] hipGraphLaunch hangs when one graph segment exceeds two AQL rings` | bug | ? | - |
+| - | [#13263](https://github.com/ROCm/rocm-systems/pull/13263) `fix(hsakmt): don't report AIS out-args when the ioctl fails` | bug,rocm | ? | - |
+| - | [#13348](https://github.com/ROCm/rocm-systems/pull/13348) `fix(rccl): stabilize Copy Engine P2P transport` | bug,rocm | ? | - |
+| - | [#13362](https://github.com/ROCm/rocm-systems/pull/13362) `test(net-ib): use routable GIDs in recovery test` | rocm | ? | - |
+| - | [#13368](https://github.com/ROCm/rocm-systems/pull/13368) `fix(rccl): stop TLS session tickets from breaking bootstrap` | bug,infra,rocm | ? | - |
+| - | [#13369](https://github.com/ROCm/rocm-systems/pull/13369) `feat(rccl-tests): enable socket encryption with NCCL_TESTS_TLS_PSK` | rocm | ? | - |
+| - | [#13373](https://github.com/ROCm/rocm-systems/pull/13373) `ci(rccl): schedule the coco TLS weekly job` | infra,rocm | ? | - |
+| - | [#13374](https://github.com/ROCm/rocm-systems/pull/13374) `fix(rccl): Address memory leaks in RCCL ` | bug,rocm | ? | - |
+| - | [#13378](https://github.com/ROCm/rocm-systems/pull/13378) `fix(rocr): warn when no trap handler is bound to a GPU agent` | bug,rocm | ? | - |
+| - | [#13401](https://github.com/ROCm/rocm-systems/pull/13401) `ci(amdsmi): check the amd-smi CLI for leaks as TheRock runs it` | infra,rocm | ? | - |
+| - | [#13446](https://github.com/ROCm/rocm-systems/issues/13446) `[Issue] Linux gfx90a: rocdecode AV1 tests fail with `GPU doesn't support codec!`` | bug,infra | ? | - |
+| - | [#13459](https://github.com/ROCm/rocm-systems/pull/13459) `Extract utility functions to agent_utils and agent_config modules` | bug,rocm | ? | - |
+| - | [#13467](https://github.com/ROCm/rocm-systems/pull/13467) `feature(rccl/gin/gda) Use new context thread-exclusivity controls with gin-gda` | rocm | ? | - |
+| - | [#13471](https://github.com/ROCm/rocm-systems/pull/13471) `test(rccl-tests): report the real device-kernel tier for -D runs` | perf,rocm | ? | - |
+| - | [#13478](https://github.com/ROCm/rocm-systems/pull/13478) `feat(rocprofiler-compute): Remove --config-dir` | rocm | ? | - |
+| - | [#13522](https://github.com/ROCm/rocm-systems/pull/13522) `feat(rocprofiler-compute): Add metric library for gfx908 and gfx90a` | rocm | ? | - |
+| - | [#13587](https://github.com/ROCm/rocm-systems/pull/13587) `test(rccl): add host microtests for the OS and socket layer` | rocm | ? | - |
+| - | [#13609](https://github.com/ROCm/rocm-systems/pull/13609) `test(rccl): add host microtests for memory management` | rocm | ? | - |
+| - | [#13687](https://github.com/ROCm/rocm-systems/pull/13687) `fix(amdsmi): report container processes by their own PIDs` | bug,rocm | ? | - |
+| - | [#13697](https://github.com/ROCm/rocm-systems/pull/13697) `feat(hrr): require explicit consent before capture starts` | rocm | ? | - |
+| - | [#13728](https://github.com/ROCm/rocm-systems/pull/13728) `ci(rccl): add Llama-3.1-70B PP=4 to the weekly madengine runs` | infra,rocm | ? | - |
+| - | [#13729](https://github.com/ROCm/rocm-systems/pull/13729) `ci(rccl): add DeepSeek-R1 SGLang 2P+2D to the weekly madengine runs` | infra,rocm | ? | - |
+| - | [#13734](https://github.com/ROCm/rocm-systems/pull/13734) `fix(rccl): back host-memory shared P2P pools with huge pages [ROCM-33021]` | bug,rocm | ? | - |
+| - | [#13743](https://github.com/ROCm/rocm-systems/pull/13743) `refactor(rocprofsys): use profiler-hub cpp/ headers and checkout-matched fetch` | rocm | ? | - |
+| - | [#13771](https://github.com/ROCm/rocm-systems/pull/13771) `feat(hipfile): Move fallback IO off the default stream` | rocm | ? | - |
+| - | [#13822](https://github.com/ROCm/rocm-systems/pull/13822) `feat(rocprofiler-compute): Add the metric library for gfx942 and gfx950` | rocm | ? | - |
+| - | [#13823](https://github.com/ROCm/rocm-systems/pull/13823) `feat(rocprofiler-compute): Add the metric library for gfx115x and gfx1250` | rocm | ? | - |
+| - | [#13829](https://github.com/ROCm/rocm-systems/pull/13829) `fix(rccl): don't route AllReduceWithBias to symmetric kernels` | bug,perf,rocm | ? | - |
+| - | [#13836](https://github.com/ROCm/rocm-systems/pull/13836) `test(rccl): add host microtests for net_ib_cast connect and QP sharing` | rocm | ? | - |
+| - | [#13852](https://github.com/ROCm/rocm-systems/pull/13852) `feat(rocjitsu): model stock-driver peer fabric traffic` | rocm | ? | - |
+| - | [#13854](https://github.com/ROCm/rocm-systems/pull/13854) `docs(rocjitsu): record same-host pod qualification` | rocm | ? | - |
+| P0 | [#13859](https://github.com/ROCm/rocm-systems/pull/13859) `fix(rocSHMEM): resolve data race, and ABA hazard from alltoall, #AIROCSHMEM-552` | bug,risk,rocm | develop | - |
+| - | [#13869](https://github.com/ROCm/rocm-systems/pull/13869) `ci(rocprofiler-systems): rocDecode and rocJPEG test configuration` | infra,rocm | ? | - |
+| - | [#13883](https://github.com/ROCm/rocm-systems/pull/13883) `refactor(rocprofiler-compute): Unify ML API tracing options` | rocm | ? | - |
+| - | [#13920](https://github.com/ROCm/rocm-systems/pull/13920) `Add DDA alltoall with TDM support` | rocm | ? | - |
+| - | [#13923](https://github.com/ROCm/rocm-systems/pull/13923) `fix(rocprofiler-sdk): Provide kernel traces for late client init` | bug,perf,rocm | ? | - |
+| - | [#13954](https://github.com/ROCm/rocm-systems/pull/13954) `[rocjitsu] Implement and activate RDNA math functions through rj-arith` | rocm | ? | - |
+| - | [#13955](https://github.com/ROCm/rocm-systems/pull/13955) `[rocjitsu] Implement and activate RDNA comparisons through rj-arith` | rocm | ? | - |
+| - | [#13956](https://github.com/ROCm/rocm-systems/pull/13956) `[rocjitsu] Implement and activate RDNA integer arithmetic through rj-arith` | rocm | ? | - |
+| - | [#13957](https://github.com/ROCm/rocm-systems/pull/13957) `[rocjitsu] Implement and activate RDNA conversions through rj-arith` | rocm | ? | - |
+| - | [#13958](https://github.com/ROCm/rocm-systems/pull/13958) `[rocjitsu] Implement and activate RDNA register and lane routing through rj-arith` | rocm | ? | - |
+| - | [#13959](https://github.com/ROCm/rocm-systems/pull/13959) `[rocjitsu] Implement and activate RDNA graphics arithmetic through rj-arith` | rocm | ? | - |
+| - | [#13960](https://github.com/ROCm/rocm-systems/pull/13960) `[rocjitsu] Implement and activate RDNA scalar arithmetic through rj-arith` | rocm | ? | - |
+| - | [#13961](https://github.com/ROCm/rocm-systems/pull/13961) `[rocjitsu] Implement and activate RDNA dual-issue arithmetic through rj-arith` | rocm | ? | - |
+| - | [#13962](https://github.com/ROCm/rocm-systems/pull/13962) `[rocjitsu] Add the CSV arithmetic benchmark and complete library documentation` | perf,rocm | ? | - |
+| - | [#13969](https://github.com/ROCm/rocm-systems/pull/13969) `rocm-bootstrap: add gfx117X (gfx1170, gfx1171) targets` | rocm | ? | - |
+| - | [#13992](https://github.com/ROCm/rocm-systems/pull/13992) `fix(rocr): Accept interior addresses in hsa_amd_vmem_retain_alloc_handle` | bug | ? | - |
+| - | [#14027](https://github.com/ROCm/rocm-systems/pull/14027) `fix(rccl): model the UALoE fabric as a shared switch across MNNVL hosts for scale-out` | bug,quant,rocm | ? | - |
+| - | [#14034](https://github.com/ROCm/rocm-systems/pull/14034) `refactor(rccl/gin) GIN-GDA does not require linking rocshmem` | rocm | ? | - |
+| - | [#14049](https://github.com/ROCm/rocm-systems/pull/14049) `ci(rdc): run the no-GPU tests under ASan and under UBSan` | infra,rocm | ? | - |
+| - | [#14051](https://github.com/ROCm/rocm-systems/pull/14051) `ci(rdc): build and test RDC with AMD clang and static gRPC` | infra,rocm | ? | - |
+| - | [#14056](https://github.com/ROCm/rocm-systems/pull/14056) `fix(rocr): honor NUMA memory policy for host allocations` | bug,rocm | ? | - |
+| - | [#14101](https://github.com/ROCm/rocm-systems/pull/14101) `fix(rccl): bound the peer-supplied message length in rasMsgRecv` | bug,rocm | ? | - |
+| - | [#14117](https://github.com/ROCm/rocm-systems/pull/14117) `fix(clr) : Update child graph nodes from graph exec node handles` | bug,rocm | ? | - |
+| - | [#14142](https://github.com/ROCm/rocm-systems/pull/14142) `fix(rccl): validate communicator split/shrink arguments and tighten init error paths` | bug,rocm | ? | - |
+| - | [#14155](https://github.com/ROCm/rocm-systems/pull/14155) `[RCCL][GRAPH] Reclaim captured graph plans on ncclCommAbort` | rocm | ? | - |
+| - | [#14177](https://github.com/ROCm/rocm-systems/issues/14177) `[amd-smi] unusable on ppc64le: CUID discovery aborts, and `amd-smi static` fails` | rocm | ? | - |
+| - | [#14196](https://github.com/ROCm/rocm-systems/pull/14196) `fix(libhsakmt): detect WSL GPU faults via poisoned monitored fence` | bug,rocm | ? | - |
+| - | [#14205](https://github.com/ROCm/rocm-systems/pull/14205) `fix(clr): fix printf %s truncation for lengths that are multiples of 4` | bug,risk,rocm | ? | - |
+| - | [#14219](https://github.com/ROCm/rocm-systems/pull/14219) `feat(rccl/gin): enable rocSHMEM GDA alongside other GIN backends` | rocm | ? | - |
+| - | [#14224](https://github.com/ROCm/rocm-systems/pull/14224) `feat(rccl-tests): hierarchical alltoall over two GIN backends` | rocm | ? | - |
+| - | [#14243](https://github.com/ROCm/rocm-systems/issues/14243) `[Issue] Linux gfx110X-all: hip-tests Unit_hipDeviceFlushGPUDirectRDMAWrites_CapabilityConsistency fails` | infra,rocm | ? | - |
+| - | [#14255](https://github.com/ROCm/rocm-systems/pull/14255) `test(kfdtest): make exclude entries for parameterized tests match` | rocm | ? | - |
+| - | [#14261](https://github.com/ROCm/rocm-systems/pull/14261) `test(kfdtest): assemble CheckCuMaskIsa on gfx11 and test gfx11/gfx950/gfx1201` | rocm | ? | - |
+| - | [#14282](https://github.com/ROCm/rocm-systems/pull/14282) `fix(rccl): validate NCCL_GRAPH_FILE XML input in ncclTopoGetChannelFromXml` | bug,rocm | ? | - |
+| - | [#14284](https://github.com/ROCm/rocm-systems/pull/14284) `feat(rocprofiler-compute): Live attach to processes in containers` | rocm | ? | - |
+| - | [#14349](https://github.com/ROCm/rocm-systems/pull/14349) `fix(hrr): charge managed and host-located hipMemCreate to --max-host-bytes` | bug,rocm | ? | - |
+| - | [#14360](https://github.com/ROCm/rocm-systems/pull/14360) `AIRUNTIME-2939 - Fix mempool tests IPC object name collisions and remove tests duplicated code` | bug,rocm | ? | - |
+| - | [#14375](https://github.com/ROCm/rocm-systems/pull/14375) `test(kfdtest): stop using a queue whose creation failed` | rocm | ? | - |
+| - | [#14430](https://github.com/ROCm/rocm-systems/pull/14430) `fix(rocm-smi-lib): updated links in deprecation messages` | bug,rocm | ? | - |
+| - | [#14457](https://github.com/ROCm/rocm-systems/issues/14457) `[rocjitsu][ci] test corpus ci fails with pytest>=9.2` | infra | ? | - |
+| - | [#14473](https://github.com/ROCm/rocm-systems/pull/14473) `feat(rocprofiler-compute): Add metric library sets by metric id` | rocm | ? | - |
+| - | [#14474](https://github.com/ROCm/rocm-systems/pull/14474) `docs(rocprofiler-compute): Add a README for the metric library` | rocm | ? | - |
+| - | [#14475](https://github.com/ROCm/rocm-systems/issues/14475) `[rocjitsu][web] Feature wishlist for V1 (2/N)` |  | ? | - |
+| - | [#14506](https://github.com/ROCm/rocm-systems/pull/14506) `test(rccl/gin): run MixedBackends_TwoNodeUnsetType in CI with NCCL_GIN_TYPE unset` | infra,rocm | ? | - |
+| - | [#14510](https://github.com/ROCm/rocm-systems/pull/14510) `fix(amdsmi): load rocm-sdk-core's library from a copied Python module` | bug,rocm | ? | - |
+| - | [#14519](https://github.com/ROCm/rocm-systems/pull/14519) `fix(rccl): backport AINIC and topology fixes into ROCm 7.14` | bug,rocm | ? | - |
+| - | [#14521](https://github.com/ROCm/rocm-systems/pull/14521) `feat(rocprofiler-sdk): support KFD profiler interface v2 dispatch-mod…` | rocm | ? | - |
+| - | [#14524](https://github.com/ROCm/rocm-systems/pull/14524) `fix(rccl): backport LL protocol memory ops into ROCm 7.14` | bug,rocm | ? | - |
+| - | [#14538](https://github.com/ROCm/rocm-systems/pull/14538) `[rocjitsu] Return cache setup and maintenance failures as results` | perf,rocm | ? | - |
+| - | [#14541](https://github.com/ROCm/rocm-systems/pull/14541) `fix(clr): Fix crash in clGetProgramInfo for CL_PROGRAM_KERNEL_NAMES` | bug,rocm | ? | - |
+| - | [#14562](https://github.com/ROCm/rocm-systems/pull/14562) `[rocjitsu] Simplify SIMD FP selection with native NaN handling` | bug,risk,rocm | ? | - |
+| - | [#14565](https://github.com/ROCm/rocm-systems/pull/14565) `[release 10.2][ci] Fix TheRock CI workflow syntax on release branch - #14661` | bug,infra,rocm | ? | - |
+| - | [#14566](https://github.com/ROCm/rocm-systems/issues/14566) `[rocjitsu][DBT] gfx1250 liveness keeps the VOPD3 v_dual_cndmask_b32 selector as an SGPR pair` | rocm | ? | - |
+| - | [#14574](https://github.com/ROCm/rocm-systems/pull/14574) `[rocjitsu][web] Add label-triggered benchmarks and dashboard PR reports` | perf,rocm | ? | - |
+| - | [#14575](https://github.com/ROCm/rocm-systems/pull/14575) `fix(cuid, amdsmi): fix amd-smi crash and ESMI AttributeError on non-x86` | bug,rocm | ? | - |
+| - | [#14578](https://github.com/ROCm/rocm-systems/pull/14578) `fix(clr/pal): skip MakeResident for peer pinned host memory to fix multi-GPU pinned memory halving` | bug,infra,rocm | ? | - |
+| P1 | [#14583](https://github.com/ROCm/rocm-systems/pull/14583) `fix(rccl): size blocks and select kernels like the default path under NCCL_ENQUEUE_REARCH_ENABLE` | bug,perf,rocm | develop | - |
+| - | [#14584](https://github.com/ROCm/rocm-systems/pull/14584) `[rocjitsu] Fuzz concurrent dispatch scheduling` | rocm | ? | - |
+| - | [#14596](https://github.com/ROCm/rocm-systems/pull/14596) `test(rccl): add a Python test for rccl_ep ElasticBuffer.dispatch scales` | quant,rocm | ? | - |
+| - | [#14598](https://github.com/ROCm/rocm-systems/pull/14598) `test(rccl): add an MPI test for ep_create's argument checks` | rocm | ? | - |
+| - | [#14602](https://github.com/ROCm/rocm-systems/pull/14602) `test(rccl): add a device test for ncclCoopWarpSpan::sync` | rocm | ? | - |
+| - | [#14603](https://github.com/ROCm/rocm-systems/pull/14603) `test(rccl): add a device test for k_ep_publish_arch` | rocm | ? | - |
+| - | [#14605](https://github.com/ROCm/rocm-systems/pull/14605) `test(rccl): add host microtests for rcclAddonLaunch when Begin fails` | rocm | ? | - |
+| - | [#14606](https://github.com/ROCm/rocm-systems/pull/14606) `test(rccl): add a device test for ddaSetLLEpoch` | rocm | ? | - |
+| - | [#14607](https://github.com/ROCm/rocm-systems/pull/14607) `test(rocprofiler-sdk): opt remaining PC sampling tests into the beta feature` | rocm | ? | - |
+| - | [#14609](https://github.com/ROCm/rocm-systems/pull/14609) `[rocjitsu] Report operand access failures without exceptions` | rocm | ? | - |
+| - | [#14611](https://github.com/ROCm/rocm-systems/pull/14611) `[rocjitsu] Return compute unit validation failures` | rocm | ? | - |
+| - | [#14612](https://github.com/ROCm/rocm-systems/issues/14612) `[rocjitsu] image_store is decoded but not executed, so hipMemcpy3D to/from a hipArray fails on emulated gfx90a` |  | ? | - |
+| - | [#14620](https://github.com/ROCm/rocm-systems/pull/14620) `test(amdsmi): restore perf level after TestClockLimitReadWrite` | perf,rocm | ? | - |
+| - | [#14627](https://github.com/ROCm/rocm-systems/pull/14627) `perf(rccl): optimize TDM copy for all alignments` | perf,rocm | ? | - |
+| - | [#14637](https://github.com/ROCm/rocm-systems/pull/14637) `test(rccl): cover RMA IB proxy doorbell batching` | rocm | ? | - |
+| - | [#14640](https://github.com/ROCm/rocm-systems/pull/14640) `[rocjitsu] Use register snapshots for wave64 f64, f32, i8 and f8 MFMA` | rocm | ? | - |
+| - | [#14682](https://github.com/ROCm/rocm-systems/pull/14682) `[rocjitsu] Execute HIP image copies with native thin-image addressing` | rocm | ? | - |
+| - | [#14691](https://github.com/ROCm/rocm-systems/issues/14691) `[Feature]: [rocjitsu] Observe `Tensor-DMA` instructions in `race_detector`` |  | ? | - |
+| - | [#14696](https://github.com/ROCm/rocm-systems/pull/14696) `fix(hipfile/fastpath): disable fastpath on WSL` | bug,rocm | ? | - |
+| - | [#14746](https://github.com/ROCm/rocm-systems/pull/14746) `[rocjitsu] Emit callable probes after relocated instructions.` | rocm | ? | - |
+| - | [#14760](https://github.com/ROCm/rocm-systems/pull/14760) `[rocjitsu] Preserve private spill layouts and surface kernel launch state` | perf,rocm | ? | - |
+| - | [#14761](https://github.com/ROCm/rocm-systems/pull/14761) `[rocjitsu] Execute texture sampling and preserve sampler mip selection` | rocm | ? | - |
+| - | [#14783](https://github.com/ROCm/rocm-systems/pull/14783) `fix(rccl-tests): free test buffers with the allocator --memory_type selected` | bug,rocm | ? | - |
+| - | [#14786](https://github.com/ROCm/rocm-systems/pull/14786) `[rocjitsu] Bind gfx1100 to a concrete public target.` | rocm | ? | - |
+| - | [#14787](https://github.com/ROCm/rocm-systems/pull/14787) `[rocjitsu] Check Instrumentor anchor writes as one transaction.` | rocm | ? | - |
+| - | [#14801](https://github.com/ROCm/rocm-systems/pull/14801) `[rocjitsu] [perf] Let VOPD instructions use the decoded-instruction cache` | perf,rocm | ? | - |
+| - | [#14807](https://github.com/ROCm/rocm-systems/pull/14807) `[rocjitsu] [Perf] Lower the fixed cost of issuing an instruction` | perf,rocm | ? | - |
+| - | [#14810](https://github.com/ROCm/rocm-systems/pull/14810) `feat(rccl): add Broadcast backend selector and DDA dispatch and DDA 1-shot LL support` | rocm | ? | - |
+| - | [#14811](https://github.com/ROCm/rocm-systems/pull/14811) `feat(rccl): add DDA LL one-shot Broadcast for gfx1250` | rocm | ? | - |
+| - | [#14815](https://github.com/ROCm/rocm-systems/pull/14815) `fix(amdsmi): scope node-wide AMPP fields to the primary GPU` | bug,rocm | ? | - |
+| - | [#14822](https://github.com/ROCm/rocm-systems/pull/14822) `CLR: Implement hipMemcpyWithAttributesAsync and hipMemcpy3DWithAttrib…` | rocm | ? | - |
+| - | [#14826](https://github.com/ROCm/rocm-systems/pull/14826) `test(rccl): Ring/Simple single-node plateau scaling in the Ring cost model (NCCL v2.32.3-1)` | nvidia,rocm | ? | - |
+| - | [#14827](https://github.com/ROCm/rocm-systems/pull/14827) `fix(rccl): scope P2P batch size cutoff to gfx950 at 16+ nodes` | bug,rocm | ? | - |
+| - | [#14830](https://github.com/ROCm/rocm-systems/pull/14830) `fix(rocprofiler-sdk): serialize kernel-replay samples and test installed SDK` | bug,perf,rocm | ? | - |
+| - | [#14832](https://github.com/ROCm/rocm-systems/pull/14832) `rccl: limit the grouped plan cap to WarpSpeed plans` | perf,rocm | ? | - |
+| - | [#14833](https://github.com/ROCm/rocm-systems/pull/14833) `Add multiplyoverflow check for all hip apis.` | risk,rocm | ? | - |
+| - | [#14835](https://github.com/ROCm/rocm-systems/pull/14835) `[rocjitsu] Bump test corpus to 8618174 and run its file-limit matrix in CI` | infra,rocm | ? | - |
+| - | [#14836](https://github.com/ROCm/rocm-systems/pull/14836) `feat(rocprofiler-systems): Update skills and add skill-check workflow` | infra,rocm | ? | - |
+| - | [#14863](https://github.com/ROCm/rocm-systems/pull/14863) `fix(clr): set HIP last error in hipAmdFileRead/Write` | bug,rocm | ? | - |
+| - | [#14867](https://github.com/ROCm/rocm-systems/pull/14867) `[rocjitsu] Add CDNA3/CDNA4 global_load_lds_* execution support` | rocm | ? | - |
+| - | [#14868](https://github.com/ROCm/rocm-systems/pull/14868) `[rocjitsu] Return atomic and LDS writeback failures` | rocm | ? | - |
+| - | [#14870](https://github.com/ROCm/rocm-systems/pull/14870) `[rocjitsu] Remove exceptions from test fixture setup` | rocm | ? | - |
+| - | [#14871](https://github.com/ROCm/rocm-systems/pull/14871) `[rocjitsu] Return plugin group configuration failures` | rocm | ? | - |
+| - | [#14872](https://github.com/ROCm/rocm-systems/pull/14872) `[rocjitsu] Remove queue registration allocation exception recovery` | rocm | ? | - |
+| - | [#14879](https://github.com/ROCm/rocm-systems/pull/14879) `fix(hip-tests): Restore 12_cmake_hip_add_executable sample` | bug,rocm | ? | - |
+| - | [#14884](https://github.com/ROCm/rocm-systems/pull/14884) `[rocjitsu][web] Polish dashboard UI` | rocm | ? | - |
+| - | [#14885](https://github.com/ROCm/rocm-systems/pull/14885) `perf(rccl): run registered gfx1250 AllReduce on DDA in capture and the eager window` | perf,rocm | ? | - |
+| - | [#14911](https://github.com/ROCm/rocm-systems/pull/14911) `fix(rccl): stop the P2P budget spin for 1-rank self send/recv at 256 channels per peer` | bug,rocm | ? | - |
+| - | [#14920](https://github.com/ROCm/rocm-systems/pull/14920) `fix(hip-tests): Remove Unit_hipStreamPerThread_MultiThread` | bug,rocm | ? | - |
+| P1 | [#14926](https://github.com/ROCm/rocm-systems/pull/14926) `perf(clr): cut redundant passes in hipGraphInstantiate` | perf,rocm | develop | - |
+| - | [#14930](https://github.com/ROCm/rocm-systems/pull/14930) `[rocjitsu] Implement S_RFE_RESTORE_B64 on CDNA1-4` | rocm | ? | - |
+| - | [#14931](https://github.com/ROCm/rocm-systems/pull/14931) `chore(rdc): Correct and move 10.2 changelog entries` | bug,rocm | ? | - |
+| - | [#14933](https://github.com/ROCm/rocm-systems/pull/14933) `Move ROCdbgapi changelog entries for code merged after the ROCm 10.2.0 branch to the rocm-dbgapi-0.84.0 for RO` | bug,infra,rocm | ? | - |
+| - | [#14938](https://github.com/ROCm/rocm-systems/pull/14938) `Move rocJPEG changelog entries for code merged after the ROCm 10.2.0 branch to the (unreleased) rocJPEG 1.14.0` | bug,infra,rocm | ? | - |
+| - | [#14944](https://github.com/ROCm/rocm-systems/pull/14944) `test(rccl): clamp isolated-test GPU pool to devices HIP can open` | rocm | ? | - |
+| - | [#14946](https://github.com/ROCm/rocm-systems/pull/14946) `fix(rocSHMEM): stale signal_ops_on_stream test ID; register missing QP/SDMA functional tests, #AIROCSHMEM-559` | bug,rocm | ? | - |
+| - | [#14949](https://github.com/ROCm/rocm-systems/pull/14949) `fix(rocr): do not fail queue creation when the scratch reservation fails` | bug,rocm | ? | - |
+| - | [#14953](https://github.com/ROCm/rocm-systems/pull/14953) `perf(rccl): register-packed gfx1250 AllToAll DDA fabric LL128 on the shared helpers` | perf,rocm | ? | - |
+| - | [#14954](https://github.com/ROCm/rocm-systems/pull/14954) `fix(rocr): restrict the DXG allocation relaxations to native Windows` | bug,rocm | ? | - |
+| - | [#14955](https://github.com/ROCm/rocm-systems/pull/14955) `fix(rocshmem): free the node-local IPC communicator and abort bad SDMA channel counts on every rank` | bug,rocm | ? | - |
+| - | [#14958](https://github.com/ROCm/rocm-systems/pull/14958) `fix(rocprofiler-sdk): Remove hip graph wrappers on thread trace` | bug,rocm | ? | - |
+| - | [#14960](https://github.com/ROCm/rocm-systems/pull/14960) `fix(rocprofiler-systems): keep target suffix in GPU architecture detection` | bug,rocm | ? | - |
+| - | [#14971](https://github.com/ROCm/rocm-systems/pull/14971) `fix(rocSHMEM): select correct wave size, fix descrepancies in functional tests, #AIROCSHMEM-560` | bug,rocm | ? | - |
+| - | [#14974](https://github.com/ROCm/rocm-systems/pull/14974) `fix(amdsmi): skip ShutdownPreservesDeviceMutex on WSL DXG backend` | bug,rocm | ? | - |
+| - | [#14976](https://github.com/ROCm/rocm-systems/issues/14976) `[rocjitsu] Proposal: passive device discovery through the C API` |  | ? | - |
+| - | [#14977](https://github.com/ROCm/rocm-systems/pull/14977) `fix(rocr): drop the generic family from the gfx1250-strict ISA row` | bug,rocm | ? | - |
+| - | [#14978](https://github.com/ROCm/rocm-systems/pull/14978) `feat(hsakmt): add event age support on Windows and spin SDMA completion wait` | rocm | ? | - |
+| - | [#14979](https://github.com/ROCm/rocm-systems/pull/14979) `Move rocSHMEM changelog entries for code merged after the ROCm 10.2.0 branch to the Unreleased - rocSHMEM 3.9.` | bug,infra,rocm | ? | - |
+| - | [#14983](https://github.com/ROCm/rocm-systems/pull/14983) `Fix rocprofiler-sdk config.cmake.in to use relocatable dependency paths` | bug,rocm | ? | - |
+| - | [#14989](https://github.com/ROCm/rocm-systems/pull/14989) `test(rccl): ship topology XML fixtures beside rccl-UnitTestsFixturesDebug` | rocm | ? | - |
+| - | [#14990](https://github.com/ROCm/rocm-systems/pull/14990) `feat(clr/rocr): - Support anisotropic texture filtering` | rocm | ? | - |
+| - | [#14991](https://github.com/ROCm/rocm-systems/pull/14991) `fix(rccl): unblock fabric handle exchange on export failure` | bug,rocm | ? | - |
+| - | [#14997](https://github.com/ROCm/rocm-systems/pull/14997) `fix(rccl): restore the gfx1250 LSA flat AddressFree skip` | bug,rocm | ? | - |
+| - | [#14998](https://github.com/ROCm/rocm-systems/pull/14998) `feat(rocprofiler-sdk): Add gfx1153 counters and metrics` | rocm | ? | - |
+| - | [#14999](https://github.com/ROCm/rocm-systems/pull/14999) `[rocjitsu] Reduce memory keeper startup and topology IPC` | rocm | ? | - |
+| - | [#15000](https://github.com/ROCm/rocm-systems/pull/15000) `[rocjitsu] Use relative offsets in AMDGPU decoder tables` | rocm | ? | - |
+| P1 | [#15001](https://github.com/ROCm/rocm-systems/pull/15001) `feat(rccl): Add TDM variant of hierarchical LSA AG kernel` | perf,rocm | develop | - |
+| - | [#15003](https://github.com/ROCm/rocm-systems/pull/15003) `perf(rccl): stage DDA LL128 AllReduce two-shot wire stores in LDS from 2 MiB shards` | perf,rocm | ? | - |
+| - | [#15005](https://github.com/ROCm/rocm-systems/pull/15005) `fix(rccl): fall back to host data when test kernels cannot run on GPU` | bug,perf,rocm | ? | - |
+| - | [#15019](https://github.com/ROCm/rocm-systems/pull/15019) `feat(rocprof-sys): check profiler-hub and rocprofiler-sdk versions at startup` | rocm | ? | - |
+| - | [#15026](https://github.com/ROCm/rocm-systems/pull/15026) `tune(rccl): enable DDA Broadcast LL/LL128 tiers on gfx1250 DPX` | perf,rocm | ? | - |
+| - | [#15033](https://github.com/ROCm/rocm-systems/pull/15033) `fix(rocprofiler-sdk): stabilize rocprofv3 ATT attachment test` | bug,rocm | ? | - |
+| - | [#15035](https://github.com/ROCm/rocm-systems/issues/15035) `[Feature]: Track the LDS side of async LDS copies` |  | ? | - |
+| - | [#15043](https://github.com/ROCm/rocm-systems/pull/15043) `nccl4py: pass stream by keyword when a shim Buffer is closed` | rocm | ? | - |
+| - | [#15044](https://github.com/ROCm/rocm-systems/pull/15044) `[rocjitsu][plugin] Have report_routed_access respect 0 mask` | rocm | ? | - |
+| P0 | [#15048](https://github.com/ROCm/rocm-systems/pull/15048) `feat(clr,rocr): faster multi-stream graph launches` | perf,rocm | develop | - |
+| - | [#15053](https://github.com/ROCm/rocm-systems/pull/15053) `[rocprofiler-systems] Add result<T, E> and use it in number parsers` | rocm | ? | - |
+| - | [#15064](https://github.com/ROCm/rocm-systems/pull/15064) `feat(rccl): model AMD EPYC inter-socket bandwidth by Zen generation` | perf,rocm | ? | - |
+| - | [#15067](https://github.com/ROCm/rocm-systems/pull/15067) `keep __managed__ variable storage mapped across hipDeviceReset()` | rocm | ? | - |
+| - | [#15068](https://github.com/ROCm/rocm-systems/pull/15068) `Profiler hub legacy rocpd format support` | rocm | ? | - |
+| - | [#15070](https://github.com/ROCm/rocm-systems/pull/15070) `feat(rocSHMEM): accelerate build scripts, #AIROCSHMEM-563` | infra,rocm | ? | - |
+| - | [#15071](https://github.com/ROCm/rocm-systems/pull/15071) `fix(rocdbgapi): Fix raw compute queue destruction` | bug,rocm | ? | - |
+| - | [#15077](https://github.com/ROCm/rocm-systems/pull/15077) `feat(rocprofiler-compute): Run catalog skill evals on Strix Halo` | rocm | ? | - |
+| - | [#15081](https://github.com/ROCm/rocm-systems/pull/15081) `test(amdsmi): run the unit tests on shared fixtures and test hooks` | rocm | ? | - |
+| - | [#15083](https://github.com/ROCm/rocm-systems/pull/15083) `feat(rocr): report signal hints in AQL_EXTENSIONS` | rocm | ? | - |
+| - | [#15084](https://github.com/ROCm/rocm-systems/pull/15084) `fix(rocprofiler-sdk): disable kernel-replay SPM tests on gfx942` | bug,perf,rocm | ? | - |
+| - | [#15085](https://github.com/ROCm/rocm-systems/pull/15085) `fix(clr): set dispatch-table entries for external-semaphore graph node APIs` | bug,rocm | ? | - |
+| - | [#15086](https://github.com/ROCm/rocm-systems/pull/15086) `fix(rocr): stop AsyncEventsLoop spinning on mixed signal batches` | bug,rocm | ? | - |
+| - | [#15090](https://github.com/ROCm/rocm-systems/pull/15090) `fix(rccl/ras): reject out-of-range client timeout before int64 conversion` | bug,rocm | ? | - |
+| - | [#15091](https://github.com/ROCm/rocm-systems/pull/15091) `fix(rccl/ras): validate peer communicator records before rasClientRunComms uses them` | bug,rocm | ? | - |
+| - | [#15100](https://github.com/ROCm/rocm-systems/pull/15100) `fix(hrr): keep a hipHostRegister replay buffer alive while a graph node points into it` | bug,rocm | ? | - |
+| - | [#15105](https://github.com/ROCm/rocm-systems/pull/15105) `perf(rccl): keep the Simple cheap post-send fence without DWORDX4 builtins` | perf,rocm | ? | - |
+| - | [#15106](https://github.com/ROCm/rocm-systems/pull/15106) `perf(rccl): spread the DDA LL AllReduce two-shot over the one-shot grid` | perf,rocm | ? | - |
+| - | [#15109](https://github.com/ROCm/rocm-systems/pull/15109) `fix(rccl): gfx1250: skip the HDP flush and keep PXN disabled by default` | bug,rocm | ? | - |
+| - | [#15112](https://github.com/ROCm/rocm-systems/pull/15112) `nccl_m2n: add nccl.m2n Python package (ROCm, nccl4py port) and validation scripts` | nvidia,rocm | ? | - |
+| - | [#15113](https://github.com/ROCm/rocm-systems/pull/15113) `fix(rccl): report DMA-BUF export failure from IbCastAccept ` | bug,rocm | ? | - |
+| - | [#15116](https://github.com/ROCm/rocm-systems/pull/15116) `fix(rocprofv3): use three BOP timestamps for ATT trace cuts` | bug,rocm | ? | - |
+| P1 | [#15118](https://github.com/ROCm/rocm-systems/issues/15118) `AMD SMI Rust wrappers use uninitialized telemetry outputs and corrupt total ECC counts` | risk,rocm | ? | - |
+| - | [#15119](https://github.com/ROCm/rocm-systems/issues/15119) `Expose GPU enumeration information in the AMD SMI Rust API` | rocm | ? | - |
+| - | [#15120](https://github.com/ROCm/rocm-systems/pull/15120) `fix(clr): reject unmatched hipCtxDestroy calls` | bug,rocm | ? | - |
+| - | [#15123](https://github.com/ROCm/rocm-systems/pull/15123) `fix(rccl): advance IB-CAST send offset past delivered QPs ` | bug,rocm | ? | - |
+| - | [#15125](https://github.com/ROCm/rocm-systems/pull/15125) `[rocjitsu][web] Display dashboard times in the browser timezone` | rocm | ? | - |
+| - | [#15126](https://github.com/ROCm/rocm-systems/pull/15126) `fix(hip): stop HIP_ADD_LIBRARY from propagating -x hip to consumers` | bug,rocm | ? | - |
+| - | [#15141](https://github.com/ROCm/rocm-systems/pull/15141) `ci(fortran): check and regenerate the Fortran bindings from the headers` | infra,rocm | ? | - |
+| - | [#15144](https://github.com/ROCm/rocm-systems/pull/15144) `[rocjitsu] Remove decoder C API allocation recovery` | rocm | ? | - |
+| - | [#15145](https://github.com/ROCm/rocm-systems/pull/15145) `[rocjitsu] Make translation-store library failures fatal` | rocm | ? | - |
+| - | [#15146](https://github.com/ROCm/rocm-systems/pull/15146) `[rocjitsu] Return decoder tooling failures without exceptions` | rocm | ? | - |
+| - | [#15148](https://github.com/ROCm/rocm-systems/pull/15148) `fix(rccl): size the proxy ops pool for the local ranks in use (#14494)` | bug,rocm | ? | - |
+| - | [#15152](https://github.com/ROCm/rocm-systems/pull/15152) `ci(rccl): add advisory pre-commit format, lint and clang-tidy checks` | infra,rocm | ? | - |
+| - | [#15154](https://github.com/ROCm/rocm-systems/pull/15154) `[rocprofiler-systems] Accept host-triple libomptarget path in DiscoverLlvmLibdir unit test` | rocm | ? | - |
+| - | [#15160](https://github.com/ROCm/rocm-systems/pull/15160) `Add support for gfx1251 target.` | rocm | ? | - |
+| - | [#15165](https://github.com/ROCm/rocm-systems/pull/15165) `feat(net-ib-cast): add RCCL_IB_MAX_MSG_SIZE cap on IB message size` | rocm | ? | - |
+| - | [#15171](https://github.com/ROCm/rocm-systems/pull/15171) `feat(rccl): changelog fragments and a nightly PR that folds them in (AICOMRCCL-3536)` | bug,infra,rocm | ? | - |
+| - | [#15173](https://github.com/ROCm/rocm-systems/pull/15173) `AIRUNTIME-2652 - Support cl-d3d9 interop` | rocm | ? | - |
+| - | [#15174](https://github.com/ROCm/rocm-systems/pull/15174) `[rocjitsu] Return code-object fuzz failures without exceptions` | rocm | ? | - |
+| - | [#15175](https://github.com/ROCm/rocm-systems/pull/15175) `[rocjitsu] Remove obsolete code-object C API exception handlers` | rocm | ? | - |
+| - | [#15176](https://github.com/ROCm/rocm-systems/pull/15176) `[rocjitsu] Remove internal DBT translation exception handlers` | rocm | ? | - |
+| - | [#15178](https://github.com/ROCm/rocm-systems/issues/15178) `[Tracking] rocprofiler-sdk: kernel replay and range replay` | perf | ? | - |
+| - | [#15194](https://github.com/ROCm/rocm-systems/pull/15194) `test(rccl): check the Inspector plugin reports ring-buffer drops` | rocm | ? | - |
+| - | [#15205](https://github.com/ROCm/rocm-systems/pull/15205) `test(rccl): check mismatched git revisions across ranks are reported` | rocm | ? | - |
+| - | [#15211](https://github.com/ROCm/rocm-systems/pull/15211) `tests(rocprofiler-systems): Use dedicated RocPD rules for default GPU metrics` | rocm | ? | - |
+| - | [#15212](https://github.com/ROCm/rocm-systems/pull/15212) `rocr-debug-agent: Use __scoped_atomic_load_n in sigquit_resume test` | bug,rocm | ? | - |
+| - | [#15217](https://github.com/ROCm/rocm-systems/issues/15217) `rocJitsu: Unit_HRR_CaptureCrashDuringFork hangs on gfx125x since develop a757bf71a82` | bug | ? | - |
+| - | [#15220](https://github.com/ROCm/rocm-systems/pull/15220) `[rocjitsu] Fetch DRM PM4 shaders from canonical high addresses` | rocm | ? | - |
+| - | [#15221](https://github.com/ROCm/rocm-systems/pull/15221) `[rocjitsu] Read PM4 register loads from high DRM addresses` | rocm | ? | - |
+| - | [#15224](https://github.com/ROCm/rocm-systems/pull/15224) `[rocprofiler-systems] Isolate pytest CTest generation from ancestor pytest config` | rocm | ? | - |
+| - | [#15227](https://github.com/ROCm/rocm-systems/pull/15227) `fix(rocprofiler-compute): Rename Active count CSV column to Issue count` | bug,rocm | ? | - |
+| - | [#15228](https://github.com/ROCm/rocm-systems/pull/15228) `refactor(rocjitsu): remove dead race detector code` | bug,risk,rocm | ? | - |
+| - | [#15230](https://github.com/ROCm/rocm-systems/pull/15230) `fix(rocjitsu): retire an ended wave's completed LDS events at the next workgroup barrier` | bug,rocm | ? | - |
+| - | [#15231](https://github.com/ROCm/rocm-systems/pull/15231) `fix(rocdbgapi): make room for hwregs` | bug,rocm | ? | - |
+| - | [#15233](https://github.com/ROCm/rocm-systems/pull/15233) `perf(rocjitsu): build race detector LDS intervals once per instruction` | bug,infra,perf,risk,rocm | ? | - |
+| - | [#15237](https://github.com/ROCm/rocm-systems/pull/15237) `rocr-debug-agent: Split logging.cpp to isolate dbgapi dependency` | bug,rocm | ? | - |
+| - | [#15240](https://github.com/ROCm/rocm-systems/pull/15240) `fix(ci): Repair sparse formatter integration fixtures` | bug,infra,rocm | ? | - |
+| - | [#15242](https://github.com/ROCm/rocm-systems/pull/15242) `[rocjitsu][DBT] Decode the gfx1250 VOPD3 cndmask selector as one SGPR` | rocm | ? | - |
+| - | [#15243](https://github.com/ROCm/rocm-systems/pull/15243) `rocr-debug-agent: Move stop reason mapping to agent_dbgapi_utils` | bug,rocm | ? | - |
+| - | [#15244](https://github.com/ROCm/rocm-systems/pull/15244) `fix(rocr): drop the generic family from the gfx1250-strict ISA row [bkc 20261103]` | bug,rocm | ? | - |
+| - | [#15247](https://github.com/ROCm/rocm-systems/pull/15247) `[rocjitsu] Preserve static MFMA execution shapes` | rocm | ? | - |
+| - | [#15248](https://github.com/ROCm/rocm-systems/pull/15248) `[rocjitsu] Preserve static WMMA execution shapes` | rocm | ? | - |
+| - | [#15249](https://github.com/ROCm/rocm-systems/pull/15249) `[rocjitsu] Race detector performance improvement` | bug,perf,risk,rocm | ? | - |
+| - | [#15250](https://github.com/ROCm/rocm-systems/pull/15250) `[rocjitsu] Describe race detector counter obligations with one helper` | bug,risk,rocm | ? | - |
+| - | [#15251](https://github.com/ROCm/rocm-systems/pull/15251) `[rocjitsu] Return diagnostic, Perfsim and plugin failures` | rocm | ? | - |
+| - | [#15253](https://github.com/ROCm/rocm-systems/pull/15253) `fix(rocprofiler-sdk): Change hsa_amd_signal_wait_any_fn in queue interpositon to active poll` | bug,rocm | ? | - |
+| - | [#15255](https://github.com/ROCm/rocm-systems/pull/15255) `[rocjitsu] Remove exception-only lock and cache recovery` | perf,rocm | ? | - |
+| - | [#15258](https://github.com/ROCm/rocm-systems/pull/15258) `Bump rocshmem hash for after PR #14034` | infra,rocm | ? | - |
+| - | [#15259](https://github.com/ROCm/rocm-systems/issues/15259) `Remove unused monorepo migration scripts and workflows` | infra | ? | - |
+| - | [#15261](https://github.com/ROCm/rocm-systems/pull/15261) `AIRUNTIME-2652 - fix wrong pitch alignment on gfx12+` | bug,rocm | ? | - |
+| - | [#15268](https://github.com/ROCm/rocm-systems/pull/15268) `fix(rocprofiler-sdk/aqlprofile): disable gfx1250 SPM exposure for GL2A, GL2C and GCEA` | bug,rocm | ? | - |
+| - | [#15270](https://github.com/ROCm/rocm-systems/pull/15270) `perf(rccl): close the TDM copy's small-copy gaps vs develop` | perf,rocm | ? | - |
+| - | [#15273](https://github.com/ROCm/rocm-systems/pull/15273) `[rocjitsu] Add passive VM configuration discovery to the C API` | rocm | ? | - |
+| - | [#15277](https://github.com/ROCm/rocm-systems/pull/15277) `[rocjitsu] Track scattered image addresses and packed D16 operands` | rocm | ? | - |
+| - | [#15278](https://github.com/ROCm/rocm-systems/pull/15278) `fix: Guard against null ISA in PAL findIsa` | bug,rocm | ? | - |
+| - | [#15282](https://github.com/ROCm/rocm-systems/pull/15282) `[rocjitsu] Honor guest NaN modes in interpolation` | bug,risk,rocm | ? | - |
+| - | [#15284](https://github.com/ROCm/rocm-systems/pull/15284) `fix(rccl): preserve replay output directories and extensions` | bug,rocm | ? | - |
+| - | [#15291](https://github.com/ROCm/rocm-systems/pull/15291) `Users/dgaliffi/skip cpufreq validation` | rocm | ? | - |
+| - | [#15294](https://github.com/ROCm/rocm-systems/issues/15294) `Deleted` |  | ? | - |
+| - | [#15299](https://github.com/ROCm/rocm-systems/pull/15299) `fix(rocjitsu): reject probe calls for relative SGPR guests` | bug,rocm | ? | - |
+| - | [#15307](https://github.com/ROCm/rocm-systems/pull/15307) `Add gfx1251 tests for hip & ocl tests.` | rocm | ? | - |
+| P0 | [#15314](https://github.com/ROCm/rocm-systems/pull/15314) `fix(rccl): apply __launch_bounds__(512) to DDA LL128 AllReduce kernels` | bug,perf,rocm | develop | - |
+| - | [#15322](https://github.com/ROCm/rocm-systems/issues/15322) `FindHIP.cmake shim: HIP_ADD_LIBRARY compiles HIP sources with the host C++ compiler, which breaks GCC builds (` | rocm | ? | - |
+| - | [#15326](https://github.com/ROCm/rocm-systems/pull/15326) `ci(rccl): skip coco setup on Dependabot PRs and explain the gate` | infra,rocm | ? | - |
+| - | [#15327](https://github.com/ROCm/rocm-systems/pull/15327) `ci(rccl): fail scheduled coco runs on a logged build failure` | infra,rocm | ? | - |
+| - | [#15330](https://github.com/ROCm/rocm-systems/pull/15330) `docs(hip): show the HRR archive notice and how to give capture consent` | infra,rocm | ? | - |
+| - | [#15332](https://github.com/ROCm/rocm-systems/pull/15332) `contrib/nccl_m2n: build the nccl.m2n release wheel in manylinux_2_28` | infra,nvidia,rocm | ? | - |
+| - | [#15338](https://github.com/ROCm/rocm-systems/pull/15338) `[rocjitsu] Speed up operand decoding across CDNA and RDNA` | perf,rocm | ? | - |
+| - | [#15339](https://github.com/ROCm/rocm-systems/pull/15339) `[rocjitsu] Write back dense D16 loads a wave at a time` | rocm | ? | - |
+| - | [#15341](https://github.com/ROCm/rocm-systems/pull/15341) `[rocjitsu] Check memory state types in execution plugin tests` | rocm | ? | - |
+| - | [#15342](https://github.com/ROCm/rocm-systems/pull/15342) `fix(rccl): link rccl-UnitTestsMicroEnqueue again` | bug,rocm | ? | - |
+| - | [#15343](https://github.com/ROCm/rocm-systems/pull/15343) `ci(rocprofiler-compute): Use Python 3.12 in the Ubuntu 22.04 CI image` | infra,rocm | ? | - |
+| - | [#15345](https://github.com/ROCm/rocm-systems/pull/15345) `[rocjitsu] Fix AMDGPU lane, integer and packed conversion results` | bug,rocm | ? | - |
+| - | [#15346](https://github.com/ROCm/rocm-systems/pull/15346) `[rocjitsu] Fix gfx1250 tensor DMA descriptors and LDS barrier updates` | bug,rocm | ? | - |
+| - | [#15361](https://github.com/ROCm/rocm-systems/pull/15361) `fix(rccl-tests): Fix ENABLE_DEVICE_API=1 build failure` | bug,infra,rocm | ? | - |
+| - | [#15363](https://github.com/ROCm/rocm-systems/pull/15363) `fix(hip): compile HIP_ADD_LIBRARY sources with CMAKE_HIP_COMPILER, no…` | bug,rocm | ? | - |
+| - | [#15364](https://github.com/ROCm/rocm-systems/pull/15364) `rocr-debug-agent: Compile src/ modules into the unit test target` | bug,rocm | ? | - |
+| - | [#15366](https://github.com/ROCm/rocm-systems/issues/15366) `Linux gfx120X: rocgdb gdb.rocm/alu-exceptions.exp fails on nightly` | bug,infra,rocm | ? | - |
+| - | [#15367](https://github.com/ROCm/rocm-systems/pull/15367) `[rocjitsu] Reduce register operand access overhead` | rocm | ? | - |
+| - | [#15368](https://github.com/ROCm/rocm-systems/pull/15368) `[rocjitsu] Migrate half-precision CDNA and gfx1250 matrix arithmetic` | rocm | ? | - |
+| - | [#15369](https://github.com/ROCm/rocm-systems/pull/15369) `[rocjitsu] Migrate FP8 and FP32 matrix arithmetic` | quant,rocm | ? | - |
+| - | [#15370](https://github.com/ROCm/rocm-systems/pull/15370) `[rocjitsu] Migrate FP64 and integer matrix arithmetic` | rocm | ? | - |
+| - | [#15371](https://github.com/ROCm/rocm-systems/pull/15371) `[rocjitsu] Migrate mixed and scaled matrix arithmetic` | rocm | ? | - |
+| - | [#15372](https://github.com/ROCm/rocm-systems/pull/15372) `[rocjitsu] Migrate sparse matrix arithmetic` | rocm | ? | - |
+| - | [#15377](https://github.com/ROCm/rocm-systems/pull/15377) `doc(hip): Corrected HIP API doxygen with the latest status in header …` | rocm | ? | - |
+| - | [#15378](https://github.com/ROCm/rocm-systems/pull/15378) `[hipFile/CI] Convert 'pull_request_target' to 'push'.` | infra,rocm | ? | - |
+| - | [#15379](https://github.com/ROCm/rocm-systems/pull/15379) `Revert "test(rocprofiler-sdk): opt remaining PC sampling tests into the beta feature"` |  | ? | - |
+| - | [#15380](https://github.com/ROCm/rocm-systems/pull/15380) `[rocjitsu] Match RDNA FP64 NaNs and division rounding edge cases to hardware (1/4)` | rocm | ? | - |
+| - | [#15382](https://github.com/ROCm/rocm-systems/pull/15382) `ci(rccl): run the coco venv from the shared filesystem on TW` | infra,rocm | ? | - |
+| - | [#15383](https://github.com/ROCm/rocm-systems/pull/15383) `feat(rocprofiler-compute): Add ids, version, rows to memory chart JSON` | rocm | ? | - |
+| - | [#15387](https://github.com/ROCm/rocm-systems/issues/15387) `[HIP] Switching existing queues to BlockingSync can reject completion callbacks and hang` | bug,rocm | ? | - |
+| - | [#15389](https://github.com/ROCm/rocm-systems/pull/15389) `[rocjitsu] Match RDNA 4 FP16/FP64 multiply tininess to hardware (2/4)` | rocm | ? | - |
+| - | [#15391](https://github.com/ROCm/rocm-systems/pull/15391) `[Feature]: Track the LDS side of async LDS copies  ` | rocm | ? | - |
+| - | [#15393](https://github.com/ROCm/rocm-systems/pull/15393) `fix(libhsa): bind API lease scopes to their calling thread` | bug,rocm | ? | - |
+| - | [#15395](https://github.com/ROCm/rocm-systems/pull/15395) `rocSHMEM : Fix mlx5 GDA multi-wavefront SQ synchronization` | bug,rocm | ? | - |
+| - | [#15396](https://github.com/ROCm/rocm-systems/pull/15396) `fix(rccl): use the full post-send fence for LL128 when FIFO stores are not system scope` | bug,rocm | ? | - |
+| - | [#15397](https://github.com/ROCm/rocm-systems/pull/15397) `feat(ci): bump hash to `647a8c5` (2026-11-09)` | infra,rocm | ? | - |
+| - | [#15400](https://github.com/ROCm/rocm-systems/pull/15400) `[rocjitsu] Match RDNA TRANS F64 operations to hardware in rj-arith (3/4)` | rocm | ? | - |
+| - | [#15401](https://github.com/ROCm/rocm-systems/pull/15401) `fix(ddi) Fix issues with state ownership` | bug,rocm | ? | - |
+| P1 | [#15402](https://github.com/ROCm/rocm-systems/pull/15402) `fix(rocr): Fix zero-duration profiled copies on gfx1250 fused SDMA path` | bug,perf,rocm | develop | - |
+| - | [#15411](https://github.com/ROCm/rocm-systems/pull/15411) `ci(rccl/gin): remove the orphaned build-rocshmem.sh prebuild script` | infra,rocm | ? | - |
+| - | [#15413](https://github.com/ROCm/rocm-systems/issues/15413) `[Feature]: race_detector: retire completed LDS events immediately in single-wave workgroups` |  | ? | - |
+| - | [#15419](https://github.com/ROCm/rocm-systems/pull/15419) `[Feature]: race_detector: retire completed LDS events immediately in single-wave workgroups  ` | rocm | ? | - |
+| - | [#15426](https://github.com/ROCm/rocm-systems/pull/15426) `fix(rccl): allow FP8 ring for >8-rank gfx1250 single-node allreduce` | bug,quant,rocm | ? | - |
+| - | [#15429](https://github.com/ROCm/rocm-systems/pull/15429) `test(rccl): add host microtests for JIT device-code devComm compatibility` | rocm | ? | - |
+| - | [#15433](https://github.com/ROCm/rocm-systems/pull/15433) `feat(ddi) fork safe DDI` | rocm | ? | - |
+| - | [#15435](https://github.com/ROCm/rocm-systems/pull/15435) `fix(rccl): IR tester not updated to latest IR 2.31.2 ncclGinBarrierSessionInit` | bug,rocm | ? | - |
+| - | [#15444](https://github.com/ROCm/rocm-systems/pull/15444) `fix(rccl): zero the CE sync flags before peers can signal them` | bug,rocm | ? | - |
+| - | [#15450](https://github.com/ROCm/rocm-systems/pull/15450) `[rocjitsu] Build the wait-check objects before their consumers` | infra,rocm | ? | - |
+| - | [#15456](https://github.com/ROCm/rocm-systems/pull/15456) `refactor(rocprof-sys): Add internal thread list and wire to cpu-snap` | rocm | ? | - |
+| - | [#15467](https://github.com/ROCm/rocm-systems/pull/15467) `fix(rocprofiler-sdk): Change hsa_amd_signal_wait_any_fn in queue interposition to active poll [bkc 20261103]` | bug | ? | - |
+| - | [#15471](https://github.com/ROCm/rocm-systems/pull/15471) `feat(rocjitsu): Add per-slot sequencer state for clocked CU drivers` | perf,rocm | ? | - |
+| - | [#15474](https://github.com/ROCm/rocm-systems/pull/15474) `[hipFile] Increase timeouts in a couple of thread pool tests.` | rocm | ? | - |
+| - | [#15492](https://github.com/ROCm/rocm-systems/pull/15492) `[rocjitsu] Accept bit-exact semantics for RDNA VINTERP (4/4)` | rocm | ? | - |
+| - | [#15493](https://github.com/ROCm/rocm-systems/pull/15493) `docs(rocJPEG): document destination and decode_params lifetime for async decodes` | rocm | ? | - |
+| - | [#15496](https://github.com/ROCm/rocm-systems/pull/15496) `[rocjitsu] Fix AMDGPU decoding, register operands and arithmetic` | bug,rocm | ? | - |
+| - | [#15497](https://github.com/ROCm/rocm-systems/pull/15497) `[rocjitsu] Fix LDS allocation, FLAT routing and buffer bounds` | bug,rocm | ? | - |
+| - | [#15500](https://github.com/ROCm/rocm-systems/pull/15500) `[rocjitsu] Preserve wave and trap state across checkpoint restore` | rocm | ? | - |
+| - | [#15505](https://github.com/ROCm/rocm-systems/pull/15505) `[rocjitsu] Make short rj-arith SIMD loop unrolling explicit` | rocm | ? | - |
+| - | [#15507](https://github.com/ROCm/rocm-systems/pull/15507) `[rocjitsu] Migrate mixed and packed floating-point arithmetic` | rocm | ? | - |
+| - | [#15508](https://github.com/ROCm/rocm-systems/pull/15508) `[rocjitsu] Migrate CDNA FP8 conversions` | quant,rocm | ? | - |
+| - | [#15510](https://github.com/ROCm/rocm-systems/pull/15510) `Extract GPU topology facts into a dedicated module` | rocm | ? | - |
+| - | [#15511](https://github.com/ROCm/rocm-systems/pull/15511) `fix(rccl): copy the TDM headers into the topo_expl build` | bug,infra,rocm | ? | - |
+| - | [#15513](https://github.com/ROCm/rocm-systems/issues/15513) `[rocjitsu] _scale_e8m0_unpack_scale scale selection mechanism` | quant | ? | - |
+| - | [#15515](https://github.com/ROCm/rocm-systems/pull/15515) `feat(ci): bump hash to 7c309db (2026-11-10)` | infra,rocm | ? | - |
+| - | [#15517](https://github.com/ROCm/rocm-systems/pull/15517) `refactor(rocddi): model cache associations as flags` | perf,rocm | ? | - |
+| - | [#15520](https://github.com/ROCm/rocm-systems/pull/15520) `[rocjitsu] [correctness fix] Suppress RDNA buffer accesses through INVALID-format descriptors` | bug,rocm | ? | - |
+| - | [#15525](https://github.com/ROCm/rocm-systems/pull/15525) `refactor(rocddi): rename topology model to graph` |  | ? | - |
+| - | [#15530](https://github.com/ROCm/rocm-systems/issues/15530) `rocr: batch RECT copies between hive GPUs serialize on one SDMA queue` |  | ? | - |
+| - | [#15534](https://github.com/ROCm/rocm-systems/pull/15534) `tune(rccl): enable DDA Broadcast LL/LL128 tiers on gfx1250 SPX` | perf,rocm | ? | - |
+| - | [#15535](https://github.com/ROCm/rocm-systems/pull/15535) `[rocprofiler-systems]: [Docs] Simplify rocsys docs` | rocm | ? | - |
+| - | [#15536](https://github.com/ROCm/rocm-systems/pull/15536) `[rocjitsu] Improve ccache reuse in review builds` | rocm | ? | - |
+| - | [#15539](https://github.com/ROCm/rocm-systems/pull/15539) `perf(abce): fan out on gfx125, fence once per submit, add a ring writer` | perf,rocm | ? | - |
+| - | [#15551](https://github.com/ROCm/rocm-systems/pull/15551) `test(rccl): skip the ReinitSameProcess case of RasDiagnostics.RunsAtEveryCommInit` | rocm | ? | - |
+| - | [#15556](https://github.com/ROCm/rocm-systems/pull/15556) `fix(rocprofiler-systems): fix rocpd scratch memory extdata flags to be string type` | bug,rocm | ? | - |
+| - | [#15561](https://github.com/ROCm/rocm-systems/pull/15561) `[rocjitsu] Migrate CDNA comparisons and register routing` | rocm | ? | - |
+| - | [#15564](https://github.com/ROCm/rocm-systems/pull/15564) `[rocjitsu] Migrate CDNA scalar-format and packed conversions` | rocm | ? | - |
+| - | [#15567](https://github.com/ROCm/rocm-systems/pull/15567) `[rocjitsu] Migrate CDNA scalar arithmetic` | rocm | ? | - |
+| - | [#15569](https://github.com/ROCm/rocm-systems/pull/15569) `refactor(rocddi): name topology graph snapshots consistently` |  | ? | - |
+| - | [#15571](https://github.com/ROCm/rocm-systems/pull/15571) `[rocjitsu] Complete instruction-family header isolation in rj-arith` | rocm | ? | - |
+| - | [#15574](https://github.com/ROCm/rocm-systems/pull/15574) `fix(rccl) : RcclWrapTests.cpp compilation fix due to concurrent merge of #14953 and #13374` | bug,rocm | ? | - |
+| - | [#15575](https://github.com/ROCm/rocm-systems/pull/15575) `chore(rocprofiler-compute): Remove inaccurate dual-issue infomation in docs` | rocm | ? | - |
+| - | [#15576](https://github.com/ROCm/rocm-systems/pull/15576) `[rocjitsu] Match RDNA3 RCP_IFLAG, TRIG_PREOP and DIV_FIXUP_F16 output modifiers to hardware` | rocm | ? | - |
+| - | [#15578](https://github.com/ROCm/rocm-systems/pull/15578) `test(rccl): close microtest gaps in graph/xml.h` | rocm | ? | - |
+| - | [#15579](https://github.com/ROCm/rocm-systems/pull/15579) `[rocjitsu] Match RDNA3 signaling-NaN passthrough and FP64 NaN order to hardware` | bug,risk,rocm | ? | - |
+| - | [#15580](https://github.com/ROCm/rocm-systems/pull/15580) `test(rccl): close microtest gaps in rma_socket_progress_recver.cc` | rocm | ? | - |
+| - | [#15582](https://github.com/ROCm/rocm-systems/pull/15582) `test(rccl): add host microtests for diagnostics_paths.cc` | rocm | ? | - |
+| - | [#15584](https://github.com/ROCm/rocm-systems/pull/15584) `test(rccl): add host microtests for devcomm_v23000.cc` | rocm | ? | - |
+| - | [#15585](https://github.com/ROCm/rocm-systems/pull/15585) `test(rccl): close microtest gaps in graph/topo.h` | rocm | ? | - |
+| - | [#15588](https://github.com/ROCm/rocm-systems/pull/15588) `[rocjitsu] Use the SIMD exact MUL path for MUL_DX9_ZERO` | rocm | ? | - |
+| - | [#15610](https://github.com/ROCm/rocm-systems/pull/15610) `feat(ci): bump hash to c0d2f4d (2026-11-11)` | infra,rocm | ? | - |
+| - | [#15617](https://github.com/ROCm/rocm-systems/pull/15617) `Update amdgpu-windows-interop with Pal#a328bb42` | rocm | ? | - |
+| - | [#15619](https://github.com/ROCm/rocm-systems/pull/15619) `feat(rocJPEG): add -n iterations and up to 64 threads to jpegDecodePerf` | rocm | ? | - |
+| - | [#15649](https://github.com/ROCm/rocm-systems/pull/15649) `ci(rocprofiler-systems): resolve high-severity zizmor findings` | infra,rocm | ? | - |
+| - | [#15660](https://github.com/ROCm/rocm-systems/pull/15660) `docs(hrr): apply the security review to the archive notice and state HRR's scope` | infra,rocm | ? | - |
+| - | [#15662](https://github.com/ROCm/rocm-systems/pull/15662) `rocr-debug-agent: Build shared modules once as an object library` | bug,infra,rocm | ? | - |
+| - | [#15686](https://github.com/ROCm/rocm-systems/pull/15686) `test(rccl): update shared-QP send depth ` | rocm | ? | - |
+| - | [#15691](https://github.com/ROCm/rocm-systems/pull/15691) `[rocjitsu] Match every RDNA4 SALU float instruction to gfx1201 in bit-exact mode` | rocm | ? | - |
+| - | [#15692](https://github.com/ROCm/rocm-systems/pull/15692) `contrib/nccl_m2n: split >= 2 GiB rows out of hipMemcpy3DAsync` | rocm | ? | - |
+| - | [#15693](https://github.com/ROCm/rocm-systems/pull/15693) `[rocjitsu] Allow bit-exact semantics for RDNA3 V_PK_ADD_F16 and V_PK_MUL_F16` | rocm | ? | - |
+| - | [#15696](https://github.com/ROCm/rocm-systems/pull/15696) `ci(fortran): regenerate the bindings in bindings/fortran/<lib>/` | infra,rocm | ? | - |
+| - | [#15703](https://github.com/ROCm/rocm-systems/pull/15703) `refactor(ddi) Improve OS interfaces for portability` | rocm | ? | - |
+| - | [#15706](https://github.com/ROCm/rocm-systems/issues/15706) `[rocprofiler-sdk] rocJPEG API tracing misses 5 functions added in newer rocJPEG versions` |  | ? | - |
+| - | [#15722](https://github.com/ROCm/rocm-systems/pull/15722) `fix(rocprofiler-compute): Keep CLI tests from setting signal handlers` | bug,rocm | ? | - |
+| - | [#15727](https://github.com/ROCm/rocm-systems/pull/15727) `ci(rccl): skip TheRock CI for host-only microtest changes` | bug,infra,rocm | ? | - |
+| - | [#15728](https://github.com/ROCm/rocm-systems/pull/15728) `[RCCL] Keep HIP headers out of wrapper_link_stubs.cpp under the atomics poison` | rocm | ? | - |
+| - | [#15741](https://github.com/ROCm/rocm-systems/pull/15741) `Revert "fix(clr/pal): skip MakeResident for peer pinned host memory (#14578)"` | bug,infra,rocm | ? | - |
+| - | [#15743](https://github.com/ROCm/rocm-systems/issues/15743) `[HIP] hipMemcpy3D/hipMemcpy3DAsync reject pitch >= INT32_MAX that hipDrvMemcpy3DAsync copies correctly` | rocm | ? | - |
+| - | [#15751](https://github.com/ROCm/rocm-systems/issues/15751) `[Issue] Windows HIP tests: `Unit_hipMemcpyAsync_Regression_PageableStaging_ConsecutiveSmallCopies` hangs on gf` | bug,infra,rocm | ? | - |
+| - | [#15761](https://github.com/ROCm/rocm-systems/pull/15761) `fix(rocr): Dup dmabuf fd on VMemoryImportShareableHandle for deferred import` | bug,rocm | ? | - |
+| - | [#15764](https://github.com/ROCm/rocm-systems/pull/15764) `fix(hip): avoid optional Doxygen build failures` | bug,infra,rocm | ? | - |
+| - | [#15775](https://github.com/ROCm/rocm-systems/pull/15775) `fix(rocprofiler-compute): Fix the gfx1250 GL0 lookup hit rate averages` | bug,rocm | ? | - |
+| - | [#15784](https://github.com/ROCm/rocm-systems/pull/15784) `Revert "[Feature]: Track the LDS side of async LDS copies (#15391)"` | rocm | ? | - |
+| - | [#15787](https://github.com/ROCm/rocm-systems/pull/15787) `[rocjitsu] Avoid serializing local GPU memory accesses` | rocm | ? | - |
+| - | [#15796](https://github.com/ROCm/rocm-systems/pull/15796) `Reland `[Feature]: Track the LDS side of async LDS copies   (#15391)`` | rocm | ? | - |
+| - | [#15805](https://github.com/ROCm/rocm-systems/pull/15805) `fix(rocprofiler-compute): Count all L2 channels in per-channel hit rate` | bug,rocm | ? | - |
+| - | [#15815](https://github.com/ROCm/rocm-systems/pull/15815) `build(hipfile): Require CMake 3.25.2` | infra,rocm | ? | - |
+| - | [#15820](https://github.com/ROCm/rocm-systems/pull/15820) `ci(rccl): add a PR freeze to the RCCL PR gate` | infra,rocm | ? | - |
+
+### rocm-systems — Open / submitted (308 items)
+
+| # | item | tags | base | claim |
+| --- | --- | --- | --- | --- |
+| - | [#15177](https://github.com/ROCm/rocm-systems/pull/15177) `Implement per-entry waits/signals in hipExtMemcpyBatchAsync` | rocm | ? | - |
+| - | [#15179](https://github.com/ROCm/rocm-systems/issues/15179) `[Tracking] rocprofiler-sdk: kernel replay (experimental)` | perf | ? | - |
+| - | [#15180](https://github.com/ROCm/rocm-systems/pull/15180) `test(rocprofiler-sdk): skip or expect counter values of zero in gfx11/12 auto mode.` | rocm | ? | - |
+| - | [#15181](https://github.com/ROCm/rocm-systems/pull/15181) `fix(clr): avoid locking a destroyed device VA cache during teardown` | bug,perf,rocm | ? | - |
+| - | [#15182](https://github.com/ROCm/rocm-systems/pull/15182) `test(rccl): check one-RPN PAT channels scale with the default thread budget` | quant,rocm | ? | - |
+| - | [#15183](https://github.com/ROCm/rocm-systems/pull/15183) `test(rccl): check OpenSSL 3 handshakes stay on the PSK path` | rocm | ? | - |
+| - | [#15184](https://github.com/ROCm/rocm-systems/pull/15184) `test(rccl): pin the LSA per-CTA cost to selection time` | infra,rocm | ? | - |
+| - | [#15185](https://github.com/ROCm/rocm-systems/pull/15185) `test(rccl): cover the GIN Put-fence barrier auto-flush path` | rocm | ? | - |
+| - | [#15186](https://github.com/ROCm/rocm-systems/pull/15186) `test(rccl): check the single-node gfx12 LL bandwidth cap in the cost model` | perf,rocm | ? | - |
+| - | [#15187](https://github.com/ROCm/rocm-systems/pull/15187) `test(rccl): check LSA CTA selection keeps the legacy rule` | rocm | ? | - |
+| - | [#15188](https://github.com/ROCm/rocm-systems/pull/15188) `test(rccl): check the proxy service rejects malformed Init and cross-peer ops` | rocm | ? | - |
+| - | [#15189](https://github.com/ROCm/rocm-systems/pull/15189) `test(rccl): check default NIC rail and plane IDs in the topology dump` | rocm | ? | - |
+| - | [#15190](https://github.com/ROCm/rocm-systems/pull/15190) `test(rccl): check nccl4py exposes the NCCL 2.31 communicator properties and config fields` | nvidia,rocm | ? | - |
+| - | [#15191](https://github.com/ROCm/rocm-systems/pull/15191) `test(rccl): check nccl4py bindings track RCCL's NCCL release` | infra,nvidia,rocm | ? | - |
+| - | [#15192](https://github.com/ROCm/rocm-systems/pull/15192) `test(rccl): cover nccl4py per-collective config on every collective` | rocm | ? | - |
+| - | [#15193](https://github.com/ROCm/rocm-systems/pull/15193) `test(rccl): cover NCCL_SPLIT_NOCOLOR ranks in a partial communicator split` | rocm | ? | - |
+| - | [#15195](https://github.com/ROCm/rocm-systems/pull/15195) `test(rccl): check the per-collective launch completion event` | rocm | ? | - |
+| - | [#15196](https://github.com/ROCm/rocm-systems/pull/15196) `test(rccl): check RAS diagnostics report the PCI checks and honor NCCL_RAS_ENABLE` | rocm | ? | - |
+| - | [#15197](https://github.com/ROCm/rocm-systems/pull/15197) `test(rccl): check a rejected profiler plugin is logged at ATTN` | rocm | ? | - |
+| - | [#15198](https://github.com/ROCm/rocm-systems/pull/15198) `test(rccl): cover RMA IB proxy completion-error logging` | rocm | ? | - |
+| - | [#15199](https://github.com/ROCm/rocm-systems/pull/15199) `test(rccl): check RAS progress counters count self send/recv` | rocm | ? | - |
+| - | [#15200](https://github.com/ROCm/rocm-systems/pull/15200) `test(rccl): check NCCL_RUN_DIAGNOSTICS probes ib_write_bw across hosts` | rocm | ? | - |
+| - | [#15201](https://github.com/ROCm/rocm-systems/pull/15201) `test(rccl): check nccl4py passes NCCLConfig num_rma_sig to RCCL` | rocm | ? | - |
+| - | [#15202](https://github.com/ROCm/rocm-systems/pull/15202) `test(rccl): check RAS diagnostics report communicator path types` | rocm | ? | - |
+| - | [#15203](https://github.com/ROCm/rocm-systems/pull/15203) `test(rccl): cover the GIN C-binding get descriptor mode` | rocm | ? | - |
+| - | [#15204](https://github.com/ROCm/rocm-systems/pull/15204) `test(rccl): cover comm init with an arch-less first CPU in NCCL_TOPO_FILE` | rocm | ? | - |
+| - | [#15206](https://github.com/ROCm/rocm-systems/pull/15206) `test(rccl): check the nccl4py version and generated struct links` | rocm | ? | - |
+| - | [#15207](https://github.com/ROCm/rocm-systems/pull/15207) `test(rccl): cover ncclSetEncryption PSK gating of bootstrap sockets` | rocm | ? | - |
+| - | [#15208](https://github.com/ROCm/rocm-systems/pull/15208) `test(rccl): check nccl4py WindowFlag.GIN_ONLY reaches RCCL` | rocm | ? | - |
+| - | [#15210](https://github.com/ROCm/rocm-systems/pull/15210) `feat(rocprofiler-compute): Enable JAX tracing under ML API Tracing` | infra,rocm | ? | - |
+| - | [#15214](https://github.com/ROCm/rocm-systems/pull/15214) `fix(amdsmi): restrict amd-smi-lib log permissions on upgrade` | bug,rocm | ? | - |
+| - | [#15215](https://github.com/ROCm/rocm-systems/pull/15215) `fix(rocprofiler-systems): Make GPU AMD-SMI metrics collection respect config` | bug,rocm | ? | - |
+| - | [#15219](https://github.com/ROCm/rocm-systems/pull/15219) `feat(rccl): [PoC] SPX near-AID receive staging for IB-CAST (RCCL_SPX_NEAR_RECV)` | rocm | ? | - |
+| - | [#15222](https://github.com/ROCm/rocm-systems/pull/15222) `fix(rocr): vmem deallocation callbacks onto existing allocation tables` | bug,rocm | ? | - |
+| - | [#15229](https://github.com/ROCm/rocm-systems/pull/15229) `[rocjitsu] Treat LDS atomics as read-modify-write in the race detector` | bug,risk,rocm | ? | - |
+| - | [#15232](https://github.com/ROCm/rocm-systems/pull/15232) `doc(hip)(clr):Update chagelog for the change on device-side assertions` | bug,rocm | ? | - |
+| - | [#15238](https://github.com/ROCm/rocm-systems/pull/15238) `fix(ci): Enforce formatting checks for each PR comparison` | bug,infra,rocm | ? | - |
+| - | [#15239](https://github.com/ROCm/rocm-systems/pull/15239) `ci(runtimes): Complete host CI dependency and ABI checks` | infra,rocm | ? | - |
+| - | [#15245](https://github.com/ROCm/rocm-systems/issues/15245) `[Windows][CLR] hipHostRegister maps the range on every visible GPU; with two GPUs it hangs at ~23 GiB per adap` | bug | ? | - |
+| - | [#15252](https://github.com/ROCm/rocm-systems/pull/15252) `[rocjitsu] Return execution and queue-service failures` | rocm | ? | - |
+| - | [#15254](https://github.com/ROCm/rocm-systems/pull/15254) `[rocjitsu] Return startup and VM construction failures` | rocm | ? | - |
+| - | [#15256](https://github.com/ROCm/rocm-systems/pull/15256) `[rocjitsu] Return PCI reset and VFIO session failures` | rocm | ? | - |
+| - | [#15260](https://github.com/ROCm/rocm-systems/pull/15260) `[rocjitsu] Propagate execution and multiplexer fuzz failures` | rocm | ? | - |
+| - | [#15262](https://github.com/ROCm/rocm-systems/pull/15262) `[rocjitsu] Preserve KFD, guest and daemon error and lifetime contracts` | rocm | ? | - |
+| - | [#15263](https://github.com/ROCm/rocm-systems/pull/15263) `[rocjitsu] Remove residual exception tests and disable C++ exceptions` | rocm | ? | - |
+| - | [#15264](https://github.com/ROCm/rocm-systems/pull/15264) `fix(hsakmt): skip GPUs without an acquired VM when setting memory policy` | bug,rocm | ? | - |
+| - | [#15265](https://github.com/ROCm/rocm-systems/pull/15265) `feat(rocprofiler-compute): Accept metric ids in -b and --list-metrics` | rocm | ? | - |
+| - | [#15266](https://github.com/ROCm/rocm-systems/pull/15266) `feat(rocprofiler-compute): Select --set metrics from the metric library` | rocm | ? | - |
+| - | [#15267](https://github.com/ROCm/rocm-systems/pull/15267) `fix(rocr): avoid spinning on a missing interrupt event` | bug | ? | - |
+| - | [#15271](https://github.com/ROCm/rocm-systems/pull/15271) `[rocjitsu] Support explicit C API embedding and library teardown` | rocm | ? | - |
+| - | [#15274](https://github.com/ROCm/rocm-systems/issues/15274) `rocprofiler-sdk/aqlprofile: fix 2 from bot review. Will come in a new PR.` | bug | ? | - |
+| - | [#15275](https://github.com/ROCm/rocm-systems/issues/15275) `the reported free memory exceeds the device total` |  | ? | - |
+| - | [#15276](https://github.com/ROCm/rocm-systems/pull/15276) `fix(rocprofiler-sdk/aqlprofile): add gfx12 SQ odd-lane SPM control` | bug,rocm | ? | - |
+| - | [#15279](https://github.com/ROCm/rocm-systems/pull/15279) `perf(rccl): let the TDM SIMPLE copy take misaligned buffers` | perf,rocm | ? | - |
+| - | [#15280](https://github.com/ROCm/rocm-systems/pull/15280) `perf(rccl): match the LL128 TDM window to the destination's line offset` | perf,rocm | ? | - |
+| - | [#15281](https://github.com/ROCm/rocm-systems/pull/15281) `perf(rccl): use 16 KB tiles in the symmetric AllGather's 16B-aligned TMA tier` | perf,rocm | ? | - |
+| - | [#15283](https://github.com/ROCm/rocm-systems/pull/15283) `fix(rccl): correct collective trace rank handling` | bug,rocm | ? | - |
+| - | [#15285](https://github.com/ROCm/rocm-systems/pull/15285) `fix(rccl): retain all PCI device bits in AMD-SMI lookup` | bug,rocm | ? | - |
+| - | [#15286](https://github.com/ROCm/rocm-systems/pull/15286) `fix(rccl): honor IB-CAST WRR disable setting` | bug,rocm | ? | - |
+| - | [#15287](https://github.com/ROCm/rocm-systems/pull/15287) `fix(rccl): preserve IB memory-registration cache order` | bug,perf,rocm | ? | - |
+| - | [#15288](https://github.com/ROCm/rocm-systems/pull/15288) `fix(rccl): clean up AlltoAllv groups and propagate completion status` | bug,rocm | ? | - |
+| - | [#15290](https://github.com/ROCm/rocm-systems/pull/15290) `perf(rccl): reload exactly the pending LL128 recv rows instead of a window` | perf,rocm | ? | - |
+| - | [#15293](https://github.com/ROCm/rocm-systems/pull/15293) `perf(rccl): split the DDA LL128 AllReduce two-shot over (slice, peer) units from 2 MiB` | perf,rocm | ? | - |
+| - | [#15296](https://github.com/ROCm/rocm-systems/pull/15296) `fix(perfxpert): cap mcp below 2 so perfxpert-mcp starts on a fresh install` | bug | ? | - |
+| - | [#15297](https://github.com/ROCm/rocm-systems/pull/15297) `fix(rocshmem): honour accept() timeout after a peer is discarded` | bug,rocm | ? | - |
+| - | [#15298](https://github.com/ROCm/rocm-systems/issues/15298) `[Issue]: perfxpert-mcp fails to start on a fresh install (mcp 2.x removed Server.list_tools)` |  | ? | - |
+| - | [#15303](https://github.com/ROCm/rocm-systems/pull/15303) `feat(hip): expose L3 cache size via hipDeviceAttributeL3CacheSize` | perf,rocm | ? | - |
+| - | [#15304](https://github.com/ROCm/rocm-systems/pull/15304) `feat(rocprofiler-sdk): rocprofv3 replay modes for range replay` | rocm | ? | - |
+| - | [#15305](https://github.com/ROCm/rocm-systems/pull/15305) `fix(rocprofv3): skip kernel and range replay while counter collection is paused` | bug,perf,rocm | ? | - |
+| - | [#15306](https://github.com/ROCm/rocm-systems/issues/15306) `[Issue]: WSL2: compute queue stops at a fixed packet in a sequence of back-to-back dispatches; the stall is re` | rocm | ? | - |
+| - | [#15309](https://github.com/ROCm/rocm-systems/pull/15309) `fix(amdsmi): Correct ESMI status handling in CPU APIs` | bug,rocm | ? | - |
+| - | [#15310](https://github.com/ROCm/rocm-systems/pull/15310) `docs(rocprofiler-sdk): range replay cost model and host API pages` | rocm | ? | - |
+| - | [#15311](https://github.com/ROCm/rocm-systems/pull/15311) `feat(rocprofiler-sdk): host range replay (sigsetjmp/siglongjmp) — re-run the application's code per pass` | rocm | ? | - |
+| - | [#15313](https://github.com/ROCm/rocm-systems/pull/15313) `feat(rccl-tests): opt-in LSA lane for the device-API AllToAll (-D 3)` | rocm | ? | - |
+| - | [#15315](https://github.com/ROCm/rocm-systems/pull/15315) `feat(rocprofiler-sdk): scoped host range replay macros, and tests that open a real range` | rocm | ? | - |
+| - | [#15316](https://github.com/ROCm/rocm-systems/pull/15316) `test(rocprofiler-sdk): rocprofv3 integration tests for range and range-host replay` | rocm | ? | - |
+| P1 | [#15317](https://github.com/ROCm/rocm-systems/pull/15317) `[rccl] NaN protocol: wave-uniform FIFO poll, L1 invalidate, escape-min, steady-loop prefetch (stacked on #1333` | bug,risk,rocm | users/abreslow/sen_proto | - |
+| - | [#15320](https://github.com/ROCm/rocm-systems/pull/15320) `feat(rccl): add backend-agnostic device data mover for gfx1250` | rocm | ? | - |
+| - | [#15324](https://github.com/ROCm/rocm-systems/pull/15324) `[rccl] NaN-flag protocol for the generic kernel` | bug,perf,risk,rocm | ? | - |
+| - | [#15325](https://github.com/ROCm/rocm-systems/pull/15325) `ci(rccl): bootstrap pip when a coco runner lacks ensurepip` | infra,rocm | ? | - |
+| - | [#15331](https://github.com/ROCm/rocm-systems/pull/15331) `fix(hip): stop reporting success when VMM peer copies fail` | bug,rocm | ? | - |
+| - | [#15333](https://github.com/ROCm/rocm-systems/pull/15333) `fix(hip): allow VMM p2p memory copy when peer access is enabled` | bug,rocm | ? | - |
+| - | [#15336](https://github.com/ROCm/rocm-systems/pull/15336) `test(rocprofiler-sdk): range replay week of 2026-11-09: P2, P3 (stacked)` | rocm | ? | - |
+| - | [#15340](https://github.com/ROCm/rocm-systems/issues/15340) `hipMemcpyPeer reports success without copying owner-only VMM memory` |  | ? | - |
+| - | [#15344](https://github.com/ROCm/rocm-systems/pull/15344) `test(kfdtest): report KFDASMTest targets the linked LLVM lacks clearly` | rocm | ? | - |
+| - | [#15360](https://github.com/ROCm/rocm-systems/pull/15360) `feat(clr): add hipArrayGetMemoryRequirements API` | infra,rocm | ? | - |
+| - | [#15373](https://github.com/ROCm/rocm-systems/pull/15373) `feat(rocprofiler-sdk): API-driven host range replay (host_run)` | rocm | ? | - |
+| - | [#15374](https://github.com/ROCm/rocm-systems/pull/15374) `feat(rocprofiler-compute): Ready the skills for the AMD skills catalog` | rocm | ? | - |
+| - | [#15381](https://github.com/ROCm/rocm-systems/pull/15381) `fix(libhsakmt): keep old WSL scratch until queued work finishes` | bug | ? | - |
+| - | [#15392](https://github.com/ROCm/rocm-systems/pull/15392) `libhsakmt: allow setting SVM migration granularity via environment va…` | rocm | ? | - |
+| - | [#15398](https://github.com/ROCm/rocm-systems/issues/15398) `[Issue]: WSL compute queue frees scratch while earlier kernels are pending` | perf | ? | - |
+| - | [#15399](https://github.com/ROCm/rocm-systems/pull/15399) `hip-tests: add all/amd/nvidia group skip targets to test config` | nvidia,rocm | ? | - |
+| - | [#15404](https://github.com/ROCm/rocm-systems/pull/15404) `test(rccl): check the CollNet send proxy fences the GDRCopy initial credit` | rocm | ? | - |
+| - | [#15405](https://github.com/ROCm/rocm-systems/pull/15405) `fix(rccl): let the installed nccl_device.h compile in C99 host files` | bug,rocm | ? | - |
+| - | [#15406](https://github.com/ROCm/rocm-systems/pull/15406) `ci(amdsmi): update hw health check` | infra,rocm | ? | - |
+| - | [#15407](https://github.com/ROCm/rocm-systems/pull/15407) `fix(kfdtest): Blacklist LargestSysBufferTest for gfx1250` | bug,rocm | ? | - |
+| - | [#15409](https://github.com/ROCm/rocm-systems/issues/15409) `[hip-tests][host-ASan] gfx90a managed-memory tests fail LeakSanitizer after the allocator abort is gone` | rocm | ? | - |
+| - | [#15410](https://github.com/ROCm/rocm-systems/issues/15410) `[rocrtst][host-ASan] gfx90a trap-handler allocations are reported leaked` |  | ? | - |
+| - | [#15412](https://github.com/ROCm/rocm-systems/pull/15412) `Add hipStreamBeginRecaptureToGraph API` | rocm | ? | - |
+| - | [#15415](https://github.com/ROCm/rocm-systems/pull/15415) `fix(rccl): cap GIN symmetric ReduceScatter at 256 threads in debug builds` | bug,rocm | ? | - |
+| - | [#15417](https://github.com/ROCm/rocm-systems/pull/15417) `fix(rccl): reject an unbuilt GPU arch at init instead of faulting in HIP` | bug,rocm | ? | - |
+| - | [#15420](https://github.com/ROCm/rocm-systems/issues/15420) `[rocjitsu] Reduce repeated per-DWORD work in 128-bit LDS transfers` |  | ? | - |
+| - | [#15422](https://github.com/ROCm/rocm-systems/pull/15422) `fix(rccl): validate rccl_ep arguments and bound combine's weight output` | bug,rocm | ? | - |
+| - | [#15423](https://github.com/ROCm/rocm-systems/pull/15423) `perf(rccl): rework the rccl_ep plan, dispatch and combine kernels` | perf,rocm | ? | - |
+| - | [#15424](https://github.com/ROCm/rocm-systems/pull/15424) `feat(rccl): rccl_ep internode dispatch and combine` | rocm | ? | - |
+| - | [#15425](https://github.com/ROCm/rocm-systems/pull/15425) ` fix(rocprofiler-sdk): search ROCm's rocm_sysdeps for libdw` | bug,rocm | ? | - |
+| - | [#15427](https://github.com/ROCm/rocm-systems/pull/15427) `docs(rocprofiler-compute): Add the RDNA4 gfx1201 performance model` | perf,rocm | ? | - |
+| - | [#15428](https://github.com/ROCm/rocm-systems/pull/15428) `docs(rocprofiler-compute): Add the Navi48 skill updates` | rocm | ? | - |
+| - | [#15430](https://github.com/ROCm/rocm-systems/pull/15430) `fix(rccl): apply the reduce pre-op to source 0 only in every reduceCopy path` | bug,rocm | ? | - |
+| - | [#15434](https://github.com/ROCm/rocm-systems/pull/15434) `fix(rccl): pass the one-slice Ring/Simple steps from the nccl*Config entry points` | bug,nvidia,rocm | ? | - |
+| - | [#15436](https://github.com/ROCm/rocm-systems/pull/15436) `docs(rocprofiler-sdk): application replay and kernel replay user guides` | perf,rocm | ? | - |
+| - | [#15437](https://github.com/ROCm/rocm-systems/pull/15437) `docs(rocprofiler-sdk): range replay user guide, after application replay` | rocm | ? | - |
+| - | [#15439](https://github.com/ROCm/rocm-systems/pull/15439) `Update amdgpu-windows-interop with Pal#765ca4da` | rocm | ? | - |
+| - | [#15441](https://github.com/ROCm/rocm-systems/pull/15441) `feat(clr): ABCE host copy path` | rocm | ? | - |
+| - | [#15445](https://github.com/ROCm/rocm-systems/pull/15445) `fix(rccl): raise the collective API profiler events for DDA collectives` | bug,rocm | ? | - |
+| - | [#15446](https://github.com/ROCm/rocm-systems/pull/15446) `fix(rccl): apply the graph-mixing stream-ordering fallback to copied child configs` | bug,rocm | ? | - |
+| - | [#15447](https://github.com/ROCm/rocm-systems/pull/15447) `test(rccl): run the per-collective nccl*Config entry points on a live communicator` | nvidia,rocm | ? | - |
+| - | [#15448](https://github.com/ROCm/rocm-systems/pull/15448) `refactor(rocprof-sys): resolve SDK domain requests via tracing_config` | rocm | ? | - |
+| - | [#15449](https://github.com/ROCm/rocm-systems/pull/15449) `feat(rocprofiler-sdk): out-of-process collector [1/5] - library and session control` | rocm | ? | - |
+| - | [#15451](https://github.com/ROCm/rocm-systems/pull/15451) `Update amdgpu-windows-interop with Pal#765ca4da` | rocm | ? | - |
+| - | [#15452](https://github.com/ROCm/rocm-systems/pull/15452) `fix(amdsmi): retain GPUs when CPU discovery returns no handles` | bug,rocm | ? | - |
+| - | [#15453](https://github.com/ROCm/rocm-systems/issues/15453) `[Issue]: Empty CPU discovery prevents GPU CLI commands despite valid GPU handles` |  | ? | - |
+| - | [#15455](https://github.com/ROCm/rocm-systems/pull/15455) `feat(rocprofiler-sdk): out-of-process collector [2/5] – trace reader and API-call join` | rocm | ? | - |
+| - | [#15457](https://github.com/ROCm/rocm-systems/pull/15457) `feat(rocprofiler-sdk): out-of-process collector [3/5] – HIP API records` | rocm | ? | - |
+| - | [#15458](https://github.com/ROCm/rocm-systems/pull/15458) `fix(rocshmem/gda): make broadcast, alltoall and ring allreduce work on MetaRoCE AINIC` | bug,rocm | ? | - |
+| - | [#15461](https://github.com/ROCm/rocm-systems/pull/15461) `fix(hipfile): skip async fastpath tests if fastpath unavailable` | bug,rocm | ? | - |
+| - | [#15462](https://github.com/ROCm/rocm-systems/pull/15462) `fix(rccl): count every RCCL GPU allocation in the per-device allocTracker` | bug,rocm | ? | - |
+| - | [#15463](https://github.com/ROCm/rocm-systems/pull/15463) `fix(rocprofiler-sdk): ATT Issues flagged by AI review` | bug,rocm | ? | - |
+| - | [#15464](https://github.com/ROCm/rocm-systems/pull/15464) `[RCCL][TUNING] Tune and Optimize hierarchical LSA AllGather` | perf,rocm | ? | - |
+| - | [#15465](https://github.com/ROCm/rocm-systems/pull/15465) `fix(rocr): never cache a queueless blit from a copy-status query (ROCM-33639)` | bug,perf,rocm | ? | - |
+| - | [#15468](https://github.com/ROCm/rocm-systems/pull/15468) `test(rccl): check the typed ReduceCopy thunks in librccl_device.bc` | rocm | ? | - |
+| - | [#15469](https://github.com/ROCm/rocm-systems/pull/15469) `perf(rccl): close the gfx1250 unregistered ring busbw gap for AllReduce/AllGather` | perf,rocm | ? | - |
+| - | [#15470](https://github.com/ROCm/rocm-systems/issues/15470) `feat(rocjitsu): Add per-slot sequencer state for clocked CU drivers` |  | ? | - |
+| - | [#15472](https://github.com/ROCm/rocm-systems/pull/15472) `perf(clr): reserve graph packet vectors once per batch` | perf,rocm | ? | - |
+| P0 | [#15473](https://github.com/ROCm/rocm-systems/issues/15473) `Kernel duration corruption under torch.profiler — HsaAmdSignalHandler re-arms the wrong signal (rocvirtual.cpp` | perf,risk,rocm | ? | - |
+| - | [#15475](https://github.com/ROCm/rocm-systems/issues/15475) `[rocjitsu] Avoid repeated literal-length scans in memory-wait mnemonic checks` |  | ? | - |
+| - | [#15478](https://github.com/ROCm/rocm-systems/pull/15478) `perf(abce): submit a wave's lanes on distinct rings at once` | perf,rocm | ? | - |
+| - | [#15482](https://github.com/ROCm/rocm-systems/pull/15482) `perf(rccl): allocate the DDA IPC scratch on first use` | perf,rocm | ? | - |
+| - | [#15483](https://github.com/ROCm/rocm-systems/pull/15483) `feat(rocprofiler-sdk): out-of-process collector [4/5] – rocprofv3 --collector` | rocm | ? | - |
+| - | [#15484](https://github.com/ROCm/rocm-systems/pull/15484) `fix memcpy perf tests` | bug,perf,rocm | ? | - |
+| - | [#15485](https://github.com/ROCm/rocm-systems/pull/15485) `test(rocprofiler-sdk): out-of-process collector [5/5] – integration tests` | rocm | ? | - |
+| - | [#15487](https://github.com/ROCm/rocm-systems/issues/15487) `[rocjitsu][Feature]: Add instruction-flag-based checks` |  | ? | - |
+| - | [#15491](https://github.com/ROCm/rocm-systems/pull/15491) `fix(rocr): SIGSEGV in amdgpu_bo_query_info during hipIpcOpenMemHandle` | bug,rocm | ? | - |
+| - | [#15494](https://github.com/ROCm/rocm-systems/issues/15494) `[RCCL] NCCL_CUMEM_ENABLE=1 makes all_to_all 4.6-5.7x and some all_gather sizes 6.4x slower on 8 GPUs (RCCL 2.3` | perf,rocm | ? | - |
+| - | [#15501](https://github.com/ROCm/rocm-systems/pull/15501) `[rocjitsu] Implement scalar, vector, export and data-share instructions` | rocm | ? | - |
+| - | [#15502](https://github.com/ROCm/rocm-systems/pull/15502) `[rocjitsu] Execute packed image transfers, atomics and BVH intersections` | rocm | ? | - |
+| - | [#15503](https://github.com/ROCm/rocm-systems/pull/15503) `[rocjitsu] Execute texture samples, gathers and LOD queries` | rocm | ? | - |
+| - | [#15516](https://github.com/ROCm/rocm-systems/issues/15516) `[Issue]: [WSL2][gfx1201] Repeated hipModuleLoad calls dominate FP16 transposed GEMM latency (~300ms per call)` | perf,rocm | ? | - |
+| - | [#15518](https://github.com/ROCm/rocm-systems/pull/15518) `fix(amdsmi): fill monitor clocks and temps that gpu_metrics omits` | bug,rocm | ? | - |
+| - | [#15521](https://github.com/ROCm/rocm-systems/pull/15521) `fix(clr): PAL - submit HIP graph launches without waiting for a synchronize` | bug,rocm | ? | - |
+| - | [#15526](https://github.com/ROCm/rocm-systems/pull/15526) `fix(rocprofiler-compute): Read specs from the visibility-selected GPU` | bug,rocm | ? | - |
+| - | [#15531](https://github.com/ROCm/rocm-systems/pull/15531) `[rocjitsu] Add execution plugin code owner` | rocm | ? | - |
+| - | [#15532](https://github.com/ROCm/rocm-systems/pull/15532) `ci(rocprofiler-compute): Add Navi4 gfx120X CI runners` | infra,rocm | ? | - |
+| P1 | [#15533](https://github.com/ROCm/rocm-systems/issues/15533) `[HIP] FP8 header fails host C++17 parsing; suppressed narrowing corrupts half bits` | quant,risk,rocm | ? | - |
+| - | [#15537](https://github.com/ROCm/rocm-systems/pull/15537) `fix(cuid): audit fixes: PPIN, partitions without xcp, lookups, fork safety, amd-smi (2.3.0)` | bug,rocm | ? | - |
+| - | [#15538](https://github.com/ROCm/rocm-systems/pull/15538) `Update amdgpu-windows-interop with Pal#765ca4da` | rocm | ? | - |
+| - | [#15545](https://github.com/ROCm/rocm-systems/pull/15545) `feat/perf(clr/rocr): pin H2D source memory read-only to avoid copy-on-write of file-backed mappings` | infra,perf,rocm | ? | - |
+| - | [#15549](https://github.com/ROCm/rocm-systems/pull/15549) `fix(clr): fix hang in batch copies larger than the signal ring` | bug,rocm | ? | - |
+| - | [#15550](https://github.com/ROCm/rocm-systems/pull/15550) `ci(hrr): install the CPU-only HRR tests as a relocatable ctest tree` | infra,rocm | ? | - |
+| - | [#15553](https://github.com/ROCm/rocm-systems/pull/15553) `clr: Hold batch wait signals in the default signal tracker` | rocm | ? | - |
+| - | [#15554](https://github.com/ROCm/rocm-systems/pull/15554) `[DNM] Profiler hub/multi schema writer` | rocm | ? | - |
+| - | [#15555](https://github.com/ROCm/rocm-systems/pull/15555) `fix(rccl): report cost-model time from ncclGroupSimulateEnd` | bug,rocm | ? | - |
+| - | [#15557](https://github.com/ROCm/rocm-systems/pull/15557) `[HIP-Test] Harden RCCL features with unit tests` | rocm | ? | - |
+| - | [#15558](https://github.com/ROCm/rocm-systems/pull/15558) `ci(amdsmi): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15562](https://github.com/ROCm/rocm-systems/pull/15562) `[rocjitsu] Migrate CDNA FP32 and FP64 arithmetic` | rocm | ? | - |
+| - | [#15566](https://github.com/ROCm/rocm-systems/pull/15566) `[rocjitsu] Migrate CDNA math and division arithmetic` | rocm | ? | - |
+| - | [#15568](https://github.com/ROCm/rocm-systems/pull/15568) `[rocjitsu] Migrate gfx1250 dual arithmetic` | rocm | ? | - |
+| - | [#15570](https://github.com/ROCm/rocm-systems/pull/15570) `fix(rccl): allocate host memory for RMA proxy descriptors in relaxed capture mode` | bug,rocm | ? | - |
+| - | [#15589](https://github.com/ROCm/rocm-systems/pull/15589) `[DO NOT REVIEW][FOR TEST]ci(asan): run host-asan pull request tests with TheRock#9887` | infra,rocm | ? | - |
+| - | [#15590](https://github.com/ROCm/rocm-systems/pull/15590) `feat(rocprofiler-compute): Give memory chart scope labels column ranges` | rocm | ? | - |
+| - | [#15591](https://github.com/ROCm/rocm-systems/pull/15591) `feat(rccl): per-collective NIC counter windows for the ACCL profiler` | rocm | ? | - |
+| - | [#15593](https://github.com/ROCm/rocm-systems/pull/15593) `feat(rocprofiler-compute): Show the Speed of Light as three tables` | perf,rocm | ? | - |
+| - | [#15594](https://github.com/ROCm/rocm-systems/pull/15594) `fix(rccl): use the upstream-LLVM b128 builtins in the device API headers` | bug,rocm | ? | - |
+| - | [#15596](https://github.com/ROCm/rocm-systems/pull/15596) `[rocjitsu] Prevent rejected memory accesses from hanging the host` | bug,rocm | ? | - |
+| - | [#15598](https://github.com/ROCm/rocm-systems/pull/15598) `fix(opencl): keep a command's resources alive when its user event fails` | bug,rocm | ? | - |
+| - | [#15599](https://github.com/ROCm/rocm-systems/pull/15599) `fix(rocprofiler-systems): validate transferBench link metrics per GPU` | bug,perf,rocm | ? | - |
+| - | [#15601](https://github.com/ROCm/rocm-systems/pull/15601) `fix(clr) Initialize the node in hipGraphAddNode` | bug,rocm | ? | - |
+| - | [#15602](https://github.com/ROCm/rocm-systems/pull/15602) `fix(clr) Fix hiprtcCompileProgram on an already compiled program` | bug,rocm | ? | - |
+| - | [#15604](https://github.com/ROCm/rocm-systems/issues/15604) `hiprtcCompileProgram fails when called again on an already compiled program` |  | ? | - |
+| - | [#15605](https://github.com/ROCm/rocm-systems/issues/15605) `hipGraphAddNode returns an uninitialized node when it fails` |  | ? | - |
+| - | [#15606](https://github.com/ROCm/rocm-systems/pull/15606) `hip-tests: Enable ASan for SPIR-V device builds and JIT` | rocm | ? | - |
+| - | [#15609](https://github.com/ROCm/rocm-systems/issues/15609) `Source build improvements` | infra | ? | - |
+| - | [#15611](https://github.com/ROCm/rocm-systems/pull/15611) `rccl(feat): broadcast DDA LL128 two shot` | rocm | ? | - |
+| - | [#15612](https://github.com/ROCm/rocm-systems/pull/15612) `refactor(rocjitsu): Classify instructions with decoded metadata` | perf,rocm | ? | - |
+| - | [#15613](https://github.com/ROCm/rocm-systems/pull/15613) `fix(rocprofiler-SDK): fix rocpd summary markers, adding rank and filename legend` | bug,rocm | ? | - |
+| - | [#15618](https://github.com/ROCm/rocm-systems/pull/15618) `Update amdgpu-windows-interop with Pal#a328bb42` | rocm | ? | - |
+| - | [#15620](https://github.com/ROCm/rocm-systems/pull/15620) `[rocjitsu][ci][web] Enable RDNA3 and RDNA4 performance benchmarks in CI` | infra,perf,rocm | ? | - |
+| - | [#15621](https://github.com/ROCm/rocm-systems/issues/15621) `[rocjitsu][web] Extend performance benchmark list for more coverage` | perf | ? | - |
+| - | [#15625](https://github.com/ROCm/rocm-systems/pull/15625) `feat(shared): add shared/elfio and use it in rocprofiler-sdk` | rocm | ? | - |
+| - | [#15626](https://github.com/ROCm/rocm-systems/pull/15626) `ci(aqlprofile): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15627](https://github.com/ROCm/rocm-systems/pull/15627) `ci(cuid): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15628](https://github.com/ROCm/rocm-systems/pull/15628) `ci(hip): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15629](https://github.com/ROCm/rocm-systems/pull/15629) `ci(hipfile): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15632](https://github.com/ROCm/rocm-systems/pull/15632) `ci(media-libs): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15633](https://github.com/ROCm/rocm-systems/pull/15633) `ci(profiler-hub): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15634](https://github.com/ROCm/rocm-systems/pull/15634) `refactor(clr): use shared/elfio instead of the amd::ELFIO fork` | rocm | ? | - |
+| - | [#15635](https://github.com/ROCm/rocm-systems/pull/15635) `[rocjitsu][consan] Retain repeated LDS accesses in gfx1250 barrier loops.` | rocm | ? | - |
+| - | [#15636](https://github.com/ROCm/rocm-systems/pull/15636) `fix(clr): read ELF headers by copy in Elf::getElfSize` | bug,rocm | ? | - |
+| - | [#15637](https://github.com/ROCm/rocm-systems/pull/15637) `ci(rccl): resolve high-severity zizmor findings` | infra,rocm | ? | - |
+| - | [#15638](https://github.com/ROCm/rocm-systems/pull/15638) `ci(rdc): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15639](https://github.com/ROCm/rocm-systems/pull/15639) `ci(rocjitsu): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15641](https://github.com/ROCm/rocm-systems/pull/15641) `ci(rocm-smi-lib): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15642](https://github.com/ROCm/rocm-systems/issues/15642) `Consolidate ELFIO into shared/elfio (rocprofiler-sdk, CLR)` |  | ? | - |
+| - | [#15643](https://github.com/ROCm/rocm-systems/pull/15643) `ci(rocminfo): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15644](https://github.com/ROCm/rocm-systems/pull/15644) `ci(rocprof-trace-decoder): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15645](https://github.com/ROCm/rocm-systems/pull/15645) `ci(rocprofiler-compute): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15646](https://github.com/ROCm/rocm-systems/pull/15646) `ci(rocprofiler-register): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15647](https://github.com/ROCm/rocm-systems/pull/15647) `feat(rccl): Add hierarchical RS (scale-up) for gfx1250 partition mode` | quant,rocm | ? | - |
+| - | [#15648](https://github.com/ROCm/rocm-systems/pull/15648) `ci(rocprofiler-sdk): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15651](https://github.com/ROCm/rocm-systems/pull/15651) `ci: resolve high-severity zizmor findings in monorepo infrastructure …` | infra,rocm | ? | - |
+| - | [#15652](https://github.com/ROCm/rocm-systems/pull/15652) `ci(therock): resolve zizmor findings` | infra,rocm | ? | - |
+| - | [#15653](https://github.com/ROCm/rocm-systems/issues/15653) `[Issue] Linux gfx90a nightly: rocprofiler-sdk `rocprofv3-avail-cli-test` fails` | infra | ? | - |
+| - | [#15654](https://github.com/ROCm/rocm-systems/issues/15654) `[Issue] Windows gfx120X HIP tests (ROCR) shard 2/4 fails across six attempts: graph user-object fault or warp-` | infra,rocm | ? | - |
+| - | [#15655](https://github.com/ROCm/rocm-systems/issues/15655) `[Issue] Linux gfx90a nightly: hip-tests fails intermittently` | infra,rocm | ? | - |
+| - | [#15656](https://github.com/ROCm/rocm-systems/issues/15656) `kpack: splitter numbers TOC entries per arch, but CLR looks them up by global TU index (wrong/missing code obj` |  | ? | - |
+| - | [#15657](https://github.com/ROCm/rocm-systems/issues/15657) `[Issue] Linux nightly: rocrtst `Memory_Available` fails intermittently on free-memory assertions` | infra | ? | - |
+| - | [#15659](https://github.com/ROCm/rocm-systems/issues/15659) `[Issue]: [clr] Event's stored recording stream can be freed between hip::isValid and use (concurrent hipStream` | rocm | ? | - |
+| - | [#15663](https://github.com/ROCm/rocm-systems/pull/15663) `[rocprofiler-systems] Add the collection framework and the sample collector` | rocm | ? | - |
+| - | [#15664](https://github.com/ROCm/rocm-systems/pull/15664) `[rocprofiler-systems] Add unit tests for the collection framework and counter path` | rocm | ? | - |
+| - | [#15665](https://github.com/ROCm/rocm-systems/pull/15665) `refactor(profiler-hub): let format registry entries recognise and probe their own files` | rocm | ? | - |
+| - | [#15666](https://github.com/ROCm/rocm-systems/pull/15666) `refactor(profiler-hub): open a per-file format source from the registry` | rocm | ? | - |
+| - | [#15667](https://github.com/ROCm/rocm-systems/pull/15667) `refactor(profiler-hub): trim through the registry entry` | rocm | ? | - |
+| - | [#15668](https://github.com/ROCm/rocm-systems/pull/15668) `feat(profiler-hub): add the PyTorch Kineto parser behind PROFILER_HUB_ENABLE_PYTORCH_KINETO` | rocm | ? | - |
+| - | [#15669](https://github.com/ROCm/rocm-systems/pull/15669) `feat(profiler-hub): add the PyTorch Kineto store and catalog fill` | rocm | ? | - |
+| - | [#15670](https://github.com/ROCm/rocm-systems/pull/15670) `feat(profiler-hub): read PyTorch Kineto traces through the format registry` | rocm | ? | - |
+| - | [#15671](https://github.com/ROCm/rocm-systems/pull/15671) `perf(rocjitsu): Reuse completed memory instructions` | perf,rocm | ? | - |
+| - | [#15673](https://github.com/ROCm/rocm-systems/pull/15673) `feat(rocprofiler-compute): Name analysis rows after their metrics and document the analysis views` | rocm | ? | - |
+| - | [#15674](https://github.com/ROCm/rocm-systems/pull/15674) `fix(rocprof-sys): exit without NULL deref when causal perf backend fails to open` | bug,infra,perf,rocm | ? | - |
+| - | [#15676](https://github.com/ROCm/rocm-systems/pull/15676) `fix(rocprofiler-sdk): Prevent kernel overlaps introduced by SDK timestamp correction` | bug,perf,rocm | ? | - |
+| - | [#15677](https://github.com/ROCm/rocm-systems/pull/15677) `style(rccl): format src/ with the pinned clang-format` | infra,rocm | ? | - |
+| - | [#15680](https://github.com/ROCm/rocm-systems/pull/15680) `docs(rocprofiler-sdk): streamline the rocprofv3 on WSL2 how-to` | rocm | ? | - |
+| - | [#15681](https://github.com/ROCm/rocm-systems/pull/15681) `fix(rccl): stop inspector plugin creating world-writable output files` | bug,rocm | ? | - |
+| - | [#15685](https://github.com/ROCm/rocm-systems/pull/15685) `ci(rccl): follow up on the advisory pre-commit checks` | infra,rocm | ? | - |
+| - | [#15687](https://github.com/ROCm/rocm-systems/pull/15687) `Integrate profiler-hub from develop-optiq` | rocm | ? | - |
+| - | [#15689](https://github.com/ROCm/rocm-systems/pull/15689) `[rocjitsu] Simplify the race detector plugin by reusing the core's register-hazard checker` | bug,risk,rocm | ? | - |
+| - | [#15690](https://github.com/ROCm/rocm-systems/pull/15690) `feat(amdsmi): add GPU-CPU XGMI link discovery for MI450` | rocm | ? | - |
+| - | [#15694](https://github.com/ROCm/rocm-systems/pull/15694) `fix(clr)(hip-tests): Fix the timeout in Unit_Grid_Group_Sync_Positive…` | bug,rocm | ? | - |
+| - | [#15698](https://github.com/ROCm/rocm-systems/pull/15698) `ci(amdsmi): add a UBSan leg to the ASAN GPU job` | infra,rocm | ? | - |
+| - | [#15700](https://github.com/ROCm/rocm-systems/pull/15700) `perf(rccl): optimize DDA LL128 RS on gfx1250` | perf,rocm | ? | - |
+| - | [#15701](https://github.com/ROCm/rocm-systems/pull/15701) `Users/kjayapra/stalethiscluster` | rocm | ? | - |
+| - | [#15704](https://github.com/ROCm/rocm-systems/pull/15704) `[rocjitsu] Match MFMA wait checks to broadcast source lanes` | rocm | ? | - |
+| - | [#15707](https://github.com/ROCm/rocm-systems/pull/15707) `feat(rccl-tests): add device-API Reduce (-D 3, tiled LSA)` | rocm | ? | - |
+| - | [#15708](https://github.com/ROCm/rocm-systems/pull/15708) `feat(rccl-tests): add an LL tier to Reduce -D 3` | rocm | ? | - |
+| - | [#15709](https://github.com/ROCm/rocm-systems/pull/15709) `feat(rccl-tests): add a GIN Anvil SDMA tier to Reduce -D 3` | rocm | ? | - |
+| - | [#15711](https://github.com/ROCm/rocm-systems/pull/15711) `fix(rccl): keep 8 gather parts per peer on halved MLOPart comms` | bug,rocm | ? | - |
+| - | [#15712](https://github.com/ROCm/rocm-systems/pull/15712) `fix(rccl): keep IpcGpuBarrier read-only in DDA IPC kernels` | bug,perf,rocm | ? | - |
+| - | [#15713](https://github.com/ROCm/rocm-systems/pull/15713) `feat(rocjitsu): make IsaExecComputeUnit derive from BaseComputeUnit` | rocm | ? | - |
+| - | [#15715](https://github.com/ROCm/rocm-systems/pull/15715) `perf(rccl): size the collective LL128 buffer for gfx1250's wider slices` | perf,rocm | ? | - |
+| - | [#15717](https://github.com/ROCm/rocm-systems/pull/15717) `feat(rocshmem/host): host-initiated putmem_signal + signal query over verbs` | rocm | ? | - |
+| - | [#15723](https://github.com/ROCm/rocm-systems/pull/15723) `fix(hip): honor pool release thresholds during automatic reclamation` | bug,infra,rocm | ? | - |
+| - | [#15724](https://github.com/ROCm/rocm-systems/pull/15724) `[RCCL] Extend __hip_atomic_* poison to the test build` | infra,rocm | ? | - |
+| - | [#15725](https://github.com/ROCm/rocm-systems/issues/15725) `[Issue]: [gfx1201][Linux] After a GPU memory fault, ROCr prints only "Queue error - HSA_STATUS_ERROR_MEMORY_FA` | risk,rocm | ? | - |
+| - | [#15726](https://github.com/ROCm/rocm-systems/pull/15726) `test(amdsmi): restore perf level in all read/write tests and verify clock limit sets` | perf,rocm | ? | - |
+| - | [#15729](https://github.com/ROCm/rocm-systems/pull/15729) `fix(rccl): relink device.elf when device objects are rebuilt` | bug,rocm | ? | - |
+| - | [#15730](https://github.com/ROCm/rocm-systems/pull/15730) `Host range replay on develop, without packet re-submit` | rocm | ? | - |
+| - | [#15731](https://github.com/ROCm/rocm-systems/pull/15731) `[hipFile] Enable fallback on ENOTTY when KFD does not have the AIS ioctl` | rocm | ? | - |
+| - | [#15733](https://github.com/ROCm/rocm-systems/pull/15733) `fix(rocshmem): reserve RO queue slots per context when a wave mixes contexts` | bug,rocm | ? | - |
+| - | [#15734](https://github.com/ROCm/rocm-systems/pull/15734) `fix(clr): restore MakeResident for peer GART mappings without CantTrim` | bug,rocm | ? | - |
+| - | [#15736](https://github.com/ROCm/rocm-systems/pull/15736) `refactor(rocprofiler-compute): Split the gfx12 benchmark into RDNA4 a…` | perf,rocm | ? | - |
+| - | [#15739](https://github.com/ROCm/rocm-systems/pull/15739) `[rocjitsu][consan] Extend barrier-loop analysis to all native LDS targets` | rocm | ? | - |
+| - | [#15742](https://github.com/ROCm/rocm-systems/pull/15742) `ci(rccl): manual MADEngine RCCL history sweep across releases` | infra,rocm | ? | - |
+| - | [#15744](https://github.com/ROCm/rocm-systems/pull/15744) `rocr-debug-agent: Add unit tests for stop reason mapping` | bug,rocm | ? | - |
+| - | [#15745](https://github.com/ROCm/rocm-systems/pull/15745) `rocr-debug-agent: Add unit tests for URI parsing and format tokens` | bug,rocm | ? | - |
+| - | [#15747](https://github.com/ROCm/rocm-systems/pull/15747) `rocr-debug-agent: Add unit tests for hex and register value formatting` | bug,rocm | ? | - |
+| - | [#15750](https://github.com/ROCm/rocm-systems/issues/15750) `[Issue] Windows HIP tests: `Unit_hipMemcpyAsync_Regression_PageableStaging_ConsecutiveSmallCopies` hangs on gf` | bug,infra,rocm | ? | - |
+| - | [#15753](https://github.com/ROCm/rocm-systems/pull/15753) `docs(rocprofiler-compute): Say when the gfx1201 VALU FLOPs estimate reads high or low` | rocm | ? | - |
+| - | [#15757](https://github.com/ROCm/rocm-systems/pull/15757) `docs(hip): document hipMemcpyPeer and hipMemcpyPeerAsync in the how-t…` | rocm | ? | - |
+| - | [#15758](https://github.com/ROCm/rocm-systems/pull/15758) `fix(clr): avoid queue-state updates during graph packet capture` | bug,rocm | ? | - |
+| - | [#15759](https://github.com/ROCm/rocm-systems/pull/15759) `fix(rocprofiler-compute): Use SQ_WAVE_CYCLES for the gfx1201 wave occupancy and life` | bug,rocm | ? | - |
+| - | [#15760](https://github.com/ROCm/rocm-systems/pull/15760) `fix(rccl): clear the HIP last error after expected-failure probes` | bug,rocm | ? | - |
+| - | [#15765](https://github.com/ROCm/rocm-systems/pull/15765) `fix(amdsmi): report WSL power limit and power cap in microwatts` | bug,rocm | ? | - |
+| - | [#15767](https://github.com/ROCm/rocm-systems/pull/15767) `fix(rccl): make GIN proxy GFD stores CPU-visible with DWORDX4 fallback` | bug,rocm | ? | - |
+| - | [#15768](https://github.com/ROCm/rocm-systems/pull/15768) `test(rccl): add host-only unit tests for tuning/{tree,pat,collnet,ce_model}.cc` | perf,rocm | ? | - |
+| - | [#15769](https://github.com/ROCm/rocm-systems/pull/15769) `test(rccl): add host-only unit tests for plugin/{env/env_v*,rma/rma_v1[45]}.cc` | rocm | ? | - |
+| - | [#15770](https://github.com/ROCm/rocm-systems/pull/15770) `test(rccl): add host-only unit tests for ras/progress_monitor.cc` | rocm | ? | - |
+| - | [#15771](https://github.com/ROCm/rocm-systems/pull/15771) `test(rccl): add host-only unit tests for ras/diagnostics_xid.cc` | rocm | ? | - |
+| - | [#15773](https://github.com/ROCm/rocm-systems/pull/15773) `fix(rccl): return ncclLoadParam's value from RCCL_PARAM macros` | bug,rocm | ? | - |
+| - | [#15774](https://github.com/ROCm/rocm-systems/pull/15774) `fix(rccl): retry the net_ib_cast GDR probe when it could not run` | bug,rocm | ? | - |
+| - | [#15776](https://github.com/ROCm/rocm-systems/pull/15776) `fix(rccl): agree on DDA fabric init failures before each exchange` | bug,rocm | ? | - |
+| - | [#15777](https://github.com/ROCm/rocm-systems/pull/15777) `[BKC 20261103] Fix rocm_agent_enumerator strict ISA default` | bug,rocm | ? | - |
+| - | [#15778](https://github.com/ROCm/rocm-systems/pull/15778) `fix(amdsmi): show N/A for unknown AI NIC NUMA node and PCIe values` | bug,rocm | ? | - |
+| - | [#15779](https://github.com/ROCm/rocm-systems/pull/15779) `fix(amdsmi): reset every GPU on UALink systems with --gpureset` | bug,rocm | ? | - |
+| - | [#15780](https://github.com/ROCm/rocm-systems/pull/15780) `build(amdsmi): declare the wheel license as an SPDX expression` | infra,rocm | ? | - |
+| - | [#15781](https://github.com/ROCm/rocm-systems/pull/15781) `fix(hip): skip non-blocking streams in capture invalidation` | bug,rocm | ? | - |
+| - | [#15782](https://github.com/ROCm/rocm-systems/pull/15782) `refactor(rocprofiler-compute): Add config_arch_members helper` | rocm | ? | - |
+| - | [#15783](https://github.com/ROCm/rocm-systems/pull/15783) `refactor(rocprofiler-compute): Derive the CLI table style in code` | rocm | ? | - |
+| - | [#15785](https://github.com/ROCm/rocm-systems/issues/15785) `rocprofiler-sdk: Flaky hip-graph-bubbles test, gaps between graph kernels sometimes too long in CI` | infra,perf,rocm | ? | - |
+| - | [#15786](https://github.com/ROCm/rocm-systems/pull/15786) `fix(kpack): key TOC entries by source bundle index, not per-arch count` | bug,rocm | ? | - |
+| - | [#15788](https://github.com/ROCm/rocm-systems/pull/15788) `test(rccl): refactor MICROTEST_README.md to drop the per-binary listings` | rocm | ? | - |
+| - | [#15789](https://github.com/ROCm/rocm-systems/pull/15789) `feat(rccl): Add an environment variable for RCCL addon done event ordering` | rocm | ? | - |
+| - | [#15790](https://github.com/ROCm/rocm-systems/issues/15790) `gfx1250 bf16 SDPA, head dim 72: attn_fwd aborts with HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION at long sequen` | rocm | ? | - |
+| - | [#15795](https://github.com/ROCm/rocm-systems/issues/15795) `[rocjitsu] mirage: Test a_grandchild_that_inherited_the_tag_is_reclaimed_too is flaky and fails in most CI run` | infra | ? | - |
+| - | [#15797](https://github.com/ROCm/rocm-systems/pull/15797) `fix(rocSHMEM): revert PR#12039, #AIROCSHMEM-512` | bug,rocm | ? | - |
+| - | [#15799](https://github.com/ROCm/rocm-systems/pull/15799) `perf(rccl): hand the DDA LL128 AllReduce peer-split's reduced slices to the push through LDS` | perf,rocm | ? | - |
+| - | [#15800](https://github.com/ROCm/rocm-systems/pull/15800) `perf(rccl): fold the DDA LL128 AllReduce peer-split's peer copies from LDS on small shards` | perf,rocm | ? | - |
+| - | [#15801](https://github.com/ROCm/rocm-systems/pull/15801) `test(rccl): run TdmSimpleCopyTest in the TDM SIMPLE config and race its teams` | bug,risk,rocm | ? | - |
+| - | [#15802](https://github.com/ROCm/rocm-systems/pull/15802) `perf(rccl): gather the DDA LL128 AllReduce peer-split's peer copies into LDS with async loads` | perf,rocm | ? | - |
+| - | [#15803](https://github.com/ROCm/rocm-systems/pull/15803) `perf(rccl): take uneven shards in the DDA LL128 AllReduce peer-split` | perf,rocm | ? | - |
+| - | [#15806](https://github.com/ROCm/rocm-systems/pull/15806) `fix(rocprofiler-compute): Plot gfx950 FP4/FP6 against the F6F4 ceiling` | bug,quant,rocm | ? | - |
+| - | [#15807](https://github.com/ROCm/rocm-systems/pull/15807) `[AICOMRCCL-3590] [RCCL] test: fix CE AllReduce eligibility tests on CE-capable ROCm` | bug,rocm | ? | - |
+| - | [#15809](https://github.com/ROCm/rocm-systems/pull/15809) `fix(rccl): gfx1250 AllToAll DDA LL bank layout, SPX DDA ceilings and in-place Direct fallback` | bug,rocm | ? | - |
+| - | [#15812](https://github.com/ROCm/rocm-systems/issues/15812) `refactor(rocjitsu): autogenerate with_compute_unit_isa` |  | ? | - |
+| - | [#15817](https://github.com/ROCm/rocm-systems/pull/15817) `perf(rccl): tune gfx1250 SPX AllReduce DDA block widths and caps and the ReduceScatter Ring LL128 range for 1–` | perf,rocm | ? | - |
+| - | [#15818](https://github.com/ROCm/rocm-systems/issues/15818) `[rocr] Second hsa_amd_ipc_signal_attach of the same handle fails, then segfaults (breaks hipIpcOpenEventHandle` | bug,nvidia,risk | ? | - |
+| - | [#15819](https://github.com/ROCm/rocm-systems/pull/15819) `rccl: match specialized stub LDS layout to Generic kernels under ASAN` | perf,rocm | ? | - |
+| - | [#15821](https://github.com/ROCm/rocm-systems/pull/15821) `[hipFile] Disable fastpath backend on ENOTTY` | rocm | ? | - |
+| - | [#15822](https://github.com/ROCm/rocm-systems/pull/15822) `feat(hip): Add NV12 support (from AIRUNTIME-3008)` | rocm | ? | - |
+| - | [#15824](https://github.com/ROCm/rocm-systems/pull/15824) `fix(clr) - probe host atomics on rocr backend` | bug,rocm | ? | - |
+
 ### tokenspeed — Merged / closed (292 items)
 
 | # | item | tags | base | claim |
