@@ -7,8 +7,8 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
 | - | [#5186](https://github.com/ROCm/aiter/pull/5186) `[CK] [OPUS] [CI] Mi300a enablement` | infra | ? | - |
-| - | [#5194](https://github.com/ROCm/aiter/pull/5194) `Cache the MLA split count, not the split indptr tensor` | perf | main | - |
-| - | [#5500](https://github.com/ROCm/aiter/pull/5500) `[Config] configs: GLM-5.3-Flash a8w8 blockscale fused-MoE configs for gfx942` | perf,quant,rocm | ? | - |
+| P0 | [#5194](https://github.com/ROCm/aiter/pull/5194) `Cache the MLA split count, not the split indptr tensor` | perf | main | - |
+| - | [#5500](https://github.com/ROCm/aiter/pull/5500) `[Config] configs: GLM-5.3-Flash a8w8 blockscale fused-MoE configs for gfx942` | perf,quant,rocm | main | - |
 | - | [#5555](https://github.com/ROCm/aiter/pull/5555) `[FlyDSL] QuickAllReduce INT5/INT6 and all-reduce cleanup` | rocm | ? | - |
 | - | [#5757](https://github.com/ROCm/aiter/pull/5757) `[ASM] [HIP] Qwe38 flash mxfp4 asm` | quant,rocm | ? | - |
 | - | [#5793](https://github.com/ROCm/aiter/pull/5793) `[Triton/Gluon] [fix] Triton FA decode: bound K/V loads in non-paged split-K tail` | bug,rocm | ? | - |
@@ -17,14 +17,14 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#5985](https://github.com/ROCm/aiter/pull/5985) `[HIP] Opt group quant gfx1250` | infra,quant,rocm | ? | - |
 | - | [#6091](https://github.com/ROCm/aiter/pull/6091) `[HIP] [MLA] Fix non-uniform query offsets after head folding` | bug,infra,rocm | ? | - |
 | - | [#6238](https://github.com/ROCm/aiter/pull/6238) `[Triton/Gluon] [gfx1250] batched a16w8/a8w8/bf16: fp8 output + tuned MLA-absorb decode tiles` | perf,quant,rocm | ? | - |
-| - | [#6484](https://github.com/ROCm/aiter/pull/6484) `[Feature][MoE] fused_moe: skip moe_sorting when the caller registers a BM=16 presort` | infra,perf | ? | - |
-| - | [#6496](https://github.com/ROCm/aiter/pull/6496) `[FlyDSL] [gfx950] Add gdn fused prefill kernel` | perf,rocm | ? | - |
+| P1 | [#6484](https://github.com/ROCm/aiter/pull/6484) `[Feature][MoE] fused_moe: skip moe_sorting when the caller registers a BM=16 presort` | infra,perf | ? | - |
+| P1 | [#6496](https://github.com/ROCm/aiter/pull/6496) `[FlyDSL] [gfx950] Add gdn fused prefill kernel` | perf,rocm | ? | - |
 | - | [#6502](https://github.com/ROCm/aiter/pull/6502) `[Triton/Gluon] [CI] Streamline Flash Attentions api` | infra,rocm | ? | - |
-| - | [#6575](https://github.com/ROCm/aiter/pull/6575) `[Triton/Gluon] [ASM] [HIP] MHAv4 per-row block-sparse geometry, LSE and ragged KV on gfx950` | rocm | ? | - |
+| P1 | [#6575](https://github.com/ROCm/aiter/pull/6575) `[Triton/Gluon] [ASM] [HIP] MHAv4 per-row block-sparse geometry, LSE and ragged KV on gfx950` | rocm | ? | - |
 | - | [#6682](https://github.com/ROCm/aiter/pull/6682) `[Triton/Gluon] : (QUANT, CE AND TRANS) Add RotatingBufferBench support` | perf,quant,rocm | ? | - |
 | - | [#6684](https://github.com/ROCm/aiter/pull/6684) `[Triton/Gluon] : (DeepSeek) Add RotatingBufferBench support` | perf,rocm | ? | - |
 | - | [#6689](https://github.com/ROCm/aiter/pull/6689) `feat(gemm_fusion): route sp_qkv_fused v1; keep a reference native, implementation moves to a provider` | perf | ? | - |
-| - | [#6734](https://github.com/ROCm/aiter/pull/6734) `[HIP] Fuse a 32-point Hadamard rotation into the MXFP4 per-1x32 quant and AR + RMSNorm epilogue` | infra,perf,quant,rocm | ? | - |
+| P1 | [#6734](https://github.com/ROCm/aiter/pull/6734) `[HIP] Fuse a 32-point Hadamard rotation into the MXFP4 per-1x32 quant and AR + RMSNorm epilogue` | infra,perf,quant,rocm | ? | - |
 | - | [#6779](https://github.com/ROCm/aiter/pull/6779) `[Triton/Gluon] fused_qkv_split_qk_norm_rope_cache: MRoPE, shuffle KV layout, optional outputs` | perf,rocm | ? | - |
 | - | [#6784](https://github.com/ROCm/aiter/pull/6784) `[Triton/Gluon] gfx1250 pa decode update and tuning` | infra,perf,rocm | ? | - |
 | - | [#6808](https://github.com/ROCm/aiter/pull/6808) `[HIP] Added an optional pre-quant k_out_unquantized under fp8 kv-cache to fused_qk_norm_rope_cache_pts_quant_s` | perf,quant,rocm | ? | - |
@@ -32,9 +32,9 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#6835](https://github.com/ROCm/aiter/pull/6835) `[Triton/Gluon] Add fused Qwen3-Next attention prologue (gfx950)` | perf,rocm | ? | - |
 | - | [#6839](https://github.com/ROCm/aiter/pull/6839) `[Triton/Gluon] : (UNIFIED ATTENTION) Add RotatingBufferBench support` | perf,rocm | ? | - |
 | - | [#6842](https://github.com/ROCm/aiter/pull/6842) `[Triton/Gluon] Add sigmoid output gate to pa_decode_gluon` | infra,rocm | ? | - |
-| - | [#6854](https://github.com/ROCm/aiter/pull/6854) `[Triton/Gluon] [Bugfix] Fix uneven split-K bug in fused a8w8 blockscale GEMMs` | bug,perf,quant,rocm | main | - |
+| P0 | [#6854](https://github.com/ROCm/aiter/pull/6854) `[Triton/Gluon] [Bugfix] Fix uneven split-K bug in fused a8w8 blockscale GEMMs` | bug,perf,quant,rocm | main | - |
 | - | [#6895](https://github.com/ROCm/aiter/pull/6895) `[Feat] Add tuner event pid recovery and fix deadlock` | bug,perf,risk | ? | - |
-| - | [#6926](https://github.com/ROCm/aiter/pull/6926) `[MoE] [Bugfix] Zero the a2 buffer before dynamic per-tensor quant` | quant | main | - |
+| P0 | [#6926](https://github.com/ROCm/aiter/pull/6926) `[MoE] [Bugfix] Zero the a2 buffer before dynamic per-tensor quant` | quant | main | - |
 | - | [#6941](https://github.com/ROCm/aiter/pull/6941) `[tuner] Reject zero timing measurements` | perf | ? | - |
 | - | [#6951](https://github.com/ROCm/aiter/pull/6951) `[Triton/Gluon] Fix Triton A8W8 Per-token Preshuffled GEMM` | bug,infra,quant,rocm | ? | - |
 | - | [#6952](https://github.com/ROCm/aiter/pull/6952) `[HIP] [OPUS] [JIT] MXFP4 MQA logits update: one API for V4 and V4.1 with Table/Free/Prefill schedules` | quant,rocm | ? | - |
@@ -42,108 +42,108 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#6960](https://github.com/ROCm/aiter/pull/6960) `[HIP] Add `all_gather_lastdim_add` to the custom all-reduce` | infra,rocm | ? | - |
 | - | [#6972](https://github.com/ROCm/aiter/pull/6972) `[FlyDSL] [Kernel] Add a DCP mailbox query gather and LSE combine` | perf,rocm | ? | - |
 | - | [#6981](https://github.com/ROCm/aiter/pull/6981) `[HIP] [MXFP4 MoE] cover Qwen3.5-397B TP4: shape gate entry and tuned rows` | perf,quant,rocm | ? | - |
-| - | [#6990](https://github.com/ROCm/aiter/pull/6990) `[CK] [Bugfix] Align batch prefill full-attention dispatch` |  | ? | - |
+| P1 | [#6990](https://github.com/ROCm/aiter/pull/6990) `[CK] [Bugfix] Align batch prefill full-attention dispatch` |  | ? | - |
 | - | [#6995](https://github.com/ROCm/aiter/pull/6995) `[FlyDSL] [CI] [Feature] Add explicit clamped SiLU to FlyDSL a16w-mix GEMM1` | infra,rocm | ? | - |
 | - | [#7008](https://github.com/ROCm/aiter/pull/7008) `[Triton/Gluon] [QSA] FP8 KV and FP8 / FP4 index caches, stacked-head decode scorer` | infra,quant,rocm | ? | - |
-| - | [#7019](https://github.com/ROCm/aiter/pull/7019) `[HIP] [CK] [JIT] Enable swiglu_limit for FP8 per_1x128 blockscale MoE` | quant,rocm | ? | - |
-| - | [#7022](https://github.com/ROCm/aiter/pull/7022) `[Triton/Gluon] fp8_mqa_logits: Do not recompile per batch size on gfx950` | rocm | ? | - |
+| P1 | [#7019](https://github.com/ROCm/aiter/pull/7019) `[HIP] [CK] [JIT] Enable swiglu_limit for FP8 per_1x128 blockscale MoE` | quant,rocm | ? | - |
+| P1 | [#7022](https://github.com/ROCm/aiter/pull/7022) `[Triton/Gluon] fp8_mqa_logits: Do not recompile per batch size on gfx950` | rocm | ? | - |
 | - | [#7040](https://github.com/ROCm/aiter/pull/7040) `[Triton/Gluon] : Add padding-mode support to specialized Triton Conv2D APIs` | rocm | ? | - |
 | - | [#7043](https://github.com/ROCm/aiter/pull/7043) `[Config] Add M=4096 Qwen3.8-27B TP1 a8w8 blockscale GEMM rows for gfx942` | quant,rocm | ? | - |
-| - | [#7047](https://github.com/ROCm/aiter/pull/7047) `[Triton/Gluon] Mask OOB e8m0 scales on the ragged-K path of batched_gemm_afp4wfp4` | quant,rocm | main | - |
+| P0 | [#7047](https://github.com/ROCm/aiter/pull/7047) `[Triton/Gluon] Mask OOB e8m0 scales on the ragged-K path of batched_gemm_afp4wfp4` | quant,rocm | main | - |
 | - | [#7072](https://github.com/ROCm/aiter/pull/7072) `[Triton/Gluon] [Config] Add gfx1150 fused_indexed_gated_residual config` | perf,rocm | ? | - |
 | - | [#7080](https://github.com/ROCm/aiter/pull/7080) `[HIP] Speed up gfx1250 two-stage AR RMSNorm FP8 amax reduction` | perf,quant,rocm | ? | - |
-| - | [#7092](https://github.com/ROCm/aiter/pull/7092) `[FlyDSL] pa_decode: zero V rows past the context before PV` | rocm | main | - |
+| P0 | [#7092](https://github.com/ROCm/aiter/pull/7092) `[FlyDSL] pa_decode: zero V rows past the context before PV` | rocm | main | - |
 | - | [#7098](https://github.com/ROCm/aiter/pull/7098) `[FlyDSL] [gfx1250] FMHA prefill m32x8: skip query tiles past a varlen sequence's end` | rocm | ? | - |
-| - | [#7099](https://github.com/ROCm/aiter/issues/7099) `ROCm 10.1 (clang 24): 8-wave cktile blockscale GEMMs no longer inlined, 7-15x slower` | perf,quant,rocm | ? | - |
+| P0 | [#7099](https://github.com/ROCm/aiter/issues/7099) `ROCm 10.1 (clang 24): 8-wave cktile blockscale GEMMs no longer inlined, 7-15x slower` | perf,quant,rocm | ? | - |
 | - | [#7100](https://github.com/ROCm/aiter/pull/7100) `[Triton/Gluon] [GFX12] Add SPEC_DECODE mode to UA with tunned Qwen35 config` | rocm | ? | - |
-| - | [#7103](https://github.com/ROCm/aiter/pull/7103) `[JIT] Add -mllvm -ignore-tti-inline-compatible=true for the 10.1 LLVM compiler to avoid some performance loss ` | perf,rocm | main | - |
-| - | [#7104](https://github.com/ROCm/aiter/pull/7104) `[FlyDSL] moe_reduce: guard against -1 topk_ids padding sentinel` | rocm | ? | - |
-| - | [#7126](https://github.com/ROCm/aiter/pull/7126) `[Triton/Gluon] [FlyDSL] [CI] [Bugfix] Never share scratch buffers whose zero fill was recorded into a graph` | infra,rocm | main | - |
+| P0 | [#7103](https://github.com/ROCm/aiter/pull/7103) `[JIT] Add -mllvm -ignore-tti-inline-compatible=true for the 10.1 LLVM compiler to avoid some performance loss ` | perf,rocm | main | - |
+| P1 | [#7104](https://github.com/ROCm/aiter/pull/7104) `[FlyDSL] moe_reduce: guard against -1 topk_ids padding sentinel` | rocm | ? | - |
+| P0 | [#7126](https://github.com/ROCm/aiter/pull/7126) `[Triton/Gluon] [FlyDSL] [CI] [Bugfix] Never share scratch buffers whose zero fill was recorded into a graph` | infra,rocm | main | - |
 | - | [#7128](https://github.com/ROCm/aiter/pull/7128) `[HIP] [FlyDSL] Add OPUS FP4 MQA writer and query scale layouts` | quant,rocm | ? | - |
 | - | [#7133](https://github.com/ROCm/aiter/pull/7133) `[Triton/Gluon] [MLA] gfx1250: write the asm MLA decode KV layout from fused_qk_rope_cat_and_cache_mla` | infra,perf,rocm | ? | - |
-| - | [#7134](https://github.com/ROCm/aiter/pull/7134) `[HIP] [Perf] Route gfx950 E=128..255 decode at M>=17 to multi-phase MoE sorting` | perf,rocm | main | - |
-| - | [#7136](https://github.com/ROCm/aiter/pull/7136) `[CK] [CI] [Bugfix] Fix CK-Tile MXFP4 MoE stage1 split-k for unaligned or padded K` | bug,infra,quant | main | - |
+| P0 | [#7134](https://github.com/ROCm/aiter/pull/7134) `[HIP] [Perf] Route gfx950 E=128..255 decode at M>=17 to multi-phase MoE sorting` | perf,rocm | main | - |
+| P0 | [#7136](https://github.com/ROCm/aiter/pull/7136) `[CK] [CI] [Bugfix] Fix CK-Tile MXFP4 MoE stage1 split-k for unaligned or padded K` | bug,infra,quant | main | - |
 | - | [#7138](https://github.com/ROCm/aiter/pull/7138) `[Config] Tune Kimi-K3 gfx1250 gemm_a4w4` | perf,quant,rocm | ? | - |
 | - | [#7169](https://github.com/ROCm/aiter/pull/7169) `[Config] Add Kimi-K3 gfx950 BF16 GEMM rows that beat 3% on every repeat` | rocm | ? | - |
 | - | [#7178](https://github.com/ROCm/aiter/pull/7178) `[FlyDSL] [gfx1250] flydsl batched mxfp8 GEMM: optional fused mxfp8 quant epilogue` | perf,quant,rocm | ? | - |
-| - | [#7182](https://github.com/ROCm/aiter/pull/7182) `[Bugfix] MLA decode: merge only the splits gfx950 bf16 gqa32 stage 1 writes` | rocm | main | - |
-| - | [#7192](https://github.com/ROCm/aiter/pull/7192) `[Triton/Gluon] [GFX950] Mha v4 production` | rocm | ? | - |
-| - | [#7203](https://github.com/ROCm/aiter/pull/7203) `[Triton/Gluon] [Bugfix] gfx1250 unified attention 2D: store decode outputs from registers` | infra,rocm | ? | - |
-| - | [#7204](https://github.com/ROCm/aiter/pull/7204) `[Config] [Tuning] Qwen3.8-Flash-Next TP4 prefill BF16 GEMMs on MI308X (gfx942, 80 CU)` | perf,rocm | ? | - |
-| - | [#7215](https://github.com/ROCm/aiter/pull/7215) `[ASM] [HIP] feat(fmha_bwd): gfx950 sliding window attention backward kernels` | perf,rocm | ? | - |
-| - | [#7218](https://github.com/ROCm/aiter/pull/7218) `[Config] Add tuned GEMM and fused-MoE configs for MI350P (gfx950, 128 CUs)` | perf,rocm | ? | - |
-| - | [#7226](https://github.com/ROCm/aiter/pull/7226) `[Docs] FlyDSL review guidance: live-GPU test gates, test quality, Copilot checks, aiter FlyDSL notes` | rocm | ? | - |
-| - | [#7227](https://github.com/ROCm/aiter/pull/7227) `review-pr: correct FlyDSL D10/D10b and add D13/D14 from review outcomes` | rocm | ? | - |
-| - | [#7228](https://github.com/ROCm/aiter/pull/7228) `[Triton/Gluon] Fused a16w16 GEMM with a separate tile and split-K per output` | perf,rocm | ? | - |
-| - | [#7232](https://github.com/ROCm/aiter/pull/7232) `[Triton/Gluon] [Feature] MHA: add out_dtype to the Triton forward entry point` | infra,rocm | ? | - |
+| P0 | [#7182](https://github.com/ROCm/aiter/pull/7182) `[Bugfix] MLA decode: merge only the splits gfx950 bf16 gqa32 stage 1 writes` | rocm | main | - |
+| P1 | [#7192](https://github.com/ROCm/aiter/pull/7192) `[Triton/Gluon] [GFX950] Mha v4 production` | rocm | ? | - |
+| P1 | [#7203](https://github.com/ROCm/aiter/pull/7203) `[Triton/Gluon] [Bugfix] gfx1250 unified attention 2D: store decode outputs from registers` | infra,rocm | ? | - |
+| P1 | [#7204](https://github.com/ROCm/aiter/pull/7204) `[Config] [Tuning] Qwen3.8-Flash-Next TP4 prefill BF16 GEMMs on MI308X (gfx942, 80 CU)` | perf,rocm | ? | - |
+| P1 | [#7215](https://github.com/ROCm/aiter/pull/7215) `[ASM] [HIP] feat(fmha_bwd): gfx950 sliding window attention backward kernels` | perf,rocm | ? | - |
+| P1 | [#7218](https://github.com/ROCm/aiter/pull/7218) `[Config] Add tuned GEMM and fused-MoE configs for MI350P (gfx950, 128 CUs)` | perf,rocm | ? | - |
+| P1 | [#7226](https://github.com/ROCm/aiter/pull/7226) `[Docs] FlyDSL review guidance: live-GPU test gates, test quality, Copilot checks, aiter FlyDSL notes` | rocm | ? | - |
+| P1 | [#7227](https://github.com/ROCm/aiter/pull/7227) `review-pr: correct FlyDSL D10/D10b and add D13/D14 from review outcomes` | rocm | ? | - |
+| P1 | [#7228](https://github.com/ROCm/aiter/pull/7228) `[Triton/Gluon] Fused a16w16 GEMM with a separate tile and split-K per output` | perf,rocm | ? | - |
+| P1 | [#7232](https://github.com/ROCm/aiter/pull/7232) `[Triton/Gluon] [Feature] MHA: add out_dtype to the Triton forward entry point` | infra,rocm | ? | - |
 | - | [#7234](https://github.com/ROCm/aiter/pull/7234) `[Config] [gfx1250] Tune DeepSeek-V4.1-Flash dense FP8 GEMM tiles for intermediate-M decode` | perf,quant,rocm | ? | - |
-| - | [#7235](https://github.com/ROCm/aiter/pull/7235) `[Config] Mistral Large 4 gfx950 tuned tables (TP8 + TP4)` | perf,rocm | ? | - |
-| - | [#7238](https://github.com/ROCm/aiter/pull/7238) `[FlyDSL] [AITER] FlyDSL a8w8 256x256 nb4/nb2 persistent kernel improvement` | perf,quant,rocm | ? | - |
-| - | [#7239](https://github.com/ROCm/aiter/pull/7239) `[Triton/Gluon] Pipelining for fused GDN decode kernel, add ba partials reduction` | perf,rocm | ? | - |
-| - | [#7254](https://github.com/ROCm/aiter/pull/7254) `[Config] Add MI350P (gfx950, 128 CU) a8w8 blockscale GEMM configs for Gemma-4-31B FP8-block` | quant,rocm | ? | - |
-| - | [#7258](https://github.com/ROCm/aiter/pull/7258) `[FlyDSL] QuickAllReduce INT4: E5M2 group scale so groups above 480 no longer clip` | quant,rocm | main | - |
-| - | [#7278](https://github.com/ROCm/aiter/issues/7278) `[Issue]: Triton MHA prefill attn_fwd (flash_attn_triton_amd) computes q/k/v/out row offsets in int32, which ov` | nvidia,risk,rocm | ? | - |
-| - | [#7289](https://github.com/ROCm/aiter/pull/7289) `[Triton/Gluon] [gfx1250] gemm_a16w16: GPT-OSS decode buckets retuned with rotating weights; LM-head files` | perf,rocm | ? | - |
-| - | [#7291](https://github.com/ROCm/aiter/pull/7291) `[ASM] [gfx1250] asm mha bf16 fwd: allow D64 without a sink` | rocm | ? | - |
-| - | [#7294](https://github.com/ROCm/aiter/pull/7294) `[FlyDSL] [CI] [MoE] gemm2: bound atomic rows by the sort's valid token count` | infra,rocm | main | - |
-| - | [#7297](https://github.com/ROCm/aiter/pull/7297) `[FlyDSL] [CI] [gfx950] Megamoe Ep Internode Impl` | infra,rocm | main | - |
-| - | [#7298](https://github.com/ROCm/aiter/pull/7298) `[Fix] Build DeepSeek RoPE caches on the default device, not hard-coded cuda` | bug,infra,nvidia | ? | - |
-| - | [#7317](https://github.com/ROCm/aiter/pull/7317) `[HIP] [CK] [FlyDSL] [GEMM][gfx950] Tune narrow-N MXFP4 with CSV-selected preshuffle kernels` | perf,quant,rocm | main | - |
+| P1 | [#7235](https://github.com/ROCm/aiter/pull/7235) `[Config] Mistral Large 4 gfx950 tuned tables (TP8 + TP4)` | perf,rocm | ? | - |
+| P1 | [#7238](https://github.com/ROCm/aiter/pull/7238) `[FlyDSL] [AITER] FlyDSL a8w8 256x256 nb4/nb2 persistent kernel improvement` | perf,quant,rocm | ? | - |
+| P1 | [#7239](https://github.com/ROCm/aiter/pull/7239) `[Triton/Gluon] Pipelining for fused GDN decode kernel, add ba partials reduction` | perf,rocm | ? | - |
+| P1 | [#7254](https://github.com/ROCm/aiter/pull/7254) `[Config] Add MI350P (gfx950, 128 CU) a8w8 blockscale GEMM configs for Gemma-4-31B FP8-block` | quant,rocm | ? | - |
+| P0 | [#7258](https://github.com/ROCm/aiter/pull/7258) `[FlyDSL] QuickAllReduce INT4: E5M2 group scale so groups above 480 no longer clip` | quant,rocm | main | - |
+| P1 | [#7278](https://github.com/ROCm/aiter/issues/7278) `[Issue]: Triton MHA prefill attn_fwd (flash_attn_triton_amd) computes q/k/v/out row offsets in int32, which ov` | nvidia,risk,rocm | ? | - |
+| P1 | [#7289](https://github.com/ROCm/aiter/pull/7289) `[Triton/Gluon] [gfx1250] gemm_a16w16: GPT-OSS decode buckets retuned with rotating weights; LM-head files` | perf,rocm | ? | - |
+| P1 | [#7291](https://github.com/ROCm/aiter/pull/7291) `[ASM] [gfx1250] asm mha bf16 fwd: allow D64 without a sink` | rocm | ? | - |
+| P0 | [#7294](https://github.com/ROCm/aiter/pull/7294) `[FlyDSL] [CI] [MoE] gemm2: bound atomic rows by the sort's valid token count` | infra,rocm | main | - |
+| P0 | [#7297](https://github.com/ROCm/aiter/pull/7297) `[FlyDSL] [CI] [gfx950] Megamoe Ep Internode Impl` | infra,rocm | main | - |
+| P1 | [#7298](https://github.com/ROCm/aiter/pull/7298) `[Fix] Build DeepSeek RoPE caches on the default device, not hard-coded cuda` | bug,infra,nvidia | ? | - |
+| P0 | [#7317](https://github.com/ROCm/aiter/pull/7317) `[HIP] [CK] [FlyDSL] [GEMM][gfx950] Tune narrow-N MXFP4 with CSV-selected preshuffle kernels` | perf,quant,rocm | main | - |
 | - | [#7330](https://github.com/ROCm/aiter/pull/7330) `[CI] Scope test_moe_2stage.py to representative tokens in standard CI` | infra | ? | - |
-| - | [#7335](https://github.com/ROCm/aiter/pull/7335) `[Config] Qwen3.5-397B: FlyDSL rows for the 528-row MoE router GEMM (gfx950)` | rocm | ? | - |
-| - | [#7350](https://github.com/ROCm/aiter/issues/7350) `[Issue]: FlyDSL fused_compress_attn corrupts the first compressed entry of each sequence (negative-history sta` | perf,risk,rocm | ? | - |
-| - | [#7356](https://github.com/ROCm/aiter/issues/7356) `[Issue]: AITER_AR_1STAGE_MAX_KB is compared as bytes, not KiB, in the fused all-reduce one-stage limit` | perf,rocm | ? | - |
-| - | [#7357](https://github.com/ROCm/aiter/pull/7357) `[Bugfix] Clarify fused all-reduce limit units with MAX_BYTES` | perf | ? | - |
-| - | [#7361](https://github.com/ROCm/aiter/pull/7361) `[CK] [JIT] [aiter] Clamp FP8 per_Token / per_Tensor SiLU on #7019's runtime swiglu_limit` | infra,quant,rocm | main | - |
-| - | [#7371](https://github.com/ROCm/aiter/pull/7371) `[ASM] [HIP] perf(pa): update gfx950 unified MTP code objects` | perf,rocm | ? | - |
-| - | [#7376](https://github.com/ROCm/aiter/pull/7376) `[HIP] [Bugfix] Skip grouped top-k launches with zero tokens` | rocm | ? | - |
-| - | [#7381](https://github.com/ROCm/aiter/pull/7381) `[Config] [Tune] GLM-5.3 a8w8 blockscale GEMM rows for gfx950` | perf,quant,rocm | ? | - |
-| - | [#7385](https://github.com/ROCm/aiter/pull/7385) `[CI] ci: cache CK submodule checkout` | infra,perf | ? | - |
-| - | [#7388](https://github.com/ROCm/aiter/pull/7388) `[FlyDSL] [Misc] pa_decode: key the tile kernel on FlyDSL dtypes and drop the batch-first plan grid` | perf,rocm | ? | - |
-| - | [#7389](https://github.com/ROCm/aiter/pull/7389) `[Config] [Perf] Tune DeepSeek V4.1 EP16 A4W4 for routed and shared experts` | perf,quant | ? | - |
-| - | [#7407](https://github.com/ROCm/aiter/pull/7407) `[ASM] [HIP] [CI] Add gfx1250 MLA v4.1 a8w4 fused sparse prefill kernel` | infra,perf,rocm | ? | - |
-| - | [#7414](https://github.com/ROCm/aiter/pull/7414) `[Config] [Tuning][gfx950] Retune MiniMax-M3.1 TP4 A16W4 decode rows (E=128, top-4) for 8/16/32/64/128 tokens` | perf,quant,rocm | ? | - |
-| - | [#7421](https://github.com/ROCm/aiter/pull/7421) `[Triton/Gluon] [GFX12] A8K4V8 Attention` | rocm | ? | - |
+| P1 | [#7335](https://github.com/ROCm/aiter/pull/7335) `[Config] Qwen3.5-397B: FlyDSL rows for the 528-row MoE router GEMM (gfx950)` | rocm | ? | - |
+| P1 | [#7350](https://github.com/ROCm/aiter/issues/7350) `[Issue]: FlyDSL fused_compress_attn corrupts the first compressed entry of each sequence (negative-history sta` | perf,risk,rocm | ? | - |
+| P1 | [#7356](https://github.com/ROCm/aiter/issues/7356) `[Issue]: AITER_AR_1STAGE_MAX_KB is compared as bytes, not KiB, in the fused all-reduce one-stage limit` | perf,rocm | ? | - |
+| P1 | [#7357](https://github.com/ROCm/aiter/pull/7357) `[Bugfix] Clarify fused all-reduce limit units with MAX_BYTES` | perf | ? | - |
+| P0 | [#7361](https://github.com/ROCm/aiter/pull/7361) `[CK] [JIT] [aiter] Clamp FP8 per_Token / per_Tensor SiLU on #7019's runtime swiglu_limit` | infra,quant,rocm | main | - |
+| P1 | [#7371](https://github.com/ROCm/aiter/pull/7371) `[ASM] [HIP] perf(pa): update gfx950 unified MTP code objects` | perf,rocm | ? | - |
+| P1 | [#7376](https://github.com/ROCm/aiter/pull/7376) `[HIP] [Bugfix] Skip grouped top-k launches with zero tokens` | rocm | ? | - |
+| P1 | [#7381](https://github.com/ROCm/aiter/pull/7381) `[Config] [Tune] GLM-5.3 a8w8 blockscale GEMM rows for gfx950` | perf,quant,rocm | ? | - |
+| P1 | [#7385](https://github.com/ROCm/aiter/pull/7385) `[CI] ci: cache CK submodule checkout` | infra,perf | ? | - |
+| P1 | [#7388](https://github.com/ROCm/aiter/pull/7388) `[FlyDSL] [Misc] pa_decode: key the tile kernel on FlyDSL dtypes and drop the batch-first plan grid` | perf,rocm | ? | - |
+| P1 | [#7389](https://github.com/ROCm/aiter/pull/7389) `[Config] [Perf] Tune DeepSeek V4.1 EP16 A4W4 for routed and shared experts` | perf,quant | ? | - |
+| P1 | [#7407](https://github.com/ROCm/aiter/pull/7407) `[ASM] [HIP] [CI] Add gfx1250 MLA v4.1 a8w4 fused sparse prefill kernel` | infra,perf,rocm | ? | - |
+| P1 | [#7414](https://github.com/ROCm/aiter/pull/7414) `[Config] [Tuning][gfx950] Retune MiniMax-M3.1 TP4 A16W4 decode rows (E=128, top-4) for 8/16/32/64/128 tokens` | perf,quant,rocm | ? | - |
+| P1 | [#7421](https://github.com/ROCm/aiter/pull/7421) `[Triton/Gluon] [GFX12] A8K4V8 Attention` | rocm | ? | - |
 | - | [#7424](https://github.com/ROCm/aiter/pull/7424) `[FlyDSL] Move _e8m0_byte_to_f32 into mxfp4_gemm_common` | quant,rocm | ? | - |
-| - | [#7432](https://github.com/ROCm/aiter/pull/7432) `[HIP] perf(custom_ar): gfx1250 LL two-shot all-reduce for 1 MiB+ messages` | perf,rocm | ? | - |
-| - | [#7452](https://github.com/ROCm/aiter/pull/7452) `[HIP] fea: impl lamport allreduce on gfx9` | rocm | main | - |
-| - | [#7456](https://github.com/ROCm/aiter/pull/7456) `[Config] gfx1250: grouped-MoE tiles for Kimi-K2 Thinking TP8` | rocm | ? | - |
-| - | [#7457](https://github.com/ROCm/aiter/pull/7457) `[Config] Add gfx950 BF16 GEMM tunings for Gemma-4-26B-A4B` | perf,rocm | ? | - |
-| - | [#7462](https://github.com/ROCm/aiter/pull/7462) `[ASM] [HIP] Optimize gfx950 MXFP6 GEMMs for Ideogram DiT shapes` | perf,quant,rocm | ? | - |
-| - | [#7463](https://github.com/ROCm/aiter/pull/7463) `[HIP] Split MXFP6 GEMM launches whose output exceeds 2 GiB` | quant,rocm | ? | - |
-| - | [#7464](https://github.com/ROCm/aiter/pull/7464) `[HIP] [MLA] Align gfx942 QH64 FP8 page-size planning` | quant,rocm | ? | - |
-| - | [#7465](https://github.com/ROCm/aiter/pull/7465) `[Build] [RFC #7240] Kernel provider interface: configuration, priority, provenance, observability` | infra,perf | ? | - |
-| - | [#7466](https://github.com/ROCm/aiter/pull/7466) `[CI] Run the provider interface tests as a CPU-only gate on every PR` | infra | ? | - |
+| P1 | [#7432](https://github.com/ROCm/aiter/pull/7432) `[HIP] perf(custom_ar): gfx1250 LL two-shot all-reduce for 1 MiB+ messages` | perf,rocm | ? | - |
+| P0 | [#7452](https://github.com/ROCm/aiter/pull/7452) `[HIP] fea: impl lamport allreduce on gfx9` | rocm | main | - |
+| P1 | [#7456](https://github.com/ROCm/aiter/pull/7456) `[Config] gfx1250: grouped-MoE tiles for Kimi-K2 Thinking TP8` | rocm | ? | - |
+| P1 | [#7457](https://github.com/ROCm/aiter/pull/7457) `[Config] Add gfx950 BF16 GEMM tunings for Gemma-4-26B-A4B` | perf,rocm | ? | - |
+| P1 | [#7462](https://github.com/ROCm/aiter/pull/7462) `[ASM] [HIP] Optimize gfx950 MXFP6 GEMMs for Ideogram DiT shapes` | perf,quant,rocm | ? | - |
+| P1 | [#7463](https://github.com/ROCm/aiter/pull/7463) `[HIP] Split MXFP6 GEMM launches whose output exceeds 2 GiB` | quant,rocm | ? | - |
+| P1 | [#7464](https://github.com/ROCm/aiter/pull/7464) `[HIP] [MLA] Align gfx942 QH64 FP8 page-size planning` | quant,rocm | ? | - |
+| P1 | [#7465](https://github.com/ROCm/aiter/pull/7465) `[Build] [RFC #7240] Kernel provider interface: configuration, priority, provenance, observability` | infra,perf | ? | - |
+| P1 | [#7466](https://github.com/ROCm/aiter/pull/7466) `[CI] Run the provider interface tests as a CPU-only gate on every PR` | infra | ? | - |
 | - | [#7482](https://github.com/ROCm/aiter/pull/7482) `[CI] Make PR Self-Review verdicts evidence-driven instead of event-driven` | infra | ? | - |
-| - | [#7484](https://github.com/ROCm/aiter/pull/7484) `[JIT] Route five ops through the provider interface, and let a compiled op report its signature` |  | ? | - |
-| - | [#7489](https://github.com/ROCm/aiter/pull/7489) `[Triton/Gluon] fused_clamp_act_mul: accept rows of whole quant groups` | perf,quant,rocm | ? | - |
-| - | [#7494](https://github.com/ROCm/aiter/pull/7494) `[Triton/Gluon] [FlyDSL] [MoE] Kimi-K3 HERD on gfx1250: K+1 sigmoid top-k and one route+psum kernel` | perf,rocm | ? | - |
-| - | [#7499](https://github.com/ROCm/aiter/pull/7499) `[HIP] fea: impl gfx1250 lamport ar+rms` | rocm | ? | - |
-| - | [#7500](https://github.com/ROCm/aiter/pull/7500) `[FlyDSL] [MoE] Support row-strided MXFP4 activations` | quant,rocm | ? | - |
-| - | [#7501](https://github.com/ROCm/aiter/pull/7501) `[FlyDSL] [MoE] [gfx1250] give each MX combine chunk its own scale line` | quant,rocm | ? | - |
-| - | [#7503](https://github.com/ROCm/aiter/pull/7503) `[HIP] [FlyDSL] Conv3d gfx1250 Optimization` | perf,rocm | ? | - |
-| - | [#7505](https://github.com/ROCm/aiter/pull/7505) `[OPUS] [gfx1250] Clear HIP sticky error after A0 strict-CO probe failure (#7185 follow-up)` | rocm | ? | - |
+| P1 | [#7484](https://github.com/ROCm/aiter/pull/7484) `[JIT] Route five ops through the provider interface, and let a compiled op report its signature` |  | ? | - |
+| P1 | [#7489](https://github.com/ROCm/aiter/pull/7489) `[Triton/Gluon] fused_clamp_act_mul: accept rows of whole quant groups` | perf,quant,rocm | ? | - |
+| P1 | [#7494](https://github.com/ROCm/aiter/pull/7494) `[Triton/Gluon] [FlyDSL] [MoE] Kimi-K3 HERD on gfx1250: K+1 sigmoid top-k and one route+psum kernel` | perf,rocm | ? | - |
+| P1 | [#7499](https://github.com/ROCm/aiter/pull/7499) `[HIP] fea: impl gfx1250 lamport ar+rms` | rocm | ? | - |
+| P1 | [#7500](https://github.com/ROCm/aiter/pull/7500) `[FlyDSL] [MoE] Support row-strided MXFP4 activations` | quant,rocm | ? | - |
+| P1 | [#7501](https://github.com/ROCm/aiter/pull/7501) `[FlyDSL] [MoE] [gfx1250] give each MX combine chunk its own scale line` | quant,rocm | ? | - |
+| P1 | [#7503](https://github.com/ROCm/aiter/pull/7503) `[HIP] [FlyDSL] Conv3d gfx1250 Optimization` | perf,rocm | ? | - |
+| P1 | [#7505](https://github.com/ROCm/aiter/pull/7505) `[OPUS] [gfx1250] Clear HIP sticky error after A0 strict-CO probe failure (#7185 follow-up)` | rocm | ? | - |
 | - | [#7507](https://github.com/ROCm/aiter/pull/7507) `[Config] [gfx1250] Tune MiniMax-M3 DP4/EP4 dense GEMMs` | perf,rocm | ? | - |
-| - | [#7513](https://github.com/ROCm/aiter/pull/7513) `[Triton/Gluon] [Config] gfx950: tune gemm_a16w16 for kimik3/glm5/qwen3.5 model shapes` | perf,rocm | ? | - |
-| - | [#7515](https://github.com/ROCm/aiter/pull/7515) `[Config] [Tuning] Add Kimi-K3 gfx950 BF16 decode rows for qkv_a+gate a…` | perf,rocm | ? | - |
-| - | [#7518](https://github.com/ROCm/aiter/pull/7518) `[Triton/Gluon] Cast strides to int64 in MHA prefill attn_fwd to prevent overflow` | risk,rocm | ? | - |
-| - | [#7534](https://github.com/ROCm/aiter/issues/7534) `[Issue]: module_moe_sorting_opus does not build for gfx1250 (DPP row_bcast in dpp_inclusive_scan_wave)` | infra,rocm | ? | - |
-| - | [#7535](https://github.com/ROCm/aiter/issues/7535) `[Issue]: FlyDSL AOT replay aborts on ROCm 10: ROCR_VISIBLE_DEVICES=-1 is rejected` | rocm | ? | - |
-| - | [#7540](https://github.com/ROCm/aiter/pull/7540) `[HIP] Fix/7534 moe sorting opus gfx1250` | bug,rocm | ? | - |
+| P1 | [#7513](https://github.com/ROCm/aiter/pull/7513) `[Triton/Gluon] [Config] gfx950: tune gemm_a16w16 for kimik3/glm5/qwen3.5 model shapes` | perf,rocm | ? | - |
+| P1 | [#7515](https://github.com/ROCm/aiter/pull/7515) `[Config] [Tuning] Add Kimi-K3 gfx950 BF16 decode rows for qkv_a+gate a…` | perf,rocm | ? | - |
+| P1 | [#7518](https://github.com/ROCm/aiter/pull/7518) `[Triton/Gluon] Cast strides to int64 in MHA prefill attn_fwd to prevent overflow` | risk,rocm | main | - |
+| P1 | [#7534](https://github.com/ROCm/aiter/issues/7534) `[Issue]: module_moe_sorting_opus does not build for gfx1250 (DPP row_bcast in dpp_inclusive_scan_wave)` | infra,rocm | ? | - |
+| P1 | [#7535](https://github.com/ROCm/aiter/issues/7535) `[Issue]: FlyDSL AOT replay aborts on ROCm 10: ROCR_VISIBLE_DEVICES=-1 is rejected` | rocm | ? | - |
+| P1 | [#7540](https://github.com/ROCm/aiter/pull/7540) `[HIP] Fix/7534 moe sorting opus gfx1250` | bug,rocm | ? | - |
 | - | [#7541](https://github.com/ROCm/aiter/pull/7541) `[CI] Skip Flash Attention CI on draft PRs` | infra | ? | - |
-| - | [#7546](https://github.com/ROCm/aiter/pull/7546) `[HIP] [FlyDSL] [CI] Add tunable HGEMM K-stagger and B streaming loads` | infra,rocm | ? | - |
-| - | [#7550](https://github.com/ROCm/aiter/pull/7550) `[FlyDSL] fused_compress_attn: zero padding kv in Phase 1` | perf,rocm | ? | - |
-| - | [#7551](https://github.com/ROCm/aiter/pull/7551) `[FlyDSL] [AOT] Hide the GPUs from replays with empty device lists, not -1` | rocm | ? | - |
-| - | [#7553](https://github.com/ROCm/aiter/pull/7553) `[FlyDSL] [FMHA] Paged-KV forward prefill` | rocm | ? | - |
-| - | [#7555](https://github.com/ROCm/aiter/pull/7555) `[HIP] perf: gfx1250 LL all-gather lines carry 12 bytes and one flag` | perf,rocm | ? | - |
-| - | [#7559](https://github.com/ROCm/aiter/pull/7559) `[ASM] [HIP] [gfx1250] asm mha bf16 hd256: batch and varlen forward` | rocm | ? | - |
-| - | [#7560](https://github.com/ROCm/aiter/pull/7560) `[CI] Add area contacts and review guide; document merge rules and review timeline` | infra | ? | - |
-| - | [#7563](https://github.com/ROCm/aiter/pull/7563) `review-pr: route the design judgment instead of making it (Step 7.8)` |  | ? | - |
-| - | [#7568](https://github.com/ROCm/aiter/pull/7568) `[CI] Install the amd-mori 1.2.5 release for the multi-GPU tests` | infra,rocm | ? | - |
-| - | [#7570](https://github.com/ROCm/aiter/pull/7570) `[HIP] [Perf] Add a wide split-K reduce for MLA decode and verify with few units and many splits` | perf,rocm | ? | - |
-| - | [#7572](https://github.com/ROCm/aiter/pull/7572) `[FlyDSL] [MoE] comm-fused MoE: launch clear_missing_routes over the whole route scratch` | perf,rocm | ? | - |
-| - | [#7573](https://github.com/ROCm/aiter/pull/7573) `[HIP] [JIT] gfx1250 Mega-MHC: XCD-local and clustered split tiles, sublayer TDM, res_preshuffle helpers` | rocm | ? | - |
-| - | [#7574](https://github.com/ROCm/aiter/pull/7574) `[ASM] Fix LDS race between V reads and R re-layout in gfx950 BF16 QH3…` | bug,risk,rocm | main | - |
+| P1 | [#7546](https://github.com/ROCm/aiter/pull/7546) `[HIP] [FlyDSL] [CI] Add tunable HGEMM K-stagger and B streaming loads` | infra,rocm | ? | - |
+| P1 | [#7550](https://github.com/ROCm/aiter/pull/7550) `[FlyDSL] fused_compress_attn: zero padding kv in Phase 1` | perf,rocm | ? | - |
+| P1 | [#7551](https://github.com/ROCm/aiter/pull/7551) `[FlyDSL] [AOT] Hide the GPUs from replays with empty device lists, not -1` | rocm | ? | - |
+| P1 | [#7553](https://github.com/ROCm/aiter/pull/7553) `[FlyDSL] [FMHA] Paged-KV forward prefill` | rocm | ? | - |
+| P1 | [#7555](https://github.com/ROCm/aiter/pull/7555) `[HIP] perf: gfx1250 LL all-gather lines carry 12 bytes and one flag` | perf,rocm | ? | - |
+| P1 | [#7559](https://github.com/ROCm/aiter/pull/7559) `[ASM] [HIP] [gfx1250] asm mha bf16 hd256: batch and varlen forward` | rocm | ? | - |
+| P1 | [#7560](https://github.com/ROCm/aiter/pull/7560) `[CI] Add area contacts and review guide; document merge rules and review timeline` | infra | ? | - |
+| P1 | [#7563](https://github.com/ROCm/aiter/pull/7563) `review-pr: route the design judgment instead of making it (Step 7.8)` |  | ? | - |
+| P1 | [#7568](https://github.com/ROCm/aiter/pull/7568) `[CI] Install the amd-mori 1.2.5 release for the multi-GPU tests` | infra,rocm | ? | - |
+| P1 | [#7570](https://github.com/ROCm/aiter/pull/7570) `[HIP] [Perf] Add a wide split-K reduce for MLA decode and verify with few units and many splits` | perf,rocm | ? | - |
+| P1 | [#7572](https://github.com/ROCm/aiter/pull/7572) `[FlyDSL] [MoE] comm-fused MoE: launch clear_missing_routes over the whole route scratch` | perf,rocm | ? | - |
+| P1 | [#7573](https://github.com/ROCm/aiter/pull/7573) `[HIP] [JIT] gfx1250 Mega-MHC: XCD-local and clustered split tiles, sublayer TDM, res_preshuffle helpers` | rocm | ? | - |
+| P0 | [#7574](https://github.com/ROCm/aiter/pull/7574) `[ASM] Fix LDS race between V reads and R re-layout in gfx950 BF16 QH3…` | bug,risk,rocm | main | - |
 | - | [#7583](https://github.com/ROCm/aiter/pull/7583) `[FlyDSL] Fix main CI: missing DROPPED_ROUTE_ROW import in moe_contiguous_psum` | bug,infra,rocm | ? | - |
 | - | [#7584](https://github.com/ROCm/aiter/pull/7584) `[HIP] [Feature] Add group/varlen and sliding-window support to the hd128 opus forward` | rocm | ? | - |
 | - | [#7591](https://github.com/ROCm/aiter/pull/7591) `[Triton/Gluon] GEMM: compute GRID_MN at runtime instead of as a constexpr` | rocm | ? | - |
@@ -152,25 +152,25 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7601](https://github.com/ROCm/aiter/pull/7601) `[FlyDSL] [Bugfix] Zero consumed kv in the gfx1250 HCA Phase 2 loop` | rocm | ? | - |
 | - | [#7602](https://github.com/ROCm/aiter/pull/7602) `[Config] [MoE] retune DeepSeek-V4.1-Flash TP2 decode buckets` | perf | ? | - |
 | - | [#7610](https://github.com/ROCm/aiter/issues/7610) `PR#6952 breaks ATOM main: pa_mqa_logits_mxfp4_plan removed without backward compat` | quant | ? | - |
-| - | [#7613](https://github.com/ROCm/aiter/pull/7613) `[Bugfix] MLA decode: merge only the splits gfx950 fp8 gqa16 stage 1 writes` | quant,rocm | ? | - |
+| P1 | [#7613](https://github.com/ROCm/aiter/pull/7613) `[Bugfix] MLA decode: merge only the splits gfx950 fp8 gqa16 stage 1 writes` | quant,rocm | ? | - |
 | - | [#7615](https://github.com/ROCm/aiter/pull/7615) `review-pr: the queue notice was wrong in both directions` |  | ? | - |
-| - | [#7617](https://github.com/ROCm/aiter/pull/7617) `[ASM] [Bugfix] Fix LDS race in gfx950 FP8 QH16 qseqlen1 MLA decode` | bug,quant,risk,rocm | main | - |
+| P0 | [#7617](https://github.com/ROCm/aiter/pull/7617) `[ASM] [Bugfix] Fix LDS race in gfx950 FP8 QH16 qseqlen1 MLA decode` | bug,quant,risk,rocm | main | - |
 | - | [#7619](https://github.com/ROCm/aiter/pull/7619) `[FlyDSL] gfx1250 PA decode: wider page-local softmax steps, shared clusters and wave-pair MTP4 for MiniMax-M3` | rocm | ? | - |
 | - | [#7620](https://github.com/ROCm/aiter/pull/7620) ` [MoE] [FlyDSL] BM16 adaptive aux sort writes into the caller's output; retune kimik3 a8w4 token-16 inter-384` | perf,rocm | ? | - |
-| - | [#7622](https://github.com/ROCm/aiter/pull/7622) `[ASM] Fix LDS races in gfx950 FP8 QH16 qseqlen1 persistent MLA decode` | bug,quant,rocm | main | - |
+| P0 | [#7622](https://github.com/ROCm/aiter/pull/7622) `[ASM] Fix LDS races in gfx950 FP8 QH16 qseqlen1 persistent MLA decode` | bug,quant,rocm | main | - |
 | - | [#7624](https://github.com/ROCm/aiter/pull/7624) `[Perf] DeepSeek-V4.1-Flash TP2 decode: indexer top-k split gate and router GEMM row` | perf | ? | - |
 | - | [#7634](https://github.com/ROCm/aiter/pull/7634) `[CI] Run Windows smoke on Radeon R9700 runner` | infra | ? | - |
 | - | [#7636](https://github.com/ROCm/aiter/pull/7636) `[CI] CI: auto-update split test times` | infra | ? | - |
 | - | [#7638](https://github.com/ROCm/aiter/pull/7638) `[CI] review-pr: watch for review requests starved of a hosted runner` | infra | ? | - |
-| - | [#7639](https://github.com/ROCm/aiter/issues/7639) `[MLA][gfx950] non-persistent fp8 gqa16 qlen 3-4 (mla_a8w8_qh64_qseqlen4_gqaratio16) computes only KV split 0 a` | quant,rocm | ? | - |
+| P0 | [#7639](https://github.com/ROCm/aiter/issues/7639) `[MLA][gfx950] non-persistent fp8 gqa16 qlen 3-4 (mla_a8w8_qh64_qseqlen4_gqaratio16) computes only KV split 0 a` | quant,rocm | ? | - |
 | - | [#7641](https://github.com/ROCm/aiter/pull/7641) `[CI] CI: add MI300X standard label trigger` | infra,rocm | ? | - |
 | - | [#7642](https://github.com/ROCm/aiter/pull/7642) `review-pr: a queued run past its gate is the box's queue, not a starved one` |  | ? | - |
-| - | [#7644](https://github.com/ROCm/aiter/pull/7644) `[Config] [Perf] Tune DeepSeek-V4-Pro small-M FP8 GEMMs on gfx1250` | perf,quant,rocm | ? | - |
+| P1 | [#7644](https://github.com/ROCm/aiter/pull/7644) `[Config] [Perf] Tune DeepSeek-V4-Pro small-M FP8 GEMMs on gfx1250` | perf,quant,rocm | ? | - |
 | - | [#7645](https://github.com/ROCm/aiter/pull/7645) `[CI] Fix SGLang downstream human-eval patches for $CI_CONTAINER_NAME` | bug,infra | ? | - |
 | - | [#7646](https://github.com/ROCm/aiter/issues/7646) `mxfp4_moe_sort_fwd zeroes the last token's final scales when K // 32 is not a multiple of 4 (e.g. K=2880)` | quant | ? | - |
 | - | [#7647](https://github.com/ROCm/aiter/pull/7647) `MHA v4: fix torch 2.10 Dynamo graph break` | bug,infra,rocm | ? | - |
 | - | [#7652](https://github.com/ROCm/aiter/pull/7652) `[FlyDSL] [AOT] Scan gfx1250 GEMM rows at representative M, not every M` | rocm | ? | - |
-| - | [#7653](https://github.com/ROCm/aiter/pull/7653) `[HIP] [Bugfix] mxfp4_moe_sort: keep the last row's tail scales when model_dim / 32 is not a multiple of 4` | quant,rocm | main | - |
+| P0 | [#7653](https://github.com/ROCm/aiter/pull/7653) `[HIP] [Bugfix] mxfp4_moe_sort: keep the last row's tail scales when model_dim / 32 is not a multiple of 4` | quant,rocm | main | - |
 | - | [#7654](https://github.com/ROCm/aiter/pull/7654) `[RFC #7240] Let a provider report what a kernel costs, and record it unchanged` | bug,perf | ? | - |
 | - | [#7655](https://github.com/ROCm/aiter/pull/7655) `[FlyDSL] V0.4.2 Tdm new interface refactor: make_tdm_atom -> make_tiled_tdm_atom` | rocm | ? | - |
 | - | [#7656](https://github.com/ROCm/aiter/pull/7656) `[Config] [DSv4.1] gfx950 FP8 fused_moe: retune TP4 prefill rows (token 4096-16384)` | perf,quant,rocm | ? | - |
@@ -183,10 +183,10 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7694](https://github.com/ROCm/aiter/pull/7694) `[CI] docker_pull_with_retry: Fall back to mirror.gcr.io when a Docker Hub pull fails` | infra | ? | - |
 | - | [#7695](https://github.com/ROCm/aiter/pull/7695) `[Docs] [RFC #7240] How to serve an AITER op from an out-of-tree kernel library` | perf,rocm | ? | - |
 | - | [#7696](https://github.com/ROCm/aiter/pull/7696) `[RFC #7240] aiter-kernel-plugin skill: how an agent ports a kernel library onto the interface` | perf,rocm | ? | - |
-| - | [#7700](https://github.com/ROCm/aiter/pull/7700) `[FlyDSL] [Perf] pa_decode: gfx950 fused BF16 MTP4 verify tile, decode load scheduling and lean FP8 MTP4; four ` | perf,quant,rocm | ? | - |
+| P1 | [#7700](https://github.com/ROCm/aiter/pull/7700) `[FlyDSL] [Perf] pa_decode: gfx950 fused BF16 MTP4 verify tile, decode load scheduling and lean FP8 MTP4; four ` | perf,quant,rocm | ? | - |
 | - | [#7702](https://github.com/ROCm/aiter/pull/7702) `[ASM] [HIP] Build gfx1250 MLA v4 sparse prefill from in-tree sources` | infra,rocm | ? | - |
 | - | [#7708](https://github.com/ROCm/aiter/pull/7708) `review-pr: register the ten rule ids derive() can emit but ALL_RULES omits` |  | ? | - |
-| - | [#7709](https://github.com/ROCm/aiter/pull/7709) `[FlyDSL] [Perf] pa_decode: gfx942 schedule tuning (K/V streaming, latency hiding, grid-size policies)` | perf,rocm | main | - |
+| P0 | [#7709](https://github.com/ROCm/aiter/pull/7709) `[FlyDSL] [Perf] pa_decode: gfx942 schedule tuning (K/V streaming, latency hiding, grid-size policies)` | perf,rocm | main | - |
 | - | [#7713](https://github.com/ROCm/aiter/pull/7713) `[Test] [RFC #7240] Pin what a provider's first call may do inside a graph capture` | infra | ? | - |
 | - | [#7723](https://github.com/ROCm/aiter/pull/7723) `[Test] test_custom_allreduce_lamport: one PASS/FAIL line per case` | infra | ? | - |
 | - | [#7724](https://github.com/ROCm/aiter/pull/7724) `[FlyDSL] [Perf] gfx1250 gather_kv_b_proj: write FP8 K/V with caller descales` | perf,quant,rocm | ? | - |
@@ -198,7 +198,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7758](https://github.com/ROCm/aiter/pull/7758) `[ASM] Mha v4: shorter gfx950 hd128/hd256 prologue` | rocm | ? | - |
 | - | [#7765](https://github.com/ROCm/aiter/pull/7765) `[FlyDSL] fix aot/flydsl/mxfp4_moe.py test` | bug,quant,rocm | ? | - |
 | - | [#7774](https://github.com/ROCm/aiter/pull/7774) `[FlyDSL] Fix a16wfp4 stage2 cache-key test for FlyDSL 0.5.0` | bug,perf,rocm | ? | - |
-| - | [#7784](https://github.com/ROCm/aiter/pull/7784) `[ASM] [HIP] [JIT] [Perf] Replace gfx950 MLA v4 prefill 16mx8 kernels with 32mx4 kernels` | infra,perf,rocm | ? | - |
+| P1 | [#7784](https://github.com/ROCm/aiter/pull/7784) `[ASM] [HIP] [JIT] [Perf] Replace gfx950 MLA v4 prefill 16mx8 kernels with 32mx4 kernels` | infra,perf,rocm | ? | - |
 | - | [#7787](https://github.com/ROCm/aiter/pull/7787) `[RFC #7240] Document every routed contract, and gate that it stays documented` |  | ? | - |
 | - | [#7791](https://github.com/ROCm/aiter/pull/7791) `[OPUS] [RFC #7240] Route MLA sparse prefill where its two public spellings converge` | infra | ? | - |
 | - | [#7794](https://github.com/ROCm/aiter/pull/7794) `[ASM] [HIP] Sol-Attn: gfx950 kernels` | perf,rocm | ? | - |
@@ -214,7 +214,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7851](https://github.com/ROCm/aiter/pull/7851) `[HIP] [FlyDSL] [gfx1250] Port BF16/FP16 TDM GEMM into the existing AITER tuner` | perf,rocm | ? | - |
 | - | [#7853](https://github.com/ROCm/aiter/pull/7853) `[ASM] [HIP] [gfx1250] asm mha bf16 d192x128 varlen: launch options per call` | rocm | ? | - |
 | - | [#7854](https://github.com/ROCm/aiter/pull/7854) `[RFC #7240] Route the three remaining DSV4.1 ops that already have a guard` | infra | ? | - |
-| - | [#7858](https://github.com/ROCm/aiter/pull/7858) `[FlyDSL] [Perf] pa_decode: K/V streaming, MTP query split and sparse split-major on gfx950` | perf,rocm | ? | - |
+| P1 | [#7858](https://github.com/ROCm/aiter/pull/7858) `[FlyDSL] [Perf] pa_decode: K/V streaming, MTP query split and sparse split-major on gfx950` | perf,rocm | ? | - |
 | - | [#7871](https://github.com/ROCm/aiter/pull/7871) `[Triton/Gluon] [Bugfix] Guard gfx1250 scheduling hints on older Triton` | rocm | ? | - |
 | - | [#7874](https://github.com/ROCm/aiter/pull/7874) `[Plugin] Route topk_gating and top_k_per_row_decode as custom ops` | infra | ? | - |
 | - | [#7875](https://github.com/ROCm/aiter/pull/7875) `[Triton/Gluon] [Plugin] Route fused_dual_rmsnorm_mxfp8_quant` | infra,perf,quant,rocm | ? | - |
@@ -226,7 +226,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7897](https://github.com/ROCm/aiter/pull/7897) `[ASM] [HIP] Walk prefix and extend as one tile stream in gfx950 MLA sparse prefill` | rocm | ? | - |
 | - | [#7903](https://github.com/ROCm/aiter/pull/7903) `[HIP] [MSA] Fix nvfp4 prefill multi-arch wheel build` | bug,infra,quant,rocm | ? | - |
 | - | [#7908](https://github.com/ROCm/aiter/pull/7908) `[Triton/Gluon] fused_clamp_act_mul: guard the Triton quant tile width` | perf,quant,rocm | ? | - |
-| - | [#7915](https://github.com/ROCm/aiter/pull/7915) `[Config] [MoE] Add gfx942 FMoE rows for Muse Spark Open PTPC FP8 under expert parallelism` | quant,rocm | ? | - |
+| P1 | [#7915](https://github.com/ROCm/aiter/pull/7915) `[Config] [MoE] Add gfx942 FMoE rows for Muse Spark Open PTPC FP8 under expert parallelism` | quant,rocm | ? | - |
 | - | [#7919](https://github.com/ROCm/aiter/pull/7919) `[FlyDSL] [gfx1250] Absorb grouped MoE GEMM1 prefill opts into mega stage-1` | rocm | ? | - |
 | - | [#7920](https://github.com/ROCm/aiter/pull/7920) `[FlyDSL] [gfx1250] Pass arg_scale_out on every cached launch_gemm_a8w8 launch` | quant,rocm | ? | - |
 | - | [#7924](https://github.com/ROCm/aiter/pull/7924) `[FlyDSL] [gfx1250] Compile mxfp8_128 GEMMs whose scale-B tile is one element` | quant,rocm | ? | - |
@@ -237,69 +237,69 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#7230](https://github.com/ROCm/aiter/pull/7230) `[HIP] [Tuning] [gfx950] Add MiniMax-M3 MXFP4 MoE configs for TP8 (E=128, top-4, inter_dim 384)` | perf,quant,rocm | main | - |
-| - | [#7349](https://github.com/ROCm/aiter/pull/7349) `[FlyDSL] Fix LDS race in MoE sorting p23 kernel` | bug,perf,risk,rocm | main | - |
-| - | [#7355](https://github.com/ROCm/aiter/pull/7355) `[FlyDSL] [Bugfix] MoE sorting: allocate the multiphase workspace per call` | rocm | main | - |
-| - | [#7393](https://github.com/ROCm/aiter/issues/7393) `[MLA] gfx942 persistent a8w8 decode returns output / kv_scale at q_len 3 and 4` | quant,rocm | ? | - |
-| - | [#7509](https://github.com/ROCm/aiter/pull/7509) `[OPUS] [Bugfix] Fix LDS race in gfx942 A8W8 blockscale B-preshuffle GEMM` | bug,quant,risk,rocm | main | - |
-| - | [#7536](https://github.com/ROCm/aiter/issues/7536) `[Issue]: grouped MoE GEMM tests require an AOT entry for moe_fused_route_quant_scatter that run_aot does not b` | infra,perf,quant | ? | - |
-| - | [#7537](https://github.com/ROCm/aiter/pull/7537) `[FlyDSL] FP4 row-group MQA logits: opt-in |s| epilogue and 16-key tile maxima` | quant,rocm | ? | - |
-| - | [#7538](https://github.com/ROCm/aiter/pull/7538) `[CK] [JIT] [Feature] Add model-specific MXFP4 A4W4 tuning profiles` | perf,quant | ? | - |
-| - | [#7539](https://github.com/ROCm/aiter/pull/7539) `[Triton/Gluon] Clamp gfx950 unified attention block-table prefetch in all modes` | rocm | ? | - |
-| - | [#7542](https://github.com/ROCm/aiter/pull/7542) `[CK] [FlyDSL] Dev/ms ep32 support` | rocm | ? | - |
-| - | [#7543](https://github.com/ROCm/aiter/pull/7543) `[FlyDSL] perf(flydsl): fold the gfx1250 TP MoE route into the activation quant` | perf,quant,rocm | ? | - |
-| - | [#7544](https://github.com/ROCm/aiter/pull/7544) `[Triton/Gluon] Explicit tl.fma in blockscale GEMM kernels for Triton 3.9` | infra,perf,quant,rocm | ? | - |
-| - | [#7547](https://github.com/ROCm/aiter/pull/7547) `[FlyDSL] perf(flydsl): route the gfx1250 TP prefill MoE in one launch` | perf,rocm | ? | - |
-| - | [#7548](https://github.com/ROCm/aiter/pull/7548) `[HIP] [FlyDSL] Port gfx1250 TDM HGEMM and source tuning space` | perf,rocm | ? | - |
-| - | [#7552](https://github.com/ROCm/aiter/pull/7552) `[HIP] getPaddedM: fall back to the M=16 row for M<16 when no power-of-two row is tuned` | perf,rocm | main | - |
-| - | [#7554](https://github.com/ROCm/aiter/pull/7554) `[Triton/Gluon] [Bugfix] gemm_afp4wfp4: mask K-tail scales with 0, not 127` | quant,rocm | main | - |
-| - | [#7556](https://github.com/ROCm/aiter/pull/7556) `[FlyDSL] [QSA] Sparse prefill attention on gfx950: union and packed-direct ports, strided K/V, routing` | rocm | ? | - |
-| - | [#7558](https://github.com/ROCm/aiter/pull/7558) `[fused_moe] Keep Swiglu MXFP4 A4W4 off a numerically-broken shape` | perf,quant | main | - |
-| - | [#7564](https://github.com/ROCm/aiter/pull/7564) `[Triton/Gluon] gfx950: add opt-in ping-pong Gluon kernel for MXFP4 GEMM` | infra,perf,quant,rocm | ? | - |
-| - | [#7565](https://github.com/ROCm/aiter/pull/7565) `[MOE] Rotate the SwiGLU output between the two GEMMs` |  | ? | - |
-| - | [#7566](https://github.com/ROCm/aiter/pull/7566) `[Triton/Gluon] [gfx950] One query block per short sequence; split-KV and 128-key tile for decode` | rocm | main | - |
-| - | [#7567](https://github.com/ROCm/aiter/pull/7567) `[FlyDSL] [Bugfix] Fix MoE XCD swizzle on grids not divisible by 8` | bug,rocm | main | - |
-| - | [#7569](https://github.com/ROCm/aiter/pull/7569) `[HIP] [Bugfix] Saturate the fp8 rope output of fused_qk_rope_concat_and_cache_mla` | perf,quant,rocm | ? | - |
-| - | [#7571](https://github.com/ROCm/aiter/pull/7571) `[Docs] Update ruff version in contribution guidelines to match CI` | infra | ? | - |
-| - | [#7576](https://github.com/ROCm/aiter/pull/7576) `[HIP] [Bugfix] sample: Map exponential's top uniform bucket to a positive sample` | rocm | ? | - |
-| - | [#7577](https://github.com/ROCm/aiter/pull/7577) `[Triton] [Config] Add gfx1201 gemm_a16w4 configs` | quant,rocm | ? | - |
-| - | [#7580](https://github.com/ROCm/aiter/pull/7580) `[Tune] GLM-5 MQA logits: retune with clean_logits=False, add GLM-5.3-Flash rows` | perf | ? | - |
-| - | [#7581](https://github.com/ROCm/aiter/pull/7581) `[Config] [Perf] Retune DeepSeek-V4.1-Flash EP4 MXFP4 (a4w4) fused-MoE rows for gfx950` | infra,perf,quant,rocm | ? | - |
+| P0 | [#7230](https://github.com/ROCm/aiter/pull/7230) `[HIP] [Tuning] [gfx950] Add MiniMax-M3 MXFP4 MoE configs for TP8 (E=128, top-4, inter_dim 384)` | perf,quant,rocm | main | - |
+| P0 | [#7349](https://github.com/ROCm/aiter/pull/7349) `[FlyDSL] Fix LDS race in MoE sorting p23 kernel` | bug,perf,risk,rocm | main | - |
+| P0 | [#7355](https://github.com/ROCm/aiter/pull/7355) `[FlyDSL] [Bugfix] MoE sorting: allocate the multiphase workspace per call` | rocm | main | - |
+| P0 | [#7393](https://github.com/ROCm/aiter/issues/7393) `[MLA] gfx942 persistent a8w8 decode returns output / kv_scale at q_len 3 and 4` | quant,rocm | ? | - |
+| P0 | [#7509](https://github.com/ROCm/aiter/pull/7509) `[OPUS] [Bugfix] Fix LDS race in gfx942 A8W8 blockscale B-preshuffle GEMM` | bug,quant,risk,rocm | main | - |
+| P1 | [#7536](https://github.com/ROCm/aiter/issues/7536) `[Issue]: grouped MoE GEMM tests require an AOT entry for moe_fused_route_quant_scatter that run_aot does not b` | infra,perf,quant | ? | - |
+| P1 | [#7537](https://github.com/ROCm/aiter/pull/7537) `[FlyDSL] FP4 row-group MQA logits: opt-in \|s\| epilogue and 16-key tile maxima` | quant,rocm | ? | - |
+| P1 | [#7538](https://github.com/ROCm/aiter/pull/7538) `[CK] [JIT] [Feature] Add model-specific MXFP4 A4W4 tuning profiles` | perf,quant | ? | - |
+| P1 | [#7539](https://github.com/ROCm/aiter/pull/7539) `[Triton/Gluon] Clamp gfx950 unified attention block-table prefetch in all modes` | rocm | ? | - |
+| P1 | [#7542](https://github.com/ROCm/aiter/pull/7542) `[CK] [FlyDSL] Dev/ms ep32 support` | rocm | ? | - |
+| P1 | [#7543](https://github.com/ROCm/aiter/pull/7543) `[FlyDSL] perf(flydsl): fold the gfx1250 TP MoE route into the activation quant` | perf,quant,rocm | ? | - |
+| P1 | [#7544](https://github.com/ROCm/aiter/pull/7544) `[Triton/Gluon] Explicit tl.fma in blockscale GEMM kernels for Triton 3.9` | infra,perf,quant,rocm | ? | - |
+| P1 | [#7547](https://github.com/ROCm/aiter/pull/7547) `[FlyDSL] perf(flydsl): route the gfx1250 TP prefill MoE in one launch` | perf,rocm | ? | - |
+| P1 | [#7548](https://github.com/ROCm/aiter/pull/7548) `[HIP] [FlyDSL] Port gfx1250 TDM HGEMM and source tuning space` | perf,rocm | ? | - |
+| P0 | [#7552](https://github.com/ROCm/aiter/pull/7552) `[HIP] getPaddedM: fall back to the M=16 row for M<16 when no power-of-two row is tuned` | perf,rocm | main | - |
+| P0 | [#7554](https://github.com/ROCm/aiter/pull/7554) `[Triton/Gluon] [Bugfix] gemm_afp4wfp4: mask K-tail scales with 0, not 127` | quant,rocm | main | - |
+| P1 | [#7556](https://github.com/ROCm/aiter/pull/7556) `[FlyDSL] [QSA] Sparse prefill attention on gfx950: union and packed-direct ports, strided K/V, routing` | rocm | ? | - |
+| P0 | [#7558](https://github.com/ROCm/aiter/pull/7558) `[fused_moe] Keep Swiglu MXFP4 A4W4 off a numerically-broken shape` | perf,quant | main | - |
+| P1 | [#7564](https://github.com/ROCm/aiter/pull/7564) `[Triton/Gluon] gfx950: add opt-in ping-pong Gluon kernel for MXFP4 GEMM` | infra,perf,quant,rocm | ? | - |
+| P1 | [#7565](https://github.com/ROCm/aiter/pull/7565) `[MOE] Rotate the SwiGLU output between the two GEMMs` |  | ? | - |
+| P0 | [#7566](https://github.com/ROCm/aiter/pull/7566) `[Triton/Gluon] [gfx950] One query block per short sequence; split-KV and 128-key tile for decode` | rocm | main | - |
+| P0 | [#7567](https://github.com/ROCm/aiter/pull/7567) `[FlyDSL] [Bugfix] Fix MoE XCD swizzle on grids not divisible by 8` | bug,rocm | main | - |
+| P1 | [#7569](https://github.com/ROCm/aiter/pull/7569) `[HIP] [Bugfix] Saturate the fp8 rope output of fused_qk_rope_concat_and_cache_mla` | perf,quant,rocm | ? | - |
+| P1 | [#7571](https://github.com/ROCm/aiter/pull/7571) `[Docs] Update ruff version in contribution guidelines to match CI` | infra | ? | - |
+| P1 | [#7576](https://github.com/ROCm/aiter/pull/7576) `[HIP] [Bugfix] sample: Map exponential's top uniform bucket to a positive sample` | rocm | ? | - |
+| P1 | [#7577](https://github.com/ROCm/aiter/pull/7577) `[Triton] [Config] Add gfx1201 gemm_a16w4 configs` | quant,rocm | ? | - |
+| P1 | [#7580](https://github.com/ROCm/aiter/pull/7580) `[Tune] GLM-5 MQA logits: retune with clean_logits=False, add GLM-5.3-Flash rows` | perf | ? | - |
+| P1 | [#7581](https://github.com/ROCm/aiter/pull/7581) `[Config] [Perf] Retune DeepSeek-V4.1-Flash EP4 MXFP4 (a4w4) fused-MoE rows for gfx950` | infra,perf,quant,rocm | ? | - |
 | - | [#7585](https://github.com/ROCm/aiter/pull/7585) `[Triton] [Config] Add gfx1201 SonicMoE config` | rocm | ? | - |
-| - | [#7586](https://github.com/ROCm/aiter/pull/7586) `[Bugfix] Keep gfx942 asm 1-stage fmoe off expert weights past 4 GiB` | rocm | main | - |
+| P0 | [#7586](https://github.com/ROCm/aiter/pull/7586) `[Bugfix] Keep gfx942 asm 1-stage fmoe off expert weights past 4 GiB` | rocm | main | - |
 | - | [#7587](https://github.com/ROCm/aiter/pull/7587) `[Triton/Gluon] [GFX12] Optimize mxfp8 gfx1250 gluon` | perf,quant,rocm | ? | - |
-| - | [#7589](https://github.com/ROCm/aiter/pull/7589) `[CK] [Bugfix] Give every GPU_ARCHS arch its own ck2stages MoE kernel table` | infra,perf,rocm | ? | - |
-| - | [#7590](https://github.com/ROCm/aiter/issues/7590) `gfx942 MLA a8w8 asm kernels cast softmax P to fp8 e4m3fnuz without scaling: small probabilities become subnorm` | perf,quant,rocm | ? | - |
+| P1 | [#7589](https://github.com/ROCm/aiter/pull/7589) `[CK] [Bugfix] Give every GPU_ARCHS arch its own ck2stages MoE kernel table` | infra,perf,rocm | ? | - |
+| P1 | [#7590](https://github.com/ROCm/aiter/issues/7590) `gfx942 MLA a8w8 asm kernels cast softmax P to fp8 e4m3fnuz without scaling: small probabilities become subnorm` | perf,quant,rocm | ? | - |
 | - | [#7592](https://github.com/ROCm/aiter/issues/7592) `NameError: DROPPED_ROUTE_ROW not defined in moe_contiguous_psum.py (TP4 mode crash)` | bug | ? | - |
 | - | [#7593](https://github.com/ROCm/aiter/issues/7593) `[issue] gfx942 (MI300X) result for pytest op_tests/test_mha_fp8.py op_tests/test_mha_varlen_fp8.py` | rocm | ? | - |
 | - | [#7594](https://github.com/ROCm/aiter/pull/7594) `[Triton/Gluon] mha variant for varlen` | rocm | ? | - |
 | - | [#7596](https://github.com/ROCm/aiter/pull/7596) `[FlyDSL] [Perf] gfx950 A16W16: rectangular tiles, nonuniform loads and tunable split-K workspace for Kimi-K3 s` | perf,rocm | ? | - |
 | - | [#7597](https://github.com/ROCm/aiter/pull/7597) `[Triton] [Config] Add gfx1201 sparse_mla_dsv4_train config` | rocm | ? | - |
 | - | [#7603](https://github.com/ROCm/aiter/pull/7603) `[Triton/Gluon] Add more support to mxfp8 attention` | quant,rocm | ? | - |
-| - | [#7604](https://github.com/ROCm/aiter/issues/7604) `[Issue]: [gfx1250] DeepSeek-V4-Pro accuracy collapses under sustained load: TDM-store stale LDS in MoE GEMMs +` | bug,risk,rocm | ? | - |
+| P1 | [#7604](https://github.com/ROCm/aiter/issues/7604) `[Issue]: [gfx1250] DeepSeek-V4-Pro accuracy collapses under sustained load: TDM-store stale LDS in MoE GEMMs +` | bug,risk,rocm | ? | - |
 | - | [#7605](https://github.com/ROCm/aiter/pull/7605) `[FlyDSL] [Bugfix] gfx1250 grouped MoE GEMM: store the output tile without the TDM store` | rocm | ? | - |
 | - | [#7606](https://github.com/ROCm/aiter/pull/7606) `[HIP] [JIT] [MoE] NVFP4 routed-expert MoE for gfx950` | quant,rocm | ? | - |
 | - | [#7607](https://github.com/ROCm/aiter/pull/7607) `[Triton/Gluon] [gfx1250] MLA decode: tune H64 and TP8, add split-FP8 compute for bf16 queries` | perf,quant,rocm | ? | - |
 | - | [#7608](https://github.com/ROCm/aiter/pull/7608) `[FlyDSL] gfx1201 flash attention: support head_dim % 8 (PixArt, DiT, SD1.5, HunyuanDiT)` | rocm | ? | - |
 | - | [#7611](https://github.com/ROCm/aiter/pull/7611) `[ASM] [HIP] [MoE] Run the FLAT and EMSORT MXFP4 fmoe tiles on padded intermediate widths` | quant,rocm | ? | - |
 | - | [#7612](https://github.com/ROCm/aiter/pull/7612) `[Bugfix] MHA varlen forward: copy inputs with a zero stride before dispatch` |  | ? | - |
-| - | [#7614](https://github.com/ROCm/aiter/pull/7614) `[Triton/Gluon] [Config] [Perf] Tune gfx950 FP8 blockscale selections for DSv4 decode` | perf,quant,rocm | ? | - |
+| P1 | [#7614](https://github.com/ROCm/aiter/pull/7614) `[Triton/Gluon] [Config] [Perf] Tune gfx950 FP8 blockscale selections for DSv4 decode` | perf,quant,rocm | ? | - |
 | - | [#7616](https://github.com/ROCm/aiter/pull/7616) `[Triton/Gluon] [gfx1250] gemm_a16w16: optional accumulate epilogue (y…` | rocm | ? | - |
 | - | [#7618](https://github.com/ROCm/aiter/pull/7618) `[FlyDSL] Optimize gfx1250 MiniMax-M3 paged attention and planning` | perf,rocm | ? | - |
-| - | [#7621](https://github.com/ROCm/aiter/pull/7621) `[ASM] Fix LDS races in gfx950 FP8 QH16 qseqlen2 MLA decode` | bug,quant,rocm | main | - |
-| - | [#7623](https://github.com/ROCm/aiter/pull/7623) `[ASM] Fix MFMA operand race in gfx950 FP8 QH16 qseqlen4 v3 MLA decode` | bug,quant,risk,rocm | main | - |
+| P0 | [#7621](https://github.com/ROCm/aiter/pull/7621) `[ASM] Fix LDS races in gfx950 FP8 QH16 qseqlen2 MLA decode` | bug,quant,rocm | main | - |
+| P0 | [#7623](https://github.com/ROCm/aiter/pull/7623) `[ASM] Fix MFMA operand race in gfx950 FP8 QH16 qseqlen4 v3 MLA decode` | bug,quant,risk,rocm | main | - |
 | - | [#7625](https://github.com/ROCm/aiter/pull/7625) `[Triton/Gluon] [Config] gfx1151 sparse_mla_dsv4_train: forward num_warps 2` | rocm | ? | - |
 | - | [#7626](https://github.com/ROCm/aiter/pull/7626) `[Triton/Gluon] [Config] gfx1151 SonicMoE: measured grouped-GEMM buckets` | rocm | ? | - |
 | - | [#7627](https://github.com/ROCm/aiter/pull/7627) `[Triton] [Config] Add gfx1150 batched_gemm_a16w16 configs` | rocm | ? | - |
 | - | [#7628](https://github.com/ROCm/aiter/pull/7628) `[Triton] [Config] gfx1151 gemm_a16w16: shape-specific configs and DEFAULT.json re-pick` | rocm | ? | - |
 | - | [#7629](https://github.com/ROCm/aiter/pull/7629) `[Triton/Gluon] fused_clamp_act_mul: Do not recompile per row count` | perf,rocm | ? | - |
 | - | [#7630](https://github.com/ROCm/aiter/pull/7630) `[Triton/Gluon] Add arch_info.is_cdna3()` | rocm | ? | - |
-| - | [#7631](https://github.com/ROCm/aiter/issues/7631) `[gfx950] mla_dec_stage1_bf16_a16w16_subQ128_mqa128.co gives nondeterministic, wrong output when a workgroup ha` | risk,rocm | ? | - |
+| P0 | [#7631](https://github.com/ROCm/aiter/issues/7631) `[gfx950] mla_dec_stage1_bf16_a16w16_subQ128_mqa128.co gives nondeterministic, wrong output when a workgroup ha` | risk,rocm | ? | - |
 | - | [#7632](https://github.com/ROCm/aiter/pull/7632) `[Triton/Gluon] [Bugfix] gfx1250 a4w4 MoE decode: store the output tile without the TDM store` | quant,rocm | ? | - |
 | - | [#7633](https://github.com/ROCm/aiter/pull/7633) `[Config] [FlyDSL] MiniMax-M3.1 EP4/EP8 fused-MoE tuned rows (gfx950, M=32768 tier)` | perf,rocm | ? | - |
 | - | [#7635](https://github.com/ROCm/aiter/pull/7635) `[Triton] [Config] Add gfx1151 gemm_a16w16_atomic configs` | rocm | ? | - |
 | - | [#7637](https://github.com/ROCm/aiter/pull/7637) `[Triton/Gluon] gemm_a16w16_atomic: fix wrong results when the split-K length is not a multiple of BLOCK_SIZE_K` | bug,rocm | ? | - |
-| - | [#7640](https://github.com/ROCm/aiter/pull/7640) `[HIP] fix(moe_sorting): pad ids name the tensor's height, not num_local_tokens` | bug,rocm | main | - |
+| P0 | [#7640](https://github.com/ROCm/aiter/pull/7640) `[HIP] fix(moe_sorting): pad ids name the tensor's height, not num_local_tokens` | bug,rocm | main | - |
 | - | [#7648](https://github.com/ROCm/aiter/pull/7648) `[FlyDSL] [Feature] Add quantized attention-output intranode all-to-all for Ulysses sequence-parallel attention` | quant,rocm | ? | - |
 | - | [#7649](https://github.com/ROCm/aiter/issues/7649) `gfx950 unified_attention: full measurements and analysis for #7566` | rocm | ? | - |
 | - | [#7650](https://github.com/ROCm/aiter/pull/7650) `[Triton/Gluon] [Config] [Perf] gfx950: tune gemm_a16w16 for Qwen3-Next shapes (N=32, N=512, K=2048)` | perf,rocm | ? | - |
@@ -315,8 +315,8 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7677](https://github.com/ROCm/aiter/pull/7677) `[Triton/Gluon] [gfx1250] unified_attention 2D: bound gathered page ids by the sequence` | rocm | ? | - |
 | - | [#7678](https://github.com/ROCm/aiter/pull/7678) `[Triton/Gluon] [gfx1250] fused_qk_norm_mrope_cache: A8K4V8 cache write (NVFP4 K, fp8 V)` | perf,quant,rocm | ? | - |
 | - | [#7679](https://github.com/ROCm/aiter/pull/7679) `[FlyDSL][gfx1250] moe_topk_route_quant_prefill: TDM gather payload store, 16 waves` | quant,rocm | ? | - |
-| - | [#7680](https://github.com/ROCm/aiter/pull/7680) `[Triton/Gluon] pa_prefill_sparse: single-pass gluon kernel for gfx950 at H=32 and 64` | perf,rocm | main | - |
-| - | [#7681](https://github.com/ROCm/aiter/pull/7681) `[Triton/Gluon] mla_sparse_prefill: triton backend on gfx950, the default at H=32 without a sink` | rocm | ? | - |
+| P0 | [#7680](https://github.com/ROCm/aiter/pull/7680) `[Triton/Gluon] pa_prefill_sparse: single-pass gluon kernel for gfx950 at H=32 and 64` | perf,rocm | main | - |
+| P1 | [#7681](https://github.com/ROCm/aiter/pull/7681) `[Triton/Gluon] mla_sparse_prefill: triton backend on gfx950, the default at H=32 without a sink` | rocm | ? | - |
 | - | [#7684](https://github.com/ROCm/aiter/pull/7684) `[MoE] [gfx950] a16w4 rows with 16-row FlyDSL kernels for MiniMax-M3 TP8 and Kimi-K3 TP4 at 1-256 tokens` | perf,quant,rocm | ? | - |
 | - | [#7685](https://github.com/ROCm/aiter/issues/7685) `[Issue]: On Windows, load_hip_runtime() loads the display driver's amdhip64.dll beside torch's HIP runtime` | rocm | ? | - |
 | - | [#7686](https://github.com/ROCm/aiter/pull/7686) `[Triton/Gluon] [Perf] Tune MLA decode launch configuration for BF16 KV on gfx1100` | perf,rocm | ? | - |
@@ -350,16 +350,16 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7739](https://github.com/ROCm/aiter/pull/7739) `[HIP] fused_qk_rope_concat_and_cache_mla: cut decode latency on gfx1250` | infra,perf,rocm | ? | - |
 | - | [#7740](https://github.com/ROCm/aiter/pull/7740) `[Triton] [Config] Add gfx1151 grouped GEMM (gmm / ptgmm / nptgmm) config` | rocm | ? | - |
 | - | [#7741](https://github.com/ROCm/aiter/pull/7741) `Fix/jit runtime arch fullgraph` | bug | ? | - |
-| - | [#7742](https://github.com/ROCm/aiter/pull/7742) `[Triton/Gluon] Cast strides to int64 in MHA backward kernels to prevent overflow` | perf,risk,rocm | ? | - |
+| - | [#7742](https://github.com/ROCm/aiter/pull/7742) `[Triton/Gluon] Cast strides to int64 in MHA backward kernels to prevent overflow` | perf,risk,rocm | main | - |
 | - | [#7743](https://github.com/ROCm/aiter/pull/7743) `[Triton/Gluon] [Perf] [gfx1250] unified attention 3D: tuned split for plain bf16 and fp8 decode` | perf,quant,rocm | ? | - |
 | - | [#7744](https://github.com/ROCm/aiter/pull/7744) `[Config] [gfx1250] gpt-oss prefill a8w4: 128x256x256, no cluster` | rocm | ? | - |
 | - | [#7745](https://github.com/ROCm/aiter/pull/7745) `[Triton/Gluon] [Perf] [gfx1250] gluon UA2D: BLOCK_M 256 only when the batch has <= 8 sequences` | perf,rocm | ? | - |
 | - | [#7746](https://github.com/ROCm/aiter/pull/7746) `[Triton/Gluon] [Perf] [gfx1250] RMSNorm forward: 4 programs per CU` | perf,rocm | ? | - |
 | - | [#7749](https://github.com/ROCm/aiter/pull/7749) `[Triton/Gluon] [Config] [gfx950] unified_attention: 128-CU split values for head-64 window decode and verify` | rocm | ? | - |
 | - | [#7750](https://github.com/ROCm/aiter/pull/7750) `[Bugfix] Fix wrong GLM-5 FP8 MoE output on gfx942 at 9-16 tokens` | bug,quant,rocm | ? | - |
-| - | [#7752](https://github.com/ROCm/aiter/pull/7752) `[Perf] Retune gfx942 Qwen3.8-27B a8w8 blockscale decode rows for cold weights` | perf,quant,rocm | ? | - |
+| P1 | [#7752](https://github.com/ROCm/aiter/pull/7752) `[Perf] Retune gfx942 Qwen3.8-27B a8w8 blockscale decode rows for cold weights` | perf,quant,rocm | ? | - |
 | - | [#7753](https://github.com/ROCm/aiter/pull/7753) `[CI] [Bugfix] perftest: time candidates on cold inputs regardless of num_iters and input size` | infra | ? | - |
-| - | [#7754](https://github.com/ROCm/aiter/pull/7754) `[HIP] Mha v4: run the K-smoothing gate as one HIP call` | rocm | ? | - |
+| P1 | [#7754](https://github.com/ROCm/aiter/pull/7754) `[HIP] Mha v4: run the K-smoothing gate as one HIP call` | rocm | ? | - |
 | - | [#7755](https://github.com/ROCm/aiter/pull/7755) `[Triton/Gluon] bench_sage: run mha4_mxfp8 --e2e through mha_v4` | perf,quant,rocm | ? | - |
 | - | [#7757](https://github.com/ROCm/aiter/pull/7757) `[Triton/Gluon] bench_sage: hd256 producers for mha4_mxfp8` | perf,quant,rocm | ? | - |
 | - | [#7761](https://github.com/ROCm/aiter/pull/7761) `[FlyDSL] Fuse a two-norm residual boundary into INT4 QuickReduce` | perf,quant,rocm | ? | - |
@@ -383,7 +383,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7783](https://github.com/ROCm/aiter/pull/7783) `[MLA] [RFC #7240] Route mla_sparse_prefill_v41 through the kernel provider interface` | perf | ? | - |
 | - | [#7785](https://github.com/ROCm/aiter/pull/7785) `[Config] Add gfx950 BF16 GEMM tunings for Muse Spark` | perf,rocm | ? | - |
 | - | [#7786](https://github.com/ROCm/aiter/pull/7786) `[Triton/Gluon] unified_attention: mask the block-table read of partial tiles` | rocm | ? | - |
-| - | [#7788](https://github.com/ROCm/aiter/pull/7788) `[FlyDSL] [CI] MegaMoEV2: one route plan for every path, shared arenas, and the DeepSeek-V4.1-Flash EP2 / EP4 /` | infra,perf,rocm | ? | - |
+| P1 | [#7788](https://github.com/ROCm/aiter/pull/7788) `[FlyDSL] [CI] MegaMoEV2: one route plan for every path, shared arenas, and the DeepSeek-V4.1-Flash EP2 / EP4 /` | infra,perf,rocm | ? | - |
 | - | [#7789](https://github.com/ROCm/aiter/pull/7789) `[Triton/Gluon] attn_res_gate: gfx1250 Gluon kernel that loads the rows with TDM` | perf,rocm | ? | - |
 | - | [#7792](https://github.com/ROCm/aiter/pull/7792) `[Triton/Gluon] [Feature] Fused all-reduce + RMSNorm + MXFP8 quant for TP decode on gfx950` | perf,quant,rocm | ? | - |
 | - | [#7795](https://github.com/ROCm/aiter/pull/7795) `[FlyDSL] Cache gfx1250 decode MoE gather routes within each wave` | perf,rocm | ? | - |
@@ -391,16 +391,16 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7805](https://github.com/ROCm/aiter/pull/7805) `[FlyDSL] [AOT] Assign into FakeTensor slices without reaching HIP on torch 2.9.1` | rocm | ? | - |
 | - | [#7806](https://github.com/ROCm/aiter/pull/7806) `fused_moe: take a caller presort on moe_sorting-layout pipelines` | perf | ? | - |
 | - | [#7808](https://github.com/ROCm/aiter/pull/7808) `custom all-reduce: MXFP8 mode for fused AR + RMSNorm + per-group quant` | perf,quant | ? | - |
-| - | [#7810](https://github.com/ROCm/aiter/pull/7810) `[Comm] Prefetch gfx1250 TP4 PullQ4 peer loads; M3 prefill-serving A/B` | rocm | ? | - |
+| P1 | [#7810](https://github.com/ROCm/aiter/pull/7810) `[Comm] Prefetch gfx1250 TP4 PullQ4 peer loads; M3 prefill-serving A/B` | rocm | ? | - |
 | - | [#7811](https://github.com/ROCm/aiter/issues/7811) `fmha_v3_varlen_fwd ASM kernel (fmha_fwd_hd128_bf16_causal_group) crashes with GPU memory access fault on paged` | bug,perf | ? | - |
 | - | [#7815](https://github.com/ROCm/aiter/pull/7815) `[Triton/Gluon] [QSA] Add qsa_select_paged_groups for row-sharded selection` | rocm | ? | - |
 | - | [#7816](https://github.com/ROCm/aiter/pull/7816) `[Recipe] Guarded M3 TP4 M16/M32 MoE decode overlays with serving A/B` |  | ? | - |
 | - | [#7817](https://github.com/ROCm/aiter/pull/7817) `[Triton/Gluon] unified_attention: run causal=False on the gfx950 Gluon kernel` | perf,rocm | ? | - |
-| - | [#7818](https://github.com/ROCm/aiter/pull/7818) `[HIP] Mega-MHC: faster large-M prefill (split tail for any T, ping-pong post tiles)` | perf,rocm | ? | - |
+| P1 | [#7818](https://github.com/ROCm/aiter/pull/7818) `[HIP] Mega-MHC: faster large-M prefill (split tail for any T, ping-pong post tiles)` | perf,rocm | ? | - |
 | - | [#7819](https://github.com/ROCm/aiter/pull/7819) `[FlyDSL] route sequence-parallel reduce-scatter / all-gather to INT4 by payload size` | quant,rocm | ? | - |
-| - | [#7821](https://github.com/ROCm/aiter/pull/7821) `[Triton/Gluon] [HIP] [OPUS] FP8 DMA deepseek prefill` | quant,rocm | ? | - |
-| - | [#7822](https://github.com/ROCm/aiter/pull/7822) `[MoE] [Bugfix] Give stage 1 only the padding columns its stage 2 skips` |  | ? | - |
-| - | [#7823](https://github.com/ROCm/aiter/pull/7823) `[Triton/Gluon] [gfx950] Fix LDS WAR race in single-warp fp8_mqa_logits` | bug,risk,rocm | ? | - |
+| P1 | [#7821](https://github.com/ROCm/aiter/pull/7821) `[Triton/Gluon] [HIP] [OPUS] FP8 DMA deepseek prefill` | quant,rocm | ? | - |
+| P1 | [#7822](https://github.com/ROCm/aiter/pull/7822) `[MoE] [Bugfix] Give stage 1 only the padding columns its stage 2 skips` |  | ? | - |
+| P1 | [#7823](https://github.com/ROCm/aiter/pull/7823) `[Triton/Gluon] [gfx950] Fix LDS WAR race in single-warp fp8_mqa_logits` | bug,risk,rocm | ? | - |
 | - | [#7827](https://github.com/ROCm/aiter/pull/7827) `[FlyDSL] [gfx1250] DSv4.1 Flash 32x32 GEMMs: tune C1024 decode, prefetch a8w8/a4w4 compute kernel code` | perf,quant,rocm | ? | - |
 | - | [#7830](https://github.com/ROCm/aiter/pull/7830) `[Triton] gemm_afp4wfp4: enable the software-emulated FP4 path on gfx1201` | quant,rocm | ? | - |
 | - | [#7831](https://github.com/ROCm/aiter/pull/7831) `[Triton] [Config] Add gfx1201 fused_reduce_add_rmsnorm config` | perf,rocm | ? | - |
@@ -418,17 +418,17 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7852](https://github.com/ROCm/aiter/pull/7852) `[Triton] [Config] Add gfx1201 mla_decode_rope config` | rocm | ? | - |
 | - | [#7855](https://github.com/ROCm/aiter/pull/7855) `[FlyDSL] [gfx950] Batched mxfp8 GEMM: fused MXFP8 quant epilogue` | perf,quant,rocm | ? | - |
 | - | [#7859](https://github.com/ROCm/aiter/pull/7859) `[FlyDSL] MegaMoE EP: expert-parallel MoE as one persistent kernel` | perf,rocm | ? | - |
-| - | [#7864](https://github.com/ROCm/aiter/pull/7864) `[FlyDSL] [Perf] pa_decode: K/V streaming, MTP query split and sparse split-major on gfx950` | perf,rocm | ? | - |
+| P1 | [#7864](https://github.com/ROCm/aiter/pull/7864) `[FlyDSL] [Perf] pa_decode: K/V streaming, MTP query split and sparse split-major on gfx950` | perf,rocm | ? | - |
 | - | [#7867](https://github.com/ROCm/aiter/pull/7867) `[FlyDSL] MegaMoEV2 EP4 V4.1-Flash: fix the large-input scale-load fault, faster decode (into #7788)` | bug,perf,quant,rocm | ? | - |
 | - | [#7868](https://github.com/ROCm/aiter/pull/7868) `[FlyDSL] [gfx1250] Compute GEMMs: cluster_m as a launch argument, DSv4.1 Flash prefill rows` | rocm | ? | - |
 | - | [#7869](https://github.com/ROCm/aiter/pull/7869) `[FlyDSL] perf(flydsl): launch a repeated gfx1250 pa_decode call without re-checking it` | perf,rocm | ? | - |
 | - | [#7870](https://github.com/ROCm/aiter/pull/7870) `[HIP] Add Muse Spark one-launch mega attention kernel (TP4, gfx950)` | perf,rocm | ? | - |
 | - | [#7873](https://github.com/ROCm/aiter/pull/7873) `[Triton] [Config] Add gfx1201 extend_attention config` | rocm | ? | - |
 | - | [#7876](https://github.com/ROCm/aiter/pull/7876) `[HIP] [Perf] Wave-per-head MLA reduce for wave32 (gfx1250) decode with few splits per tile` | perf,rocm | ? | - |
-| - | [#7879](https://github.com/ROCm/aiter/pull/7879) `[FlyDSL] [Bugfix] Support gfx950 GEMM operands of 4 GiB or more` | rocm | ? | - |
-| - | [#7880](https://github.com/ROCm/aiter/pull/7880) `[OPUS] [Bugfix] Fix unwritten output tiles in the gfx950 A16W16 GEMM` | bug,rocm | ? | - |
+| P1 | [#7879](https://github.com/ROCm/aiter/pull/7879) `[FlyDSL] [Bugfix] Support gfx950 GEMM operands of 4 GiB or more` | rocm | ? | - |
+| P1 | [#7880](https://github.com/ROCm/aiter/pull/7880) `[OPUS] [Bugfix] Fix unwritten output tiles in the gfx950 A16W16 GEMM` | bug,rocm | ? | - |
 | - | [#7882](https://github.com/ROCm/aiter/pull/7882) `[CK] [Bugfix] Reject K that is not a multiple of the CKTile flatmm warp-tile K` |  | ? | - |
-| - | [#7883](https://github.com/ROCm/aiter/pull/7883) `[ASM] [Bugfix] Make the bf16 and a4w4 ASM GEMMs exact past 4 GiB` | infra,quant,rocm | ? | - |
+| P1 | [#7883](https://github.com/ROCm/aiter/pull/7883) `[ASM] [Bugfix] Make the bf16 and a4w4 ASM GEMMs exact past 4 GiB` | infra,quant,rocm | ? | - |
 | - | [#7884](https://github.com/ROCm/aiter/pull/7884) `[Bugfix] Apply scale_a and scale_b in BF16 tgemm.mm instead of ignoring them` |  | ? | - |
 | - | [#7887](https://github.com/ROCm/aiter/pull/7887) `[Triton/Gluon] [Config] [Perf] Retune gfx1250 96-CU Gluon bf16 GEMMs for Kimi-K2 TP8 prefill (M > 8192)` | perf,rocm | ? | - |
 | - | [#7888](https://github.com/ROCm/aiter/pull/7888) `fused_moe: make fused_moe_2stages respect metadata.run_1stage` | perf | ? | - |
@@ -441,13 +441,13 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7899](https://github.com/ROCm/aiter/pull/7899) `[Triton/Gluon] sparse_mla_dsv4_train: chunked backward with fp32 dQ` | infra,rocm | ? | - |
 | - | [#7900](https://github.com/ROCm/aiter/pull/7900) `[Triton/Gluon] : [PA_DECODE] Add rot_bufs and do_bench_aiter_triton support` | perf,rocm | ? | - |
 | - | [#7901](https://github.com/ROCm/aiter/pull/7901) `[ASM] Tune conc 256 and 128 for qwen3.8-flash` | perf | ? | - |
-| - | [#7902](https://github.com/ROCm/aiter/pull/7902) `[Triton/Gluon] Tune gfx1250 Gluon A4W4 MoE prefill GEMM1 BLOCK_N` | perf,quant,rocm | ? | - |
+| P1 | [#7902](https://github.com/ROCm/aiter/pull/7902) `[Triton/Gluon] Tune gfx1250 Gluon A4W4 MoE prefill GEMM1 BLOCK_N` | perf,quant,rocm | ? | - |
 | - | [#7904](https://github.com/ROCm/aiter/pull/7904) `[FlyDSL] Prune gfx1250 TDM GEMM tuning search space` | perf,rocm | ? | - |
-| - | [#7905](https://github.com/ROCm/aiter/pull/7905) `[Triton/Gluon] gfx950: recover three regressions from the LLVM 18f9e623 bump` | bug,infra,rocm | ? | - |
+| P1 | [#7905](https://github.com/ROCm/aiter/pull/7905) `[Triton/Gluon] gfx950: recover three regressions from the LLVM 18f9e623 bump` | bug,infra,rocm | ? | - |
 | - | [#7906](https://github.com/ROCm/aiter/pull/7906) `[Triton/Gluon] Flashkda k2 pipelined pass a doc` | rocm | ? | - |
 | - | [#7907](https://github.com/ROCm/aiter/pull/7907) `[Triton/Gluon] [Config] [gfx1250] Drop ambiguous no-B batched_gemm_bf16 decode configs` | rocm | ? | - |
 | - | [#7909](https://github.com/ROCm/aiter/pull/7909) `[ASM] [HIP] fix(mla): use native MI350 Q32 kernel for BF16 QH128` | bug,perf,rocm | ? | - |
-| - | [#7910](https://github.com/ROCm/aiter/pull/7910) `[Triton] [Bugfix] gemm_afp4wfp4: run short K loops with a masked tail unpipelined on gfx950` | rocm | main | - |
+| P0 | [#7910](https://github.com/ROCm/aiter/pull/7910) `[Triton] [Bugfix] gemm_afp4wfp4: run short K loops with a masked tail unpipelined on gfx950` | rocm | main | - |
 | - | [#7911](https://github.com/ROCm/aiter/pull/7911) `[CI] [Build] [DO NOT MERGE] Use amd-triton/amd-triton-kernels from public pypi` | infra,perf,rocm | ? | - |
 | - | [#7913](https://github.com/ROCm/aiter/pull/7913) `[FlyDSL] [gfx1250] MLA PS1: take 32/64-head multi-token decode as several qo tiles` | rocm | ? | - |
 | - | [#7914](https://github.com/ROCm/aiter/pull/7914) `[HIP] [gfx1250] MLA reduce: run kn_mla_reduce_v1_wide on wave32 GPUs` | rocm | ? | - |
@@ -470,7 +470,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#7942](https://github.com/ROCm/aiter/pull/7942) `Mha v4: kv_splits="auto" from a wave-rounding cost model` |  | ? | - |
 | - | [#7945](https://github.com/ROCm/aiter/pull/7945) `Implement Per-token Quant on Gluon All-reduce` | quant,rocm | ? | - |
 | - | [#7946](https://github.com/ROCm/aiter/pull/7946) `[gfx1250] [Perf] FP8 varlen ASM prefill: split the keys of a non-causal call that underfills the GPU` | perf,quant,rocm | ? | - |
-| - | [#7949](https://github.com/ROCm/aiter/pull/7949) `[FlyDSL] MoE stage 2: fix the fp8 route-out scale group for tile_n=128` | bug,quant,rocm | ? | - |
+| P1 | [#7949](https://github.com/ROCm/aiter/pull/7949) `[FlyDSL] MoE stage 2: fix the fp8 route-out scale group for tile_n=128` | bug,quant,rocm | ? | - |
 | - | [#7950](https://github.com/ROCm/aiter/pull/7950) `[FlyDSL] MoE reduce: drop padded (negative topk id) slots` | rocm | ? | - |
 | - | [#7951](https://github.com/ROCm/aiter/pull/7951) `gfx1250: HIP kernel for the KDA ReplaySSM decode / verify step` | perf,rocm | ? | - |
 | - | [#7952](https://github.com/ROCm/aiter/pull/7952) `[Triton/Gluon] [Bugfix] fused_qk_rope_cat_and_cache_mla: Use 64-bit row and head offsets to avoid int32 overfl` | perf,risk,rocm | ? | - |
@@ -479,7 +479,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#7351](https://github.com/ROCm/aiter/pull/7351) `[FlyDSL] [Bugfix] Fix first-entry corruption in fused_compress_attn` | bug,perf,risk,rocm | main | - |
+| P0 | [#7351](https://github.com/ROCm/aiter/pull/7351) `[FlyDSL] [Bugfix] Fix first-entry corruption in fused_compress_attn` | bug,perf,risk,rocm | main | - |
 
 ### vLLM — Merged / closed (849 items)
 
@@ -527,20 +527,20 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#47684](https://github.com/vllm-project/vllm/issues/47684) `[RFC]: FlashInfer NVFP4 KV serving on pre-SM100 GPUs` | nvidia,quant | ? | - |
 | - | [#47746](https://github.com/vllm-project/vllm/issues/47746) `[Bug]: AnthropicContentBlock missing per-type field validation for tool_use blocks` | bug | ? | - |
 | - | [#47749](https://github.com/vllm-project/vllm/issues/47749) `[Bug]: RTX 5090 / SM120 ModelOpt mixed NVFP4 checkpoint falls back to Marlin W4A16 path and warns no native FP` | bug,nvidia,quant | ? | - |
-| - | [#47763](https://github.com/vllm-project/vllm/issues/47763) `[Performance]: MiniMax-M3 verify-as-decode re-streams the sparse KV from HBM once per draft token` | perf | ? | - |
+| P1 | [#47763](https://github.com/vllm-project/vllm/issues/47763) `[Performance]: MiniMax-M3 verify-as-decode re-streams the sparse KV from HBM once per draft token` | perf | ? | - |
 | - | [#47768](https://github.com/vllm-project/vllm/issues/47768) `[RFC]: vLLM gRPC server API for downstream integrations` |  | ? | - |
-| - | [#47783](https://github.com/vllm-project/vllm/issues/47783) `[Bug]: DSV4 sparse MLA emits garbage (gsm8k ~0%) with the packed KV layout from #44577` | bug,risk | ? | - |
+| P1 | [#47783](https://github.com/vllm-project/vllm/issues/47783) `[Bug]: DSV4 sparse MLA emits garbage (gsm8k ~0%) with the packed KV layout from #44577` | bug,risk | ? | - |
 | - | [#47788](https://github.com/vllm-project/vllm/issues/47788) `[Bug]: Qwen3-Omni use_audio_in_video via --mm-processor-kwargs is broken in online serving: engine crash at st` | bug,risk | ? | - |
 | - | [#47802](https://github.com/vllm-project/vllm/issues/47802) `[Feature]: Priority scheduling is not reflected in KV/prefix cache retention under cache pressure` | perf | ? | - |
 | - | [#47846](https://github.com/vllm-project/vllm/issues/47846) `[Feature]: model runner v2 support prefill context parallelism & cp8+tp8=worldsize8` |  | ? | - |
-| - | [#47847](https://github.com/vllm-project/vllm/issues/47847) `[Bug]: disable_flashinfer_q_quantization + fp8 KV + spec decode silently corrupts sliding-window models on SM1` | nvidia,quant,risk | ? | - |
+| P1 | [#47847](https://github.com/vllm-project/vllm/issues/47847) `[Bug]: disable_flashinfer_q_quantization + fp8 KV + spec decode silently corrupts sliding-window models on SM1` | nvidia,quant,risk | ? | - |
 | - | [#47918](https://github.com/vllm-project/vllm/issues/47918) `[Bug]: V1 + Ray distributed executor + LoRA — execute_model returns NoneType on NVIDIA GPU` | nvidia | ? | - |
 | - | [#47919](https://github.com/vllm-project/vllm/issues/47919) `[RFC]   guard-gated sparse MLA topology index policy` |  | ? | - |
 | - | [#47974](https://github.com/vllm-project/vllm/issues/47974) `[Bug]: vllm 校验arguments合法性` | bug | ? | - |
 | - | [#47982](https://github.com/vllm-project/vllm/issues/47982) `[Bug]: flashinfer_b12x MoE broken after PR #43328: "num_tokens exceeds max_num_tokens" with dp_size>1 and OOM ` | bug,nvidia | ? | - |
 | - | [#48005](https://github.com/vllm-project/vllm/issues/48005) `[Bug]: VLLM concurrent requests: the last request does not return` | bug | ? | - |
 | - | [#48029](https://github.com/vllm-project/vllm/issues/48029) `[RFC]: Composite Attention Backends` |  | ? | - |
-| - | [#48043](https://github.com/vllm-project/vllm/issues/48043) `[Bug][ROCm] Triton kernel_paged_attention_2d illegal memory access (hipErrorLaunchFailure) on gfx950 (MI350X) ` | bug,perf,risk,rocm | ? | - |
+| P1 | [#48043](https://github.com/vllm-project/vllm/issues/48043) `[Bug][ROCm] Triton kernel_paged_attention_2d illegal memory access (hipErrorLaunchFailure) on gfx950 (MI350X) ` | bug,perf,risk,rocm | ? | - |
 | - | [#48066](https://github.com/vllm-project/vllm/issues/48066) `[Performance]: Marlin MoE block_size_m heuristic over-selects a large M-tile for expert-parallel decode (up to` | perf,quant | ? | - |
 | - | [#48077](https://github.com/vllm-project/vllm/issues/48077) `[Usage]: Does it support the deployment of P node TEP and D node DEP modes` |  | ? | - |
 | - | [#48080](https://github.com/vllm-project/vllm/issues/48080) `[RFC]: Confident Decoding — entropy-guided intermediate-layer logits selection` |  | ? | - |
@@ -593,7 +593,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#52051](https://github.com/vllm-project/vllm/issues/52051) `[Bug]: gpt-oss-120b MXFP4 + --enable-expert-parallel crashes at startup: modular MoE finalize allocates padded` | bug,quant | ? | - |
 | - | [#52652](https://github.com/vllm-project/vllm/pull/52652) `[Perf][Kernel][Quantization] Tensor-descriptor path for int4 fused_moe_kernel_gptq_awq (XPU default, sm100 opt` | infra,nvidia,perf,quant | ? | - |
 | - | [#52738](https://github.com/vllm-project/vllm/issues/52738) `[Feature]: Map unsupported reasoning_effort values to the nearest level the chat template accepts` | quant | ? | - |
-| - | [#52833](https://github.com/vllm-project/vllm/issues/52833) `[Bug]: GLM-5.2 MTP accepts 0% of drafts on MI355X (gfx950); disabling expert parallelism hits hipErrorIllegalA` | rocm | ? | - |
+| P1 | [#52833](https://github.com/vllm-project/vllm/issues/52833) `[Bug]: GLM-5.2 MTP accepts 0% of drafts on MI355X (gfx950); disabling expert parallelism hits hipErrorIllegalA` | rocm | ? | - |
 | - | [#52875](https://github.com/vllm-project/vllm/pull/52875) `[Perf][Frontend] Render plain completion stream deltas from a template` | perf | ? | - |
 | - | [#53369](https://github.com/vllm-project/vllm/pull/53369) `[Bugfix][Frontend] Match default MM LoRA for OpenAI input_audio parts` | bug | ? | - |
 | - | [#53488](https://github.com/vllm-project/vllm/issues/53488) `[Bug]: `prompt_logprobs` silently corrupted for some requests when MTP speculative decoding is enabled (Qwen3.` | quant,risk | ? | - |
@@ -601,7 +601,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#54555](https://github.com/vllm-project/vllm/issues/54555) `[Bug]: V1 spec-decode proposer never constructs the positions buffer a both-XD-RoPE drafter seeds from` |  | ? | - |
 | - | [#54737](https://github.com/vllm-project/vllm/pull/54737) `[Doc] Fix stale attention_kernels.cu reference in paged_attention.md` | bug,infra | ? | - |
 | - | [#54761](https://github.com/vllm-project/vllm/issues/54761) `[Bug]: On ROCm, DCP and non-FP8 KV dtypes are unreachable, but the errors suggest fixes that don't exist there` | quant,rocm | ? | - |
-| - | [#54775](https://github.com/vllm-project/vllm/issues/54775) `[Bug]: KDA/gated-delta-rule chunked-scan buffers are outside memory profiling — runtime OOM at large --max-num` | rocm | ? | - |
+| P1 | [#54775](https://github.com/vllm-project/vllm/issues/54775) `[Bug]: KDA/gated-delta-rule chunked-scan buffers are outside memory profiling — runtime OOM at large --max-num` | rocm | ? | - |
 | - | [#54820](https://github.com/vllm-project/vllm/pull/54820) `[ROCm] Avoid DSpark placeholder shared vocab allocations` | rocm | ? | - |
 | - | [#54843](https://github.com/vllm-project/vllm/issues/54843) `[Bug][CPU][Spec Decode]: --use-fp64-gumbel silently ignored in CPU recovered-token sampling (inv_q downcast to` | risk | ? | - |
 | - | [#54899](https://github.com/vllm-project/vllm/pull/54899) `[ROCm][MLA][DCP] Pad the AITER MLA decode head count to a native tile` | infra,rocm | ? | - |
@@ -619,7 +619,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#56192](https://github.com/vllm-project/vllm/pull/56192) `[Feature][KV Offload] Add RDMA-capable OBJ tier (#55855)` |  | ? | - |
 | - | [#56246](https://github.com/vllm-project/vllm/pull/56246) `[CI][XPU] Add Rust Frontend CI coverage for Intel GPU` | infra,nvidia | ? | - |
 | - | [#56451](https://github.com/vllm-project/vllm/pull/56451) `[ROCm][Spec Decode] Enable adaptive DSpark verification for MiniMax M3` | nvidia,rocm | ? | - |
-| - | [#56492](https://github.com/vllm-project/vllm/pull/56492) `[Core] Extensible KV cache` | infra,nvidia,perf | main | - |
+| P0 | [#56492](https://github.com/vllm-project/vllm/pull/56492) `[Core] Extensible KV cache` | infra,nvidia,perf | main | - |
 | - | [#56507](https://github.com/vllm-project/vllm/issues/56507) `[Doc]: ec_cpu_connector.md refers to a no-NIXL import test that doesn't exist` |  | ? | - |
 | - | [#56508](https://github.com/vllm-project/vllm/pull/56508) `[Test][EC Connector] Add the no-NIXL import test the docs refer to` |  | ? | - |
 | - | [#56900](https://github.com/vllm-project/vllm/issues/56900) `[Bug]: Qwen/Qwen1.5-MoE-A2.7B-Chat produces degenerate output with torch.compile (VLLM_COMPILE) but correct ou` | nvidia,perf,quant | ? | - |
@@ -644,7 +644,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#59460](https://github.com/vllm-project/vllm/pull/59460) `[Quantization] Make activation-quantization fallbacks explicit, add VLLM_STRICT_QUANT_SCHEME` | nvidia,quant | ? | - |
 | - | [#59746](https://github.com/vllm-project/vllm/pull/59746) `[Bugfix][NIXL] Pair P/D blocks by the last token with different block sizes` | bug | ? | - |
 | - | [#59767](https://github.com/vllm-project/vllm/pull/59767) `[Model] Migrate Aria to the Transformers modeling backend` |  | ? | - |
-| - | [#59818](https://github.com/vllm-project/vllm/issues/59818) `[ROCm]: run-to-run GSM8K accuracy variance for simple-nemotron-h-8b in KV-Offload test on MI300` | infra,risk,rocm | ? | - |
+| P1 | [#59818](https://github.com/vllm-project/vllm/issues/59818) `[ROCm]: run-to-run GSM8K accuracy variance for simple-nemotron-h-8b in KV-Offload test on MI300` | infra,risk,rocm | ? | - |
 | - | [#59981](https://github.com/vllm-project/vllm/pull/59981) `[Perf] V2 runner decode optimizations for NVIDIA Confidential Computing` | nvidia,perf | ? | - |
 | - | [#59988](https://github.com/vllm-project/vllm/issues/59988) `[Bug]: With --api-server-count > 1, gauges such as vllm:num_requests_running have no samples until the first r` |  | ? | - |
 | - | [#59994](https://github.com/vllm-project/vllm/pull/59994) `[Bugfix] Offload model runner construction buffers on sleep` | bug | ? | - |
@@ -660,23 +660,23 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#60314](https://github.com/vllm-project/vllm/pull/60314) `[Model] Support data-parallel multimodal encoder for Gemma-4` |  | ? | - |
 | - | [#60321](https://github.com/vllm-project/vllm/pull/60321) `[ROCm][Attention] Add an mxfp4_mla KV cache for rope-free sparse MLA (read/write path)` | perf,quant,rocm | ? | - |
 | - | [#60390](https://github.com/vllm-project/vllm/pull/60390) `[Model][Core] Share the CPU-offloaded Qwen4Exp PLE table across co-located DP replicas` |  | ? | - |
-| - | [#60408](https://github.com/vllm-project/vllm/issues/60408) `[Bug][ROCm] gfx950: ROCM_AITER_UNIFIED_ATTN decode regressed in v0.31.0 (-19%, and MTP decode decays with cont` | rocm | ? | - |
+| P0 | [#60408](https://github.com/vllm-project/vllm/issues/60408) `[Bug][ROCm] gfx950: ROCM_AITER_UNIFIED_ATTN decode regressed in v0.31.0 (-19%, and MTP decode decays with cont` | rocm | ? | - |
 | - | [#60438](https://github.com/vllm-project/vllm/pull/60438) `[Bugfix] Fall back from DeepGEMM when nvcc is older than 12.9` | bug,nvidia | ? | - |
-| - | [#60487](https://github.com/vllm-project/vllm/pull/60487) `[Bugfix][ROCm] Count attention sinks once in AITER FA chunked-context extend` | bug,rocm | main | - |
+| P0 | [#60487](https://github.com/vllm-project/vllm/pull/60487) `[Bugfix][ROCm] Count attention sinks once in AITER FA chunked-context extend` | bug,rocm | main | - |
 | - | [#60531](https://github.com/vllm-project/vllm/pull/60531) `[Bugfix][Kernel] Preserve batch invariance in Triton unified attention on SM100` | bug,nvidia,perf,rocm | ? | - |
 | - | [#60609](https://github.com/vllm-project/vllm/pull/60609) `[XPU] Bump up kernel 0.1.17, change MoE and MLA interfaces` | bug,infra,nvidia,perf | ? | - |
-| - | [#60895](https://github.com/vllm-project/vllm/pull/60895) `[Perf][GLM-5.3-Flash] DeepGEMM FP8 MegaMoE with fused shared experts` | perf,quant | main | - |
+| P0 | [#60895](https://github.com/vllm-project/vllm/pull/60895) `[Perf][GLM-5.3-Flash] DeepGEMM FP8 MegaMoE with fused shared experts` | perf,quant | main | - |
 | - | [#60977](https://github.com/vllm-project/vllm/issues/60977) `[Bug]: EmbeddingGemma 2 rejects dimensions=768 despite returning 768-dimensional embeddings` |  | ? | - |
 | - | [#60978](https://github.com/vllm-project/vllm/pull/60978) `[Bugfix][Pooling] Use embedding_dim for pooling output size` | bug | ? | - |
 | - | [#61076](https://github.com/vllm-project/vllm/pull/61076) `[RL] Add configurable staging and parallel stage pulls to sharded RDT` | infra | ? | - |
 | - | [#61243](https://github.com/vllm-project/vllm/pull/61243) `[HiSparse] GLM-5.3-Flash support` | infra,nvidia,perf,rocm | ? | - |
 | - | [#61395](https://github.com/vllm-project/vllm/pull/61395) `[EPLB] Support heterogeneous DeepSeek V4/V4.1 DSpark draft experts` |  | ? | - |
 | - | [#61424](https://github.com/vllm-project/vllm/pull/61424) `[Core][Metrics] Collect iteration details during scheduling` |  | ? | - |
-| - | [#61448](https://github.com/vllm-project/vllm/pull/61448) `[ROCm][Model] Add fusions for Muse Glimmer for AMD backend` | perf,rocm | ? | - |
+| P1 | [#61448](https://github.com/vllm-project/vllm/pull/61448) `[ROCm][Model] Add fusions for Muse Glimmer for AMD backend` | perf,rocm | ? | - |
 | - | [#61452](https://github.com/vllm-project/vllm/pull/61452) `[Core][KV Cache] Move KV cache allocation policy out of KVCacheSpecs (RFC #42449 part 2)` | infra,nvidia,perf,rocm | ? | - |
 | - | [#61486](https://github.com/vllm-project/vllm/issues/61486) `[Bug]: [ROCm] Qwen4Exp (AMD path): PLE n-gram IDs read a stale query_start_loc tail during PIECEWISE CUDA-grap` | bug,nvidia,quant,rocm | ? | - |
 | - | [#61492](https://github.com/vllm-project/vllm/pull/61492) `[Bugfix][Metrics] Periodic stats line: dead Preemptions field + Finished count` | bug | ? | - |
-| - | [#61498](https://github.com/vllm-project/vllm/pull/61498) `[ROCm][Perf][Kimi-K3] Mono decode layer for Kimi-K3 on MI355X w/ vanilla decode` | infra,perf,rocm | main | - |
+| P0 | [#61498](https://github.com/vllm-project/vllm/pull/61498) `[ROCm][Perf][Kimi-K3] Mono decode layer for Kimi-K3 on MI355X w/ vanilla decode` | infra,perf,rocm | main | - |
 | - | [#61501](https://github.com/vllm-project/vllm/pull/61501) `[Perf][Mamba] Opt-in FlashInfer SSD prefill scan; per-step ReplaySSM seed` | nvidia,perf,quant | ? | - |
 | - | [#61530](https://github.com/vllm-project/vllm/pull/61530) `[Model][DSV4.1] Support MXFP4-packed Engram embedding tables` | quant | ? | - |
 | - | [#61539](https://github.com/vllm-project/vllm/issues/61539) `[RFC]: Explicit row layouts for routed-expert capture` |  | ? | - |
@@ -685,37 +685,37 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#61666](https://github.com/vllm-project/vllm/pull/61666) `[Quantization] Support compressed-tensors MXFP6 (mxfp6-pack-quantized)` | infra,quant | ? | - |
 | - | [#61669](https://github.com/vllm-project/vllm/pull/61669) `[Bugfix][Model] DiffusionGemma: stop sampler recompiles during serving` | bug,perf | ? | - |
 | - | [#61725](https://github.com/vllm-project/vllm/pull/61725) `[Core] Add max_async_kv_loads_per_step to cap new async KV loads per step` |  | ? | - |
-| - | [#61770](https://github.com/vllm-project/vllm/pull/61770) `[Bugfix][ROCm][Qwen4Exp] Remap Quark layer names for the MTP draft model` | bug,rocm | main | - |
+| P0 | [#61770](https://github.com/vllm-project/vllm/pull/61770) `[Bugfix][ROCm][Qwen4Exp] Remap Quark layer names for the MTP draft model` | bug,rocm | main | - |
 | - | [#61796](https://github.com/vllm-project/vllm/pull/61796) `[Test][UMBP][8/10] Add standalone runtime coverage` | infra,rocm | ? | - |
 | - | [#61797](https://github.com/vllm-project/vllm/pull/61797) `[UMBP][9/10] Add lazy GPU cache offloading` | infra,perf,rocm | ? | - |
 | - | [#61798](https://github.com/vllm-project/vllm/pull/61798) `[Test][UMBP][10/10] Add lazy offload and token restore coverage` | infra | ? | - |
 | - | [#61813](https://github.com/vllm-project/vllm/pull/61813) `[Chore] Use upstream Transformers MiniMaxM3VLConfig` | nvidia | ? | - |
 | - | [#61815](https://github.com/vllm-project/vllm/pull/61815) `[Quantization] Allow online per-channel fp8 quantization of an unquantized lm_head` | quant | ? | - |
-| - | [#61816](https://github.com/vllm-project/vllm/pull/61816) `[ROCm][Bugfix] Stop declaring the MXFP4 MoE intermediate padding to AITER` | bug,quant,rocm | main | - |
-| - | [#61821](https://github.com/vllm-project/vllm/pull/61821) `[Perf][Kernel] Add the bias in the SM120 NVFP4 CUTLASS GEMM epilogue` | nvidia,perf,quant | ? | - |
+| P0 | [#61816](https://github.com/vllm-project/vllm/pull/61816) `[ROCm][Bugfix] Stop declaring the MXFP4 MoE intermediate padding to AITER` | bug,quant,rocm | main | - |
+| P1 | [#61821](https://github.com/vllm-project/vllm/pull/61821) `[Perf][Kernel] Add the bias in the SM120 NVFP4 CUTLASS GEMM epilogue` | nvidia,perf,quant | ? | - |
 | - | [#61853](https://github.com/vllm-project/vllm/issues/61853) `[Bug]: enable_lora on Jamba (ai21labs/Jamba-tiny-dev) causes a CUDA illegal memory access followed by an uncau` | bug,nvidia,risk | ? | - |
-| - | [#61866](https://github.com/vllm-project/vllm/issues/61866) `[ROCm][Perf] gfx950 spec-decode verify attention is up to 48x slower with AITER <= v0.1.25; bump to a release ` | infra,perf,rocm | ? | - |
+| P0 | [#61866](https://github.com/vllm-project/vllm/issues/61866) `[ROCm][Perf] gfx950 spec-decode verify attention is up to 48x slower with AITER <= v0.1.25; bump to a release ` | infra,perf,rocm | ? | - |
 | - | [#61869](https://github.com/vllm-project/vllm/pull/61869) `[Perf][DSv4.1] DSpark draft on the specialized decode` | infra,nvidia,perf | ? | - |
 | - | [#61872](https://github.com/vllm-project/vllm/pull/61872) `[Bugfix][ROCm] Restore MoE weight padding dropped by #46009` | bug,rocm | ? | - |
 | - | [#61897](https://github.com/vllm-project/vllm/pull/61897) `[Feature][MoE] Support routed experts capture (R3) with pipeline parallelism` | infra,nvidia,perf,quant,rocm | ? | - |
 | - | [#61942](https://github.com/vllm-project/vllm/pull/61942) `[ROCm][Perf] Skip DSA indexer scoring for short dense-MHA prefills` | infra,perf,rocm | ? | - |
-| - | [#62270](https://github.com/vllm-project/vllm/pull/62270) `[ROCm][Perf][MiniMax-M3] Enable the fp8 indexer cache on gfx942` | infra,perf,quant,rocm | main | - |
+| P0 | [#62270](https://github.com/vllm-project/vllm/pull/62270) `[ROCm][Perf][MiniMax-M3] Enable the fp8 indexer cache on gfx942` | infra,perf,quant,rocm | main | - |
 | - | [#62298](https://github.com/vllm-project/vllm/pull/62298) `[CI][ROCm] Run ROCm-capable tests that are currently skipped on AMD` | infra,nvidia,rocm | ? | - |
 | - | [#62309](https://github.com/vllm-project/vllm/pull/62309) `[XPU] support adaptive verification for deepseek-v4` | nvidia | ? | - |
 | - | [#62345](https://github.com/vllm-project/vllm/pull/62345) `[Bugfix][Security] muse: fix quadratic attribute scans in tool-call extraction` | bug | ? | - |
 | - | [#62515](https://github.com/vllm-project/vllm/pull/62515) `[Spec Decode] Enable adaptive verification for `FlashInferMLASparseSM90Backend`` | nvidia | ? | - |
 | - | [#62517](https://github.com/vllm-project/vllm/pull/62517) `[Bugfix][Parser] DeepSeek V4.1: don't leak a `<｜DSML｜ tool_calls>` opener into content` | bug | ? | - |
 | - | [#62529](https://github.com/vllm-project/vllm/pull/62529) `[Tests] Add TP2 PCP2 canonical mapping byte coverage` |  | ? | - |
-| - | [#62565](https://github.com/vllm-project/vllm/pull/62565) `[ROCm][Perf] Fix Kimi-K2.6 int4 MoE prefill regression on Triton 3.8 (gfx950 tuned config)` | bug,perf,quant,rocm | main | - |
+| P0 | [#62565](https://github.com/vllm-project/vllm/pull/62565) `[ROCm][Perf] Fix Kimi-K2.6 int4 MoE prefill regression on Triton 3.8 (gfx950 tuned config)` | bug,perf,quant,rocm | main | - |
 | - | [#62566](https://github.com/vllm-project/vllm/pull/62566) `[KV Offload] Warn when secondary-tier KV is tied to the parallel config` |  | ? | - |
 | - | [#62603](https://github.com/vllm-project/vllm/pull/62603) `[Perf][MoE] Enable SM90 block-FP8 MegaMoE via FlashInfer MoE-EP` | nvidia,perf,quant | ? | - |
-| - | [#62606](https://github.com/vllm-project/vllm/issues/62606) `[Bug][ROCm]: ROCM_AITER_UNIFIED_ATTN gives wrong output on gfx950 when a layer's KV cache is 2–4 GiB` | perf,risk,rocm | ? | - |
+| P0 | [#62606](https://github.com/vllm-project/vllm/issues/62606) `[Bug][ROCm]: ROCM_AITER_UNIFIED_ATTN gives wrong output on gfx950 when a layer's KV cache is 2–4 GiB` | perf,risk,rocm | ? | - |
 | - | [#62656](https://github.com/vllm-project/vllm/pull/62656) `[XPU][CI] Re-enable `test_reset_prefix_cache_e2e` and `test_scheduler_e2e` on XPU` | infra,nvidia | ? | - |
-| - | [#62675](https://github.com/vllm-project/vllm/pull/62675) `[Bugfix][ROCm] Pad Qwen4Exp PLE n-gram inputs for piecewise CUDA graph replays` | bug,nvidia,rocm | ? | - |
+| P1 | [#62675](https://github.com/vllm-project/vllm/pull/62675) `[Bugfix][ROCm] Pad Qwen4Exp PLE n-gram inputs for piecewise CUDA graph replays` | bug,nvidia,rocm | ? | - |
 | - | [#62687](https://github.com/vllm-project/vllm/issues/62687) `[Bug]: CPU backend: a seeded request whose prompt is split by chunked prefill kills the engine ("CPU Generator` |  | ? | - |
 | - | [#62718](https://github.com/vllm-project/vllm/pull/62718) `[ROCm][Build][3/5] Speed up ROCm build: split the skinny GEMMs per kernel family and trim torch headers` | infra,perf,rocm | ? | - |
-| - | [#62725](https://github.com/vllm-project/vllm/pull/62725) `[ROCm][Bugfix] Serve gfx942 MLA verify past 4 tokens with a Triton kernel` | bug,perf,rocm | main | - |
-| - | [#62750](https://github.com/vllm-project/vllm/pull/62750) `[Quantization] Block Hadamard input rotation for linear layers: online `mxfp4_hadamard32` and Quark online-rot` | quant,rocm | main | - |
+| P0 | [#62725](https://github.com/vllm-project/vllm/pull/62725) `[ROCm][Bugfix] Serve gfx942 MLA verify past 4 tokens with a Triton kernel` | bug,perf,rocm | main | - |
+| P0 | [#62750](https://github.com/vllm-project/vllm/pull/62750) `[Quantization] Block Hadamard input rotation for linear layers: online `mxfp4_hadamard32` and Quark online-rot` | quant,rocm | main | - |
 | - | [#62769](https://github.com/vllm-project/vllm/pull/62769) `[Bugfix][Spec Decode] Synchronize adaptive DSpark decisions across TP ranks` | bug,nvidia | ? | - |
 | - | [#62785](https://github.com/vllm-project/vllm/pull/62785) `[Bugfix][Pooling] Honor the CrossEncoder activation saved by Sentence Transformers v6` | bug | ? | - |
 | - | [#62791](https://github.com/vllm-project/vllm/pull/62791) `[Bugfix][Benchmark] Take openai-audio input tokens from server usage` | bug,perf | ? | - |
@@ -723,8 +723,8 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#62808](https://github.com/vllm-project/vllm/issues/62808) `[Bug]: Built-in LMCacheConnectorV1 does not forward shutdown(), so LMCache never stops and EngineCore is force` |  | ? | - |
 | - | [#62964](https://github.com/vllm-project/vllm/pull/62964) `[Bugfix][Spec Decode] Keep FlashInfer CUDA graphs for drafters with their own head count` | bug,nvidia,perf | ? | - |
 | - | [#63043](https://github.com/vllm-project/vllm/issues/63043) `[Bug]: Native FlashInfer produces garbage output with BF16 Q and non-unit q_scale` | nvidia,quant,risk | ? | - |
-| - | [#63049](https://github.com/vllm-project/vllm/issues/63049) `[Bug]: TritonW4A16 GEMM faults on ROCm once M × N or M × K passes 2^31` | quant,rocm | ? | - |
-| - | [#63054](https://github.com/vllm-project/vllm/pull/63054) `[Bugfix][ROCm] Use 64-bit row offsets in the Triton W4A16 GEMM` | bug,quant,rocm | main | - |
+| P0 | [#63049](https://github.com/vllm-project/vllm/issues/63049) `[Bug]: TritonW4A16 GEMM faults on ROCm once M × N or M × K passes 2^31` | quant,rocm | ? | - |
+| P0 | [#63054](https://github.com/vllm-project/vllm/pull/63054) `[Bugfix][ROCm] Use 64-bit row offsets in the Triton W4A16 GEMM` | bug,quant,rocm | main | - |
 | - | [#63096](https://github.com/vllm-project/vllm/pull/63096) `[ROCm][Spec Decode] Enable fused multi-step draft decode for ROCM_AITER_UNIFIED_ATTN` | perf,rocm | ? | - |
 | - | [#63097](https://github.com/vllm-project/vllm/pull/63097) `[Model] Load q/k/v scales for the quantized Kimi-K2.6` | quant | ? | - |
 | - | [#63102](https://github.com/vllm-project/vllm/pull/63102) `[Perf][GLM-5.3-Flash] Specialized decode for GB300 TP4` | infra,nvidia,perf | ? | - |
@@ -746,31 +746,31 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#63401](https://github.com/vllm-project/vllm/pull/63401) `[Bugfix][ROCm] Size the extensible KV cache from exact VRAM use, not 2 MB-rounded free memory` | bug,infra,nvidia,perf,rocm | ? | - |
 | - | [#63405](https://github.com/vllm-project/vllm/pull/63405) `[CI] Leave GPU headroom in the offline ColBERT plugin tests` | infra | ? | - |
 | - | [#63432](https://github.com/vllm-project/vllm/pull/63432) `[Bugfix][Spec Decode] Keep nested-config and YaRN drafts within their rotary cache` | bug,perf | ? | - |
-| - | [#63440](https://github.com/vllm-project/vllm/pull/63440) `[ROCm][Perf][Muse Spark] FlyDSL decode monokernel for DSpark verify steps on MI355X (--monokernel)` | infra,nvidia,perf,rocm | main | - |
-| - | [#63467](https://github.com/vllm-project/vllm/issues/63467) `[Bug]: Wrong token ids from fastokens' split cache before 0.3.4 (Rust frontend, VLLM_USE_FASTOKENS)` | perf | ? | - |
+| P0 | [#63440](https://github.com/vllm-project/vllm/pull/63440) `[ROCm][Perf][Muse Spark] FlyDSL decode monokernel for DSpark verify steps on MI355X (--monokernel)` | infra,nvidia,perf,rocm | main | - |
+| P1 | [#63467](https://github.com/vllm-project/vllm/issues/63467) `[Bug]: Wrong token ids from fastokens' split cache before 0.3.4 (Rust frontend, VLLM_USE_FASTOKENS)` | perf | ? | - |
 | - | [#63505](https://github.com/vllm-project/vllm/issues/63505) `[Bug]: Qwen3.8-27B (GDN hybrid) with PP=3 on sm_86: illegal memory access (Xid 31) with prefix caching, gibber` | bug,perf,risk | ? | - |
 | - | [#63540](https://github.com/vllm-project/vllm/pull/63540) `[Perf][DSv4] Process 4 heads per program in fused_inv_rope_fp8_quant` | perf,quant | ? | - |
 | - | [#63574](https://github.com/vllm-project/vllm/pull/63574) `[Security] Raise patched runtime and test dependency floors` | infra,rocm | ? | - |
 | - | [#63598](https://github.com/vllm-project/vllm/issues/63598) `[Bug]: Qwen3.5/3.6 MoE GPTQ checkpoint with BF16 fused MTP experts: `mtp.layers.0.mlp.experts has no parameter` | perf,quant,rocm | ? | - |
 | - | [#63627](https://github.com/vllm-project/vllm/pull/63627) `[Perf] Tuned batch-invariant fused MoE configs on Blackwell` | nvidia,perf | ? | - |
 | - | [#63636](https://github.com/vllm-project/vllm/pull/63636) `[Bugfix][Transformers] Infer mm encoder dynamic_arg_dims from forward signature` | bug,infra | ? | - |
-| - | [#63721](https://github.com/vllm-project/vllm/pull/63721) `[ROCm][Perf][MoE] Fuse SiLU-and-mul with per-token FP8 quant in TritonExperts and skip remote EP routes` | perf,quant,rocm | main | - |
+| P0 | [#63721](https://github.com/vllm-project/vllm/pull/63721) `[ROCm][Perf][MoE] Fuse SiLU-and-mul with per-token FP8 quant in TritonExperts and skip remote EP routes` | perf,quant,rocm | main | - |
 | - | [#63724](https://github.com/vllm-project/vllm/pull/63724) `[ROCm][Perf][Muse Spark] Enable the bf16x3 router GEMM on gfx942` | perf,rocm | ? | - |
-| - | [#63727](https://github.com/vllm-project/vllm/pull/63727) `[ROCm][Perf][Muse Spark] Add gfx942 FP8 W8A8 fused-MoE configs for E=32,N=4096` | perf,quant,rocm | main | - |
-| - | [#63732](https://github.com/vllm-project/vllm/issues/63732) `[Bug]: Gemma 4 + online --quantization fp8: image requests crash since v0.23.0 (FP8-cast pixel values reach qu` | bug,quant | ? | - |
+| P0 | [#63727](https://github.com/vllm-project/vllm/pull/63727) `[ROCm][Perf][Muse Spark] Add gfx942 FP8 W8A8 fused-MoE configs for E=32,N=4096` | perf,quant,rocm | main | - |
+| P1 | [#63732](https://github.com/vllm-project/vllm/issues/63732) `[Bug]: Gemma 4 + online --quantization fp8: image requests crash since v0.23.0 (FP8-cast pixel values reach qu` | bug,quant | ? | - |
 | - | [#63751](https://github.com/vllm-project/vllm/issues/63751) `[Bug]: IndexError in _create_chat_logprobs / _create_completion_logprobs (top_logprobs shorter than token_ids)` | bug | ? | - |
 | - | [#63753](https://github.com/vllm-project/vllm/pull/63753) `[Fast Start] Seed compiled caches through the D2D transport` | nvidia | ? | - |
 | - | [#63795](https://github.com/vllm-project/vllm/pull/63795) `[Spec Decode] DSpark: sliding-window MLA draft layers` | perf | ? | - |
 | - | [#63796](https://github.com/vllm-project/vllm/pull/63796) `[Spec Decode][DCP] DSpark: run sliding-window MLA drafts under DCP` | perf | ? | - |
 | - | [#63838](https://github.com/vllm-project/vllm/pull/63838) `[ROCm][Kimi-K3] Keep the AttnRes block bank in a persistent workspace` | rocm | ? | - |
 | - | [#63847](https://github.com/vllm-project/vllm/pull/63847) `[ROCm][Kernel] Support persistent_topk on ROCm` | infra,nvidia,perf,rocm | ? | - |
-| - | [#63878](https://github.com/vllm-project/vllm/pull/63878) `[ROCm][Perf][DSA] Honor skip_kv_gather in the ROCm sparse-indexer prefill loop` | perf,rocm | ? | - |
+| P1 | [#63878](https://github.com/vllm-project/vllm/pull/63878) `[ROCm][Perf][DSA] Honor skip_kv_gather in the ROCm sparse-indexer prefill loop` | perf,rocm | ? | - |
 | - | [#63890](https://github.com/vllm-project/vllm/pull/63890) `[ROCm][Perf] Use AITER's all-gather for small TP all-gathers` | nvidia,perf,rocm | ? | - |
 | - | [#63893](https://github.com/vllm-project/vllm/pull/63893) `[ROCm][Perf][DSv4.1] Mono: tuned K1 at TP4` | perf,rocm | ? | - |
-| - | [#63944](https://github.com/vllm-project/vllm/issues/63944) `[Bug]: int8_per_token_head scale-view fill overwrites Gated DeltaNet state in hybrid models` | quant | ? | - |
-| - | [#63971](https://github.com/vllm-project/vllm/pull/63971) `[Bugfix][Mooncake] Let decodes reuse divergent local hybrid prefix hits` | bug | main | - |
+| P0 | [#63944](https://github.com/vllm-project/vllm/issues/63944) `[Bug]: int8_per_token_head scale-view fill overwrites Gated DeltaNet state in hybrid models` | quant | ? | - |
+| P0 | [#63971](https://github.com/vllm-project/vllm/pull/63971) `[Bugfix][Mooncake] Let decodes reuse divergent local hybrid prefix hits` | bug | main | - |
 | - | [#64001](https://github.com/vllm-project/vllm/pull/64001) `[ROCm][DSv4.1] Avoid runtime JIT for offset combine_topk_swa_indices inputs` | rocm | ? | - |
-| - | [#64004](https://github.com/vllm-project/vllm/pull/64004) `[ROCm][Kimi-K3][Perf] Cut gfx942 MXFP4-to-int4 requant time under pure TP` | perf,quant,rocm | main | - |
+| P0 | [#64004](https://github.com/vllm-project/vllm/pull/64004) `[ROCm][Kimi-K3][Perf] Cut gfx942 MXFP4-to-int4 requant time under pure TP` | perf,quant,rocm | main | - |
 | - | [#64038](https://github.com/vllm-project/vllm/issues/64038) `[Bug]: `/v1/chat/completions/derender` usage omits `reasoning_tokens` and `cached_tokens` that `/v1/chat/compl` | bug | ? | - |
 | - | [#64041](https://github.com/vllm-project/vllm/pull/64041) `[Bugfix] Report reasoning and cached tokens in chat derender usage` | bug | ? | - |
 | - | [#64055](https://github.com/vllm-project/vllm/pull/64055) `[ROCm][RDNA][Perf][MoE] Use w2 scatter + topk sum for the tk 3.8 OAI MoE combine on RDNA` | perf,rocm | ? | - |
@@ -778,10 +778,10 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#64061](https://github.com/vllm-project/vllm/pull/64061) `[Kernel][Perf] Run DeepGEMM Mega MoE on SM90 with MXFP4 experts` | infra,nvidia,perf,quant | ? | - |
 | - | [#64070](https://github.com/vllm-project/vllm/pull/64070) `[Recipe] Qwen3.5: keep configuration-specific content out of the guides` | infra | ? | - |
 | - | [#64086](https://github.com/vllm-project/vllm/pull/64086) `[Bugfix][MoE] Preserve invalid expert IDs in NIXL round-robin mapping` | bug,infra | ? | - |
-| - | [#64087](https://github.com/vllm-project/vllm/pull/64087) `[Bugfix][Kernel] Fix reshape & cache dropping KV heads past 512 chunks` | bug,perf,rocm | main | - |
-| - | [#64094](https://github.com/vllm-project/vllm/pull/64094) `[ROCm][DSv4.1][Perf]  Enable prefix-cache SWA replay on gfx950` | perf,rocm | main | - |
+| P0 | [#64087](https://github.com/vllm-project/vllm/pull/64087) `[Bugfix][Kernel] Fix reshape & cache dropping KV heads past 512 chunks` | bug,perf,rocm | main | - |
+| P0 | [#64094](https://github.com/vllm-project/vllm/pull/64094) `[ROCm][DSv4.1][Perf]  Enable prefix-cache SWA replay on gfx950` | perf,rocm | main | - |
 | - | [#64099](https://github.com/vllm-project/vllm/issues/64099) `[RFC]: Consistent semantics for drafted, verified and accepted spec decode tokens` |  | ? | - |
-| - | [#64106](https://github.com/vllm-project/vllm/issues/64106) `[Bug]: Kimi-K3 on MI355X: --kv-cache-dtype fp8 silently breaks accuracy (GSM8K 0.975 -> 0.305)` | perf,quant,risk,rocm | ? | - |
+| P0 | [#64106](https://github.com/vllm-project/vllm/issues/64106) `[Bug]: Kimi-K3 on MI355X: --kv-cache-dtype fp8 silently breaks accuracy (GSM8K 0.975 -> 0.305)` | perf,quant,risk,rocm | ? | - |
 | - | [#64131](https://github.com/vllm-project/vllm/pull/64131) `[ROCm][CI] Keep nightlies off PR-writable images and trim the csrc cache key` | infra,perf,rocm | ? | - |
 | - | [#64152](https://github.com/vllm-project/vllm/pull/64152) `[ROCm][Perf][DSv4.1] Mono: tuned K1 at TP8` | perf,rocm | ? | - |
 | - | [#64153](https://github.com/vllm-project/vllm/pull/64153) `[ROCm][Perf][DSv4.1] Mono: batch TP8 K2's X8 copies, load its push's peer bases late` | perf,rocm | ? | - |
@@ -789,7 +789,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#64159](https://github.com/vllm-project/vllm/pull/64159) `[Bugfix][DP] Log cross-engine step statistics ordering at debug level` | bug | ? | - |
 | - | [#64164](https://github.com/vllm-project/vllm/pull/64164) `[Bugfix][Metrics] Keep Ray metrics usable without Ray Serve` | bug | ? | - |
 | - | [#64165](https://github.com/vllm-project/vllm/pull/64165) `[Bugfix] Fix FlashInfer plan buffer race causing illegal memory access with PP` | bug,nvidia,risk | ? | - |
-| - | [#64168](https://github.com/vllm-project/vllm/pull/64168) `[Bugfix] Fix Gemma 4 vision crash with online FP8 quantization` | bug,infra,nvidia,quant | ? | - |
+| P1 | [#64168](https://github.com/vllm-project/vllm/pull/64168) `[Bugfix] Fix Gemma 4 vision crash with online FP8 quantization` | bug,infra,nvidia,quant | ? | - |
 | - | [#64275](https://github.com/vllm-project/vllm/issues/64275) `[Bug]: Adaptive-verification cost profiling OOMs at startup after KV-cache allocation (DeepSeek-V4.1-Flash-101` | bug,perf,rocm | ? | - |
 | - | [#64286](https://github.com/vllm-project/vllm/pull/64286) `[KV Offload] Add a store trigger and isolated store trigger handlers` |  | ? | - |
 | - | [#64298](https://github.com/vllm-project/vllm/pull/64298) `[Bugfix][KV Offload][P2P] Fail never-sent fetches locally` | bug | ? | - |
@@ -797,7 +797,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#64324](https://github.com/vllm-project/vllm/pull/64324) `[Bugfix] Forward shutdown() in LMCacheConnectorV1 so EngineCore is not force-killed` | bug | ? | - |
 | - | [#64329](https://github.com/vllm-project/vllm/pull/64329) `[Bugfix] Apply the layer q_scale only to FP8 queries in FlashInfer` | bug,nvidia,quant | ? | - |
 | - | [#64331](https://github.com/vllm-project/vllm/pull/64331) `[ROCm][RDNA][Perf] Bump triton_kernels to ROCm 3.8.x with the RDNA MXFP4 configs` | infra,perf,quant,rocm | ? | - |
-| - | [#64352](https://github.com/vllm-project/vllm/pull/64352) `[Model Loader] Direct reload: reset MoE expert padding at begin` | infra,quant | ? | - |
+| P1 | [#64352](https://github.com/vllm-project/vllm/pull/64352) `[Model Loader] Direct reload: reset MoE expert padding at begin` | infra,quant | ? | - |
 | - | [#64403](https://github.com/vllm-project/vllm/pull/64403) `[Bugfix][ROCm] Avoid unused index caches in MiniMax-M3 sharing layers` | bug,rocm | ? | - |
 | - | [#64410](https://github.com/vllm-project/vllm/pull/64410) `[Quantization] Support w4afp8 checkpoints on the W4A8 FP8 MoE path` | quant | ? | - |
 | - | [#64436](https://github.com/vllm-project/vllm/issues/64436) `[Bug]: Gemma4 MoE cannot load PEFT expert LoRA adapters without --enable-mixed-moe-lora-format` |  | ? | - |
@@ -813,22 +813,22 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#64534](https://github.com/vllm-project/vllm/pull/64534) `[Model] Add Mistral Large 4` | infra,nvidia,perf,quant,rocm | ? | - |
 | - | [#64541](https://github.com/vllm-project/vllm/issues/64541) `[Bug]: dots.ocr produces identical "blurry image" output for every region with tensor-parallel size 2` |  | ? | - |
 | - | [#64543](https://github.com/vllm-project/vllm/pull/64543) `[Bugfix][Model] Fix dots_ocr vision tower QKV split for TP > 1` | bug | ? | - |
-| - | [#64560](https://github.com/vllm-project/vllm/pull/64560) `[ROCm][Perf][MLA] Fuse the decode W_UK absorb, q concat + fp8 quant and head pad via AITER` | perf,quant,rocm | ? | - |
+| P1 | [#64560](https://github.com/vllm-project/vllm/pull/64560) `[ROCm][Perf][MLA] Fuse the decode W_UK absorb, q concat + fp8 quant and head pad via AITER` | perf,quant,rocm | ? | - |
 | - | [#64588](https://github.com/vllm-project/vllm/pull/64588) `[Doc][Recipe] MiMo-V2.5-Pro: split fused --max-model-len base arg` | infra,perf | ? | - |
 | - | [#64604](https://github.com/vllm-project/vllm/pull/64604) `[CI] Enroll Language Models (Hybrid) and Granite Compatibility in automatic sharding` | infra | ? | - |
 | - | [#64606](https://github.com/vllm-project/vllm/pull/64606) `[CI] Enroll 8 jobs in automatic sharding` | infra | ? | - |
 | - | [#64622](https://github.com/vllm-project/vllm/pull/64622) `[Startup] Skip the CUDA graph memory profile when its estimate is disabled` | nvidia | ? | - |
 | - | [#64652](https://github.com/vllm-project/vllm/issues/64652) `[Bug]: EAGLE3 draft acceptance collapses after the first position with --block-size > 128 (MiniMax-M3, GB200)` | nvidia | ? | - |
 | - | [#64663](https://github.com/vllm-project/vllm/pull/64663) `[Doc] Named and required tool_choice need a tool parser` |  | ? | - |
-| - | [#64677](https://github.com/vllm-project/vllm/pull/64677) `[Bugfix][UMBP] Copy every KV cache layout's per-head runs` | bug,infra,perf,rocm | main | - |
+| P0 | [#64677](https://github.com/vllm-project/vllm/pull/64677) `[Bugfix][UMBP] Copy every KV cache layout's per-head runs` | bug,infra,perf,rocm | main | - |
 | - | [#64681](https://github.com/vllm-project/vllm/pull/64681) `[Bugfix][LoRA] Give Mamba-1 LoRA layers every row of the batch` | bug,infra | ? | - |
-| - | [#64693](https://github.com/vllm-project/vllm/pull/64693) `[ROCm][MoRIIO] Support PP for prefill instance in PD disaggregated serving with MoRI WRITE mode` | rocm | ? | - |
-| - | [#64715](https://github.com/vllm-project/vllm/pull/64715) `[ROCm][UMBP] Support UMBP standalone mode for DeepSeek-V4.1-Flash` | rocm | ? | - |
+| P1 | [#64693](https://github.com/vllm-project/vllm/pull/64693) `[ROCm][MoRIIO] Support PP for prefill instance in PD disaggregated serving with MoRI WRITE mode` | rocm | ? | - |
+| P1 | [#64715](https://github.com/vllm-project/vllm/pull/64715) `[ROCm][UMBP] Support UMBP standalone mode for DeepSeek-V4.1-Flash` | rocm | ? | - |
 | - | [#64742](https://github.com/vllm-project/vllm/pull/64742) `[Bugfix][Rust Frontend] Fix cancellation during request submission` | bug | ? | - |
-| - | [#64763](https://github.com/vllm-project/vllm/pull/64763) `[ROCm][HY4] Use breakable graphs without torch.compile` | infra,rocm | main | - |
+| P0 | [#64763](https://github.com/vllm-project/vllm/pull/64763) `[ROCm][HY4] Use breakable graphs without torch.compile` | infra,rocm | main | - |
 | - | [#64765](https://github.com/vllm-project/vllm/pull/64765) `[Misc] Use the b12x package shipped with flashinfer-python` | infra,nvidia | ? | - |
 | - | [#64767](https://github.com/vllm-project/vllm/pull/64767) `[Quantization] Load ModelOpt NVFP4 W4A16 token embeddings in mixed-precision checkpoints` | infra,quant | ? | - |
-| - | [#64777](https://github.com/vllm-project/vllm/pull/64777) `[Bugfix][Spec Decode] Use the target's kernel block sizes for EAGLE draft attention` | bug,perf | ? | - |
+| P1 | [#64777](https://github.com/vllm-project/vllm/pull/64777) `[Bugfix][Spec Decode] Use the target's kernel block sizes for EAGLE draft attention` | bug,perf | ? | - |
 | - | [#64778](https://github.com/vllm-project/vllm/issues/64778) `[Bug]: Non-streaming `/v1/chat/completions/derender` and `/v1/completions/derender` report `usage.prompt_token` | bug | ? | - |
 | - | [#64781](https://github.com/vllm-project/vllm/pull/64781) `[Bugfix] Read generate usage.prompt_tokens in non-streaming derender` | bug | ? | - |
 | - | [#64822](https://github.com/vllm-project/vllm/pull/64822) `[Perf][Model] Muse vision encoders: no GPU<->CPU syncs, build Glimmer's vision prep once per call` | infra,perf | ? | - |
@@ -836,93 +836,93 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#64831](https://github.com/vllm-project/vllm/pull/64831) `[Bugfix][Benchmark] Fix bench mm-processor crash with HF datasets` | bug,perf | ? | - |
 | - | [#64834](https://github.com/vllm-project/vllm/pull/64834) `[CI][XPU] Use supported block sizes in UCX backend tests` | infra,nvidia | ? | - |
 | - | [#64845](https://github.com/vllm-project/vllm/issues/64845) `[Bug]: EmbeddingGemma 2 rejects `dimensions` by default although the model supports Matryoshka (128/256/512/76` |  | ? | - |
-| - | [#64874](https://github.com/vllm-project/vllm/issues/64874) `[Bug]: [ROCm][GLM-5.3-Flash]: "Workspace is locked" AssertionError in rocm_fp8_paged_mqa_logits under high dec` | bug,rocm | ? | - |
-| - | [#64883](https://github.com/vllm-project/vllm/pull/64883) `[ROCm][Perf][DSv4.1] Mono: tuned K2 FFN seam at TP4 / TP8` | perf,rocm | ? | - |
+| P1 | [#64874](https://github.com/vllm-project/vllm/issues/64874) `[Bug]: [ROCm][GLM-5.3-Flash]: "Workspace is locked" AssertionError in rocm_fp8_paged_mqa_logits under high dec` | bug,rocm | ? | - |
+| P1 | [#64883](https://github.com/vllm-project/vllm/pull/64883) `[ROCm][Perf][DSv4.1] Mono: tuned K2 FFN seam at TP4 / TP8` | perf,rocm | ? | - |
 | - | [#64885](https://github.com/vllm-project/vllm/pull/64885) `[Bugfix][Pooling] Enable Matryoshka dimensions for EmbeddingGemma 2` | bug,infra | ? | - |
 | - | [#64897](https://github.com/vllm-project/vllm/pull/64897) `[Bugfix][Spec Decode][XPU] greedy_argmax: treat NaN as -inf on the torch fallback` | bug,nvidia,risk | ? | - |
 | - | [#64923](https://github.com/vllm-project/vllm/pull/64923) `[Bugfix][V2 runner] Keep idle-DP dummy requests within max_model_len` | bug | ? | - |
-| - | [#64958](https://github.com/vllm-project/vllm/pull/64958) `[ROCm][Kimi-K3] Support Mooncake consumers with specialized decode` | rocm | main | - |
+| P0 | [#64958](https://github.com/vllm-project/vllm/pull/64958) `[ROCm][Kimi-K3] Support Mooncake consumers with specialized decode` | rocm | main | - |
 | - | [#64985](https://github.com/vllm-project/vllm/issues/64985) `[Bug]: KV-sharing fast prefill hangs under async scheduling (non-blocking D2H copy of query_start_loc_cpu)` | bug | ? | - |
-| - | [#64986](https://github.com/vllm-project/vllm/pull/64986) `[Bugfix][Attention] Fix KV-sharing fast prefill hang from unsynchronized host offsets` | bug | ? | - |
+| P1 | [#64986](https://github.com/vllm-project/vllm/pull/64986) `[Bugfix][Attention] Fix KV-sharing fast prefill hang from unsynchronized host offsets` | bug | ? | - |
 | - | [#64994](https://github.com/vllm-project/vllm/pull/64994) `[Perf][DCP] Up-project the MLA decode output before the A2A merge` | infra,perf | ? | - |
 | - | [#65028](https://github.com/vllm-project/vllm/pull/65028) `[Perf][Rust Frontend] Serialize SSE chunks before building the event` | perf | ? | - |
 | - | [#65029](https://github.com/vllm-project/vllm/pull/65029) `[Bugfix][Frontend] Report the line of a run-batch request rejected by request validators` | bug | ? | - |
-| - | [#65030](https://github.com/vllm-project/vllm/pull/65030) `[Perf][Model] DeepSeek V4/V4.1 Vision: encode a call's images in packed passes` | perf | main | - |
+| P0 | [#65030](https://github.com/vllm-project/vllm/pull/65030) `[Perf][Model] DeepSeek V4/V4.1 Vision: encode a call's images in packed passes` | perf | main | - |
 | - | [#65077](https://github.com/vllm-project/vllm/pull/65077) `[Perf][Quantization] Honor FP8 activations for Humming linear on SM100/SM110` | infra,nvidia,perf,quant | ? | - |
-| - | [#65080](https://github.com/vllm-project/vllm/pull/65080) `[Bugfix][ROCm] Muse Spark: merge the two process_weights_after_loading hooks` | bug,rocm | main | - |
+| P0 | [#65080](https://github.com/vllm-project/vllm/pull/65080) `[Bugfix][ROCm] Muse Spark: merge the two process_weights_after_loading hooks` | bug,rocm | main | - |
 | - | [#65084](https://github.com/vllm-project/vllm/pull/65084) `[Multimodal] Refactor encoder cuda graph to support share graph buffer reuse` | nvidia,rocm | ? | - |
-| - | [#65087](https://github.com/vllm-project/vllm/pull/65087) `[ROCm][Perf][MiniMax-M3.1] Four-wave decode top-k for the NVFP4 indexer` | perf,quant,rocm | main | - |
-| - | [#65092](https://github.com/vllm-project/vllm/pull/65092) `[Bugfix][ROCm] Reserve kpool decode indexer logits in workspace during profiling` | bug,rocm | main | - |
-| - | [#65105](https://github.com/vllm-project/vllm/issues/65105) `[Bug]: [ROCm] AITER MLA `paged_kv_indices` sized max_num_seqs x max_model_len (4 GiB per builder) pins a cache` | infra,rocm | ? | - |
-| - | [#65106](https://github.com/vllm-project/vllm/issues/65106) `[Bug]: [ROCm][Kimi-K3] DBO: MoE workspace locked smaller than the DP-gathered batch, first request fails` | rocm | ? | - |
-| - | [#65132](https://github.com/vllm-project/vllm/pull/65132) `[ROCm][Perf] Build AITER MLA full-graph decode metadata in one kernel` | infra,perf,rocm | ? | - |
-| - | [#65137](https://github.com/vllm-project/vllm/pull/65137) `[Bugfix][KV Connector] Keep same-host NIXL on NVLink with the extensible KV cache` | bug,perf | ? | - |
+| P0 | [#65087](https://github.com/vllm-project/vllm/pull/65087) `[ROCm][Perf][MiniMax-M3.1] Four-wave decode top-k for the NVFP4 indexer` | perf,quant,rocm | main | - |
+| P0 | [#65092](https://github.com/vllm-project/vllm/pull/65092) `[Bugfix][ROCm] Reserve kpool decode indexer logits in workspace during profiling` | bug,rocm | main | - |
+| P1 | [#65105](https://github.com/vllm-project/vllm/issues/65105) `[Bug]: [ROCm] AITER MLA `paged_kv_indices` sized max_num_seqs x max_model_len (4 GiB per builder) pins a cache` | infra,rocm | ? | - |
+| P1 | [#65106](https://github.com/vllm-project/vllm/issues/65106) `[Bug]: [ROCm][Kimi-K3] DBO: MoE workspace locked smaller than the DP-gathered batch, first request fails` | rocm | ? | - |
+| P1 | [#65132](https://github.com/vllm-project/vllm/pull/65132) `[ROCm][Perf] Build AITER MLA full-graph decode metadata in one kernel` | infra,perf,rocm | ? | - |
+| P1 | [#65137](https://github.com/vllm-project/vllm/pull/65137) `[Bugfix][KV Connector] Keep same-host NIXL on NVLink with the extensible KV cache` | bug,perf | ? | - |
 | - | [#65145](https://github.com/vllm-project/vllm/pull/65145) `[CI] Bake hash-locked KV connectors into the CI image and re-enable their jobs` | infra | ? | - |
 | - | [#65149](https://github.com/vllm-project/vllm/pull/65149) `[Quantization][Fusion] Extend manual activation fusion to more NVFP4 linear backends` | infra,nvidia,perf,quant | ? | - |
 | - | [#65156](https://github.com/vllm-project/vllm/pull/65156) `[Bugfix][Frontend] Close the parent's listening sockets after launching the Rust frontend` | bug | ? | - |
 | - | [#65158](https://github.com/vllm-project/vllm/pull/65158) `[CI] Add check-docstring-style pre-commit hook and use single backticks in docstrings` | infra,nvidia,perf,quant,rocm | ? | - |
 | - | [#65168](https://github.com/vllm-project/vllm/pull/65168) `[Fast start] Pluggable shared stores for daemon warmup caches` | infra | ? | - |
-| - | [#65177](https://github.com/vllm-project/vllm/pull/65177) `[Bugfix][Quantization] Index INT8 MoE per-channel weight scales independently of act quant - #58570` | bug,infra,nvidia,perf,quant,rocm | ? | - |
-| - | [#65190](https://github.com/vllm-project/vllm/issues/65190) `[ROCm][Bug] Muse Spark long-context c40 on MI350X: serial prefill and ~0 decode when the working set exceeds G` | rocm | ? | - |
+| P1 | [#65177](https://github.com/vllm-project/vllm/pull/65177) `[Bugfix][Quantization] Index INT8 MoE per-channel weight scales independently of act quant - #58570` | bug,infra,nvidia,perf,quant,rocm | ? | - |
+| P0 | [#65190](https://github.com/vllm-project/vllm/issues/65190) `[ROCm][Bug] Muse Spark long-context c40 on MI350X: serial prefill and ~0 decode when the working set exceeds G` | rocm | ? | - |
 | - | [#65191](https://github.com/vllm-project/vllm/pull/65191) `[CPU][Test] Add INT8 W4A8 smoke tests for Arm CPUs` | infra,quant | ? | - |
 | - | [#65203](https://github.com/vllm-project/vllm/pull/65203) `[Attention] Sync FA with upstream (54b044c8)` | infra | ? | - |
 | - | [#65217](https://github.com/vllm-project/vllm/pull/65217) `[Spec Decode][MRV2] Add prefill_context_kv_only for P/D prefill instances` |  | ? | - |
 | - | [#65227](https://github.com/vllm-project/vllm/pull/65227) `[Perf][Multimodal] Encoder CUDA graphs: one replay per batch, finer grid up to one max budget` | nvidia,perf,rocm | ? | - |
-| - | [#65229](https://github.com/vllm-project/vllm/pull/65229) `[Bugfix][Spec Decode] Avoid catastrophic cancellation in the acceptance estimator` | bug | ? | - |
+| P1 | [#65229](https://github.com/vllm-project/vllm/pull/65229) `[Bugfix][Spec Decode] Avoid catastrophic cancellation in the acceptance estimator` | bug | ? | - |
 | - | [#65235](https://github.com/vllm-project/vllm/pull/65235) `[RL][Model Loader] Load plan: plan_loads and TraceTensor` |  | ? | - |
-| - | [#65249](https://github.com/vllm-project/vllm/pull/65249) `[ROCm][DSv4.1] Enable prefix-cache SWA replay on gfx942` | perf,rocm | main | - |
-| - | [#65267](https://github.com/vllm-project/vllm/pull/65267) `[Perf][ROCm][MiniMax-M3.1] Add opt-in parallel decode top-k` | infra,perf,rocm | ? | - |
+| P0 | [#65249](https://github.com/vllm-project/vllm/pull/65249) `[ROCm][DSv4.1] Enable prefix-cache SWA replay on gfx942` | perf,rocm | main | - |
+| P1 | [#65267](https://github.com/vllm-project/vllm/pull/65267) `[Perf][ROCm][MiniMax-M3.1] Add opt-in parallel decode top-k` | infra,perf,rocm | ? | - |
 | - | [#65270](https://github.com/vllm-project/vllm/pull/65270) `[MRV2][Spec Decode] Fix mixed draft-model warmup token budget` | bug | ? | - |
-| - | [#65272](https://github.com/vllm-project/vllm/pull/65272) `[Quantization] Support ModelOpt INT8_PB_WO (per-block INT8 weight-only) linear layers` | quant | ? | - |
-| - | [#65275](https://github.com/vllm-project/vllm/pull/65275) `[Bugfix][MRV2] Use promised max_query_len for encoder-only FULL CUDA graphs` | bug,infra,nvidia | ? | - |
+| P1 | [#65272](https://github.com/vllm-project/vllm/pull/65272) `[Quantization] Support ModelOpt INT8_PB_WO (per-block INT8 weight-only) linear layers` | quant | ? | - |
+| P1 | [#65275](https://github.com/vllm-project/vllm/pull/65275) `[Bugfix][MRV2] Use promised max_query_len for encoder-only FULL CUDA graphs` | bug,infra,nvidia | ? | - |
 | - | [#65323](https://github.com/vllm-project/vllm/pull/65323) `[XPU][UT] Preserve RoPE buffer dtype for HF reference in the privacy-filter model test on XPU` | nvidia | ? | - |
 | - | [#65349](https://github.com/vllm-project/vllm/pull/65349) `[Perf] Warm up JIT kernels that only long prefills, eager drafters and constrained decoding reach` | perf | ? | - |
-| - | [#65351](https://github.com/vllm-project/vllm/pull/65351) `[Multimodal][Bugfix] Fix Step3-VL encoder output aliasing and guard shared CUDA graph capture buffers` | bug,nvidia,rocm | ? | - |
+| P1 | [#65351](https://github.com/vllm-project/vllm/pull/65351) `[Multimodal][Bugfix] Fix Step3-VL encoder output aliasing and guard shared CUDA graph capture buffers` | bug,nvidia,rocm | ? | - |
 | - | [#65363](https://github.com/vllm-project/vllm/pull/65363) `[Bugfix][Multimodal] Handle media cache eviction during reads` | bug,perf | ? | - |
-| - | [#65373](https://github.com/vllm-project/vllm/pull/65373) `Share DeepSeek V4.1 CPU KV across TP ranks` | perf | ? | - |
-| - | [#65386](https://github.com/vllm-project/vllm/pull/65386) `Minimax m3.1 dspark drafter monokernel` | infra | ? | - |
+| P1 | [#65373](https://github.com/vllm-project/vllm/pull/65373) `Share DeepSeek V4.1 CPU KV across TP ranks` | perf | ? | - |
+| P1 | [#65386](https://github.com/vllm-project/vllm/pull/65386) `Minimax m3.1 dspark drafter monokernel` | infra | ? | - |
 | - | [#65400](https://github.com/vllm-project/vllm/pull/65400) `[Recipe] Kimi-K3, MiniMax-M3.1-Flash: add Rubin VR200 support` | infra | ? | - |
 | - | [#65405](https://github.com/vllm-project/vllm/issues/65405) `[Bug]: MoE w2_bias is added tp_size times under tensor parallelism` |  | ? | - |
-| - | [#65406](https://github.com/vllm-project/vllm/pull/65406) `[Bugfix][MoE] Count the expert down-projection bias once under TP` | bug | ? | - |
+| P1 | [#65406](https://github.com/vllm-project/vllm/pull/65406) `[Bugfix][MoE] Count the expert down-projection bias once under TP` | bug | ? | - |
 | - | [#65446](https://github.com/vllm-project/vllm/pull/65446) `[torch.compile] Only flag `_buffers.update` in the cudagraph buffer assignment check` | nvidia | ? | - |
 | - | [#65448](https://github.com/vllm-project/vllm/pull/65448) `[KV Connector][Spec Decode] Support lookahead block hashes in remaining KV connectors` | perf | ? | - |
-| - | [#65461](https://github.com/vllm-project/vllm/pull/65461) `[ROCm][Perf][DSv4.1] Mono: merge K2(l) and K1(l + 1) into one launch at TP8` | infra,perf,rocm | ? | - |
-| - | [#65463](https://github.com/vllm-project/vllm/pull/65463) `[Bugfix][KV Cache] Re-fit `--max-model-len auto` after the extensible KV cache shrinks` | bug,perf | ? | - |
-| - | [#65465](https://github.com/vllm-project/vllm/issues/65465) `[Bug][Spec Decode][Structured Output] Reverting #54442 reopens grammar-invalid proposal acceptance in async sc` |  | ? | - |
-| - | [#65478](https://github.com/vllm-project/vllm/pull/65478) `[ROCm][Perf][MiniMax-M3.1] Fuse the FFN-side MXFP8 activation quant into the post-attention norm and swiglu` | perf,quant,rocm | ? | - |
-| - | [#65479](https://github.com/vllm-project/vllm/pull/65479) `[ROCm][MiniMax-M3.1] MXFP8 linear on AITER's tuned FlyDSL GEMM` | perf,quant,rocm | main | - |
-| - | [#65481](https://github.com/vllm-project/vllm/pull/65481) `[ROCm][Perf][MiniMax-M3.1] Pick the NVFP4 sparse decode splits per XCD, not per CU` | infra,perf,quant,rocm | ? | - |
-| - | [#65508](https://github.com/vllm-project/vllm/pull/65508) `[ROCm][Perf][MiniMax-M3.1] Emit the o_proj MXFP8 input from the NVFP4 sparse decode kernel` | perf,quant,rocm | ? | - |
+| P1 | [#65461](https://github.com/vllm-project/vllm/pull/65461) `[ROCm][Perf][DSv4.1] Mono: merge K2(l) and K1(l + 1) into one launch at TP8` | infra,perf,rocm | ? | - |
+| P1 | [#65463](https://github.com/vllm-project/vllm/pull/65463) `[Bugfix][KV Cache] Re-fit `--max-model-len auto` after the extensible KV cache shrinks` | bug,perf | ? | - |
+| P0 | [#65465](https://github.com/vllm-project/vllm/issues/65465) `[Bug][Spec Decode][Structured Output] Reverting #54442 reopens grammar-invalid proposal acceptance in async sc` |  | ? | - |
+| P1 | [#65478](https://github.com/vllm-project/vllm/pull/65478) `[ROCm][Perf][MiniMax-M3.1] Fuse the FFN-side MXFP8 activation quant into the post-attention norm and swiglu` | perf,quant,rocm | ? | - |
+| P0 | [#65479](https://github.com/vllm-project/vllm/pull/65479) `[ROCm][MiniMax-M3.1] MXFP8 linear on AITER's tuned FlyDSL GEMM` | perf,quant,rocm | main | - |
+| P1 | [#65481](https://github.com/vllm-project/vllm/pull/65481) `[ROCm][Perf][MiniMax-M3.1] Pick the NVFP4 sparse decode splits per XCD, not per CU` | infra,perf,quant,rocm | ? | - |
+| P1 | [#65508](https://github.com/vllm-project/vllm/pull/65508) `[ROCm][Perf][MiniMax-M3.1] Emit the o_proj MXFP8 input from the NVFP4 sparse decode kernel` | perf,quant,rocm | ? | - |
 | - | [#65514](https://github.com/vllm-project/vllm/pull/65514) `[CI] Run PyTorch Compilation root tests in one pytest, with test_config.py's forked tests spawned` | infra | ? | - |
-| - | [#65517](https://github.com/vllm-project/vllm/pull/65517) `[Bugfix][ROCm][MoE] Fix tkw1 rejecting count-free expert metadata, rename AITER QuantMethod` | bug,quant,rocm | ? | - |
+| P1 | [#65517](https://github.com/vllm-project/vllm/pull/65517) `[Bugfix][ROCm][MoE] Fix tkw1 rejecting count-free expert metadata, rename AITER QuantMethod` | bug,quant,rocm | ? | - |
 | - | [#65521](https://github.com/vllm-project/vllm/pull/65521) `[Perf][mHC] use FlashInfer mega mHC for MHCFusedPostPreOp (GLM-5.3-Fl…` | nvidia,perf | ? | - |
 | - | [#65523](https://github.com/vllm-project/vllm/issues/65523) `[Bug]:  MiMo-V2.6 video timestamps ignore real frame times (every clip is labelled 00:00–00:30)` | bug | ? | - |
 | - | [#65524](https://github.com/vllm-project/vllm/pull/65524) `[Perf][DSv4.1] Replay one row for far prefill chunks` | nvidia,perf | ? | - |
-| - | [#65530](https://github.com/vllm-project/vllm/pull/65530) `[ROCm][Perf][MiniMax-M3.1] Retune the MXFP8 dot_scaled GEMM tiles for M=17-256` | perf,quant,rocm | ? | - |
+| P1 | [#65530](https://github.com/vllm-project/vllm/pull/65530) `[ROCm][Perf][MiniMax-M3.1] Retune the MXFP8 dot_scaled GEMM tiles for M=17-256` | perf,quant,rocm | ? | - |
 | - | [#65531](https://github.com/vllm-project/vllm/issues/65531) `[Bug]: Precomputed image or video embeddings crash the engine when the encoder CUDA graph is on` | bug,nvidia | ? | - |
 | - | [#65533](https://github.com/vllm-project/vllm/issues/65533) `[Bug]: GLM-4.7-AWQ on Blackwell (sm_120) produces degenerate/looping output on v0.25.1 but correct on v0.14.0 ` | bug,nvidia,perf,quant | ? | - |
 | - | [#65535](https://github.com/vllm-project/vllm/pull/65535) `[Bugfix][Multimodal] Skip the encoder CUDA graph for precomputed embeddings` | bug,nvidia | ? | - |
 | - | [#65541](https://github.com/vllm-project/vllm/pull/65541) `[Rust][Benchmark] Align vllm-bench result files and requests with Python` | perf | ? | - |
 | - | [#65554](https://github.com/vllm-project/vllm/pull/65554) `[Bugfix] Fix startup illegal memory access from unaligned extensible KV cache segments` | bug,perf,risk | ? | - |
 | - | [#65557](https://github.com/vllm-project/vllm/pull/65557) `[Doc] Add vllm-iluvatar core Gpu to the Vllm support list` |  | ? | - |
-| - | [#65559](https://github.com/vllm-project/vllm/pull/65559) `[ROCm][KV Offload] SimpleCPUOffload: batch copies on SDMA with hipMemcpyFlagExtPreferCE (HIP 7.16+)` | nvidia,rocm | ? | - |
+| P1 | [#65559](https://github.com/vllm-project/vllm/pull/65559) `[ROCm][KV Offload] SimpleCPUOffload: batch copies on SDMA with hipMemcpyFlagExtPreferCE (HIP 7.16+)` | nvidia,rocm | ? | - |
 | - | [#65576](https://github.com/vllm-project/vllm/pull/65576) `[docker] Install AWS EFA in the main image; build DeepEP-EFA separately` | infra,nvidia | ? | - |
 | - | [#65583](https://github.com/vllm-project/vllm/pull/65583) `[Bugfix][Benchmark] Fix bench throughput crash with BlazeEdit HF datasets` | bug,perf | ? | - |
 | - | [#65587](https://github.com/vllm-project/vllm/issues/65587) `[Bug]: VLLM_BATCH_INVARIANT=1 is not batch-invariant for Gemma-2-9B on H100 (FlashAttention sliding-window pat` | bug,nvidia | ? | - |
 | - | [#65589](https://github.com/vllm-project/vllm/pull/65589) `[Perf][Startup] Don't import vllm.parser from vllm.v1.structured_output` | perf | ? | - |
-| - | [#65599](https://github.com/vllm-project/vllm/pull/65599) `[ROCm][Step5] Use one warp for CSA prefill sparse attention on CDNA3/CDNA4` | rocm | ? | - |
+| P1 | [#65599](https://github.com/vllm-project/vllm/pull/65599) `[ROCm][Step5] Use one warp for CSA prefill sparse attention on CDNA3/CDNA4` | rocm | ? | - |
 | - | [#65607](https://github.com/vllm-project/vllm/pull/65607) `[Perf][HiSparse] Batch the coordinator's per-page residency bookkeeping` | perf | ? | - |
 | - | [#65620](https://github.com/vllm-project/vllm/pull/65620) `[Doc] Document multimodal requirements for the Transformers modeling …` | infra | ? | - |
 | - | [#65627](https://github.com/vllm-project/vllm/pull/65627) `[Bugfix][Attention] Keep FA sliding window active under batch invariance` | bug | ? | - |
 | - | [#65629](https://github.com/vllm-project/vllm/pull/65629) `[Rust Frontend][Perf] Reduce per-request output channel memory` | perf | ? | - |
 | - | [#65640](https://github.com/vllm-project/vllm/pull/65640) `[Bugfix][KV Offload] Refresh streaming request keys after preemption` | bug | ? | - |
 | - | [#65652](https://github.com/vllm-project/vllm/pull/65652) `[torch.compile] Replace config `compute_hash` with `compile_factors`` | nvidia | ? | - |
-| - | [#65667](https://github.com/vllm-project/vllm/pull/65667) `[Bugfix][MRV2]  Read routed experts from unkeyed full blocks` | bug,infra | ? | - |
-| - | [#65685](https://github.com/vllm-project/vllm/pull/65685) `[Model] Kimi K3.1 Pro (split 5/6: ROCm DCP, P/D, indexer top-k)` | infra,nvidia,perf,rocm | ? | - |
+| P1 | [#65667](https://github.com/vllm-project/vllm/pull/65667) `[Bugfix][MRV2]  Read routed experts from unkeyed full blocks` | bug,infra | ? | - |
+| P1 | [#65685](https://github.com/vllm-project/vllm/pull/65685) `[Model] Kimi K3.1 Pro (split 5/6: ROCm DCP, P/D, indexer top-k)` | infra,nvidia,perf,rocm | main | - |
 | - | [#65697](https://github.com/vllm-project/vllm/pull/65697) `[Bugfix][Frontend] Count prompts over max_model_len in Anthropic count_tokens` | bug | ? | - |
 | - | [#65704](https://github.com/vllm-project/vllm/pull/65704) `[Bugfix][GLM-5.3] Build the MTP eh_proj low-latency GEMM plan` | bug,infra,perf | ? | - |
-| - | [#65710](https://github.com/vllm-project/vllm/pull/65710) `[Bugfix][Structured Output] Handle EOS in speculative Guidance batches` | bug | ? | - |
-| - | [#65722](https://github.com/vllm-project/vllm/pull/65722) `[Bugfix][ROCm] Stop AITER FA from skipping 1-token prompts in prefill/extend` | bug,rocm | main | - |
+| P1 | [#65710](https://github.com/vllm-project/vllm/pull/65710) `[Bugfix][Structured Output] Handle EOS in speculative Guidance batches` | bug | ? | - |
+| P0 | [#65722](https://github.com/vllm-project/vllm/pull/65722) `[Bugfix][ROCm] Stop AITER FA from skipping 1-token prompts in prefill/extend` | bug,rocm | main | - |
 | - | [#65724](https://github.com/vllm-project/vllm/pull/65724) `[MM] Support mm_device_do_normalize for Gemma 4 Unified` |  | ? | - |
 | - | [#65725](https://github.com/vllm-project/vllm/pull/65725) `[Recipe] Kimi-K3.1-Pro: add TPU serving via vllm-torchtpu` | infra | ? | - |
 | - | [#65733](https://github.com/vllm-project/vllm/pull/65733) `[CI] Make DSpark sharded-sampling test deterministic under torch.compile` | infra | ? | - |
@@ -930,53 +930,53 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#65743](https://github.com/vllm-project/vllm/pull/65743) `[Refactor] Remove dead code kernels` | perf,quant | ? | - |
 | - | [#65744](https://github.com/vllm-project/vllm/pull/65744) `[Bugfix][Frontend] Normalize Chat Completions tools and tool_choice validation` | bug | ? | - |
 | - | [#65746](https://github.com/vllm-project/vllm/pull/65746) `[GLM 5.3 Perf] Expand fp8 moe tma for sm100, 1.03~1.60x kernel performance improvement` | nvidia,perf,quant | ? | - |
-| - | [#65755](https://github.com/vllm-project/vllm/pull/65755) `[Bugfix][Step5] Fix FP32 residual truncation at pipeline boundaries` | bug,risk | ? | - |
+| P1 | [#65755](https://github.com/vllm-project/vllm/pull/65755) `[Bugfix][Step5] Fix FP32 residual truncation at pipeline boundaries` | bug,risk | ? | - |
 | - | [#65765](https://github.com/vllm-project/vllm/pull/65765) `[CI/Build][NVIDIA] Move Rubin nightly images to CUDA 13.5` | infra,nvidia | ? | - |
 | - | [#65766](https://github.com/vllm-project/vllm/pull/65766) `[DeepSeek-V4] Support sequence parallelism with pipeline parallelism for MegaMoE` |  | ? | - |
 | - | [#65768](https://github.com/vllm-project/vllm/pull/65768) `[Perf][Rust][Benchmark] Reuse allowed tokens in multi-turn generation` | perf | ? | - |
 | - | [#65778](https://github.com/vllm-project/vllm/pull/65778) `[Bugfix][Multimodal] Fix FlashInfer ViT attention for GLM-4.1V, GLM-OCR and GLM-5.3-Flash` | bug,nvidia | ? | - |
 | - | [#65791](https://github.com/vllm-project/vllm/pull/65791) `[Perf] Vectorize silu_and_mul_per_block_quant for large inputs` | perf,quant | ? | - |
-| - | [#65792](https://github.com/vllm-project/vllm/pull/65792) `[BugFix][DP] Hash the parallel config before engine init for DP validation` | bug | ? | - |
+| P1 | [#65792](https://github.com/vllm-project/vllm/pull/65792) `[BugFix][DP] Hash the parallel config before engine init for DP validation` | bug | ? | - |
 | - | [#65804](https://github.com/vllm-project/vllm/pull/65804) `[Spec Decode] Treat standalone draft model prefill as decode` |  | ? | - |
 | - | [#65808](https://github.com/vllm-project/vllm/pull/65808) `[Bugfix] Fix DP ViT all-gather dtype mismatch when the first parameter is fp32` | bug | ? | - |
 | - | [#65811](https://github.com/vllm-project/vllm/issues/65811) `[Bug]: Qwen3.5-122B + LoRA crashes at startup: _inject_lora_into_fused_moe asserts TritonExperts, but FlashInf` | bug,nvidia,perf | ? | - |
-| - | [#65816](https://github.com/vllm-project/vllm/pull/65816) `[Bugfix][DeepSeek-V4] Share the target embedding with the MTP drafter under PP` | bug | ? | - |
+| P1 | [#65816](https://github.com/vllm-project/vllm/pull/65816) `[Bugfix][DeepSeek-V4] Share the target embedding with the MTP drafter under PP` | bug | ? | - |
 | - | [#65818](https://github.com/vllm-project/vllm/pull/65818) `[Bugfix] Fix Granite 4.1 Vision deepstack handoff between pipeline stages` | bug | ? | - |
-| - | [#65822](https://github.com/vllm-project/vllm/pull/65822) `[Perf][KV Connector][ROCm] MoRIIO WRITE: skip blocks the decoder prefix cache already holds` | perf,rocm | main | - |
+| P0 | [#65822](https://github.com/vllm-project/vllm/pull/65822) `[Perf][KV Connector][ROCm] MoRIIO WRITE: skip blocks the decoder prefix cache already holds` | perf,rocm | main | - |
 | - | [#65826](https://github.com/vllm-project/vllm/pull/65826) `[Model] Add LFM3-Text` |  | ? | - |
 | - | [#65827](https://github.com/vllm-project/vllm/pull/65827) `[Model] Add LFM3-VL` |  | ? | - |
 | - | [#65828](https://github.com/vllm-project/vllm/pull/65828) `[Model] Add LFM3-Audio` |  | ? | - |
-| - | [#65831](https://github.com/vllm-project/vllm/pull/65831) `[Perf][Core] Reduce per-block CPU cost of KV block allocation and caching` | perf | ? | - |
+| P1 | [#65831](https://github.com/vllm-project/vllm/pull/65831) `[Perf][Core] Reduce per-block CPU cost of KV block allocation and caching` | perf | ? | - |
 | - | [#65840](https://github.com/vllm-project/vllm/pull/65840) `[XPU][Kimi-K3] Run KDA metadata tests on XPU` | nvidia | ? | - |
-| - | [#65842](https://github.com/vllm-project/vllm/pull/65842) `[Bugfix][MoE] Only divide shared expert output in FP16 for models that compensate` | bug | ? | - |
+| P1 | [#65842](https://github.com/vllm-project/vllm/pull/65842) `[Bugfix][MoE] Only divide shared expert output in FP16 for models that compensate` | bug | ? | - |
 | - | [#65848](https://github.com/vllm-project/vllm/pull/65848) `[Model] Add Ling VL video, YaRN, and vision DP support` | infra | ? | - |
 | - | [#65856](https://github.com/vllm-project/vllm/issues/65856) `[Bug]: Draft-model speculative decoding exceeds the token budget during warmup` | bug | ? | - |
 | - | [#65864](https://github.com/vllm-project/vllm/pull/65864) `[Rust Frontend] Return routed experts on non-streaming chat and completions` |  | ? | - |
 | - | [#65866](https://github.com/vllm-project/vllm/pull/65866) `[Bugfix] Move model inspection RPC out of LLM.__repr__` | bug | ? | - |
-| - | [#65868](https://github.com/vllm-project/vllm/issues/65868) `[Bug]: MRV2 extensible KV cache commits all KV before encoder CUDA graph capture, so cudagraph_mm_encoder OOMs` | nvidia,perf | ? | - |
+| P1 | [#65868](https://github.com/vllm-project/vllm/issues/65868) `[Bug]: MRV2 extensible KV cache commits all KV before encoder CUDA graph capture, so cudagraph_mm_encoder OOMs` | nvidia,perf | ? | - |
 | - | [#65874](https://github.com/vllm-project/vllm/pull/65874) `[Kernel][Perf] Fused GDN MTP: Support DSpark K=8 and use idle SMs at small batch sizes` | perf | ? | - |
 | - | [#65877](https://github.com/vllm-project/vllm/pull/65877) `[Misc] Separate Mooncake PD and Store connectors into sibling packages` | infra | ? | - |
 | - | [#65881](https://github.com/vllm-project/vllm/pull/65881) `[CI] Let ci-selector decide CMakeLists.txt changes on CUDA` | bug,infra,nvidia | ? | - |
 | - | [#65888](https://github.com/vllm-project/vllm/pull/65888) `[HiSparse] Alternative to #55398: promote P/D imports into GPU pages without NIXL changes` | bug,perf | ? | - |
 | - | [#65896](https://github.com/vllm-project/vllm/pull/65896) `[Perf][PP] Copy-engine PP transport, on by default where supported (NVLink only)` | infra,nvidia,perf | ? | - |
-| - | [#65904](https://github.com/vllm-project/vllm/pull/65904) `[Model] Move MiniMax-M3 to `AutoWeightsLoader`` | quant | ? | - |
-| - | [#65914](https://github.com/vllm-project/vllm/pull/65914) `[Model Loader] One finish for every update path; drop refresh_derived_weights` |  | ? | - |
-| - | [#65926](https://github.com/vllm-project/vllm/pull/65926) `[Bugfix][DSv4.1] Use int64 row offsets in the K-cache gather kernels` | bug,perf | main | - |
+| P1 | [#65904](https://github.com/vllm-project/vllm/pull/65904) `[Model] Move MiniMax-M3 to `AutoWeightsLoader`` | quant | ? | - |
+| P1 | [#65914](https://github.com/vllm-project/vllm/pull/65914) `[Model Loader] One finish for every update path; drop refresh_derived_weights` |  | ? | - |
+| P0 | [#65926](https://github.com/vllm-project/vllm/pull/65926) `[Bugfix][DSv4.1] Use int64 row offsets in the K-cache gather kernels` | bug,perf | main | - |
 | - | [#65930](https://github.com/vllm-project/vllm/pull/65930) `[Dependency] Upgrade FlashInfer to 0.7.3` | infra,nvidia | ? | - |
 | - | [#65932](https://github.com/vllm-project/vllm/pull/65932) `[Bugfix][Frontend] Pool HF fast tokenizers in BaseRenderer so concurrent truncation stays per request` | bug,risk | ? | - |
 | - | [#65934](https://github.com/vllm-project/vllm/issues/65934) `[Bug]: [InferHunt] olmo3 tool parser silently drops HTML-like plain text in streaming responses` | risk | ? | - |
 | - | [#65936](https://github.com/vllm-project/vllm/pull/65936) `[Bugfix][Tool Parser] Olmo3: stream plain text that starts with "<"` | bug | ? | - |
-| - | [#65937](https://github.com/vllm-project/vllm/pull/65937) `[ROCm] Bump AITER to v0.1.28.post1` | infra,rocm | ? | - |
+| P1 | [#65937](https://github.com/vllm-project/vllm/pull/65937) `[ROCm] Bump AITER to v0.1.28.post1` | infra,rocm | ? | - |
 | - | [#65939](https://github.com/vllm-project/vllm/pull/65939) `[Bugfix][Mooncake] Bound store prefix lookups with a circuit breaker` | bug,infra | ? | - |
 | - | [#65940](https://github.com/vllm-project/vllm/pull/65940) `[ROCm][CI] Run the MI355 BF16 AR-RMS fusion E2E matrices nightly with a per-PR subset` | infra,perf,rocm | ? | - |
 | - | [#65943](https://github.com/vllm-project/vllm/pull/65943) `[KVConnector] Reuse the Mooncake PD TransferEngine in the store connector` |  | ? | - |
 | - | [#65945](https://github.com/vllm-project/vllm/issues/65945) `[Bug]: GPT-J silently ignores FP8 KV-cache scales from compressed-tensors (LLM Compressor) checkpoints` | perf,quant,risk | ? | - |
 | - | [#65949](https://github.com/vllm-project/vllm/pull/65949) `[Bugfix] Map compressed-tensors KV-cache scale names for GPT-J` | bug,perf,quant | ? | - |
-| - | [#65951](https://github.com/vllm-project/vllm/pull/65951) `[Bugfix][Quantization] Handle dict-valued Quark `algo_config` in `maybe_update_config`` | bug,quant,rocm | ? | - |
-| - | [#65952](https://github.com/vllm-project/vllm/issues/65952) `[Bug]: [ROCm] GLM-5.3 TP8 hangs with MTP and CPU KV offload` | bug,rocm | ? | - |
+| P1 | [#65951](https://github.com/vllm-project/vllm/pull/65951) `[Bugfix][Quantization] Handle dict-valued Quark `algo_config` in `maybe_update_config`` | bug,quant,rocm | ? | - |
+| P1 | [#65952](https://github.com/vllm-project/vllm/issues/65952) `[Bug]: [ROCm] GLM-5.3 TP8 hangs with MTP and CPU KV offload` | bug,rocm | ? | - |
 | - | [#65955](https://github.com/vllm-project/vllm/pull/65955) `[Quantization] Avoid importing humming when resolving quantization configs` | quant | ? | - |
 | - | [#65957](https://github.com/vllm-project/vllm/pull/65957) `[ROCm][CI] Cache only a ROCm stack the PR's CI pushed itself` | infra,perf,rocm | ? | - |
-| - | [#65965](https://github.com/vllm-project/vllm/pull/65965) `[Bugfix] Apply `WeightsMapper` stacked rules last, and fix the `--mm-encoder-only` shared root check` | bug,quant | ? | - |
+| P1 | [#65965](https://github.com/vllm-project/vllm/pull/65965) `[Bugfix] Apply `WeightsMapper` stacked rules last, and fix the `--mm-encoder-only` shared root check` | bug,quant | ? | - |
 | - | [#65968](https://github.com/vllm-project/vllm/pull/65968) `[Docs][ROCm] Fix stale AMD recipe images for GLM-5 and GLM-5.1` | bug,infra,rocm | ? | - |
 | - | [#65971](https://github.com/vllm-project/vllm/pull/65971) `[ROCm][Kernel] Follow-ups to the gfx942 MLA Triton verify kernel` | perf,rocm | ? | - |
 | - | [#65972](https://github.com/vllm-project/vllm/pull/65972) `[Perf][MoE] Skip DP padding rows in TRT-LLM monolithic MoE with vLLM's top-k` | nvidia,perf | ? | - |
@@ -987,12 +987,12 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#65983](https://github.com/vllm-project/vllm/pull/65983) `[Bugfix][Model] Build the tied embedding on the last PP rank for ERNIE 4.5 MoE and Falcon-H1` | bug,infra | ? | - |
 | - | [#65987](https://github.com/vllm-project/vllm/pull/65987) `[Bugfix] Make fused MoE expert weights contiguous before GPU copy in Llama-4` | bug,perf | ? | - |
 | - | [#65988](https://github.com/vllm-project/vllm/pull/65988) `[ROCm][CI] Let /ci rocm cache start its main build on AMD CI` | infra,perf,rocm | ? | - |
-| - | [#65989](https://github.com/vllm-project/vllm/pull/65989) `[Bugfix][Gemma4] Read per-layer embeddings on later pipeline stages` | bug | ? | - |
+| P1 | [#65989](https://github.com/vllm-project/vllm/pull/65989) `[Bugfix][Gemma4] Read per-layer embeddings on later pipeline stages` | bug | ? | - |
 | - | [#65993](https://github.com/vllm-project/vllm/pull/65993) `[Rust Frontend] Multimodal and LoRA in the engine-free renderer` |  | ? | - |
 | - | [#65994](https://github.com/vllm-project/vllm/pull/65994) `[Rust Frontend][gRPC] Add the Render service with RenderChat` |  | ? | - |
-| - | [#65995](https://github.com/vllm-project/vllm/pull/65995) `[Bugfix][ROCm] Support AITER's preload() in FlyDSL INT4 QuickReduce init` | bug,quant,rocm | main | - |
+| P0 | [#65995](https://github.com/vllm-project/vllm/pull/65995) `[Bugfix][ROCm] Support AITER's preload() in FlyDSL INT4 QuickReduce init` | bug,quant,rocm | main | - |
 | - | [#65996](https://github.com/vllm-project/vllm/pull/65996) `[Bugfix][MRV2] Build multimodal prefix-LM attention ranges on every PP stage` | bug,infra | ? | - |
-| - | [#65998](https://github.com/vllm-project/vllm/pull/65998) `[ROCm] Revert #59420: pass the (B, next_n) context lengths to AITER as is` | rocm | ? | - |
+| P1 | [#65998](https://github.com/vllm-project/vllm/pull/65998) `[ROCm] Revert #59420: pass the (B, next_n) context lengths to AITER as is` | rocm | ? | - |
 | - | [#66000](https://github.com/vllm-project/vllm/pull/66000) `[Bugfix][Step5][Spec Decode] Skip VllmConfig re-validation for the MTP draft config` | bug | ? | - |
 | - | [#66005](https://github.com/vllm-project/vllm/pull/66005) `[CI][Frontend] Pin the derender n2 parity cases to top-1 sampling` | infra | ? | - |
 | - | [#66006](https://github.com/vllm-project/vllm/issues/66006) `[Bug]: With `HF_HUB_OFFLINE=1`, a Hub-ID speculative draft model logs `ERROR ... Error retrieving safetensors:` |  | ? | - |
@@ -1002,7 +1002,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66015](https://github.com/vllm-project/vllm/pull/66015) `[Bugfix][MoE] Stop DeepGEMM's MLOPart helper once MegaMoE caches its SM map` | bug | ? | - |
 | - | [#66016](https://github.com/vllm-project/vllm/pull/66016) `[Build][Bugfix] Never fall back from an x.yf CUDA arch to a lower minor` | bug,infra,nvidia | ? | - |
 | - | [#66017](https://github.com/vllm-project/vllm/pull/66017) `[Bugfix][Qwen3-Omni] Size the video encoder budget from the processor's video limits` | bug | ? | - |
-| - | [#66018](https://github.com/vllm-project/vllm/pull/66018) `[Attention][MiniMax-M3] Add FlashInfer MSA backend for SM90 and SM120/SM121` | nvidia | ? | - |
+| P1 | [#66018](https://github.com/vllm-project/vllm/pull/66018) `[Attention][MiniMax-M3] Add FlashInfer MSA backend for SM90 and SM120/SM121` | nvidia | ? | - |
 | - | [#66019](https://github.com/vllm-project/vllm/pull/66019) `[CI][KV Offload] Pin GPU block size in test_p2p_cache_reset_with_absent_decoder` | infra | ? | - |
 | - | [#66021](https://github.com/vllm-project/vllm/pull/66021) `[Perf][RL] Validate sparse weight patches in one pass` | perf | ? | - |
 | - | [#66024](https://github.com/vllm-project/vllm/issues/66024) `[CI Failure]: Entrypoints Integration - test_derender_parity.py::test_inline_derender_parity[n2]` | infra | ? | - |
@@ -1010,21 +1010,21 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66029](https://github.com/vllm-project/vllm/pull/66029) `[XPU] increase gpu_memory_utilization for test_granite4_vision.py` | nvidia | ? | - |
 | - | [#66030](https://github.com/vllm-project/vllm/pull/66030) `[Model] Kimi K3.1: model files and NVIDIA specialized decode (Kimi K3.1 split 1/5)` | infra,nvidia,perf | ? | - |
 | - | [#66034](https://github.com/vllm-project/vllm/pull/66034) `[XPU][CI]Migrate several B70 jobs from intel_gpu to intel_gpu_k8s` | infra,nvidia | ? | - |
-| - | [#66036](https://github.com/vllm-project/vllm/pull/66036) `[ROCm][DSv4/4.1] Enable Tensor scale FP8 KV Cache for Sparse MLA` | nvidia,perf,quant,rocm | ? | - |
+| P1 | [#66036](https://github.com/vllm-project/vllm/pull/66036) `[ROCm][DSv4/4.1] Enable Tensor scale FP8 KV Cache for Sparse MLA` | nvidia,perf,quant,rocm | ? | - |
 | - | [#66037](https://github.com/vllm-project/vllm/pull/66037) `[Core][Kimi K3.1] KV cache and attention changes to serve Kimi K3.1 at TP8 (Kimi K3.1 split 3/5)` | bug,nvidia,perf | ? | - |
 | - | [#66039](https://github.com/vllm-project/vllm/pull/66039) `[XPU][CI] Correct deselected file path in entrypoints/scale_out test` | infra,nvidia | ? | - |
 | - | [#66044](https://github.com/vllm-project/vllm/pull/66044) `[Doc][Bugfix] Fix strict docs build broken by unresolved autorefs` | bug,infra,nvidia | ? | - |
 | - | [#66046](https://github.com/vllm-project/vllm/pull/66046) `[ROCm][CI] Skip the unlimited OCR tests until the ROCm CK OCR2 DASH updates land` | infra,rocm | ? | - |
-| - | [#66047](https://github.com/vllm-project/vllm/pull/66047) `[ROCm][Perf][DSv4.1] Shard the sparse-indexer decode rows across TP` | perf,rocm | ? | - |
-| - | [#66048](https://github.com/vllm-project/vllm/pull/66048) `[BugFix] Fix/spec decode insert resampled race` | bug,risk | ? | - |
-| - | [#66051](https://github.com/vllm-project/vllm/pull/66051) `[ROCm][Muse Spark] DSpark Markov sampling with one launch a round (--monokernel)` | infra,rocm | ? | - |
+| P1 | [#66047](https://github.com/vllm-project/vllm/pull/66047) `[ROCm][Perf][DSv4.1] Shard the sparse-indexer decode rows across TP` | perf,rocm | ? | - |
+| P1 | [#66048](https://github.com/vllm-project/vllm/pull/66048) `[BugFix] Fix/spec decode insert resampled race` | bug,risk | ? | - |
+| P1 | [#66051](https://github.com/vllm-project/vllm/pull/66051) `[ROCm][Muse Spark] DSpark Markov sampling with one launch a round (--monokernel)` | infra,rocm | ? | - |
 | - | [#66062](https://github.com/vllm-project/vllm/pull/66062) `[Doc][Bugfix] Fix strict docs build broken by subclassing mocked torch classes` | bug,infra | ? | - |
 | - | [#66063](https://github.com/vllm-project/vllm/pull/66063) `[Spec Decode][PP] Run draft models as a single pipeline stage` | bug,infra,perf | ? | - |
-| - | [#66064](https://github.com/vllm-project/vllm/pull/66064) `[Perf][GDN] Fuse prefill state gather/scatter with the shared Triton kernels` | infra,perf,rocm | ? | - |
+| P1 | [#66064](https://github.com/vllm-project/vllm/pull/66064) `[Perf][GDN] Fuse prefill state gather/scatter with the shared Triton kernels` | infra,perf,rocm | ? | - |
 | - | [#66073](https://github.com/vllm-project/vllm/pull/66073) `[Multimodal] Add keyframe-aware sampling to PyNvVideoCodec backend` |  | ? | - |
 | - | [#66079](https://github.com/vllm-project/vllm/pull/66079) `[CI][Bugfix] Fix EmbeddingGemma2 encoder contract test after Gemma-4 DP encoder` | bug,infra | ? | - |
 | - | [#66080](https://github.com/vllm-project/vllm/pull/66080) `[Bugfix][DeepGEMM] Match relax warmup M values to the vendored SM100 heuristic` | bug,nvidia | ? | - |
-| - | [#66081](https://github.com/vllm-project/vllm/pull/66081) `[Bugfix][Spec Decode] Fix non-deferred structured-output draft retrieval` | bug | ? | - |
+| P1 | [#66081](https://github.com/vllm-project/vllm/pull/66081) `[Bugfix][Spec Decode] Fix non-deferred structured-output draft retrieval` | bug | ? | - |
 | - | [#66092](https://github.com/vllm-project/vllm/pull/66092) `[Doc] Raise the bar for in-tree kernel translation units` | perf | ? | - |
 | - | [#66097](https://github.com/vllm-project/vllm/pull/66097) `[Model] Use the upstream config for Qwen3-ASR` |  | ? | - |
 | - | [#66100](https://github.com/vllm-project/vllm/pull/66100) `[CPU][Refactor] Move CPU ops wrappers to vllm/_cpu_ops.py` | infra,perf | ? | - |
@@ -1039,7 +1039,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66123](https://github.com/vllm-project/vllm/pull/66123) `[Bugfix] Preserve embedding size overrides` | bug | ? | - |
 | - | [#66125](https://github.com/vllm-project/vllm/pull/66125) `[XPU] skip test_online_hadamard_target_wraps_resolved_method UT` | nvidia | ? | - |
 | - | [#66139](https://github.com/vllm-project/vllm/pull/66139) `[Model][Quantization] Muse Spark: online FP8 routed experts (fp8_per_channel) on Hopper` | infra,nvidia,quant | ? | - |
-| - | [#66141](https://github.com/vllm-project/vllm/issues/66141) `[Bug][ROCm]: ROCM_AITER_MLA can select an aiter MLA decode kernel that silently returns uncorrelated output (g` | perf,quant,risk,rocm | ? | - |
+| P0 | [#66141](https://github.com/vllm-project/vllm/issues/66141) `[Bug][ROCm]: ROCM_AITER_MLA can select an aiter MLA decode kernel that silently returns uncorrelated output (g` | perf,quant,risk,rocm | ? | - |
 | - | [#66165](https://github.com/vllm-project/vllm/pull/66165) `[Sleep] Warn when level-2 sleep discards draft weights` |  | ? | - |
 | - | [#66175](https://github.com/vllm-project/vllm/pull/66175) `[CI] Recompile the KV connector lock against the raised opentelemetry floors` | infra | ? | - |
 | - | [#66177](https://github.com/vllm-project/vllm/pull/66177) `[Spec Decode][PP] Centralize auxiliary hidden-state relay` | nvidia,perf | ? | - |
@@ -1113,7 +1113,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66397](https://github.com/vllm-project/vllm/pull/66397) `[ROCm][Bugfix] Build DSv4.1 replay builders at warmup and the DSv4/DSv4.1 mono runner at load` | bug,infra,rocm | ? | - |
 | - | [#66398](https://github.com/vllm-project/vllm/pull/66398) `[ROCm][Bugfix] Stash DiffusionGemma logprobs on device without host syncs` | bug,perf,rocm | ? | - |
 | - | [#66399](https://github.com/vllm-project/vllm/pull/66399) `[ROCm][Bugfix] Remove step-path GPU syncs in EPLB skip-rearrange, AITER GDN prefill metadata, Moondream3 BOS a` | bug,quant,rocm | ? | - |
-| - | [#66400](https://github.com/vllm-project/vllm/pull/66400) `[ROCm][Bugfix] Drop sparse MLA metadata host sync; use persistent AITER for gfx950 long BF16 prefills` | bug,rocm | main | - |
+| P0 | [#66400](https://github.com/vllm-project/vllm/pull/66400) `[ROCm][Bugfix] Drop sparse MLA metadata host sync; use persistent AITER for gfx950 long BF16 prefills` | bug,rocm | main | - |
 | - | [#66402](https://github.com/vllm-project/vllm/issues/66402) `[Bug]: prompt_text is null when return_prompt_text is used with reused kv_transfer_params.prompt_token_ids` | bug | ? | - |
 | - | [#66403](https://github.com/vllm-project/vllm/pull/66403) `[Bugfix][Frontend] Render messages for return_prompt_text with reused prompt token ids` | bug | ? | - |
 | - | [#66412](https://github.com/vllm-project/vllm/pull/66412) `[CI][KV Connector] Shard the NIXL PD accuracy core sweep and use decode-only CUDA graphs` | infra,nvidia,risk | ? | - |
@@ -1152,7 +1152,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66529](https://github.com/vllm-project/vllm/pull/66529) `[Rust Frontend] Stream DeepSeek DSML tool-call arguments` |  | ? | - |
 | - | [#66530](https://github.com/vllm-project/vllm/pull/66530) `[Rust Frontend] Stream Kimi K3 tool-call arguments` |  | ? | - |
 | - | [#66531](https://github.com/vllm-project/vllm/pull/66531) `[Rust Frontend] Stream MiniMax M3 tool-call arguments` |  | ? | - |
-| - | [#66532](https://github.com/vllm-project/vllm/pull/66532) `[Model] Kimi K3.1: NVIDIA specialized decode and AMD model updates, ROCm TP8 support (Kimi K3.1 split 4/6)` | infra,nvidia,rocm | ? | - |
+| - | [#66532](https://github.com/vllm-project/vllm/pull/66532) `[Model] Kimi K3.1: NVIDIA specialized decode and AMD model updates, ROCm TP8 support (Kimi K3.1 split 4/6)` | infra,nvidia,rocm | main | - |
 | - | [#66537](https://github.com/vllm-project/vllm/pull/66537) `[Perf][MoE] Add H200 FP8 config for GLM-5.3-Flash TP8` | nvidia,perf,quant | ? | - |
 | - | [#66539](https://github.com/vllm-project/vllm/pull/66539) `[Rust Frontend] Support the JSON log formatter` |  | ? | - |
 | - | [#66540](https://github.com/vllm-project/vllm/pull/66540) `[Rust Frontend] Support stop strings on the generate route` |  | ? | - |
@@ -1268,9 +1268,9 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67093](https://github.com/vllm-project/vllm/pull/67093) `[PP] Require exact intermediate-tensor match on every PP transport` |  | ? | - |
 | - | [#67096](https://github.com/vllm-project/vllm/pull/67096) `[Bugfix] Let SIGTERM during engine startup stop the API server` | bug | ? | - |
 | - | [#67098](https://github.com/vllm-project/vllm/pull/67098) `[Bugfix][KV Offload] Evict a running request’s ARC chunks tail first` | bug | ? | - |
-| - | [#67099](https://github.com/vllm-project/vllm/pull/67099) `[GLM-5.3-Flash Perf] Enable `latency_specialized` by default, 27.0% E2E Throughput improvement` | perf | ? | - |
+| P1 | [#67099](https://github.com/vllm-project/vllm/pull/67099) `[GLM-5.3-Flash Perf] Enable `latency_specialized` by default, 27.0% E2E Throughput improvement` | perf | ? | - |
 | - | [#67104](https://github.com/vllm-project/vllm/pull/67104) `[GLM-5.3-Flash Perf] Skip unused MTP post-attention rows, 4.2% E2E throughput improvement` | perf | ? | - |
-| - | [#67107](https://github.com/vllm-project/vllm/pull/67107) `[ROCm][Bugfix] Route biased softmax/sigmoid top-k to AITER topk_gating` | bug,rocm | ? | - |
+| P1 | [#67107](https://github.com/vllm-project/vllm/pull/67107) `[ROCm][Bugfix] Route biased softmax/sigmoid top-k to AITER topk_gating` | bug,rocm | ? | - |
 | - | [#67121](https://github.com/vllm-project/vllm/issues/67121) `[CI Failure]: V1 KV Connectors Shard 2/4 - test_lmcache_connector.py::test_engine_shutdown_stops_lmcache_threa` | infra | ? | - |
 | - | [#67148](https://github.com/vllm-project/vllm/pull/67148) `[XPU][CI]Skip seed instability issue in Intel GPU CI ` | infra,nvidia | ? | - |
 | - | [#67150](https://github.com/vllm-project/vllm/pull/67150) `[Bugfix][P/D] Proxies: return text/event-stream for streaming requests` | bug | ? | - |
@@ -1339,38 +1339,38 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#64640](https://github.com/vllm-project/vllm/pull/64640) `[ROCm][MoE] Add opt-in AITER FlyDSL clamped MXFP4 BF16 experts` | infra,quant,rocm | main | - |
-| - | [#64643](https://github.com/vllm-project/vllm/pull/64643) `[Feature][ROCm][DSv4.1] Relay KV-sharing state across ROCm pipeline stages` | infra,rocm | main | - |
-| - | [#64662](https://github.com/vllm-project/vllm/pull/64662) `[ROCm][Perf] Add MI325X FP8 fused MoE configs for Qwen3.8-Flash-Next` | perf,quant,rocm | main | - |
-| - | [#64679](https://github.com/vllm-project/vllm/issues/64679) `[Bug]: fuse_rope_kvcache breaks draft_model/EAGLE spec decode when the drafter's attention shape differs from ` | perf,rocm | ? | - |
-| - | [#64737](https://github.com/vllm-project/vllm/pull/64737) `[ROCm][Bugfix] Fix AITER shared-expert fusion routing for gate-less MoE (DeepSeek-V2-Lite)` | bug,perf,rocm | main | - |
-| - | [#64855](https://github.com/vllm-project/vllm/issues/64855) `[Bug] Sparse-attention indexer: native padded decode (`requires_padding`) gives wrong logits/top-k on ragged s` | rocm | ? | - |
-| - | [#64888](https://github.com/vllm-project/vllm/pull/64888) `[Bugfix][ROCm] Fix AITER FA extend_forward zero-chunk and drafter KV workspace (#64680)` | bug,rocm | main | - |
-| - | [#64929](https://github.com/vllm-project/vllm/pull/64929) `[To close when vLLM pins AITER >= v0.1.29] [ROCm] Add VLLM_ROCM_USE_AITER_QUICK_REDUCE to keep INT4 QuickReduc` | infra,perf,quant,rocm | main | - |
-| - | [#65022](https://github.com/vllm-project/vllm/pull/65022) `[ROCm][Bugfix] Keep AITER MLA split metadata alive for CUDA graph replay` | bug,nvidia,rocm | main | - |
-| - | [#65034](https://github.com/vllm-project/vllm/issues/65034) `[Bug]: Quark `exclude` entries written as weight names (e.g. `mtp.fc.weight`) are silently never matched, brea` | bug,quant,risk,rocm | ? | - |
-| - | [#65108](https://github.com/vllm-project/vllm/pull/65108) `[Bugfix][LoRA] Fix GPT-OSS triton_kernels 3.8 MoE LoRA row order` | bug | main | - |
-| - | [#65128](https://github.com/vllm-project/vllm/pull/65128) `[MORI][DBO] Dual batch overlap with MoRI EPv2 (native and AsyncLL), and DBO fixes` | nvidia,perf,rocm | main | - |
-| - | [#65188](https://github.com/vllm-project/vllm/pull/65188) `[ROCm][Perf] Qwen3.8-Flash-Next specialized decode at 1-192 rows on MI355X (--monokernel)` | infra,perf,rocm | main | - |
-| - | [#65219](https://github.com/vllm-project/vllm/pull/65219) `[Bugfix][NIXL] Reject NVFP4 KV cache when the prefill block size is smaller than decode's` | bug,perf,quant | main | - |
-| - | [#65410](https://github.com/vllm-project/vllm/pull/65410) `[ROCm][Step5] Give the CSA prefill indexer its own ROCm kernel, with native fnuz FP8 MFMA on gfx942` | infra,perf,quant,rocm | main | - |
-| - | [#65421](https://github.com/vllm-project/vllm/pull/65421) `[ROCm][Perf][DSv4.1] Asm decode layers for 17-256-row decode steps (gfx950, TP4)` | infra,perf,rocm | main | - |
-| - | [#65474](https://github.com/vllm-project/vllm/pull/65474) `[ROCm][Perf][Qwen4Exp] Tune QSA sparse GQA and indexer on gfx942 and gfx950` | perf,rocm | main | - |
-| - | [#65512](https://github.com/vllm-project/vllm/pull/65512) `[WIP][ROCm][Perf][DeepSeek-V4.1] Mega-attention prefill kernel for gfx942` | infra,nvidia,perf,rocm | main | - |
-| - | [#65555](https://github.com/vllm-project/vllm/pull/65555) `[ROCm][DSv4.1] Score the sparse-indexer prefill on ShardQ token slices` | rocm | main | - |
-| - | [#65611](https://github.com/vllm-project/vllm/issues/65611) `[Bug]: gpt-oss-20b + nebius/EAGLE3-gpt-oss-20b gives corrupted greedy output at num_speculative_tokens >= 5 on` | risk,rocm | ? | - |
-| - | [#65618](https://github.com/vllm-project/vllm/issues/65618) `[Bug]: DSpark draft for DeepSeek-V4 models has no `packed_modules_mapping` → fused layers ignore `ignored_laye` | bug,perf,quant,rocm | ? | - |
-| - | [#65734](https://github.com/vllm-project/vllm/issues/65734) `[Bug][ROCm]: Dense attention output allocated with torch.empty — CUDA-graph padding rows poison the dynamic pe` | nvidia,quant,risk,rocm | ? | - |
-| - | [#65820](https://github.com/vllm-project/vllm/pull/65820) `[Bugfix][Attention] Zero-init dense attention output buffers to prevent CUDA-graph padding corruption (#65734)` | bug,nvidia,risk | main | - |
-| - | [#65830](https://github.com/vllm-project/vllm/pull/65830) `[Bugfix][Attention] Prevent overlapping query tile writes in Triton unified attention` | bug,rocm | main | - |
-| - | [#65871](https://github.com/vllm-project/vllm/pull/65871) `[Bugfix][Attention] Fix V masking for non-causal sliding-window attention` | bug | main | - |
-| - | [#65899](https://github.com/vllm-project/vllm/pull/65899) `[ROCm][MiniMax-M3] Serve --kv-cache-dtype mxfp4 on gfx942` | perf,quant,rocm | main | - |
-| - | [#66011](https://github.com/vllm-project/vllm/pull/66011) `[Bugfix][NIXL] Decline remote prefill reads after the producer's KV lease expired` | bug | main | - |
+| P0 | [#64640](https://github.com/vllm-project/vllm/pull/64640) `[ROCm][MoE] Add opt-in AITER FlyDSL clamped MXFP4 BF16 experts` | infra,quant,rocm | main | - |
+| P0 | [#64643](https://github.com/vllm-project/vllm/pull/64643) `[Feature][ROCm][DSv4.1] Relay KV-sharing state across ROCm pipeline stages` | infra,rocm | main | - |
+| P0 | [#64662](https://github.com/vllm-project/vllm/pull/64662) `[ROCm][Perf] Add MI325X FP8 fused MoE configs for Qwen3.8-Flash-Next` | perf,quant,rocm | main | - |
+| P0 | [#64679](https://github.com/vllm-project/vllm/issues/64679) `[Bug]: fuse_rope_kvcache breaks draft_model/EAGLE spec decode when the drafter's attention shape differs from ` | perf,rocm | ? | - |
+| P0 | [#64737](https://github.com/vllm-project/vllm/pull/64737) `[ROCm][Bugfix] Fix AITER shared-expert fusion routing for gate-less MoE (DeepSeek-V2-Lite)` | bug,perf,rocm | main | - |
+| P0 | [#64855](https://github.com/vllm-project/vllm/issues/64855) `[Bug] Sparse-attention indexer: native padded decode (`requires_padding`) gives wrong logits/top-k on ragged s` | rocm | ? | - |
+| P0 | [#64888](https://github.com/vllm-project/vllm/pull/64888) `[Bugfix][ROCm] Fix AITER FA extend_forward zero-chunk and drafter KV workspace (#64680)` | bug,rocm | main | - |
+| P0 | [#64929](https://github.com/vllm-project/vllm/pull/64929) `[To close when vLLM pins AITER >= v0.1.29] [ROCm] Add VLLM_ROCM_USE_AITER_QUICK_REDUCE to keep INT4 QuickReduc` | infra,perf,quant,rocm | main | - |
+| P0 | [#65022](https://github.com/vllm-project/vllm/pull/65022) `[ROCm][Bugfix] Keep AITER MLA split metadata alive for CUDA graph replay` | bug,nvidia,rocm | main | - |
+| P0 | [#65034](https://github.com/vllm-project/vllm/issues/65034) `[Bug]: Quark `exclude` entries written as weight names (e.g. `mtp.fc.weight`) are silently never matched, brea` | bug,quant,risk,rocm | ? | - |
+| P0 | [#65108](https://github.com/vllm-project/vllm/pull/65108) `[Bugfix][LoRA] Fix GPT-OSS triton_kernels 3.8 MoE LoRA row order` | bug | main | - |
+| P0 | [#65128](https://github.com/vllm-project/vllm/pull/65128) `[MORI][DBO] Dual batch overlap with MoRI EPv2 (native and AsyncLL), and DBO fixes` | nvidia,perf,rocm | main | - |
+| P0 | [#65188](https://github.com/vllm-project/vllm/pull/65188) `[ROCm][Perf] Qwen3.8-Flash-Next specialized decode at 1-192 rows on MI355X (--monokernel)` | infra,perf,rocm | main | - |
+| P0 | [#65219](https://github.com/vllm-project/vllm/pull/65219) `[Bugfix][NIXL] Reject NVFP4 KV cache when the prefill block size is smaller than decode's` | bug,perf,quant | main | - |
+| P0 | [#65410](https://github.com/vllm-project/vllm/pull/65410) `[ROCm][Step5] Give the CSA prefill indexer its own ROCm kernel, with native fnuz FP8 MFMA on gfx942` | infra,perf,quant,rocm | main | - |
+| P0 | [#65421](https://github.com/vllm-project/vllm/pull/65421) `[ROCm][Perf][DSv4.1] Asm decode layers for 17-256-row decode steps (gfx950, TP4)` | infra,perf,rocm | main | - |
+| P0 | [#65474](https://github.com/vllm-project/vllm/pull/65474) `[ROCm][Perf][Qwen4Exp] Tune QSA sparse GQA and indexer on gfx942 and gfx950` | perf,rocm | main | - |
+| P0 | [#65512](https://github.com/vllm-project/vllm/pull/65512) `[WIP][ROCm][Perf][DeepSeek-V4.1] Mega-attention prefill kernel for gfx942` | infra,nvidia,perf,rocm | main | - |
+| P0 | [#65555](https://github.com/vllm-project/vllm/pull/65555) `[ROCm][DSv4.1] Score the sparse-indexer prefill on ShardQ token slices` | rocm | main | - |
+| P0 | [#65611](https://github.com/vllm-project/vllm/issues/65611) `[Bug]: gpt-oss-20b + nebius/EAGLE3-gpt-oss-20b gives corrupted greedy output at num_speculative_tokens >= 5 on` | risk,rocm | ? | - |
+| P0 | [#65618](https://github.com/vllm-project/vllm/issues/65618) `[Bug]: DSpark draft for DeepSeek-V4 models has no `packed_modules_mapping` → fused layers ignore `ignored_laye` | bug,perf,quant,rocm | ? | - |
+| P0 | [#65734](https://github.com/vllm-project/vllm/issues/65734) `[Bug][ROCm]: Dense attention output allocated with torch.empty — CUDA-graph padding rows poison the dynamic pe` | nvidia,quant,risk,rocm | ? | - |
+| P0 | [#65820](https://github.com/vllm-project/vllm/pull/65820) `[Bugfix][Attention] Zero-init dense attention output buffers to prevent CUDA-graph padding corruption (#65734)` | bug,nvidia,risk | main | - |
+| P0 | [#65830](https://github.com/vllm-project/vllm/pull/65830) `[Bugfix][Attention] Prevent overlapping query tile writes in Triton unified attention` | bug,rocm | main | - |
+| P0 | [#65871](https://github.com/vllm-project/vllm/pull/65871) `[Bugfix][Attention] Fix V masking for non-causal sliding-window attention` | bug | main | - |
+| P0 | [#65899](https://github.com/vllm-project/vllm/pull/65899) `[ROCm][MiniMax-M3] Serve --kv-cache-dtype mxfp4 on gfx942` | perf,quant,rocm | main | - |
+| P0 | [#66011](https://github.com/vllm-project/vllm/pull/66011) `[Bugfix][NIXL] Decline remote prefill reads after the producer's KV lease expired` | bug | main | - |
 | - | [#66020](https://github.com/vllm-project/vllm/pull/66020) `[Bugfix] Added CUDA graph capturing enabled flag management in MRV2` | bug,nvidia | ? | - |
 | - | [#66023](https://github.com/vllm-project/vllm/issues/66023) `[Feature]: Tighter integration with Compressed-Tensors by consolidating and converting targets to vLLM` | quant | ? | - |
 | - | [#66025](https://github.com/vllm-project/vllm/pull/66025) `[Bugfix][DSv4.1] Run decoder replay on a PP stage that starts at the cut` | bug | ? | - |
-| - | [#66026](https://github.com/vllm-project/vllm/pull/66026) `[Bugfix][Spec Decode] Don't specialize MRV2 _gather_draft_sampled_kernel on num_logits` | bug | ? | - |
-| - | [#66027](https://github.com/vllm-project/vllm/pull/66027) `[Attention][DCP] Sparse MLA DCP optimizations: packed top-k merge, direct A2A, DCP ShardQ (Kimi K3.1 split 6/6` | infra,nvidia,perf,rocm | ? | - |
+| P1 | [#66026](https://github.com/vllm-project/vllm/pull/66026) `[Bugfix][Spec Decode] Don't specialize MRV2 _gather_draft_sampled_kernel on num_logits` | bug | ? | - |
+| P1 | [#66027](https://github.com/vllm-project/vllm/pull/66027) `[Attention][DCP] Sparse MLA DCP optimizations: packed top-k merge, direct A2A, DCP ShardQ (Kimi K3.1 split 6/6` | infra,nvidia,perf,rocm | ? | - |
 | - | [#66035](https://github.com/vllm-project/vllm/pull/66035) `[HiSparse] Flush hot-buffer stats on the metrics logging timescale` |  | ? | - |
 | - | [#66038](https://github.com/vllm-project/vllm/pull/66038) `[Perf][DSv4.1] Reuse the gathered compressed KV across consumers in FlashMLA prefill` | nvidia,perf | ? | - |
 | - | [#66040](https://github.com/vllm-project/vllm/pull/66040) `[Kimi-K3] Deferred RecoverSSM verify kernels for FP32-state KDA layers` | perf | ? | - |
@@ -1379,7 +1379,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66045](https://github.com/vllm-project/vllm/pull/66045) `[Bugfix][Model Loader] Stop the EP weight filter from skipping a draft model's experts` | bug,infra | ? | - |
 | - | [#66049](https://github.com/vllm-project/vllm/pull/66049) `[Bugfix][Core] Reject negative block counts in the free-block pool APIs` | bug,perf | ? | - |
 | - | [#66050](https://github.com/vllm-project/vllm/pull/66050) `[Model] Enable audio-conditioned hidden-state extraction for Ming ASR` | infra | ? | - |
-| - | [#66052](https://github.com/vllm-project/vllm/pull/66052) `[Bugfix][DSA] Stage ShardQ indexer indices in fresh host memory each step` | bug | ? | - |
+| P1 | [#66052](https://github.com/vllm-project/vllm/pull/66052) `[Bugfix][DSA] Stage ShardQ indexer indices in fresh host memory each step` | bug | ? | - |
 | - | [#66053](https://github.com/vllm-project/vllm/pull/66053) `[Rust Frontend] Add the Poolside tool parser` |  | ? | - |
 | - | [#66054](https://github.com/vllm-project/vllm/pull/66054) `[Perf][MiniMax-M3] Shard large batches by token and fuse the MoE finalize into the reduce-scatter` | infra,perf | ? | - |
 | - | [#66055](https://github.com/vllm-project/vllm/issues/66055) `[Bug]: thinking_token_budget turns off reasoning when an earlier message mentions <think>` |  | ? | - |
@@ -1388,21 +1388,21 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66060](https://github.com/vllm-project/vllm/pull/66060) `[RL][Model Loader] Load plan: per-family plan == load_weights tests` |  | ? | - |
 | - | [#66061](https://github.com/vllm-project/vllm/pull/66061) `[Feature][Model] Add NCP-OLMo support for pure HF checkpoints` | infra | ? | - |
 | - | [#66066](https://github.com/vllm-project/vllm/pull/66066) `[XPU] Allow StatelessGroupCoordinator and elastic EPLB ` | infra,nvidia | ? | - |
-| - | [#66068](https://github.com/vllm-project/vllm/pull/66068) `[ROCm][Quantization] Add tuned W8A8 block-FP8 Triton GEMM configs for MI355X` | perf,quant,rocm | ? | - |
+| P1 | [#66068](https://github.com/vllm-project/vllm/pull/66068) `[ROCm][Quantization] Add tuned W8A8 block-FP8 Triton GEMM configs for MI355X` | perf,quant,rocm | ? | - |
 | - | [#66070](https://github.com/vllm-project/vllm/issues/66070) `[Bug]: Qwen3.5 vision RoPE angle precision differs from HF (public 9B reproduction, mixed FP32 workaround resu` | bug,quant | ? | - |
 | - | [#66072](https://github.com/vllm-project/vllm/pull/66072) `docs: fix broken FusedMoE imports in quantization guide` | bug,perf,quant | ? | - |
-| - | [#66074](https://github.com/vllm-project/vllm/issues/66074) `[Bug]: MXFP4 linear layers on Hopper (default Humming kernel) silently round or zero weights whose E8M0 scale ` | nvidia,perf,quant,risk | ? | - |
+| P1 | [#66074](https://github.com/vllm-project/vllm/issues/66074) `[Bug]: MXFP4 linear layers on Hopper (default Humming kernel) silently round or zero weights whose E8M0 scale ` | nvidia,perf,quant,risk | ? | - |
 | - | [#66075](https://github.com/vllm-project/vllm/pull/66075) `[Test][Core] Regression tests for EAGLE prefix caching with multiple attention groups and mixed block sizes` | bug,perf | ? | - |
-| - | [#66076](https://github.com/vllm-project/vllm/pull/66076) `[Kernel] Add GC-MoE backend with fused shared experts for DeepSeek-V4.1` | perf | ? | - |
+| P1 | [#66076](https://github.com/vllm-project/vllm/pull/66076) `[Kernel] Add GC-MoE backend with fused shared experts for DeepSeek-V4.1` | perf | ? | - |
 | - | [#66077](https://github.com/vllm-project/vllm/pull/66077) `[Quantization][Kernel] Unify MXFP6 linear activation scheme gate and propagate per-layer target overrides` | perf,quant | ? | - |
 | - | [#66078](https://github.com/vllm-project/vllm/pull/66078) `[Feature][Rust Frontend] Support parallel sampling in gRPC GenerateStream` |  | ? | - |
-| - | [#66082](https://github.com/vllm-project/vllm/pull/66082) `[Perf][ROCm][ROCM_ATTN] Run large fp8 decode batches on the AITER asm paged attention` | perf,quant,rocm | main | - |
+| P0 | [#66082](https://github.com/vllm-project/vllm/pull/66082) `[Perf][ROCm][ROCM_ATTN] Run large fp8 decode batches on the AITER asm paged attention` | perf,quant,rocm | main | - |
 | - | [#66083](https://github.com/vllm-project/vllm/pull/66083) `[Bugfix] Handle OOV multimodal prompt logprobs` | bug | ? | - |
-| - | [#66084](https://github.com/vllm-project/vllm/pull/66084) `[ROCm][Spec Decode] Support draft_lm_head_quantization on RDNA (int4 drafter head, 18% faster MTP decode)` | perf,quant,rocm | ? | - |
+| P1 | [#66084](https://github.com/vllm-project/vllm/pull/66084) `[ROCm][Spec Decode] Support draft_lm_head_quantization on RDNA (int4 drafter head, 18% faster MTP decode)` | perf,quant,rocm | ? | - |
 | - | [#66085](https://github.com/vllm-project/vllm/issues/66085) `[Performance]: Avoid extra logits passes for temperature-only sampling` | perf | ? | - |
-| - | [#66086](https://github.com/vllm-project/vllm/pull/66086) `[Perf][MRV2] Avoid extra passes for temperature-only sampling` | infra,perf | ? | - |
-| - | [#66087](https://github.com/vllm-project/vllm/pull/66087) `[Bugfix][EPLB] Fix startup failure with MoE layers on multiple pipeline stages` | bug,infra | ? | - |
-| - | [#66088](https://github.com/vllm-project/vllm/pull/66088) `[Bugfix] Make GLM-5.3 sparse MLA batch invariant under VLLM_BATCH_INVARIANT` | bug,infra | ? | - |
+| P1 | [#66086](https://github.com/vllm-project/vllm/pull/66086) `[Perf][MRV2] Avoid extra passes for temperature-only sampling` | infra,perf | ? | - |
+| P1 | [#66087](https://github.com/vllm-project/vllm/pull/66087) `[Bugfix][EPLB] Fix startup failure with MoE layers on multiple pipeline stages` | bug,infra | ? | - |
+| P1 | [#66088](https://github.com/vllm-project/vllm/pull/66088) `[Bugfix] Make GLM-5.3 sparse MLA batch invariant under VLLM_BATCH_INVARIANT` | bug,infra | ? | - |
 | - | [#66089](https://github.com/vllm-project/vllm/pull/66089) `[ROCm][CI] Bound DeepSeek V4 MoE output by per-token error` | infra,quant,rocm | ? | - |
 | - | [#66093](https://github.com/vllm-project/vllm/issues/66093) `[Feature]: Carry the HTTP EPD multimodal handoff on the Rust gRPC frontend` |  | ? | - |
 | - | [#66094](https://github.com/vllm-project/vllm/pull/66094) `[Frontend][gRPC] Carry the HTTP EPD handoff on the Rust frontend` |  | ? | - |
@@ -1424,12 +1424,12 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66122](https://github.com/vllm-project/vllm/issues/66122) `[Feature]: Selectable fused prefill top-k backend for the sparse indexer (add FlashTopK; SM90 + SM100)` | nvidia,perf | ? | - |
 | - | [#66124](https://github.com/vllm-project/vllm/issues/66124) `[Bug]: `enable_weights_track` refuses correct weight-only NVFP4 checkpoints (input scales that no export write` | perf,quant | ? | - |
 | - | [#66126](https://github.com/vllm-project/vllm/pull/66126) `[Perf][Kernel] CUTLASS FP8 scaled_mm: smaller tiles for narrow-N decode GEMMs on SM90 and SM100` | nvidia,perf,quant | ? | - |
-| - | [#66128](https://github.com/vllm-project/vllm/pull/66128) `[ROCm][Perf][DSv4.1] Score adaptive-verification decode steps as varlen sequences in the MXFP4 indexer` | perf,quant,rocm | ? | - |
+| P1 | [#66128](https://github.com/vllm-project/vllm/pull/66128) `[ROCm][Perf][DSv4.1] Score adaptive-verification decode steps as varlen sequences in the MXFP4 indexer` | perf,quant,rocm | ? | - |
 | - | [#66129](https://github.com/vllm-project/vllm/issues/66129) `[Bug]: compressed-tensors loads checkpoint FP8 k/v scales into layers kept in BF16 by kv_cache_dtype_skip_laye` | bug,nvidia,quant | ? | - |
 | - | [#66130](https://github.com/vllm-project/vllm/pull/66130) `[ROCm] Add a FlyDSL MXFP4 linear backend for RDNA4` | infra,quant,rocm | ? | - |
 | - | [#66131](https://github.com/vllm-project/vllm/issues/66131) `[Bug][KV Connector][Kimi-K3.1-Pro] Local hybrid hit can exceed draft-attention coverage` |  | ? | - |
 | - | [#66132](https://github.com/vllm-project/vllm/pull/66132) `[Bugfix][KV Connector] Reconcile local hits when draft attention lags` | bug,infra,perf | ? | - |
-| - | [#66133](https://github.com/vllm-project/vllm/pull/66133) `[ROCm][Perf] W4A16: fix the gfx1151 bf16 tile cliff at decode-sized M (up to +44% decode throughput)` | bug,perf,quant,rocm | ? | - |
+| P1 | [#66133](https://github.com/vllm-project/vllm/pull/66133) `[ROCm][Perf] W4A16: fix the gfx1151 bf16 tile cliff at decode-sized M (up to +44% decode throughput)` | bug,perf,quant,rocm | ? | - |
 | - | [#66134](https://github.com/vllm-project/vllm/issues/66134) `[RFC]: Text sessions on /v1/realtime with streaming-input prefill` |  | ? | - |
 | - | [#66135](https://github.com/vllm-project/vllm/pull/66135) `[Bugfix][Parser] DeepSeek DSML: keep a closer inside a tool-argument value` | bug | ? | - |
 | - | [#66137](https://github.com/vllm-project/vllm/issues/66137) `[Bug][Prefix Cache][Kimi-K3.1-Pro] DSpark does not enable shared Mamba checkpoints` | perf | ? | - |
@@ -1455,7 +1455,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66168](https://github.com/vllm-project/vllm/pull/66168) `[CPU] Support 2D (batched) weights in rms_norm, fixing DFlash acceptance on CPU` | infra | ? | - |
 | - | [#66169](https://github.com/vllm-project/vllm/pull/66169) `[Feature][Hybrid] K0 spec-window slot release for hybrid mamba models` | infra,nvidia,perf,quant | ? | - |
 | - | [#66170](https://github.com/vllm-project/vllm/issues/66170) `[Feature]: Enable and validate pipeline parallelism for Domyn Edge` | quant | ? | - |
-| - | [#66172](https://github.com/vllm-project/vllm/pull/66172) `[ROCm][Kimi-K3.1] Specialized decode: run DCP1 without M1 on vLLM's MLA ops (enables K3.1; K3 fallback)` | rocm | ? | - |
+| P1 | [#66172](https://github.com/vllm-project/vllm/pull/66172) `[ROCm][Kimi-K3.1] Specialized decode: run DCP1 without M1 on vLLM's MLA ops (enables K3.1; K3 fallback)` | rocm | ? | - |
 | - | [#66173](https://github.com/vllm-project/vllm/issues/66173) `[Bug]: Pythonic tool parsers silently drop calls with Python reserved keywords as parameter names` | risk | ? | - |
 | - | [#66174](https://github.com/vllm-project/vllm/pull/66174) `fix(tool_parsers): support Python reserved keywords as tool arguments in pythonic parsers` | bug | ? | - |
 | - | [#66176](https://github.com/vllm-project/vllm/pull/66176) `[Perf][Core] Look up single-group prefix-cache hits with one dict get per block` | perf | ? | - |
@@ -1591,12 +1591,12 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66408](https://github.com/vllm-project/vllm/pull/66408) `[Bugfix][Frontend] Fix speech-to-text chunk spacing and unsupported verbose_json errors` | bug | ? | - |
 | - | [#66410](https://github.com/vllm-project/vllm/pull/66410) `[Bugfix] Cap compile-range warmup at reachable batch sizes` | bug | ? | - |
 | - | [#66411](https://github.com/vllm-project/vllm/issues/66411) `[RFC]: Breakdown PR time to signal from ~73 to ~30 minutes` | rocm | ? | - |
-| - | [#66415](https://github.com/vllm-project/vllm/pull/66415) `[ROCm][Perf][Muse Spark] Specialized decode for PTPC FP8 on gfx942 (--monokernel, TP8 EP8)` | perf,quant,rocm | ? | - |
+| P1 | [#66415](https://github.com/vllm-project/vllm/pull/66415) `[ROCm][Perf][Muse Spark] Specialized decode for PTPC FP8 on gfx942 (--monokernel, TP8 EP8)` | perf,quant,rocm | ? | - |
 | - | [#66416](https://github.com/vllm-project/vllm/pull/66416) `[Transformers backend] Migrate InternLM3 and IQuestCoder` |  | ? | - |
 | - | [#66418](https://github.com/vllm-project/vllm/issues/66418) `[RFC]: DBO support for the DeepEP v2 backend in Model Runner V2` | nvidia | ? | - |
 | - | [#66420](https://github.com/vllm-project/vllm/pull/66420) `[DBO] Support DBO in the DeepEP v2 backend on MRV2` | nvidia | ? | - |
 | - | [#66423](https://github.com/vllm-project/vllm/issues/66423) `[Bug]: Segfault during engine init with any --reasoning-parser on SM120 + NVFP4 W4A4 (flashinfer_cutlass MoE)` | bug,nvidia,quant,risk | ? | - |
-| - | [#66424](https://github.com/vllm-project/vllm/pull/66424) `[ROCm][Perf] Route sink-less sparse MLA prefill to AITER OPUS on gfx950` | perf,rocm | ? | - |
+| P1 | [#66424](https://github.com/vllm-project/vllm/pull/66424) `[ROCm][Perf] Route sink-less sparse MLA prefill to AITER OPUS on gfx950` | perf,rocm | ? | - |
 | - | [#66426](https://github.com/vllm-project/vllm/issues/66426) `[Feature]: Support mm_processor_kwargs and media_io_kwargs across vllm.Render and vllm.Inference` |  | ? | - |
 | - | [#66427](https://github.com/vllm-project/vllm/issues/66427) `[Feature]: Support output_mode: derender, parse_context, and decoded logprobs in vllm.Inference` |  | ? | - |
 | - | [#66428](https://github.com/vllm-project/vllm/pull/66428) `[Bugfix][Spec Decode] Don't compile multi-module MTP drafters that pick their module by draft step` | bug | ? | - |
@@ -1610,15 +1610,15 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66440](https://github.com/vllm-project/vllm/pull/66440) `[Perf][Spec Decode] Keep full CUDA graphs when extracting hidden states` | nvidia,perf | ? | - |
 | - | [#66442](https://github.com/vllm-project/vllm/pull/66442) `[MOE oracle][Refactor][2/N] Move INT8 backend priority and selection to base oracle` | quant | ? | - |
 | - | [#66443](https://github.com/vllm-project/vllm/pull/66443) `[Bugfix][KV Connector] Renew push leases and fail expired receives` | bug,infra | ? | - |
-| - | [#66444](https://github.com/vllm-project/vllm/pull/66444) `[ROCm] wvSplitK: keep bf16 N=5 at YTILE 2 on wave64 to avoid VGPR spills` | rocm | ? | - |
+| P1 | [#66444](https://github.com/vllm-project/vllm/pull/66444) `[ROCm] wvSplitK: keep bf16 N=5 at YTILE 2 on wave64 to avoid VGPR spills` | rocm | ? | - |
 | - | [#66449](https://github.com/vllm-project/vllm/pull/66449) `[Bugfix] Preserve Responses API logprobs across empty text deltas` | bug | ? | - |
 | - | [#66451](https://github.com/vllm-project/vllm/issues/66451) `[Performance][KV Cache][Kimi-K3.1-Pro] DCP8 wastes shared-pool capacity on replicated draft KV` | perf | ? | - |
 | - | [#66452](https://github.com/vllm-project/vllm/issues/66452) `[Bug]: FlashInfer pinned planner workspace reuse corrupts async prefill/decode; fixes tracked upstream` | infra,nvidia,risk | ? | - |
-| - | [#66454](https://github.com/vllm-project/vllm/pull/66454) `[ROCm][Bugfix] Route gfx950 BF16 sparse MLA sink layers to Triton` | bug,rocm | ? | - |
+| P1 | [#66454](https://github.com/vllm-project/vllm/pull/66454) `[ROCm][Bugfix] Route gfx950 BF16 sparse MLA sink layers to Triton` | bug,rocm | ? | - |
 | - | [#66455](https://github.com/vllm-project/vllm/pull/66455) `Allow joint-schema decisions beyond 26 options` |  | ? | - |
 | - | [#66456](https://github.com/vllm-project/vllm/pull/66456) `[MoE][Kernel] Support MXFP8 in FlashInfer CuteDSL batched experts for DeepEP low-latency` | infra,nvidia,perf,quant | ? | - |
 | - | [#66457](https://github.com/vllm-project/vllm/pull/66457) `Fix NO DATA in query statistic dashboard  by fixing Deployment_ID query variables binding to DS_PROMETHEUS` | bug | ? | - |
-| - | [#66459](https://github.com/vllm-project/vllm/issues/66459) `[Bug]: fused_recurrent_kda silently ignores num_accepted_tokens` | perf,risk | ? | - |
+| P1 | [#66459](https://github.com/vllm-project/vllm/issues/66459) `[Bug]: fused_recurrent_kda silently ignores num_accepted_tokens` | perf,risk | ? | - |
 | - | [#66460](https://github.com/vllm-project/vllm/issues/66460) `ROCm FlexAttention paged-mask lookup changes BF16 output versus contiguous FlexAttention` | bug,rocm | ? | - |
 | - | [#66463](https://github.com/vllm-project/vllm/pull/66463) `Refine Prometheus queries with model_name filtering in Performance Statistics Dashboard` | perf | ? | - |
 | - | [#66464](https://github.com/vllm-project/vllm/pull/66464) `[Engram] PLE disk_offload: batched O_DIRECT reader (io_uring with pread fallback)` | infra | ? | - |
@@ -1629,8 +1629,8 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66472](https://github.com/vllm-project/vllm/pull/66472) `[Fast Start] Persist CUDA graphs with Foundry and prepare them during preload` | infra,nvidia | ? | - |
 | - | [#66474](https://github.com/vllm-project/vllm/pull/66474) `[Tool Parser] Fall invoke-less DSML blocks back to content and drop name-truncated calls` | risk | ? | - |
 | - | [#66475](https://github.com/vllm-project/vllm/pull/66475) `[Frontend][Responses] Reject empty assistant message content with 400 instead of 500` |  | ? | - |
-| - | [#66484](https://github.com/vllm-project/vllm/pull/66484) `[ROCm][Perf] Tune MXFP4 MoE tiles on gfx942` | perf,quant,rocm | main | - |
-| - | [#66485](https://github.com/vllm-project/vllm/pull/66485) `[ROCm][Perf] Use 64 split-KV segments for small decode batches on gfx942` | perf,rocm | main | - |
+| P0 | [#66484](https://github.com/vllm-project/vllm/pull/66484) `[ROCm][Perf] Tune MXFP4 MoE tiles on gfx942` | perf,quant,rocm | main | - |
+| P0 | [#66485](https://github.com/vllm-project/vllm/pull/66485) `[ROCm][Perf] Use 64 split-KV segments for small decode batches on gfx942` | perf,rocm | main | - |
 | - | [#66488](https://github.com/vllm-project/vllm/pull/66488) `[Bugfix][Quantization] Accept AWQ key names in MoeWNA16Config` | bug,quant | ? | - |
 | - | [#66491](https://github.com/vllm-project/vllm/issues/66491) `[RFC]: Packed-weight INT4 GEMM (W4A16 / W4A8) for RDNA4 (gfx1200/gfx1201)` | quant,rocm | ? | - |
 | - | [#66492](https://github.com/vllm-project/vllm/pull/66492) `[Perf][CPU] Speed up structured-output mask expansion` | perf | ? | - |
@@ -1687,12 +1687,12 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66574](https://github.com/vllm-project/vllm/pull/66574) `[Feature][KV Connector] Notify connectors after startup KV cache preparation` | infra,perf | ? | - |
 | - | [#66575](https://github.com/vllm-project/vllm/pull/66575) `[Perf][Rust Frontend] Compute multimodal prompt block hashes with canonical CBOR` | perf | ? | - |
 | - | [#66576](https://github.com/vllm-project/vllm/pull/66576) `[Quantization] Support NGQ2 Qwen4Exp PLE tables` | infra,quant | ? | - |
-| - | [#66578](https://github.com/vllm-project/vllm/pull/66578) `[Bugfix][ROCm] Kimi-K3: don't bake the fused decode MLA path into PIECEWISE graphs` | bug,infra,nvidia,perf,rocm | ? | - |
+| P1 | [#66578](https://github.com/vllm-project/vllm/pull/66578) `[Bugfix][ROCm] Kimi-K3: don't bake the fused decode MLA path into PIECEWISE graphs` | bug,infra,nvidia,perf,rocm | ? | - |
 | - | [#66579](https://github.com/vllm-project/vllm/pull/66579) `[Metrics] Configurable request-header labels for per-request Prometheus metrics` | infra | ? | - |
-| - | [#66580](https://github.com/vllm-project/vllm/pull/66580) `[Bugfix][ROCm] Convert ModelOpt FP8 MoE expert weights to e4m3fnuz` | bug,quant,rocm | main | - |
+| P0 | [#66580](https://github.com/vllm-project/vllm/pull/66580) `[Bugfix][ROCm] Convert ModelOpt FP8 MoE expert weights to e4m3fnuz` | bug,quant,rocm | main | - |
 | - | [#66581](https://github.com/vllm-project/vllm/pull/66581) `[Model] Add Granite Docling` |  | ? | - |
 | - | [#66585](https://github.com/vllm-project/vllm/pull/66585) `[Attention][Spec Decode] Capture varlen graphs at the split-K request bound` | nvidia | ? | - |
-| - | [#66586](https://github.com/vllm-project/vllm/pull/66586) `[Bugfix][ROCm] Apply the e4m3fnuz KV-scale factor for compressed-tensors` | bug,quant,rocm | main | - |
+| P0 | [#66586](https://github.com/vllm-project/vllm/pull/66586) `[Bugfix][ROCm] Apply the e4m3fnuz KV-scale factor for compressed-tensors` | bug,quant,rocm | main | - |
 | - | [#66587](https://github.com/vllm-project/vllm/issues/66587) `[ROCm][AMD] DeepSeek-V4.1-Flash gfx950 / MI355X Performance Optimization (vLLM)` | perf,rocm | ? | - |
 | - | [#66588](https://github.com/vllm-project/vllm/issues/66588) `[ROCm][AMD] MiniMax-M3 gfx950 / MI355X Performance Optimization (vLLM)` | perf,rocm | ? | - |
 | - | [#66590](https://github.com/vllm-project/vllm/issues/66590) `[Performance]: On H100, the default FP8 KV cache path (FA3, FP8 query) is ~11% slower than FlashInfer and its ` | nvidia,perf,quant | ? | - |
@@ -1800,7 +1800,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66763](https://github.com/vllm-project/vllm/pull/66763) `[Bugfix][Model] Fix pipeline-parallel loading and generation for LongCat-Flash-Lite` | bug | ? | - |
 | - | [#66765](https://github.com/vllm-project/vllm/pull/66765) `[Perf][Core] Avoid scanning cache-aware queue backlog` | perf | ? | - |
 | - | [#66766](https://github.com/vllm-project/vllm/pull/66766) `[Bugfix][KV Offload] Widen the lazy SimpleCPUOffload walk to cover CPU loads` | bug | ? | - |
-| - | [#66769](https://github.com/vllm-project/vllm/pull/66769) `[ROCm][Attention][Kimi-K3.1] Accept fp8_ds_mla on gfx942 when AITER reads it in fnuz` | rocm | ? | - |
+| P1 | [#66769](https://github.com/vllm-project/vllm/pull/66769) `[ROCm][Attention][Kimi-K3.1] Accept fp8_ds_mla on gfx942 when AITER reads it in fnuz` | rocm | ? | - |
 | - | [#66770](https://github.com/vllm-project/vllm/pull/66770) `[Bugfix] Fix FlashInfer DCP with FP8 KV cache` | bug,nvidia,perf,quant | ? | - |
 | - | [#66771](https://github.com/vllm-project/vllm/pull/66771) `[ROCm] MXFP8 dispatch for AITER MXFP4 MoE under data parallelism` | quant,rocm | ? | - |
 | - | [#66772](https://github.com/vllm-project/vllm/pull/66772) `[Bugfix][CPU] Apply e_score_correction_bias in CPU softmax routing` | bug,infra | ? | - |
@@ -1814,7 +1814,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66788](https://github.com/vllm-project/vllm/pull/66788) `[KV Events] Add source attribution and resource sharing scope` | infra,perf | ? | - |
 | - | [#66790](https://github.com/vllm-project/vllm/pull/66790) `[Model][Spec Decode] Support DFlash with pipeline parallelism for MiMo-V2` |  | ? | - |
 | - | [#66791](https://github.com/vllm-project/vllm/pull/66791) `[Perf][Qwen4Exp] Fuse HyperConnection up projection and gate mix on SM90` | nvidia,perf | ? | - |
-| - | [#66792](https://github.com/vllm-project/vllm/pull/66792) `[Perf][Sampler] Exact Triton top-k/top-p kernel, ~3x faster` | perf,rocm | ? | - |
+| P1 | [#66792](https://github.com/vllm-project/vllm/pull/66792) `[Perf][Sampler] Exact Triton top-k/top-p kernel, ~3x faster` | perf,rocm | ? | - |
 | - | [#66793](https://github.com/vllm-project/vllm/pull/66793) `[Attention] Add FlashInfer SM120 FP8 PRIMS prefill backend` | nvidia,quant | ? | - |
 | - | [#66794](https://github.com/vllm-project/vllm/issues/66794) `[RFC]: extract_hidden_states — stream hidden states to CPU pages with token-hash prefix backfill` |  | ? | - |
 | - | [#66795](https://github.com/vllm-project/vllm/pull/66795) `[Bugfix][NIXL] Push: stop WRITE submission stalls and early block release; lock the NIXL agent` | bug,infra | ? | - |
@@ -1834,7 +1834,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#66817](https://github.com/vllm-project/vllm/pull/66817) `[Bugfix][Kimi-K3.1-Pro] Preserve instructions and tools when rendering` | bug | ? | - |
 | - | [#66818](https://github.com/vllm-project/vllm/pull/66818) `[Fast Start] Add PCP/DCP support` | infra,nvidia | ? | - |
 | - | [#66820](https://github.com/vllm-project/vllm/pull/66820) `[Perf][Core] Add encoder length bucketing for padded audio encoders` | infra,perf | ? | - |
-| - | [#66822](https://github.com/vllm-project/vllm/pull/66822) `[Bugfix][ROCm][GLM-5.3-Flash] Clamp num_warps for the kpool decode tail-ring update` | bug,rocm | main | - |
+| P0 | [#66822](https://github.com/vllm-project/vllm/pull/66822) `[Bugfix][ROCm][GLM-5.3-Flash] Clamp num_warps for the kpool decode tail-ring update` | bug,rocm | main | - |
 | - | [#66825](https://github.com/vllm-project/vllm/pull/66825) `[Feature][RL] Return logprobs aligned with the sampling mask, captured compactly per request` | perf | ? | - |
 | - | [#66826](https://github.com/vllm-project/vllm/pull/66826) `[Bugfix][Kimi-K3.1] Find sparse MLA layers in flashinfer prefill hyperparam scan` | bug,nvidia | ? | - |
 | - | [#66828](https://github.com/vllm-project/vllm/pull/66828) `[Model] Enable pipeline parallelism for GLM-5.3-Flash` |  | ? | - |
@@ -1998,10 +1998,10 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67064](https://github.com/vllm-project/vllm/pull/67064) `[KV Connector][NIXL] Cut P/D loads at the Mamba prefix-cache checkpoint` | perf | ? | - |
 | - | [#67065](https://github.com/vllm-project/vllm/issues/67065) `[Bug]: NixlConnector: with n > 1, prefill releases KV blocks after the first decode child's read, later childr` | infra | ? | - |
 | - | [#67069](https://github.com/vllm-project/vllm/pull/67069) `[KV Offload] Add SchedulerView.lookup_request (RFC #66782)` |  | ? | - |
-| - | [#67074](https://github.com/vllm-project/vllm/pull/67074) `[Bugfix][ROCm][MoRIIO] Make MoRIIO READ wait for pending KV block zeroing and copies` | bug,rocm | main | - |
+| P0 | [#67074](https://github.com/vllm-project/vllm/pull/67074) `[Bugfix][ROCm][MoRIIO] Make MoRIIO READ wait for pending KV block zeroing and copies` | bug,rocm | main | - |
 | - | [#67075](https://github.com/vllm-project/vllm/pull/67075) `[NIXL] Pair KV pages by logical position for asymmetric P/D region layouts` |  | ? | - |
 | - | [#67076](https://github.com/vllm-project/vllm/pull/67076) `[Model][DSv4.1] Token-shard the pre-replay decoder stream under ShardQ` | infra | ? | - |
-| - | [#67077](https://github.com/vllm-project/vllm/pull/67077) `[Bugfix][P/D] Keep NIXL prefill blocks until every parallel sample has read them` | bug,infra | ? | - |
+| P1 | [#67077](https://github.com/vllm-project/vllm/pull/67077) `[Bugfix][P/D] Keep NIXL prefill blocks until every parallel sample has read them` | bug,infra | ? | - |
 | - | [#67078](https://github.com/vllm-project/vllm/pull/67078) `[Bugfix][Tool Parser] Fix truncated DeepSeek V3 streaming tool arguments` | bug,risk | ? | - |
 | - | [#67082](https://github.com/vllm-project/vllm/pull/67082) `[Bugfix][ROCm] Avoid KFD queue eviction after the first IPC weight update` | bug,rocm | ? | - |
 | - | [#67084](https://github.com/vllm-project/vllm/pull/67084) `[Bugfix] Keep warmup block IDs within each KV block pool` | bug,nvidia | ? | - |
@@ -2018,7 +2018,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67106](https://github.com/vllm-project/vllm/pull/67106) `[Perf][Audio] Cache torchcodec load failure; honour audio_backend in STT` | perf | ? | - |
 | - | [#67108](https://github.com/vllm-project/vllm/pull/67108) `[Bugfix][Frontend] Order complete tool-result batches by call ID` | bug | ? | - |
 | - | [#67109](https://github.com/vllm-project/vllm/pull/67109) `[Perf][KV Connector] Serve Mooncake store lookups from a separate process` | perf | ? | - |
-| - | [#67110](https://github.com/vllm-project/vllm/issues/67110) `[ROCm][Performance] `wvSplitK` skinny GEMM is 3 to 8x slower than hipBLASLt at 3 and 5 activation rows on gfx9` | perf,rocm | ? | - |
+| P1 | [#67110](https://github.com/vllm-project/vllm/issues/67110) `[ROCm][Performance] `wvSplitK` skinny GEMM is 3 to 8x slower than hipBLASLt at 3 and 5 activation rows on gfx9` | perf,rocm | ? | - |
 | - | [#67111](https://github.com/vllm-project/vllm/pull/67111) `[Bugfix][Multimodal] Size multimodal profiling from the processor's effective kwargs` | bug | ? | - |
 | - | [#67112](https://github.com/vllm-project/vllm/pull/67112) `[Bugfix][Multimodal] Size the Gemma 4 profiling dummies to their token budgets` | bug | ? | - |
 | - | [#67122](https://github.com/vllm-project/vllm/pull/67122) `[Recipe] Add SmolLM3-3B deployment recipe` | infra | ? | - |
@@ -2048,7 +2048,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67149](https://github.com/vllm-project/vllm/pull/67149) `[Kernel] Selectable fused MQA+top-k prefill backend: add FlashTopK (SM90, SM100)` | infra,nvidia,perf | ? | - |
 | - | [#67151](https://github.com/vllm-project/vllm/pull/67151) `[Frontend] Pass use_beam_search and max_completion_tokens to speech-to-text models` |  | ? | - |
 | - | [#67153](https://github.com/vllm-project/vllm/pull/67153) `[Perf][Frontend] Seed the fast detokenizer with a prompt tail, not the full prompt` | perf | ? | - |
-| - | [#67154](https://github.com/vllm-project/vllm/pull/67154) `[Bugfix][Attention] Fix TRITON_MLA NaN logits under CUDA graphs at batch>=3` | bug,nvidia,risk | ? | - |
+| P1 | [#67154](https://github.com/vllm-project/vllm/pull/67154) `[Bugfix][Attention] Fix TRITON_MLA NaN logits under CUDA graphs at batch>=3` | bug,nvidia,risk | ? | - |
 | - | [#67155](https://github.com/vllm-project/vllm/pull/67155) `[Bugfix] Profile the forward again after a profiling pass that compiled` | bug | ? | - |
 | - | [#67156](https://github.com/vllm-project/vllm/pull/67156) `[Bugfix] ParserEngine: scan for the tool name incrementally while streaming` | bug | ? | - |
 | - | [#67157](https://github.com/vllm-project/vllm/issues/67157) `[Bug]: Qwen3-0.6B with --tool-call-parser qwen3_xml returns an empty message (Python) / leaked text (Rust fron` |  | ? | - |
@@ -2102,7 +2102,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67229](https://github.com/vllm-project/vllm/pull/67229) `[DRAFT] Autotune gemm BF16 in offline mode` | nvidia,perf | ? | - |
 | - | [#67230](https://github.com/vllm-project/vllm/pull/67230) `[Perf][Kernel] Size Mamba1 varlen selective scan launch from the longest sequence` | perf | ? | - |
 | - | [#67231](https://github.com/vllm-project/vllm/issues/67231) `[Feature]:  Support Hugging Face Tokenizers v1` |  | ? | - |
-| - | [#67232](https://github.com/vllm-project/vllm/pull/67232) `[Bugfix][ROCm] Fix fp8 NoPE NaN, fp16 crash and a decode-path sync in ROCM_AITER_MLA_SPARSE` | bug,quant,risk,rocm | main | - |
+| P0 | [#67232](https://github.com/vllm-project/vllm/pull/67232) `[Bugfix][ROCm] Fix fp8 NoPE NaN, fp16 crash and a decode-path sync in ROCM_AITER_MLA_SPARSE` | bug,quant,risk,rocm | main | - |
 | - | [#67233](https://github.com/vllm-project/vllm/pull/67233) `[CI][ROCm] Add a ROCM_AITER_MLA_SPARSE and DSA indexer test suite` | infra,nvidia,perf,rocm | ? | - |
 | - | [#67234](https://github.com/vllm-project/vllm/pull/67234) `[CI][ROCm] Add a ROCM_FLASHMLA_SPARSE_DSV41 backend test suite` | infra,nvidia,rocm | ? | - |
 | - | [#67236](https://github.com/vllm-project/vllm/pull/67236) `[Spec Decode] Default the NVFP4 draft lm_head for MTP on DGX Spark (SM121)` | nvidia,quant | ? | - |
@@ -2179,7 +2179,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67360](https://github.com/vllm-project/vllm/issues/67360) `[Bug]: MiniCPM-V 4.7 canvas M-RoPE silently falls back to sequential positions when user text contains `</imag` | risk | ? | - |
 | - | [#67361](https://github.com/vllm-project/vllm/pull/67361) `[Bugfix][Model] MiniCPM-V 4.7: pair image/slice markers by position` | bug | ? | - |
 | - | [#67363](https://github.com/vllm-project/vllm/pull/67363) `[ROCm][Perf][DSv4.1] Build the MXFP4 indexer decode metadata in one launch` | infra,perf,quant,rocm | ? | - |
-| - | [#67364](https://github.com/vllm-project/vllm/pull/67364) `[ROCm][Perf][DSv4.1] Insert the compressed KV cache inside the compression launch` | perf,rocm | ? | - |
+| P1 | [#67364](https://github.com/vllm-project/vllm/pull/67364) `[ROCm][Perf][DSv4.1] Insert the compressed KV cache inside the compression launch` | perf,rocm | ? | - |
 | - | [#67365](https://github.com/vllm-project/vllm/pull/67365) `[ROCm][Perf][DSv4.1] Pack the decode sparse-MLA ragged top-k in one launch from the MXFP4 indexer's row bounds` | perf,quant,rocm | ? | - |
 | - | [#67366](https://github.com/vllm-project/vllm/pull/67366) `[ROCm][Perf][DSv4.1] Fold the consumer remap into top-512; skip the -1 fill on all decode rows` | perf,rocm | ? | - |
 | - | [#67367](https://github.com/vllm-project/vllm/pull/67367) `[ROCm][Perf][DSv4.1] Keep few-row gfx950 top-512 calls in one block up to 36K` | perf,rocm | ? | - |
@@ -2238,7 +2238,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67443](https://github.com/vllm-project/vllm/pull/67443) `[Docs][ROCm] Add Step-5-Preview recipe for MI325X and MI355X` | infra,rocm | ? | - |
 | - | [#67444](https://github.com/vllm-project/vllm/pull/67444) `[ROCm][Attention][Perf][Kimi-k3.1] Add a gfx942 FlyDSL sparse MLA kernel for fp8_ds_mla prefill` | perf,rocm | ? | - |
 | - | [#67445](https://github.com/vllm-project/vllm/pull/67445) `[ROCm][RDNA] ROCM_RDNA_ATTN: gfx1150..gfx1153 and RDNA4 tables, default on gfx115x` | infra,perf,rocm | ? | - |
-| - | [#67446](https://github.com/vllm-project/vllm/pull/67446) `[ROCm][Bugfix] Route CDNA3 FP8 MLA decode to Triton past a 4 GiB KV view` | bug,quant,rocm | main | - |
+| P0 | [#67446](https://github.com/vllm-project/vllm/pull/67446) `[ROCm][Bugfix] Route CDNA3 FP8 MLA decode to Triton past a 4 GiB KV view` | bug,quant,rocm | main | - |
 | - | [#67447](https://github.com/vllm-project/vllm/pull/67447) `[Perf][Kernel] Fuse mixed-dtype casts into Triton causal-conv prefill and decode` | perf,rocm | ? | - |
 | - | [#67448](https://github.com/vllm-project/vllm/pull/67448) `[Kernel] Enable DeepGEMM MegaMoE on SM120` | infra,nvidia,perf | ? | - |
 | - | [#67449](https://github.com/vllm-project/vllm/pull/67449) `[Bugfix] Reject nonpositive offline beam concurrency limits` | bug | ? | - |
@@ -2272,7 +2272,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67491](https://github.com/vllm-project/vllm/pull/67491) `[Bugfix][Tool Parser] Keep unparsed DeepSeek V3.1 tool calls as content` | bug | ? | - |
 | - | [#67492](https://github.com/vllm-project/vllm/pull/67492) `Add TTL for cache entries` | infra,perf | ? | - |
 | - | [#67493](https://github.com/vllm-project/vllm/pull/67493) `[Bugfix][GLM-5.3-Flash] Respect configured video budget during startup profiling` | bug | ? | - |
-| - | [#67494](https://github.com/vllm-project/vllm/pull/67494) `[Perf][ROCm] AWQ: keep awq_gemm for decode under torch.compile` | perf,quant,rocm | ? | - |
+| P1 | [#67494](https://github.com/vllm-project/vllm/pull/67494) `[Perf][ROCm] AWQ: keep awq_gemm for decode under torch.compile` | perf,quant,rocm | ? | - |
 | - | [#67495](https://github.com/vllm-project/vllm/pull/67495) `[Kernel][ROCm] AWQ Triton: decode-friendly block sizes for M<=16` | perf,quant,rocm | ? | - |
 | - | [#67496](https://github.com/vllm-project/vllm/pull/67496) `[Bugfix][Tool Parser] Keep unparsed HY V3 tool calls as content` | bug | ? | - |
 | - | [#67498](https://github.com/vllm-project/vllm/pull/67498) `[Bugfix][MoE] Reject expert biases in backends that cannot apply them` | bug,nvidia | ? | - |
@@ -2282,7 +2282,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67503](https://github.com/vllm-project/vllm/pull/67503) `[Doc] Add Atomic Agent deployment guide` |  | ? | - |
 | - | [#67504](https://github.com/vllm-project/vllm/pull/67504) `[TieredOffloading][Benchmarks] Add benchmarks for TieredOffloading ` | perf | ? | - |
 | - | [#67506](https://github.com/vllm-project/vllm/pull/67506) `[Perf] Batch per-output sample logprobs in EngineCoreOutputs for transport` | perf | ? | - |
-| - | [#67507](https://github.com/vllm-project/vllm/pull/67507) `[ROCm][Bugfix][Kimi-K3] Label the fused MLA fp8 outputs with the platform fp8 dtype` | bug,infra,perf,quant,rocm | ? | - |
+| P1 | [#67507](https://github.com/vllm-project/vllm/pull/67507) `[ROCm][Bugfix][Kimi-K3] Label the fused MLA fp8 outputs with the platform fp8 dtype` | bug,infra,perf,quant,rocm | ? | - |
 | - | [#67508](https://github.com/vllm-project/vllm/pull/67508) `[Bugfix][Frontend] Replace invalid tool call names by a placeholder in the Mistral renderer history` | bug | ? | - |
 | - | [#67509](https://github.com/vllm-project/vllm/pull/67509) `[Bugfix][Reasoning] Keep text before <think> in Hunyuan A13B output` | bug | ? | - |
 | - | [#67510](https://github.com/vllm-project/vllm/pull/67510) `[Perf][HiSparse] Token-sharded sparse-MLA prefill under TP` | perf | ? | - |
@@ -2326,7 +2326,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#67561](https://github.com/vllm-project/vllm/pull/67561) `[Bugfix][Multimodal] Hash image decode options for video/jpeg frames` | bug | ? | - |
 | - | [#67562](https://github.com/vllm-project/vllm/pull/67562) `[Core] Session-based retention and lookup for the prefix cache` | perf | ? | - |
 | - | [#67566](https://github.com/vllm-project/vllm/pull/67566) `[Bugfix][Compile] Key the AOT compile cache on loaded general plugins` | bug,perf | ? | - |
-| - | [#67569](https://github.com/vllm-project/vllm/pull/67569) `[ROCm][Perf][Qwen4Exp] Add --enable-hc-sp-replicated-moe` | infra,perf,rocm | ? | - |
+| P1 | [#67569](https://github.com/vllm-project/vllm/pull/67569) `[ROCm][Perf][Qwen4Exp] Add --enable-hc-sp-replicated-moe` | infra,perf,rocm | ? | - |
 | - | [#67570](https://github.com/vllm-project/vllm/pull/67570) `[ROCm][Perf][Qwen4Exp] Allow replicated MoE with --monokernel` | infra,perf,rocm | ? | - |
 | - | [#67572](https://github.com/vllm-project/vllm/pull/67572) `[Doc] Make CUDA 13 the default in the GPU install guide` | nvidia | ? | - |
 | - | [#67573](https://github.com/vllm-project/vllm/pull/67573) `[ROCm][Build] Install device code via ROCM_DEVICE_EXTRAS in the ROCm base images` | infra,rocm | ? | - |
@@ -2335,9 +2335,9 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#65638](https://github.com/vllm-project/vllm/pull/65638) `[ROCm][MiniMax-M3] Mono decode on the NVFP4 KV and index caches` | quant,rocm | main | - |
-| - | [#65645](https://github.com/vllm-project/vllm/pull/65645) `[ROCm][MiniMax-M3] Default to breakable CUDA graphs tests on ROCM` | nvidia,rocm | main | - |
-| - | [#66090](https://github.com/vllm-project/vllm/pull/66090) `[Bugfix] Stop advertising fp8_e5m2 where the KV writer stores e4m3` | bug,quant,rocm | main | - |
+| P0 | [#65638](https://github.com/vllm-project/vllm/pull/65638) `[ROCm][MiniMax-M3] Mono decode on the NVFP4 KV and index caches` | quant,rocm | main | - |
+| P0 | [#65645](https://github.com/vllm-project/vllm/pull/65645) `[ROCm][MiniMax-M3] Default to breakable CUDA graphs tests on ROCM` | nvidia,rocm | main | - |
+| P0 | [#66090](https://github.com/vllm-project/vllm/pull/66090) `[Bugfix] Stop advertising fp8_e5m2 where the KV writer stores e4m3` | bug,quant,rocm | main | - |
 
 ### sglang — Merged / closed (880 items)
 
@@ -2348,7 +2348,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#25760](https://github.com/sgl-project/sglang/issues/25760) `[Roadmap] SGLang's new lightweight SessionAware Router module for bucket-based PD serving` |  | ? | - |
 | - | [#26890](https://github.com/sgl-project/sglang/issues/26890) `[AITER-Upgrade] AITER Scout Status` | rocm | ? | - |
 | - | [#27267](https://github.com/sgl-project/sglang/pull/27267) `[Feat] mem_cache: Add hugepage preflight and allocation modes for host pools` | infra,nvidia | ? | - |
-| - | [#29857](https://github.com/sgl-project/sglang/issues/29857) `[Bug] v0.5.14: With EAGLE/MTP on, KV pool profiler leaves ~50 GB VRAM idle on hybrid GDN model (Qwen3.6-27B NV` | quant | ? | - |
+| P1 | [#29857](https://github.com/sgl-project/sglang/issues/29857) `[Bug] v0.5.14: With EAGLE/MTP on, KV pool profiler leaves ~50 GB VRAM idle on hybrid GDN model (Qwen3.6-27B NV` | quant | ? | - |
 | - | [#29913](https://github.com/sgl-project/sglang/issues/29913) `FP4 KV Roadmap` | quant | ? | - |
 | - | [#30122](https://github.com/sgl-project/sglang/issues/30122) `Bug Report: SGLang 0.5.14 Multi-Node GGUF MoE Deployment — 9 Bugs Fixed by a Finance Guy with an AI Agent` | quant | ? | - |
 | - | [#30550](https://github.com/sgl-project/sglang/issues/30550) `[Bug] [MLX] SchedulerProfilerManager._start_profile returns success=False under mocked Metal capture` |  | ? | - |
@@ -2362,7 +2362,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#33226](https://github.com/sgl-project/sglang/pull/33226) `[Feat] cp: Support FlashInfer prefill context parallelism` | nvidia | ? | - |
 | - | [#33483](https://github.com/sgl-project/sglang/issues/33483) `[Bug] `max_running_requests` (4096) and `cuda_graph_max_bs` (32) defaults are derived independently; crossing ` |  | ? | - |
 | - | [#33549](https://github.com/sgl-project/sglang/issues/33549) `[Bug] DeepSeek-V4 (dsv4 backend + DSPARK) TP=8 on 8×H20: decode forward hangs indefinitely at ~245K context — ` | bug | ? | - |
-| - | [#34212](https://github.com/sgl-project/sglang/pull/34212) `[Fix] [AMD] DSP: skip unused QuickAllReduce allocation for DCP groups` | bug,infra,rocm | main | - |
+| P0 | [#34212](https://github.com/sgl-project/sglang/pull/34212) `[Fix] [AMD] DSP: skip unused QuickAllReduce allocation for DCP groups` | bug,infra,rocm | main | - |
 | - | [#34572](https://github.com/sgl-project/sglang/issues/34572) `[Bug][PP] PP disaggregated prefill hangs: bootstrap queue history diverges across stages under abort storms (R` | bug | ? | - |
 | - | [#34716](https://github.com/sgl-project/sglang/issues/34716) `[Bug] /v1/responses: `created_at` is a float in streaming events but an int in non-streaming responses` |  | ? | - |
 | - | [#34772](https://github.com/sgl-project/sglang/issues/34772) `[Bug][Diffusion] Native-fallback component loading drops all CPU-offload decisions (should_offload called with` | perf | ? | - |
@@ -2373,28 +2373,28 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#36224](https://github.com/sgl-project/sglang/issues/36224) `[RFC] First-Class, Versioned KV Hint Envelope for SGLang` |  | ? | - |
 | - | [#36678](https://github.com/sgl-project/sglang/issues/36678) `[Feature] Expose opt-in per-request metrics in OpenAI-compatible responses` |  | ? | - |
 | - | [#36741](https://github.com/sgl-project/sglang/issues/36741) `[Bug] Anthropic endpoint: output_config.effort forwarded unvalidated -> 500, and xhigh is made unreachable` |  | ? | - |
-| - | [#36807](https://github.com/sgl-project/sglang/issues/36807) `[Bug] fast_topk_v2 can silently return wrong top-k sets when a radix threshold bucket exceeds its 4096-entry c` | risk | ? | - |
+| P1 | [#36807](https://github.com/sgl-project/sglang/issues/36807) `[Bug] fast_topk_v2 can silently return wrong top-k sets when a radix threshold bucket exceeds its 4096-entry c` | risk | ? | - |
 | - | [#36906](https://github.com/sgl-project/sglang/issues/36906) `[Bug] GLM-5.3-Flash crashes at startup under pipeline parallelism — KeyError: 'residual'` | bug | ? | - |
-| - | [#37326](https://github.com/sgl-project/sglang/issues/37326) `[Bug] NEXTN/MTP draft acceptance decays to ~0 over server uptime on qwen4_exp (Qwen3.8-Flash-Next), fully rest` |  | ? | - |
+| P1 | [#37326](https://github.com/sgl-project/sglang/issues/37326) `[Bug] NEXTN/MTP draft acceptance decays to ~0 over server uptime on qwen4_exp (Qwen3.8-Flash-Next), fully rest` |  | ? | - |
 | - | [#37354](https://github.com/sgl-project/sglang/pull/37354) `[Feat] [Apple] mlx: Add an architecture-independent ATen-to-MLX lowering layer` | infra | ? | - |
 | - | [#37430](https://github.com/sgl-project/sglang/issues/37430) `[Bug] Kimi-K3 tool_choice=required requests hang until ReadTimeout in 2P2D TP8/DCP8 deployment` | bug | ? | - |
 | - | [#37451](https://github.com/sgl-project/sglang/issues/37451) `[Failure Tracker] PR Test (AMD)` | infra,rocm | ? | - |
 | - | [#37472](https://github.com/sgl-project/sglang/pull/37472) `[Fix] dspark: Keep verify bookkeeping in range for rows without candidates` | bug,perf | ? | - |
-| - | [#37478](https://github.com/sgl-project/sglang/issues/37478) `[ROCm] IndexerKPool calls aiter fp8_mqa_logits unbounded; >2 GiB logits abort every TP rank (#36960 does not c` | rocm | ? | - |
+| P0 | [#37478](https://github.com/sgl-project/sglang/issues/37478) `[ROCm] IndexerKPool calls aiter fp8_mqa_logits unbounded; >2 GiB logits abort every TP rank (#36960 does not c` | rocm | ? | - |
 | - | [#37585](https://github.com/sgl-project/sglang/issues/37585) `[Bug] Eager hybrid target verify fails when TP padding breaks fixed-width request groups` | bug | ? | - |
 | - | [#37609](https://github.com/sgl-project/sglang/issues/37609) `[Bug] Spark2.5 MLP uses tanh-approximate GELU instead of reference GELU` |  | ? | - |
 | - | [#37892](https://github.com/sgl-project/sglang/issues/37892) `[Bug] DeepSeek-V4 long-context prefill: illegal memory access in the DSA indexer top-k kernel (`topk_v1.cuh:34` | bug,perf,risk | ? | - |
 | - | [#37983](https://github.com/sgl-project/sglang/issues/37983) `[Bug] VisionTritonAttention drops MiMo-style window attention and sinks` |  | ? | - |
 | - | [#38004](https://github.com/sgl-project/sglang/issues/38004) `[RFC] Quantization module layout: Config, Scheme, backend kernels` | perf,quant | ? | - |
 | - | [#38009](https://github.com/sgl-project/sglang/issues/38009) `[Bug] [DFlash2] Greedy output diverges from target-only Qwen3.8-27B when thinking is enabled` |  | ? | - |
-| - | [#38029](https://github.com/sgl-project/sglang/issues/38029) `[Bug] EAGLE DSA draft backend misses KVIndexTranslator in FP8 MHA prefix reads` | quant | ? | - |
+| P0 | [#38029](https://github.com/sgl-project/sglang/issues/38029) `[Bug] EAGLE DSA draft backend misses KVIndexTranslator in FP8 MHA prefix reads` | quant | ? | - |
 | - | [#38031](https://github.com/sgl-project/sglang/issues/38031) `[Bug] GLM-5.3-Flash (DSA): HiCache host-tier load-back corrupts generation even without speculative decoding —` | nvidia,risk | ? | - |
 | - | [#38069](https://github.com/sgl-project/sglang/issues/38069) `[Feature] Per-request opt-out from prefix cache insertion (skip_cache_insert)` | perf | ? | - |
 | - | [#38104](https://github.com/sgl-project/sglang/issues/38104) `[Bug] `--default-chat-template-kwargs` with `reasoning_effort` silently overrides the per-request `reasoning_e` | risk | ? | - |
-| - | [#38143](https://github.com/sgl-project/sglang/issues/38143) `[Bug] MiniMax-M3 W4A16 (compressed-tensors) on 2x DGX Spark (sm_121, TP=2): serves but every token is id 0 — a` | quant,rocm | ? | - |
+| P1 | [#38143](https://github.com/sgl-project/sglang/issues/38143) `[Bug] MiniMax-M3 W4A16 (compressed-tensors) on 2x DGX Spark (sm_121, TP=2): serves but every token is id 0 — a` | quant,rocm | ? | - |
 | - | [#38156](https://github.com/sgl-project/sglang/issues/38156) `[Bug] HiCache host-memory sizing guard charges co-located ranks twice and rejects pools that fit (host_memory_` |  | ? | - |
 | - | [#38196](https://github.com/sgl-project/sglang/issues/38196) `[Bug] [NPU] ascend attention backend silently corrupts output with page_size 16 (128 OK, 1 rejected per #25169` | risk | ? | - |
-| - | [#38207](https://github.com/sgl-project/sglang/issues/38207) `[Bug] GLM-5.3 DPC crashes` | bug | ? | - |
+| P1 | [#38207](https://github.com/sgl-project/sglang/issues/38207) `[Bug] GLM-5.3 DPC crashes` | bug | ? | - |
 | - | [#38236](https://github.com/sgl-project/sglang/issues/38236) `[Bug] DeepseekV4ForCausalLM hook rejects `--speculative-algorithm NEXTN` because the NEXTN->EAGLE alias is res` |  | ? | - |
 | - | [#38291](https://github.com/sgl-project/sglang/issues/38291) `[Bug] `fp8e4nv` not supported on A100 (SM80) when serving Qwen3.8-Flash-Next-FP8` | quant | ? | - |
 | - | [#38312](https://github.com/sgl-project/sglang/issues/38312) `[Playground] Verified cell: h100 / flash-official / fp4 / high-throughput / single` | nvidia,perf,quant | ? | - |
@@ -2456,13 +2456,13 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#40141](https://github.com/sgl-project/sglang/pull/40141) `[Feat] [NPU] startup-weight-load: Support overlap mode on NPU` | infra,perf | ? | - |
 | - | [#40729](https://github.com/sgl-project/sglang/issues/40729) `[Bug] PD decode scheduler crashes with NotImplementedError when retracting a request under --enable-hisparse` | bug | ? | - |
 | - | [#40962](https://github.com/sgl-project/sglang/pull/40962) `[Fix] speculative: build target graphs outside draft contexts` | bug,infra | ? | - |
-| - | [#41204](https://github.com/sgl-project/sglang/pull/41204) `[Fix] processor: Restore BOS/EOS flags for processor-owned tokenizers` | bug,infra | ? | - |
+| P1 | [#41204](https://github.com/sgl-project/sglang/pull/41204) `[Fix] processor: Restore BOS/EOS flags for processor-owned tokenizers` | bug,infra | ? | - |
 | - | [#41293](https://github.com/sgl-project/sglang/pull/41293) `[Fix] gemma4: Honor OOT attention defaults` | bug,infra | ? | - |
-| - | [#41301](https://github.com/sgl-project/sglang/pull/41301) `[Perf] [NVIDIA] quantization: Add tuned W8A8 block-FP8 GEMM configs for H20` | infra,nvidia,perf,quant | ? | - |
+| P1 | [#41301](https://github.com/sgl-project/sglang/pull/41301) `[Perf] [NVIDIA] quantization: Add tuned W8A8 block-FP8 GEMM configs for H20` | infra,nvidia,perf,quant | ? | - |
 | - | [#41372](https://github.com/sgl-project/sglang/issues/41372) `[Bug]: scheduler Req.decoded_text is never written: dead stop-string fallback at schedule_batch.py:1846 and em` |  | ? | - |
 | - | [#41495](https://github.com/sgl-project/sglang/pull/41495) `[Feat] [NPU] weight-cache: Add NPU weight cache support` | infra,perf | ? | - |
 | - | [#41501](https://github.com/sgl-project/sglang/pull/41501) `[Feat] diffusion/sana-video2: Support breakable CUDA graphs` | infra,nvidia,perf | ? | - |
-| - | [#41532](https://github.com/sgl-project/sglang/pull/41532) `[Feat] [XPU] quant: Add MXFP8 W8A8 compressed-tensors` | infra,nvidia,quant | ? | - |
+| P1 | [#41532](https://github.com/sgl-project/sglang/pull/41532) `[Feat] [XPU] quant: Add MXFP8 W8A8 compressed-tensors` | infra,nvidia,quant | ? | - |
 | - | [#41635](https://github.com/sgl-project/sglang/pull/41635) `[Feat] gemma4: Add out-of-tree MoE expert executor selection` | infra | ? | - |
 | - | [#41794](https://github.com/sgl-project/sglang/pull/41794) `[Perf] [AMD] kimi-k3: Run the fused KDA decode with a BF16 state and Quark weights` | infra,perf,quant,rocm | ? | - |
 | - | [#42119](https://github.com/sgl-project/sglang/pull/42119) `[Feat] [AMD] quantization: enable GPTQ and AutoRound INT4 checkpoints` | infra,perf,quant,rocm | ? | - |
@@ -2478,7 +2478,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#43675](https://github.com/sgl-project/sglang/pull/43675) `[Fix] Kimi-K3: Fix derived weight buffers across CUDA graph reloads` | bug,infra,nvidia | ? | - |
 | - | [#43703](https://github.com/sgl-project/sglang/pull/43703) `[Perf] [NVIDIA] unquant: Autotune low-M BF16 GEMMs via FlashInfer mm_bf16` | infra,nvidia,perf,quant | ? | - |
 | - | [#43739](https://github.com/sgl-project/sglang/pull/43739) `[Feat] [Ascend] quantization: :sparkles: Support online W4A8 MoE` | infra,perf,quant | ? | - |
-| - | [#43788](https://github.com/sgl-project/sglang/pull/43788) `[Fix] [AMD] deterministic: Bypass AITER GEMM and MoE in deterministic mode on gfx950` | bug,infra,quant,rocm | main | - |
+| P0 | [#43788](https://github.com/sgl-project/sglang/pull/43788) `[Fix] [AMD] deterministic: Bypass AITER GEMM and MoE in deterministic mode on gfx950` | bug,infra,quant,rocm | main | - |
 | - | [#43886](https://github.com/sgl-project/sglang/pull/43886) `[Fix] multimodal: Preserve empty media in parallel sampling` | bug,infra | ? | - |
 | - | [#44017](https://github.com/sgl-project/sglang/pull/44017) `[Feat] [XPU] GDN: support speculative decoding` | infra,nvidia | ? | - |
 | - | [#44047](https://github.com/sgl-project/sglang/pull/44047) `[Fix] openai: Validate sampling bounds and preserve chat output limits` | bug,infra | ? | - |
@@ -2486,14 +2486,14 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#44152](https://github.com/sgl-project/sglang/pull/44152) `[Feat] score/embedding: Add raw embeddings, score rids, encode input_ids, and schedule-decision logging` | infra | ? | - |
 | - | [#44176](https://github.com/sgl-project/sglang/pull/44176) `[Fix] dsa: Route mixed-chunk batches to the RAGGED top-k transform for bf16-only sparse prefill` | bug,infra | ? | - |
 | - | [#44236](https://github.com/sgl-project/sglang/pull/44236) `[Fix] metrics: Populate pending_prealloc_token_usage` | bug,infra | ? | - |
-| - | [#44268](https://github.com/sgl-project/sglang/pull/44268) `[Fix] moe: Fix --enable-fused-moe-sum-all-reduce outside CUDA and with LoRA hooks` | bug,infra,nvidia,perf | main | - |
+| P0 | [#44268](https://github.com/sgl-project/sglang/pull/44268) `[Fix] moe: Fix --enable-fused-moe-sum-all-reduce outside CUDA and with LoRA hooks` | bug,infra,nvidia,perf | main | - |
 | - | [#44396](https://github.com/sgl-project/sglang/pull/44396) `[Perf] kda-replayssm: Reuse the verify-fused commit step indices` | infra,perf,rocm | ? | - |
 | - | [#44399](https://github.com/sgl-project/sglang/pull/44399) `[Feat] gemma4: per-layer attention backend` | infra | ? | - |
-| - | [#44437](https://github.com/sgl-project/sglang/pull/44437) `[Fix] mem_cache: Move FP4 MLA block scales with their KV in `move_kv_cache`` | bug,infra,quant | ? | - |
+| P1 | [#44437](https://github.com/sgl-project/sglang/pull/44437) `[Fix] mem_cache: Move FP4 MLA block scales with their KV in `move_kv_cache`` | bug,infra,quant | ? | - |
 | - | [#44458](https://github.com/sgl-project/sglang/pull/44458) `[Perf] [AMD] attention: Use aiter's Triton MLA decode in the aiter backend on gfx1250` | infra,perf,rocm | ? | - |
 | - | [#44477](https://github.com/sgl-project/sglang/pull/44477) `[Fix] metrics: Handle process CPU clock resets after restore` | bug,infra,perf | ? | - |
 | - | [#44486](https://github.com/sgl-project/sglang/pull/44486) `[Perf] quantization: Add the bias in the cuBLASLt epilogue for per-tensor FP8 linears` | infra,perf,quant | ? | - |
-| - | [#44489](https://github.com/sgl-project/sglang/pull/44489) `[Perf] [AMD] deterministic: Allow AITER decode attention on gfx950` | infra,perf,rocm | main | - |
+| P0 | [#44489](https://github.com/sgl-project/sglang/pull/44489) `[Perf] [AMD] deterministic: Allow AITER decode attention on gfx950` | infra,perf,rocm | main | - |
 | - | [#44566](https://github.com/sgl-project/sglang/pull/44566) `[Perf] [AMD] Qwen3-Next: consume the fused AR+norm+quant output` | infra,perf,quant,rocm | ? | - |
 | - | [#44588](https://github.com/sgl-project/sglang/pull/44588) `[Feat] spec: Online acceptance estimator for DSpark confidence-scheduled verification` | infra,nvidia,perf | ? | - |
 | - | [#44615](https://github.com/sgl-project/sglang/pull/44615) `[Perf] NIXL: KV packing for TP-heterogeneous transfer (Muse Spark Open)` | infra,perf | ? | - |
@@ -2509,12 +2509,12 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#45263](https://github.com/sgl-project/sglang/pull/45263) `[Perf] [NVIDIA] fp8: Add Triton block-fp8 GEMM configs for RTX PRO 5000` | infra,nvidia,perf,quant,rocm | ? | - |
 | - | [#45264](https://github.com/sgl-project/sglang/pull/45264) `[Perf] [NVIDIA] mhc: Use BLOCK_K=32 for the hc_mix kernel on SM120` | infra,nvidia,perf | ? | - |
 | - | [#45367](https://github.com/sgl-project/sglang/issues/45367) `[Bug] Kimi-K3 DCP a2a produces garbled decode output on 2-node GB300; NCCL_GRAPH_REGISTER=0 restores smoke-tes` | nvidia | ? | - |
-| - | [#45486](https://github.com/sgl-project/sglang/pull/45486) `[Fix] [AMD] MoE: Preserve CT FP8 Triton layout and reduction dimensions` | bug,infra,perf,quant,rocm | main | - |
+| P0 | [#45486](https://github.com/sgl-project/sglang/pull/45486) `[Fix] [AMD] MoE: Preserve CT FP8 Triton layout and reduction dimensions` | bug,infra,perf,quant,rocm | main | - |
 | - | [#45497](https://github.com/sgl-project/sglang/pull/45497) `[Perf] attention: avoid concatenating MLA queries for zigzag CP` | infra,perf | ? | - |
 | - | [#45534](https://github.com/sgl-project/sglang/pull/45534) `[Fix] [NVIDIA] DeepSeek-v4.1: scatter the replay tail before the prefill CP gather with DSpark` | bug,infra,nvidia | ? | - |
 | - | [#45599](https://github.com/sgl-project/sglang/pull/45599) `[Perf] [AMD] batch-invariant: Segmented split-K bf16 matmul for gfx950` | infra,perf,rocm | ? | - |
 | - | [#45600](https://github.com/sgl-project/sglang/pull/45600) `[Feat] linker: Add prefetch mode for the Mooncake external linker` | infra,perf | ? | - |
-| - | [#45601](https://github.com/sgl-project/sglang/pull/45601) `[Perf] [AMD] deterministic: Allow AITER prefill attention on gfx950` | infra,perf,rocm | main | - |
+| P0 | [#45601](https://github.com/sgl-project/sglang/pull/45601) `[Perf] [AMD] deterministic: Allow AITER prefill attention on gfx950` | infra,perf,rocm | main | - |
 | - | [#45727](https://github.com/sgl-project/sglang/pull/45727) `[Feat] hisparse: Support shared KV sources in HiSparse MLA swap kernels` | infra,perf | ? | - |
 | - | [#45730](https://github.com/sgl-project/sglang/pull/45730) `[Fix] diffusion: Keep ComfyUI patches in the plugin and refresh H3 compatibility` | bug,infra,perf | ? | - |
 | - | [#45737](https://github.com/sgl-project/sglang/pull/45737) `[Feat] kv-events: Report caller multimodal routing labels as block spans` | infra,perf | ? | - |
@@ -2543,10 +2543,10 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#46200](https://github.com/sgl-project/sglang/pull/46200) `[Fix] swa: Start the SWA KV pool at its first layer under pipeline parallelism` | bug,infra | ? | - |
 | - | [#46213](https://github.com/sgl-project/sglang/pull/46213) `[Perf] flashinfer-megamoe: Add an optional decode workspace` | infra,nvidia,perf,quant | ? | - |
 | - | [#46214](https://github.com/sgl-project/sglang/pull/46214) `[Fix] flashinfer: Apply the sliding window in ragged prefill for hybrid-SWA models` | bug,infra,nvidia | ? | - |
-| - | [#46225](https://github.com/sgl-project/sglang/pull/46225) `[Fix] attention: Zero padded KDA/GDN recurrent outputs` | bug,infra,perf | main | - |
+| P0 | [#46225](https://github.com/sgl-project/sglang/pull/46225) `[Fix] attention: Zero padded KDA/GDN recurrent outputs` | bug,infra,perf | main | - |
 | - | [#46291](https://github.com/sgl-project/sglang/pull/46291) `[Feat] rust-server: multimodal (image) preprocessing through sglang-processor` | infra | ? | - |
 | - | [#46301](https://github.com/sgl-project/sglang/issues/46301) `[Perf] diffusion quantization layer: fix 6 real perf/overhead bugs` | bug,perf,quant | ? | - |
-| - | [#46325](https://github.com/sgl-project/sglang/pull/46325) `[Perf] [AMD] deterministic: Use a fixed-order two-stage all-reduce for large inputs` | infra,perf,rocm | main | - |
+| P0 | [#46325](https://github.com/sgl-project/sglang/pull/46325) `[Perf] [AMD] deterministic: Use a fixed-order two-stage all-reduce for large inputs` | infra,perf,rocm | main | - |
 | - | [#46408](https://github.com/sgl-project/sglang/pull/46408) `[Refactor] multimodal: [MM refactor 2/9] Initialize multimodal processors from a processor config` | infra | ? | - |
 | - | [#46425](https://github.com/sgl-project/sglang/pull/46425) `[Refactor] diffusion: Move the Nomas segment KV cache under layers/kvcache` | infra,perf | ? | - |
 | - | [#46429](https://github.com/sgl-project/sglang/issues/46429) `[Bug] FLUX.3 Image: TP/SP ranks pick packed or sequential CFG independently and can hang` | bug | ? | - |
@@ -2560,23 +2560,23 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#46586](https://github.com/sgl-project/sglang/pull/46586) `[Fix] srt: Promptly abort running requests on client disconnect (#46517)` | bug,infra | ? | - |
 | - | [#46597](https://github.com/sgl-project/sglang/pull/46597) `[Perf] [NVIDIA] minimax-sparse: Run the decode indexer CP on Hopper at TP4 and TP8` | infra,nvidia,perf | ? | - |
 | - | [#46610](https://github.com/sgl-project/sglang/pull/46610) `[Feat] [Intel] mem_cache: Enable the HiCache Mamba host pool on XPU` | infra,nvidia | ? | - |
-| - | [#46662](https://github.com/sgl-project/sglang/pull/46662) `[Doc] [AMD] GLM-5.3: Enable MTP on MI355X and add the agentic recipe with the AMD monokernel` | rocm | ? | - |
+| P1 | [#46662](https://github.com/sgl-project/sglang/pull/46662) `[Doc] [AMD] GLM-5.3: Enable MTP on MI355X and add the agentic recipe with the AMD monokernel` | rocm | ? | - |
 | - | [#46663](https://github.com/sgl-project/sglang/pull/46663) `[Fix] gemma4: Fix Bolt E4B and Gemma4 prefill CUDA graphs` | bug,infra,nvidia | ? | - |
-| - | [#46693](https://github.com/sgl-project/sglang/pull/46693) `[Feat] [AMD] minimax: Support MiniMax-M3.1-Flash on MI350X / MI355X (gfx950)` | infra,nvidia,perf,quant,rocm | ? | - |
+| - | [#46693](https://github.com/sgl-project/sglang/pull/46693) `[Feat] [AMD] minimax: Support MiniMax-M3.1-Flash on MI350X / MI355X (gfx950)` | infra,nvidia,perf,quant,rocm | main | - |
 | - | [#46694](https://github.com/sgl-project/sglang/pull/46694) `[Perf] [AMD] minimax: decode indexer CP for DSpark verify on the NVFP4 index cache` | infra,nvidia,perf,quant,rocm | ? | - |
-| - | [#46800](https://github.com/sgl-project/sglang/pull/46800) `[Fix] [AMD] quark: Keep MXFP8 shared experts out of the MXFP4 fused slot on dense-first models` | bug,infra,perf,quant,rocm | main | - |
+| P0 | [#46800](https://github.com/sgl-project/sglang/pull/46800) `[Fix] [AMD] quark: Keep MXFP8 shared experts out of the MXFP4 fused slot on dense-first models` | bug,infra,perf,quant,rocm | main | - |
 | - | [#46820](https://github.com/sgl-project/sglang/pull/46820) `[Fix] metrics: Avoid blocking the scheduler on KV metrics backpressure` | bug,infra | ? | - |
 | - | [#46830](https://github.com/sgl-project/sglang/pull/46830) `[Fix] dsa: Remove host syncs from rank-divergent eager paths` | bug,infra | ? | - |
-| - | [#46833](https://github.com/sgl-project/sglang/pull/46833) `[Fix] [AMD] aiter: Use the layer's softmax scale in MHA prefill and decode` | bug,infra,quant,rocm | main | - |
+| P0 | [#46833](https://github.com/sgl-project/sglang/pull/46833) `[Fix] [AMD] aiter: Use the layer's softmax scale in MHA prefill and decode` | bug,infra,quant,rocm | main | - |
 | - | [#46855](https://github.com/sgl-project/sglang/pull/46855) `[Fix] scheduler: Reserve member rows of beam leaders admitted in the same prefill` | bug,infra | ? | - |
-| - | [#46928](https://github.com/sgl-project/sglang/pull/46928) `[Fix] [AMD] aiter: Fix garbage decode output with unified attention at page size 1 under CUDA graph` | bug,infra,nvidia,risk,rocm | main | - |
+| P0 | [#46928](https://github.com/sgl-project/sglang/pull/46928) `[Fix] [AMD] aiter: Fix garbage decode output with unified attention at page size 1 under CUDA graph` | bug,infra,nvidia,risk,rocm | main | - |
 | - | [#46929](https://github.com/sgl-project/sglang/pull/46929) `[Fix] mnnvl: Match FlashInfer's arch-specific CuTe DSL AR profiles` | bug,infra,nvidia | ? | - |
 | - | [#46934](https://github.com/sgl-project/sglang/pull/46934) `[Fix] hicache: Restore sub-window SWA L3 hits under a mid-tree anchor` | bug,infra,perf | ? | - |
-| - | [#46944](https://github.com/sgl-project/sglang/pull/46944) `[CI] [AMD] minimax-m3.1: Add a MI35x MXFP4 + DSpark nightly accuracy gate` | infra,quant,risk,rocm | ? | - |
+| - | [#46944](https://github.com/sgl-project/sglang/pull/46944) `[CI] [AMD] minimax-m3.1: Add a MI35x MXFP4 + DSpark nightly accuracy gate` | infra,quant,risk,rocm | main | - |
 | - | [#46965](https://github.com/sgl-project/sglang/pull/46965) `[Feat] [NVIDIA] flash-attn: FA4 SM90 FP8 e4m3 KV cache for head_dim 256 and 512 (Gemma-4)` | infra,nvidia,perf,quant | ? | - |
 | - | [#47025](https://github.com/sgl-project/sglang/pull/47025) `[Feat] disaggregation: Add opt-in Mooncake TENT transfer engine backend for PD` | infra | ? | - |
-| - | [#47029](https://github.com/sgl-project/sglang/pull/47029) `[Fix] attention: Compute extend attention KV offsets in int64` | bug,infra,perf | main | - |
-| - | [#47030](https://github.com/sgl-project/sglang/pull/47030) `[Fix] [AMD] aiter: Use the layer's KV scales in the legacy target-verify attention` | bug,infra,quant,rocm | main | - |
+| P0 | [#47029](https://github.com/sgl-project/sglang/pull/47029) `[Fix] attention: Compute extend attention KV offsets in int64` | bug,infra,perf | main | - |
+| P0 | [#47030](https://github.com/sgl-project/sglang/pull/47030) `[Fix] [AMD] aiter: Use the layer's KV scales in the legacy target-verify attention` | bug,infra,quant,rocm | main | - |
 | - | [#47090](https://github.com/sgl-project/sglang/pull/47090) `[Perf] qwen-image21: Pack BF16 gate/up projections on SM120` | infra,nvidia,perf | ? | - |
 | - | [#47093](https://github.com/sgl-project/sglang/pull/47093) `[Fix] anthropic: Accept thinking enabled without budget_tokens` | bug,infra | ? | - |
 | - | [#47096](https://github.com/sgl-project/sglang/pull/47096) `[Fix] responses: Merge replayed tool calls into the preceding commentary message` | bug,infra | ? | - |
@@ -2585,66 +2585,66 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#47253](https://github.com/sgl-project/sglang/pull/47253) `[Perf] diffusion: Enable verified eager LN fusion for SANA-Video` | infra,perf | ? | - |
 | - | [#47267](https://github.com/sgl-project/sglang/pull/47267) `[Fix] dflash: Gather candidate top-k over the target lm_head's own shard group` | bug,infra | ? | - |
 | - | [#47354](https://github.com/sgl-project/sglang/pull/47354) `[Perf] [NVIDIA] glm5: Route small-M BF16 GEMMs to FlashInfer warp split-K with PDL on SM107` | infra,nvidia,perf,quant | ? | - |
-| - | [#47371](https://github.com/sgl-project/sglang/pull/47371) `[Feat] [AMD] muse-spark: Add the ROCm day0 implementation` | infra,nvidia,perf,quant,rocm | ? | - |
-| - | [#47398](https://github.com/sgl-project/sglang/pull/47398) `[Feat] [AMD] gpt-oss: Mixed W4A8 MoE on gfx1250, Gluon below a token count and FlyDSL above` | infra,rocm | ? | - |
+| P1 | [#47371](https://github.com/sgl-project/sglang/pull/47371) `[Feat] [AMD] muse-spark: Add the ROCm day0 implementation` | infra,nvidia,perf,quant,rocm | main | - |
+| P1 | [#47398](https://github.com/sgl-project/sglang/pull/47398) `[Feat] [AMD] gpt-oss: Mixed W4A8 MoE on gfx1250, Gluon below a token count and FlyDSL above` | infra,rocm | ? | - |
 | - | [#47406](https://github.com/sgl-project/sglang/pull/47406) `[Fix] deepseek-v4.1: Fix bounded replay with CP and DSpark` | bug,infra | ? | - |
 | - | [#47444](https://github.com/sgl-project/sglang/issues/47444) `[Bug] NemotronHConfig rejects transformers 5 layer types `linear_attention` / `full_attention` in config.json` |  | ? | - |
-| - | [#47458](https://github.com/sgl-project/sglang/pull/47458) `[Fix] nemotron: Accept transformers 5 layer types in NemotronHConfig` | bug | ? | - |
+| P1 | [#47458](https://github.com/sgl-project/sglang/pull/47458) `[Fix] nemotron: Accept transformers 5 layer types in NemotronHConfig` | bug | ? | - |
 | - | [#47468](https://github.com/sgl-project/sglang/pull/47468) `[Fix] diffusion: Align Pika H3 Flex inference numerics` | bug,infra,perf | ? | - |
 | - | [#47469](https://github.com/sgl-project/sglang/pull/47469) `[Perf] [NVIDIA] attention: Add opt-in LiteTopK prefill indexer top-k for DSA (FP8) and DeepSeek-V4.1 (FP4) on ` | infra,nvidia,perf,quant | ? | - |
 | - | [#47490](https://github.com/sgl-project/sglang/issues/47490) `[Bug] EAGLE draft extend crashes with negative dimension under DP attention + FlashInfer A2A + prefill CUDA gr` | bug,nvidia | ? | - |
-| - | [#47491](https://github.com/sgl-project/sglang/pull/47491) `[Fix] [AMD] scheduler: Keep Muse Spark's scheduler GPU work on the forward stream under monokernel` | bug,infra,rocm | ? | - |
+| P1 | [#47491](https://github.com/sgl-project/sglang/pull/47491) `[Fix] [AMD] scheduler: Keep Muse Spark's scheduler GPU work on the forward stream under monokernel` | bug,infra,rocm | ? | - |
 | - | [#47493](https://github.com/sgl-project/sglang/pull/47493) `[Fix] dp-attention: Trim MLP-sync pad rows from extend outputs before the draft extend` | bug,infra | ? | - |
-| - | [#47513](https://github.com/sgl-project/sglang/pull/47513) `[Perf] attention: Support attention sinks in the split-KV EAGLE verify kernel (gpt-oss)` | infra,perf | ? | - |
-| - | [#47521](https://github.com/sgl-project/sglang/pull/47521) `[Fix] scheduler: Abort retracted requests whose KV the recompute cannot rebuild` | bug,infra | main | - |
+| P1 | [#47513](https://github.com/sgl-project/sglang/pull/47513) `[Perf] attention: Support attention sinks in the split-KV EAGLE verify kernel (gpt-oss)` | infra,perf | ? | - |
+| P0 | [#47521](https://github.com/sgl-project/sglang/pull/47521) `[Fix] scheduler: Abort retracted requests whose KV the recompute cannot rebuild` | bug,infra | main | - |
 | - | [#47529](https://github.com/sgl-project/sglang/pull/47529) `[Fix] RL: Fix crash when returning routed experts under DCP or KV sharding` | bug,infra | ? | - |
 | - | [#47538](https://github.com/sgl-project/sglang/pull/47538) `[Feat] http_server: Dispatch SageMaker /invocations to completions and embeddings by request body` | infra | ? | - |
 | - | [#47581](https://github.com/sgl-project/sglang/pull/47581) `[Perf] [NPU] dspark: Integrate argmax and verify scheduler kernels` | infra,perf | ? | - |
-| - | [#47585](https://github.com/sgl-project/sglang/pull/47585) `[Fix] [AMD] quark: Widen the Quark MXFP4 W4A16 MoE gate to consumer RDNA and fail clearly without aiter` | bug,infra,quant,rocm | ? | - |
+| P1 | [#47585](https://github.com/sgl-project/sglang/pull/47585) `[Fix] [AMD] quark: Widen the Quark MXFP4 W4A16 MoE gate to consumer RDNA and fail clearly without aiter` | bug,infra,quant,rocm | ? | - |
 | - | [#47617](https://github.com/sgl-project/sglang/pull/47617) `[Fix] hicache: keep the storage ack sequence on backend failures, stop workers in lockstep, fail the rank when` | bug,infra,perf | ? | - |
 | - | [#47620](https://github.com/sgl-project/sglang/pull/47620) `[Fix] hicache: vote the prefetch timeout once per tick, not per admission poll` | bug,infra,perf | ? | - |
 | - | [#47624](https://github.com/sgl-project/sglang/issues/47624) `[RFC] NPU RL Test Consolidation: File Ownership, Coverage Docstrings, and CI Integration (Ascend)` | infra | ? | - |
-| - | [#47626](https://github.com/sgl-project/sglang/pull/47626) `[Fix] hicache: settle storage backups at the rank-agreed written prefix` | bug,infra,perf | ? | - |
+| P1 | [#47626](https://github.com/sgl-project/sglang/pull/47626) `[Fix] hicache: settle storage backups at the rank-agreed written prefix` | bug,infra,perf | ? | - |
 | - | [#47627](https://github.com/sgl-project/sglang/pull/47627) `[Perf] [NVIDIA] dspark: Stage DSv4.1 long-context target verify metadata beside the draft` | nvidia,perf | ? | - |
-| - | [#47645](https://github.com/sgl-project/sglang/pull/47645) `[Fix] [AMD] aiter: Plan the DCP asm verify shard with the draft tokens under CUDA graph replay` | bug,infra,nvidia,rocm | main | - |
+| P0 | [#47645](https://github.com/sgl-project/sglang/pull/47645) `[Fix] [AMD] aiter: Plan the DCP asm verify shard with the draft tokens under CUDA graph replay` | bug,infra,nvidia,rocm | main | - |
 | - | [#47658](https://github.com/sgl-project/sglang/pull/47658) `[Perf] SM120: honour SGLANG_OPT_DEEPGEMM_HC_PRENORM for the DeepSeek-V4.1 compensated mhc projection` | infra,nvidia,perf | ? | - |
-| - | [#47670](https://github.com/sgl-project/sglang/pull/47670) `[Fix] mem_cache: Keep K/V in separate allocations under torch.compile` | bug,infra | main | - |
+| P0 | [#47670](https://github.com/sgl-project/sglang/pull/47670) `[Fix] mem_cache: Keep K/V in separate allocations under torch.compile` | bug,infra | main | - |
 | - | [#47685](https://github.com/sgl-project/sglang/pull/47685) `[Perf] [NVIDIA] dflash: Top up decode KV pages for the whole batch on allocation steps` | nvidia,perf | ? | - |
-| - | [#47695](https://github.com/sgl-project/sglang/pull/47695) `[Feat] [AMD] quark: Quark int4 W4A16 on ROCm, and gfx1151 kernels for Strix Halo decode and prefill` | infra,perf,quant,rocm | ? | - |
+| P1 | [#47695](https://github.com/sgl-project/sglang/pull/47695) `[Feat] [AMD] quark: Quark int4 W4A16 on ROCm, and gfx1151 kernels for Strix Halo decode and prefill` | infra,perf,quant,rocm | ? | - |
 | - | [#47696](https://github.com/sgl-project/sglang/pull/47696) `[Perf] diffusion: Run a single packed FA3 sequence through the batch kernel` | infra,nvidia,perf | ? | - |
 | - | [#47724](https://github.com/sgl-project/sglang/pull/47724) `[Perf] diffusion: qknorm_complex_rope keeps two Q/K rows in flight per half-warp` | infra,perf | ? | - |
 | - | [#47749](https://github.com/sgl-project/sglang/pull/47749) `[CI] [Intel] ci/xpu: Move remaining XPU CI installs to uv and set SGLANG_IS_IN_CI` | infra,nvidia | ? | - |
 | - | [#47750](https://github.com/sgl-project/sglang/pull/47750) `[Fix] score: Validate logical item and MIS hidden-state row counts` | bug,infra | ? | - |
 | - | [#47765](https://github.com/sgl-project/sglang/pull/47765) `[Perf] dflash: Fuse the simulated-acceptance overwrite into one kernel` | infra,perf | ? | - |
-| - | [#47802](https://github.com/sgl-project/sglang/pull/47802) `[Fix] attention: Triton decode reads wrong KV head for GQA groups > 16 not divisible by 16 (GLM-4-32B breaks)` | bug,infra,perf,rocm | main | - |
+| P0 | [#47802](https://github.com/sgl-project/sglang/pull/47802) `[Fix] attention: Triton decode reads wrong KV head for GQA groups > 16 not divisible by 16 (GLM-4-32B breaks)` | bug,infra,perf,rocm | main | - |
 | - | [#47808](https://github.com/sgl-project/sglang/pull/47808) `cherry-pick #47810 [Feat] deepseek-recipe: [sglang-miles] Expose convert and encode_conversation on DeepSeekRe` |  | ? | - |
 | - | [#47827](https://github.com/sgl-project/sglang/issues/47827) `[Bug] Simulator Replay startup eagerly imports optional AIConfigurator dependency` |  | ? | - |
 | - | [#47828](https://github.com/sgl-project/sglang/pull/47828) `[Fix] simulator: Lazily import optional AIConfigurator dependency` | bug,infra | ? | - |
 | - | [#47842](https://github.com/sgl-project/sglang/pull/47842) `[Fix] diffusion: Enable Cosmos 3 Edge and Nano fused QK-norm/RoPE on SM 121 (GB10)` | bug,infra,perf | ? | - |
 | - | [#47857](https://github.com/sgl-project/sglang/pull/47857) `[Feat] [NPU] attention: enable mixed-chunk for pure MLA on the ascend backend` | infra | ? | - |
-| - | [#47862](https://github.com/sgl-project/sglang/pull/47862) `[Feat] [AMD] aiter: One folder of in-tree aiter tuned rows for every model` | infra,perf,rocm | ? | - |
-| - | [#47870](https://github.com/sgl-project/sglang/pull/47870) `[Fix] [AMD] ct-fp8-moe: Mark the pre-shuffled CT FP8 MoE weights is_shuffled` | bug,infra,quant,rocm | main | - |
-| - | [#47892](https://github.com/sgl-project/sglang/pull/47892) `[Fix] quantization: Store --quantization-param-path KV scales the way checkpoint KV scales are stored` | bug,infra,quant | main | - |
-| - | [#47893](https://github.com/sgl-project/sglang/pull/47893) `[Perf] [NVIDIA] glm5_next: Run the fused KDA decode kernel at 8 and 16 heads per rank` | infra,nvidia,perf | ? | - |
-| - | [#47896](https://github.com/sgl-project/sglang/issues/47896) `[Bug] Qwen3.5 GatedDeltaNet: finalize_fused_in_proj builds the fused in_proj weight on CPU under --cpu-offload` | perf | ? | - |
-| - | [#47899](https://github.com/sgl-project/sglang/pull/47899) `[Fix] qwen3.5: Keep CPU-offloaded GDN input projections separate` | bug,infra | ? | - |
+| P1 | [#47862](https://github.com/sgl-project/sglang/pull/47862) `[Feat] [AMD] aiter: One folder of in-tree aiter tuned rows for every model` | infra,perf,rocm | ? | - |
+| P0 | [#47870](https://github.com/sgl-project/sglang/pull/47870) `[Fix] [AMD] ct-fp8-moe: Mark the pre-shuffled CT FP8 MoE weights is_shuffled` | bug,infra,quant,rocm | main | - |
+| P0 | [#47892](https://github.com/sgl-project/sglang/pull/47892) `[Fix] quantization: Store --quantization-param-path KV scales the way checkpoint KV scales are stored` | bug,infra,quant | main | - |
+| P1 | [#47893](https://github.com/sgl-project/sglang/pull/47893) `[Perf] [NVIDIA] glm5_next: Run the fused KDA decode kernel at 8 and 16 heads per rank` | infra,nvidia,perf | ? | - |
+| P1 | [#47896](https://github.com/sgl-project/sglang/issues/47896) `[Bug] Qwen3.5 GatedDeltaNet: finalize_fused_in_proj builds the fused in_proj weight on CPU under --cpu-offload` | perf | ? | - |
+| P1 | [#47899](https://github.com/sgl-project/sglang/pull/47899) `[Fix] qwen3.5: Keep CPU-offloaded GDN input projections separate` | bug,infra | ? | - |
 | - | [#47903](https://github.com/sgl-project/sglang/pull/47903) `[Feature] multimodal: [sglang-miles] Cache token-space media features per item before loading` | perf | ? | - |
-| - | [#47908](https://github.com/sgl-project/sglang/pull/47908) `[Fix] [AMD] quark: Match aiter's column-major scale layout in the MXFP4 quant fake` | bug,infra,quant,rocm | ? | - |
-| - | [#47911](https://github.com/sgl-project/sglang/pull/47911) `[Fix] [AMD] aiter: Skip the unused decode workspace on the vectorized_5d KV layout` | bug,infra,rocm | main | - |
-| - | [#47916](https://github.com/sgl-project/sglang/issues/47916) `[Bug] [mamba/hybrid] MambaPool.copy_from gathers all source temporal states into one temporary (n x state_size` | nvidia | ? | - |
+| P1 | [#47908](https://github.com/sgl-project/sglang/pull/47908) `[Fix] [AMD] quark: Match aiter's column-major scale layout in the MXFP4 quant fake` | bug,infra,quant,rocm | ? | - |
+| P0 | [#47911](https://github.com/sgl-project/sglang/pull/47911) `[Fix] [AMD] aiter: Skip the unused decode workspace on the vectorized_5d KV layout` | bug,infra,rocm | main | - |
+| P1 | [#47916](https://github.com/sgl-project/sglang/issues/47916) `[Bug] [mamba/hybrid] MambaPool.copy_from gathers all source temporal states into one temporary (n x state_size` | nvidia | ? | - |
 | - | [#47917](https://github.com/sgl-project/sglang/pull/47917) `[Feat] [NPU] longcat: Support Longcat2.0 for arch22 NPU` | infra | ? | - |
 | - | [#47921](https://github.com/sgl-project/sglang/pull/47921) `[Feat] [Apple] mps: Serve Unlimited-OCR v2 BF16 on the Torch MPS runtime` | infra,perf,quant | ? | - |
-| - | [#47923](https://github.com/sgl-project/sglang/pull/47923) `[Feat] [AMD] tokenizer: Install fastokens in the ROCm image` | infra,rocm | ? | - |
+| P1 | [#47923](https://github.com/sgl-project/sglang/pull/47923) `[Feat] [AMD] tokenizer: Install fastokens in the ROCm image` | infra,rocm | ? | - |
 | - | [#47930](https://github.com/sgl-project/sglang/pull/47930) `[Feat] [NVIDIA] megakernel: Support prefill and extend steps` | infra,nvidia,perf,quant,rocm | ? | - |
 | - | [#47934](https://github.com/sgl-project/sglang/pull/47934) `[Fix] [NPU] dsv4: transfer A3 C4 state using peer-local rows` | bug,infra | ? | - |
 | - | [#47943](https://github.com/sgl-project/sglang/pull/47943) `[Fix] ZeroMQ: make blocking send wait for queue space` | bug | ? | - |
-| - | [#47944](https://github.com/sgl-project/sglang/pull/47944) `[Fix] attention: Migrate FLA Triton kernels off tl.make_block_ptr` | bug,infra,perf,rocm | main | - |
+| P0 | [#47944](https://github.com/sgl-project/sglang/pull/47944) `[Fix] attention: Migrate FLA Triton kernels off tl.make_block_ptr` | bug,infra,perf,rocm | main | - |
 | - | [#47956](https://github.com/sgl-project/sglang/pull/47956) `[Feat] xpu: Consolidate simple XPU enablements` | infra,nvidia,perf,quant | ? | - |
-| - | [#47960](https://github.com/sgl-project/sglang/pull/47960) `[Perf] [NVIDIA] dsv4/topk_v2: Exactness modes (fast / exact / deterministic) and an exact cluster path` | infra,nvidia,perf | main | - |
+| P0 | [#47960](https://github.com/sgl-project/sglang/pull/47960) `[Perf] [NVIDIA] dsv4/topk_v2: Exactness modes (fast / exact / deterministic) and an exact cluster path` | infra,nvidia,perf | main | - |
 | - | [#47963](https://github.com/sgl-project/sglang/pull/47963) `[Fix] rust-server: Park the idle scheduler on its request ring only with --sleep-on-idle` | bug,infra | ? | - |
-| - | [#47964](https://github.com/sgl-project/sglang/pull/47964) `[Feat] [AMD] custom-all-reduce: Run the JIT custom all-reduce v2 on ROCm` | infra,perf,rocm | ? | - |
+| P1 | [#47964](https://github.com/sgl-project/sglang/pull/47964) `[Feat] [AMD] custom-all-reduce: Run the JIT custom all-reduce v2 on ROCm` | infra,perf,rocm | ? | - |
 | - | [#47968](https://github.com/sgl-project/sglang/pull/47968) `[Refactor] multimodal: Share the CUDA VMM chunk copy and let the transport pick its pool class` | infra,nvidia | ? | - |
-| - | [#47984](https://github.com/sgl-project/sglang/pull/47984) `[Fix] mem_cache: Chunk MambaPool temporal state copy to avoid OOM spike` | bug,infra | ? | - |
+| P1 | [#47984](https://github.com/sgl-project/sglang/pull/47984) `[Fix] mem_cache: Chunk MambaPool temporal state copy to avoid OOM spike` | bug,infra | ? | - |
 | - | [#47999](https://github.com/sgl-project/sglang/pull/47999) `[CI] [NVIDIA] docker: Publish the CUDA 13.4 nightly image for x86_64 as well as aarch64` | infra,nvidia | ? | - |
 | - | [#48006](https://github.com/sgl-project/sglang/pull/48006) `[Refactor] mem_cache: Name each unified window sub-pool by its own window length` | nvidia,perf | ? | - |
 | - | [#48007](https://github.com/sgl-project/sglang/pull/48007) `[Refactor] mem_cache: Address prefix-tree window slots, cursors and evictions by sub-pool name` | perf | ? | - |
@@ -2656,9 +2656,9 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48013](https://github.com/sgl-project/sglang/pull/48013) `[Refactor] mem_cache: Give each window sub-pool its own host pool, PD entry and metrics` | perf | ? | - |
 | - | [#48014](https://github.com/sgl-project/sglang/pull/48014) `[Feat] attention: Serve several window sub-pools per runner in the Triton backend` | infra,nvidia,perf,rocm | ? | - |
 | - | [#48031](https://github.com/sgl-project/sglang/pull/48031) `[Feat] [NPU] hicache: Support AIV transfers for MLA and DeepSeek V4` | infra | ? | - |
-| - | [#48043](https://github.com/sgl-project/sglang/pull/48043) `[Perf] [AMD] qwen3: Fuse the 1x128 FP8 input quant into RMSNorm and SiLU-and-mul for block-FP8 linears on gfx9` | infra,perf,quant,rocm | ? | - |
-| - | [#48044](https://github.com/sgl-project/sglang/pull/48044) `[Perf] [AMD] qwen3-next: Fuse the full-attention Q/K GemmaRMSNorm and partial RoPE into one Triton kernel on g` | infra,perf,rocm | ? | - |
-| - | [#48061](https://github.com/sgl-project/sglang/pull/48061) `[Fix] batch-invariant: restore the dispatcher state when a scope exits` | bug | ? | - |
+| P1 | [#48043](https://github.com/sgl-project/sglang/pull/48043) `[Perf] [AMD] qwen3: Fuse the 1x128 FP8 input quant into RMSNorm and SiLU-and-mul for block-FP8 linears on gfx9` | infra,perf,quant,rocm | ? | - |
+| P1 | [#48044](https://github.com/sgl-project/sglang/pull/48044) `[Perf] [AMD] qwen3-next: Fuse the full-attention Q/K GemmaRMSNorm and partial RoPE into one Triton kernel on g` | infra,perf,rocm | ? | - |
+| P1 | [#48061](https://github.com/sgl-project/sglang/pull/48061) `[Fix] batch-invariant: restore the dispatcher state when a scope exits` | bug | ? | - |
 | - | [#48117](https://github.com/sgl-project/sglang/pull/48117) `[Fix] spec: Prune the draft branch instead of crashing when the grammar rejects a token` | bug,infra | ? | - |
 | - | [#48122](https://github.com/sgl-project/sglang/pull/48122) `[Perf] diffusion: Cache MiniMax-H3 reference and keyframe rows per image` | infra,perf | ? | - |
 | - | [#48126](https://github.com/sgl-project/sglang/pull/48126) `[Feat] [NPU] attention: Support Modelslim GQA mxfp8 kvcache for 950 NPU` | infra,quant | ? | - |
@@ -2667,16 +2667,16 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48165](https://github.com/sgl-project/sglang/pull/48165) `[Perf] quantization: Speed up Hopper group32 FP8 quantization with FP32 scales` | infra,nvidia,perf,quant | ? | - |
 | - | [#48174](https://github.com/sgl-project/sglang/pull/48174) `[Perf] [NVIDIA] moe: Re-land the JIT moe_finalize_fuse_shared with the shared row read after the PDL wait` | infra,nvidia,perf | ? | - |
 | - | [#48200](https://github.com/sgl-project/sglang/pull/48200) `[Doc] diffusion: Document IMAGEIO_FFMPEG_EXE for faster MP4 encoding` | infra,perf | ? | - |
-| - | [#48207](https://github.com/sgl-project/sglang/pull/48207) `[Fix] routed-experts: reset routed_experts_start_len when a request is rejected at intake` | bug,infra | ? | - |
+| P1 | [#48207](https://github.com/sgl-project/sglang/pull/48207) `[Fix] routed-experts: reset routed_experts_start_len when a request is rejected at intake` | bug,infra | ? | - |
 | - | [#48211](https://github.com/sgl-project/sglang/pull/48211) `[Fix] openai: do not render a null tool-level defer_loading` | bug,infra | ? | - |
 | - | [#48218](https://github.com/sgl-project/sglang/pull/48218) `[Perf] diffusion: Enable image-prefix sequence parallelism for ERNIE-Image` | infra,perf | ? | - |
-| - | [#48219](https://github.com/sgl-project/sglang/pull/48219) `[Fix] [AMD] moe: Keep is_shuffled on AITER-shuffled unquantized MoE weights` | bug,quant,rocm | main | - |
+| P0 | [#48219](https://github.com/sgl-project/sglang/pull/48219) `[Fix] [AMD] moe: Keep is_shuffled on AITER-shuffled unquantized MoE weights` | bug,quant,rocm | main | - |
 | - | [#48228](https://github.com/sgl-project/sglang/pull/48228) `[Fix] scheduler: use OpenAI's context-length wording when a prompt exceeds the KV pool` | bug,infra | ? | - |
-| - | [#48230](https://github.com/sgl-project/sglang/issues/48230) `[Bug] PD + Mooncake: different DSA backends on prefill and decode silently corrupt the decode KV ("Requested a` | risk | ? | - |
-| - | [#48231](https://github.com/sgl-project/sglang/pull/48231) `[Fix] disaggregation: Reject a decode peer whose KV page stride differs at Mooncake registration` | bug,infra | ? | - |
-| - | [#48241](https://github.com/sgl-project/sglang/pull/48241) `[Feat] weight-sync: let one serialized payload serve every TP rank` |  | ? | - |
+| P1 | [#48230](https://github.com/sgl-project/sglang/issues/48230) `[Bug] PD + Mooncake: different DSA backends on prefill and decode silently corrupt the decode KV ("Requested a` | risk | ? | - |
+| P1 | [#48231](https://github.com/sgl-project/sglang/pull/48231) `[Fix] disaggregation: Reject a decode peer whose KV page stride differs at Mooncake registration` | bug,infra | ? | - |
+| P1 | [#48241](https://github.com/sgl-project/sglang/pull/48241) `[Feat] weight-sync: let one serialized payload serve every TP rank` |  | ? | - |
 | - | [#48260](https://github.com/sgl-project/sglang/issues/48260) `[Bug] DSA models crash on first prefill with --cpu-offload-gb: breakable prefill CUDA graph replays the DSA in` | bug,nvidia | ? | - |
-| - | [#48263](https://github.com/sgl-project/sglang/pull/48263) `[Perf] [NVIDIA] nvfp4: Fuse SiLU-and-mul with the next linear layer's NVFP4 activation quant` | infra,nvidia,perf,quant | ? | - |
+| P1 | [#48263](https://github.com/sgl-project/sglang/pull/48263) `[Perf] [NVIDIA] nvfp4: Fuse SiLU-and-mul with the next linear layer's NVFP4 activation quant` | infra,nvidia,perf,quant | ? | - |
 | - | [#48264](https://github.com/sgl-project/sglang/pull/48264) `[Feat] beam: support LoRA for BF16 and FP8` | infra,quant | ? | - |
 | - | [#48271](https://github.com/sgl-project/sglang/pull/48271) `[Perf] qsa: drop the per-layer RoPE cache length check in the indexer` | infra,perf | ? | - |
 | - | [#48272](https://github.com/sgl-project/sglang/pull/48272) `[Fix] mem_cache: report the CUDA error when host registration fails` | bug,infra,nvidia | ? | - |
@@ -2687,50 +2687,50 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48295](https://github.com/sgl-project/sglang/pull/48295) `[Feat] modelopt: Quantize block-FP8 MTP draft experts to NVFP4 for MIXED_PRECISION checkpoints` | infra,quant | ? | - |
 | - | [#48304](https://github.com/sgl-project/sglang/pull/48304) `[Feature] multimodal: [sglang-miles] Write item feature cache entries behind the request` | perf | ? | - |
 | - | [#48305](https://github.com/sgl-project/sglang/pull/48305) `[Feature] multimodal: [sglang-miles] Write each item feature cache key once` | perf | ? | - |
-| - | [#48316](https://github.com/sgl-project/sglang/pull/48316) `[Fix] offload: Keep DSA indexer parameters resident on GPU under CPU offload` | bug,infra | ? | - |
-| - | [#48328](https://github.com/sgl-project/sglang/pull/48328) `[Fix] mamba: Give a lazy boundary snapshot its own slot instead of overwriting the keep slot` | bug,infra,perf | main | - |
+| P1 | [#48316](https://github.com/sgl-project/sglang/pull/48316) `[Fix] offload: Keep DSA indexer parameters resident on GPU under CPU offload` | bug,infra | ? | - |
+| P0 | [#48328](https://github.com/sgl-project/sglang/pull/48328) `[Fix] mamba: Give a lazy boundary snapshot its own slot instead of overwriting the keep slot` | bug,infra,perf | main | - |
 | - | [#48350](https://github.com/sgl-project/sglang/pull/48350) `[Perf] flashinfer_cutedsl: Use swap-AB MoE on Blackwell` | infra,nvidia,perf,quant | ? | - |
 | - | [#48364](https://github.com/sgl-project/sglang/pull/48364) `[Feat] [CPU] model: Support Intern-S2-Mobius models on CPU` | infra,perf | ? | - |
 | - | [#48366](https://github.com/sgl-project/sglang/pull/48366) `[Refactor] kernels/diffusion/tests: Prune new dead code and make silently skipped tests run` | infra,nvidia,perf,quant,risk,rocm | ? | - |
 | - | [#48367](https://github.com/sgl-project/sglang/pull/48367) `[Perf] speculative: Fuse the draft proposal's Gumbel-max sample into one pass` | infra,perf | ? | - |
-| - | [#48370](https://github.com/sgl-project/sglang/pull/48370) `[Perf] gemma3: Fuse q_norm and k_norm into gemma_rmsnorm for rank above 2` | infra,perf | ? | - |
+| P1 | [#48370](https://github.com/sgl-project/sglang/pull/48370) `[Perf] gemma3: Fuse q_norm and k_norm into gemma_rmsnorm for rank above 2` | infra,perf | ? | - |
 | - | [#48375](https://github.com/sgl-project/sglang/pull/48375) `[Feat] PD: Publish spec_kv_layout so DSpark/DFlash prefill and decode must match` | infra | ? | - |
-| - | [#48382](https://github.com/sgl-project/sglang/pull/48382) `[Fix] [AMD] disaggregation: Pair MoRI DSA state across PP prefill stages` | bug,infra,rocm | ? | - |
+| P1 | [#48382](https://github.com/sgl-project/sglang/pull/48382) `[Fix] [AMD] disaggregation: Pair MoRI DSA state across PP prefill stages` | bug,infra,rocm | ? | - |
 | - | [#48383](https://github.com/sgl-project/sglang/pull/48383) `[Perf] diffusion: reuse bit-exact RoPE in HiDream-O1-Image` | infra,perf | ? | - |
-| - | [#48385](https://github.com/sgl-project/sglang/pull/48385) `[Fix] multimodal: keep placeholder token ids at multimodal positions of input_ids` | bug,infra | main | - |
+| P0 | [#48385](https://github.com/sgl-project/sglang/pull/48385) `[Fix] multimodal: keep placeholder token ids at multimodal positions of input_ids` | bug,infra | main | - |
 | - | [#48393](https://github.com/sgl-project/sglang/pull/48393) `[Fix] kimi-k3: Cap cached_tokens at prompt_tokens in the Rust processor` | bug,infra | ? | - |
 | - | [#48394](https://github.com/sgl-project/sglang/pull/48394) `[Perf] diffusion: Fuse Anima gated residuals during BCG capture` | infra,perf | ? | - |
-| - | [#48397](https://github.com/sgl-project/sglang/pull/48397) `[Fix] [AMD] moe: Stop dropping FP32 partials in GLM Gluon TP8 32K MoE` | bug,infra,perf,rocm | main | - |
-| - | [#48399](https://github.com/sgl-project/sglang/pull/48399) `[Refactor] env: Dispatch on the GPU architecture instead of env vars that restate it` | infra,perf,quant,rocm | ? | - |
+| P0 | [#48397](https://github.com/sgl-project/sglang/pull/48397) `[Fix] [AMD] moe: Stop dropping FP32 partials in GLM Gluon TP8 32K MoE` | bug,infra,perf,rocm | main | - |
+| P1 | [#48399](https://github.com/sgl-project/sglang/pull/48399) `[Refactor] env: Dispatch on the GPU architecture instead of env vars that restate it` | infra,perf,quant,rocm | ? | - |
 | - | [#48401](https://github.com/sgl-project/sglang/pull/48401) `[Test] [Intel] jit: Stub tvm_ffi paths in test_jit_cache when tvm_ffi is absent` | infra,nvidia | ? | - |
 | - | [#48403](https://github.com/sgl-project/sglang/issues/48403) `[Bug] EPLB crashes with per_pass/per_token recorder modes` | bug | ? | - |
 | - | [#48404](https://github.com/sgl-project/sglang/pull/48404) `[Fix] eplb: reject incompatible recorder modes` | bug,infra | ? | - |
-| - | [#48405](https://github.com/sgl-project/sglang/pull/48405) `[Perf] [AMD] kvcache: Fuse fp8 quantization into the vectorized_5d KV-cache write` | infra,perf,quant,rocm | ? | - |
-| - | [#48406](https://github.com/sgl-project/sglang/pull/48406) `[Perf] [AMD] qwen3: Let the fused QK-norm + RoPE + KV write serve the vectorized_5d layout` | infra,perf,rocm | ? | - |
+| P1 | [#48405](https://github.com/sgl-project/sglang/pull/48405) `[Perf] [AMD] kvcache: Fuse fp8 quantization into the vectorized_5d KV-cache write` | infra,perf,quant,rocm | ? | - |
+| P1 | [#48406](https://github.com/sgl-project/sglang/pull/48406) `[Perf] [AMD] qwen3: Let the fused QK-norm + RoPE + KV write serve the vectorized_5d layout` | infra,perf,rocm | ? | - |
 | - | [#48410](https://github.com/sgl-project/sglang/pull/48410) `[CI] arm64: Publish Arm CPU Docker images` | infra | ? | - |
-| - | [#48412](https://github.com/sgl-project/sglang/pull/48412) `[Feat] pp: Relay routed experts through pipeline-parallel stages` | infra | ? | - |
+| P1 | [#48412](https://github.com/sgl-project/sglang/pull/48412) `[Feat] pp: Relay routed experts through pipeline-parallel stages` | infra | ? | - |
 | - | [#48418](https://github.com/sgl-project/sglang/pull/48418) `[Fix] diffusion: Count reclaimable page cache as available inside a cgroup cap` | bug,infra,perf | ? | - |
 | - | [#48433](https://github.com/sgl-project/sglang/pull/48433) `[Feat] weight_update: Let platforms serve weight transports through /plugin_weight_update` | infra | ? | - |
-| - | [#48434](https://github.com/sgl-project/sglang/pull/48434) `[Fix] [AMD] aiter: Quantize q with its own scale in the fp8 prefills over a gathered cache` | bug,infra,perf,quant,rocm | main | - |
-| - | [#48437](https://github.com/sgl-project/sglang/pull/48437) `[Perf] [AMD] dsa: Split-K HIP sparse MLA for decode/verify` | perf,rocm | kimi-k3.1-day-0-amd | - |
+| P0 | [#48434](https://github.com/sgl-project/sglang/pull/48434) `[Fix] [AMD] aiter: Quantize q with its own scale in the fp8 prefills over a gathered cache` | bug,infra,perf,quant,rocm | main | - |
+| P0 | [#48437](https://github.com/sgl-project/sglang/pull/48437) `[Perf] [AMD] dsa: Split-K HIP sparse MLA for decode/verify` | perf,rocm | kimi-k3.1-day-0-amd | - |
 | - | [#48438](https://github.com/sgl-project/sglang/pull/48438) `[Test] [AMD] aiter: Run the HD128 ASM prefill test on gfx950 with a routed pool` | infra,rocm | ? | - |
 | - | [#48442](https://github.com/sgl-project/sglang/pull/48442) `[Perf] diffusion: Accelerate exact SANA-Video RoPE on SM103` | infra,nvidia,perf | ? | - |
 | - | [#48444](https://github.com/sgl-project/sglang/pull/48444) `[Perf] [NVIDIA] gdn: deferred-fold ReplaySSM target verify on FlashInfer u-cache kernels` | nvidia,perf | ? | - |
-| - | [#48446](https://github.com/sgl-project/sglang/pull/48446) `[Fix] io_struct: Give each request its own sampling_params dict during normalization` | bug | ? | - |
+| P1 | [#48446](https://github.com/sgl-project/sglang/pull/48446) `[Fix] io_struct: Give each request its own sampling_params dict during normalization` | bug | ? | - |
 | - | [#48447](https://github.com/sgl-project/sglang/pull/48447) `[Fix] dp-attention: Carry a rank's ShutdownReq to its DP peers through the MLP-sync gather` | bug | ? | - |
 | - | [#48448](https://github.com/sgl-project/sglang/pull/48448) `[CI] server_args: Isolate two tests from process state and host hardware` | infra | ? | - |
 | - | [#48449](https://github.com/sgl-project/sglang/pull/48449) `[Refactor] scheduler: Run a prefill batch's KV calls from one overridable _flush_prefill` |  | ? | - |
-| - | [#48450](https://github.com/sgl-project/sglang/pull/48450) `[Fix] mem_cache: Order lazy unified-pool page reuse after the latest forward` | bug,infra | ? | - |
+| P1 | [#48450](https://github.com/sgl-project/sglang/pull/48450) `[Fix] mem_cache: Order lazy unified-pool page reuse after the latest forward` | bug,infra | ? | - |
 | - | [#48451](https://github.com/sgl-project/sglang/pull/48451) `[Perf] pd: Poll the prefill result wait per attention-DP shard and pump HiCache storage events in it` | infra,perf | ? | - |
 | - | [#48453](https://github.com/sgl-project/sglang/pull/48453) `[Test] load-snapshot: Pin the Python server mode in TestZmqReaderOwner` | infra | ? | - |
 | - | [#48455](https://github.com/sgl-project/sglang/pull/48455) `[Feat] rust-server: Log requests like the Python server` |  | ? | - |
-| - | [#48456](https://github.com/sgl-project/sglang/pull/48456) `[Perf] [NVIDIA] dsv41: Run the side-stream mHC mix in BF16x3 for Blackwell decode batches` | infra,nvidia,perf | ? | - |
+| P1 | [#48456](https://github.com/sgl-project/sglang/pull/48456) `[Perf] [NVIDIA] dsv41: Run the side-stream mHC mix in BF16x3 for Blackwell decode batches` | infra,nvidia,perf | ? | - |
 | - | [#48457](https://github.com/sgl-project/sglang/pull/48457) `[Feat] rust-server: Write --crash-dump-folder dumps from the Rust frontend` | bug,infra | ? | - |
-| - | [#48458](https://github.com/sgl-project/sglang/pull/48458) `[Fix] disaggregation: Keep non-final KV sends inside the protected prefix` | bug,infra | ? | - |
+| P1 | [#48458](https://github.com/sgl-project/sglang/pull/48458) `[Fix] disaggregation: Keep non-final KV sends inside the protected prefix` | bug,infra | ? | - |
 | - | [#48468](https://github.com/sgl-project/sglang/pull/48468) `[Chore] [NVIDIA] deps: Bump FlashInfer to 0.7.3 and migrate the NVLink one-sided all-to-all to flashinfer.moe_` | infra,nvidia,perf | ? | - |
 | - | [#48470](https://github.com/sgl-project/sglang/pull/48470) `[Perf] diffusion: Tune LingBot MoE TMA for B300 SXM6 AC` | infra,perf | ? | - |
 | - | [#48479](https://github.com/sgl-project/sglang/pull/48479) `[CI] [AMD] nightly: Add Kimi-K3.1-Pro nightly test` | infra,rocm | ? | - |
-| - | [#48485](https://github.com/sgl-project/sglang/pull/48485) `[Fix] [AMD] mooncake: Bump Mooncake to pick up the HIP IPC sub-allocation fix` | bug,infra,rocm | main | - |
+| P0 | [#48485](https://github.com/sgl-project/sglang/pull/48485) `[Fix] [AMD] mooncake: Bump Mooncake to pick up the HIP IPC sub-allocation fix` | bug,infra,rocm | main | - |
 | - | [#48487](https://github.com/sgl-project/sglang/pull/48487) `[Fix] sampler: skip the token-id all-reduce when the TP sync group has one rank` | bug,infra | ? | - |
 | - | [#48492](https://github.com/sgl-project/sglang/pull/48492) `[Fix] rust-server: Let DP rank 0's drain wait for every attention-DP listener` | bug | ? | - |
 | - | [#48496](https://github.com/sgl-project/sglang/pull/48496) `[Perf] mem_cache: Order recycled unified-page writers after the forward instead of the current stream` | infra,perf | ? | - |
@@ -2742,21 +2742,21 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48513](https://github.com/sgl-project/sglang/pull/48513) `[Feat] rust-server: Export extension metric families and hand media admission timing to the MM processor` | infra | ? | - |
 | - | [#48515](https://github.com/sgl-project/sglang/pull/48515) `[Fix] rust-server: Freeze the scheduler's garbage collector after the startup warmup` | bug,risk | ? | - |
 | - | [#48518](https://github.com/sgl-project/sglang/pull/48518) `[Fix] server-args: Redact the access keys from /server_info, logs, launch_command and crash dumps` | bug | ? | - |
-| - | [#48522](https://github.com/sgl-project/sglang/pull/48522) `[Fix] hicache: Stop L3 prefetch at the match key limit` | bug,infra | ? | - |
+| P1 | [#48522](https://github.com/sgl-project/sglang/pull/48522) `[Fix] hicache: Stop L3 prefetch at the match key limit` | bug,infra | ? | - |
 | - | [#48523](https://github.com/sgl-project/sglang/pull/48523) `[Feat] rust-server: Decompress x-body-compressed request bodies` | infra | ? | - |
 | - | [#48525](https://github.com/sgl-project/sglang/pull/48525) `[Chore] flashmla: bump sgl-flash-mla to 1.0.2` | infra,nvidia | ? | - |
 | - | [#48531](https://github.com/sgl-project/sglang/pull/48531) `[Perf] [NVIDIA] fp8: Let the Hopper block GEMV take K=6144 for MiniMax M3.1` | infra,nvidia,perf,quant | ? | - |
-| - | [#48536](https://github.com/sgl-project/sglang/pull/48536) `[Perf] [AMD] quantization: Fuse SiLU-and-mul with the dynamic per-tensor fp8 quant of dense MLPs on gfx95` | infra,perf,quant,rocm | ? | - |
+| P1 | [#48536](https://github.com/sgl-project/sglang/pull/48536) `[Perf] [AMD] quantization: Fuse SiLU-and-mul with the dynamic per-tensor fp8 quant of dense MLPs on gfx95` | infra,perf,quant,rocm | ? | - |
 | - | [#48545](https://github.com/sgl-project/sglang/pull/48545) `[Fix] [CPU] cpu-graph: Preserve return_logprob and request metadata in dynamic prefill` | bug,infra | ? | - |
-| - | [#48547](https://github.com/sgl-project/sglang/pull/48547) `[Feat] model: Support ERNIE 5.5 Flash` | infra,perf,quant | ? | - |
+| - | [#48547](https://github.com/sgl-project/sglang/pull/48547) `[Feat] model: Support ERNIE 5.5 Flash` | infra,perf,quant | main | - |
 | - | [#48554](https://github.com/sgl-project/sglang/pull/48554) `[Fix] [NVIDIA] custom-allreduce: Scope a zero NVLink fabric cluster UUID to its own node` | bug,infra,nvidia | ? | - |
-| - | [#48556](https://github.com/sgl-project/sglang/pull/48556) `[Fix] moe: Fix illegal memory access in the W4A16/W8A16 Triton MoE kernel (unmasked K tail)` | bug,infra,perf,quant,risk,rocm | ? | - |
+| P1 | [#48556](https://github.com/sgl-project/sglang/pull/48556) `[Fix] moe: Fix illegal memory access in the W4A16/W8A16 Triton MoE kernel (unmasked K tail)` | bug,infra,perf,quant,risk,rocm | main | - |
 | - | [#48563](https://github.com/sgl-project/sglang/pull/48563) `[Perf] [NVIDIA] gemma4: fuse the TP all-reduce with the layer epilogue and FP8 quant on NVLink multicast` | infra,nvidia,perf,quant | ? | - |
 | - | [#48572](https://github.com/sgl-project/sglang/pull/48572) `[Feat] rust-server: Report the serving DP rank in /generate meta_info` |  | ? | - |
 | - | [#48583](https://github.com/sgl-project/sglang/pull/48583) `[Feat] [Intel] xpu_kernel: update sglang-kernel-xpu to 0.6.0` | infra,nvidia,perf | ? | - |
-| - | [#48584](https://github.com/sgl-project/sglang/pull/48584) `[Perf] kimi-k3.1: TP-shard the decode MoE front and latent-up tail` | infra,perf | ? | - |
-| - | [#48585](https://github.com/sgl-project/sglang/pull/48585) `[Perf] gdn: reduce MIS output and QK preparation overhead` | infra,perf | ? | - |
-| - | [#48586](https://github.com/sgl-project/sglang/pull/48586) `[Perf] kimi-k3: Fuse the decode MoE routing for 1-256 rows into one kernel` | infra,perf,quant | ? | - |
+| P1 | [#48584](https://github.com/sgl-project/sglang/pull/48584) `[Perf] kimi-k3.1: TP-shard the decode MoE front and latent-up tail` | infra,perf | ? | - |
+| P1 | [#48585](https://github.com/sgl-project/sglang/pull/48585) `[Perf] gdn: reduce MIS output and QK preparation overhead` | infra,perf | ? | - |
+| P1 | [#48586](https://github.com/sgl-project/sglang/pull/48586) `[Perf] kimi-k3: Fuse the decode MoE routing for 1-256 rows into one kernel` | infra,perf,quant | ? | - |
 | - | [#48602](https://github.com/sgl-project/sglang/pull/48602) `[Perf] dsa: Add an opt-in FlashInfer Prims-TS sparse MLA backend` | infra,nvidia,perf | ? | - |
 | - | [#48603](https://github.com/sgl-project/sglang/issues/48603) `[Bug] EPLB statistics include empty draft records during speculative decoding` |  | ? | - |
 | - | [#48605](https://github.com/sgl-project/sglang/pull/48605) `[Perf] moe/paged-experts: decide block-wide and skip empty page-ins` | infra,perf,quant | ? | - |
@@ -2767,36 +2767,36 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48629](https://github.com/sgl-project/sglang/pull/48629) `[Perf] models: use fused apply_qk_norm in Exaone, HunYuan-V3, AfMoE, and BailingMoE` | infra,perf | ? | - |
 | - | [#48638](https://github.com/sgl-project/sglang/pull/48638) `[Perf] [NVIDIA] moe: Add an opt-in persistent MXFP4 decode MoE kernel for Kimi-K3.1` | infra,nvidia,perf,quant | ? | - |
 | - | [#48642](https://github.com/sgl-project/sglang/pull/48642) `[Feat] paged-experts: keep experts on disk so later starts skip loading them` | infra | ? | - |
-| - | [#48654](https://github.com/sgl-project/sglang/pull/48654) `[Fix] scheduler: Match arrival prefixes on every PP stage` | bug,infra | ? | - |
+| P1 | [#48654](https://github.com/sgl-project/sglang/pull/48654) `[Fix] scheduler: Match arrival prefixes on every PP stage` | bug,infra | ? | - |
 | - | [#48656](https://github.com/sgl-project/sglang/pull/48656) `[Fix] comfyui: Load FastH3, H3 FP8, Qwen-Image 2.1 Turbo and community INT8 single files` | bug,infra,perf,quant | ? | - |
 | - | [#48662](https://github.com/sgl-project/sglang/pull/48662) `[Feat] cli: Export Cookbook commands as per-checkpoint JSON files` | infra | ? | - |
 | - | [#48666](https://github.com/sgl-project/sglang/pull/48666) `[Fix] tbo: Capture routed experts at each child's parent rows` | bug,infra | ? | - |
-| - | [#48668](https://github.com/sgl-project/sglang/pull/48668) `[Fix] sgl-router: Keep a worker's cached chain visible when another worker holds its prefix` | bug,infra | ? | - |
+| P1 | [#48668](https://github.com/sgl-project/sglang/pull/48668) `[Fix] sgl-router: Keep a worker's cached chain visible when another worker holds its prefix` | bug,infra | ? | - |
 | - | [#48677](https://github.com/sgl-project/sglang/issues/48677) `[CI] attention/unittests/mla/test_flashinfer.py fails on main: FlashInfer MLA EAGLE draft CUDA-graph outputs m` | infra,nvidia | ? | - |
 | - | [#48688](https://github.com/sgl-project/sglang/pull/48688) `[Perf] longcat-image: Reuse timestep conditioning for serial CFG` | infra,perf | ? | - |
 | - | [#48689](https://github.com/sgl-project/sglang/pull/48689) `[Feat] qwen4-exp: accept HMM devices for the file-backed PLE table` | infra | ? | - |
 | - | [#48692](https://github.com/sgl-project/sglang/pull/48692) `[CI] [AMD] spur: Take HF_TOKEN from the runner environment` | infra,rocm | ? | - |
 | - | [#48693](https://github.com/sgl-project/sglang/pull/48693) `[Fix] hicache: Do not count staged-prefetch deferrals while KV awaits a PD transfer` | bug,infra | ? | - |
 | - | [#48699](https://github.com/sgl-project/sglang/pull/48699) `[CI] [AMD] disaggregation: Send aux data over TCP in the PP disaggregation test` | infra,rocm | ? | - |
-| - | [#48709](https://github.com/sgl-project/sglang/pull/48709) `[Feat] kimi-k3.1: Prefill context parallelism (CP-TP group sharing)` |  | ? | - |
+| P1 | [#48709](https://github.com/sgl-project/sglang/pull/48709) `[Feat] kimi-k3.1: Prefill context parallelism (CP-TP group sharing)` |  | ? | - |
 | - | [#48710](https://github.com/sgl-project/sglang/pull/48710) `[Feat] kimi-k3.1: MegaMoE, breakable prefill graphs and DFlash under prefill CP` |  | ? | - |
 | - | [#48711](https://github.com/sgl-project/sglang/pull/48711) `[Perf] kimi-k3.1: Fuse MegaMoE padding masks, DSA indexer Q prep and CP row copies` | perf,quant | ? | - |
 | - | [#48712](https://github.com/sgl-project/sglang/pull/48712) `[Feat] cuda-graph: Kimi-K3.1 breakable prefill graphs with PP x prefill CP` | infra,nvidia | ? | - |
 | - | [#48713](https://github.com/sgl-project/sglang/pull/48713) `[Feat] kimi-k3.1: Let shared-expert TP span interleave prefill CP` |  | ? | - |
 | - | [#48714](https://github.com/sgl-project/sglang/pull/48714) `[Feat] kimi-k3.1: Opt-in trtllm DSA backend` |  | ? | - |
 | - | [#48719](https://github.com/sgl-project/sglang/pull/48719) `[Fix] docker: update NVIDIA megakernel pin for Qwen3.5 follow-up kernels` | bug,infra,nvidia,perf | ? | - |
-| - | [#48721](https://github.com/sgl-project/sglang/pull/48721) `[Feat] kimi-k3.1: DSA decode context parallelism runtime` | infra | ? | - |
+| P1 | [#48721](https://github.com/sgl-project/sglang/pull/48721) `[Feat] kimi-k3.1: DSA decode context parallelism runtime` | infra | ? | - |
 | - | [#48722](https://github.com/sgl-project/sglang/pull/48722) `[CI] [AMD] nightly-disagg: Install the checkout's runtime deps over the image` | infra,rocm | ? | - |
 | - | [#48723](https://github.com/sgl-project/sglang/pull/48723) `[Perf] mega_moe: reserve 18 SMs for MegaMoE in sm107 decode and target-verify` | nvidia,perf | ? | - |
-| - | [#48726](https://github.com/sgl-project/sglang/pull/48726) `[CI] [AMD] miles: Skip MI30x FP8 and DeepSeek-V4 tests that cannot run on gfx942` | infra,quant,rocm | ? | - |
+| P1 | [#48726](https://github.com/sgl-project/sglang/pull/48726) `[CI] [AMD] miles: Skip MI30x FP8 and DeepSeek-V4 tests that cannot run on gfx942` | infra,quant,rocm | ? | - |
 | - | [#48731](https://github.com/sgl-project/sglang/pull/48731) `[Perf] [NVIDIA] dsv41: Gather 16 local Engram rows per program on SM103 and SM107` | nvidia,perf | ? | - |
-| - | [#48732](https://github.com/sgl-project/sglang/pull/48732) `[Fix] gemm: Keep Kimi-K3's tiny GEMM shapes on SIMT at every batch size` | bug,perf | ? | - |
+| P1 | [#48732](https://github.com/sgl-project/sglang/pull/48732) `[Fix] gemm: Keep Kimi-K3's tiny GEMM shapes on SIMT at every batch size` | bug,perf | ? | - |
 | - | [#48733](https://github.com/sgl-project/sglang/pull/48733) `[Perf] [NVIDIA] dsv41: Index-Q RoPE + fp4 pack runs one thread per fp4 block for prefill-sized calls` | nvidia,perf,quant | ? | - |
-| - | [#48734](https://github.com/sgl-project/sglang/pull/48734) `[Fix] spec: Make per-step draft `out_cache_loc` contiguous for KV writes` | bug,infra | main | - |
+| P0 | [#48734](https://github.com/sgl-project/sglang/pull/48734) `[Fix] spec: Make per-step draft `out_cache_loc` contiguous for KV writes` | bug,infra | main | - |
 | - | [#48739](https://github.com/sgl-project/sglang/pull/48739) `[Feat] kimi-k3.1: DSPARK and DFLASH under decode context parallelism` | infra | ? | - |
 | - | [#48740](https://github.com/sgl-project/sglang/pull/48740) `[Perf] kimi-k3.1: Faster DCP decode reduce (push-combine, V pre-projection, direct exchange)` | bug,perf | ? | - |
 | - | [#48741](https://github.com/sgl-project/sglang/pull/48741) `[Feat] kimi-k3.1: PD disaggregation under decode context parallelism` | infra | ? | - |
-| - | [#48751](https://github.com/sgl-project/sglang/pull/48751) `[Fix] eplb: Keep draft forwards out of the target expert window` | bug | ? | - |
+| P1 | [#48751](https://github.com/sgl-project/sglang/pull/48751) `[Fix] eplb: Keep draft forwards out of the target expert window` | bug | ? | - |
 | - | [#48752](https://github.com/sgl-project/sglang/pull/48752) `[Fix] rust-server: Publish 127.0.0.1 for an IPv6 loopback SGLANG_HOST_IP on an IPv4 wildcard bind` | bug | ? | - |
 | - | [#48753](https://github.com/sgl-project/sglang/pull/48753) `[Feat] rust-server: Refuse more ignored settings, add a launch-time GenerateValidator, and catalogue the Pytho` | perf | ? | - |
 | - | [#48755](https://github.com/sgl-project/sglang/pull/48755) `[Chore] utils: Guard `srt.utils` imports and remove dead code` | infra | ? | - |
@@ -2805,7 +2805,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48758](https://github.com/sgl-project/sglang/pull/48758) `[Refactor] utils: Move domain-dependent modules out of `srt.utils`` | infra,perf | ? | - |
 | - | [#48761](https://github.com/sgl-project/sglang/pull/48761) `[Perf] mhc: halve the DeepGEMM prenorm slices when the grid overflows one wave` | perf,risk | ? | - |
 | - | [#48762](https://github.com/sgl-project/sglang/pull/48762) `[Refactor] scheduler: Run every state check through SchedulerInvariantChecker.run` | infra | ? | - |
-| - | [#48773](https://github.com/sgl-project/sglang/pull/48773) `[Fix] [AMD] topk-v2: Fix wrong picks on split-launch short rows` | bug,infra,perf,rocm | main | - |
+| P0 | [#48773](https://github.com/sgl-project/sglang/pull/48773) `[Fix] [AMD] topk-v2: Fix wrong picks on split-launch short rows` | bug,infra,perf,rocm | main | - |
 | - | [#48775](https://github.com/sgl-project/sglang/pull/48775) `[Feat] kimi-k3: Stream tool-call arguments incrementally` | infra | ? | - |
 | - | [#48776](https://github.com/sgl-project/sglang/pull/48776) `[Feat] kimi-k3: Read the `thinking` object and map reasoning effort onto K3 tiers` | infra | ? | - |
 | - | [#48777](https://github.com/sgl-project/sglang/pull/48777) `[Feat] kimi-k3: Shape chat responses to the K3 wire format` | infra | ? | - |
@@ -2823,7 +2823,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48807](https://github.com/sgl-project/sglang/pull/48807) `[Test] [Ascend] npu: GLM-5.3 1P1D accuracy cases + weekday gsm8k` | infra,risk | ? | - |
 | - | [#48808](https://github.com/sgl-project/sglang/issues/48808) `[CI] multimodal-gen-test-1-gpu (llada_image) fails on main: 'NoneType' object has no attribute 'takes_deferred` | infra | ? | - |
 | - | [#48809](https://github.com/sgl-project/sglang/pull/48809) `[Fix] overlap: Skip deferred-relay flush when future_map is None` | bug,perf | ? | - |
-| - | [#48810](https://github.com/sgl-project/sglang/pull/48810) `[Fix] [AMD] mxfp4: Keep MoE weight layout and dispatch consistent with the selected runner` | bug,infra,quant,rocm | ? | - |
+| P1 | [#48810](https://github.com/sgl-project/sglang/pull/48810) `[Fix] [AMD] mxfp4: Keep MoE weight layout and dispatch consistent with the selected runner` | bug,infra,quant,rocm | ? | - |
 | - | [#48812](https://github.com/sgl-project/sglang/pull/48812) `[Fix] weight_checker: Compare weights on the live weight's device` | bug,infra | ? | - |
 | - | [#48815](https://github.com/sgl-project/sglang/pull/48815) `[Fix] rust-server: Keep the DP control fan-out off an inherited HTTP proxy` | bug,infra | ? | - |
 | - | [#48816](https://github.com/sgl-project/sglang/pull/48816) `[CI] sgl-router: Stop label events from cancelling and restarting the router tiers` | infra | ? | - |
@@ -2835,13 +2835,13 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#48831](https://github.com/sgl-project/sglang/pull/48831) `[Perf] dspark: Prepare the DSpark draft attention metadata through the glue graph under every verify mode` | perf | ? | - |
 | - | [#48832](https://github.com/sgl-project/sglang/pull/48832) `[Perf] dsv4: Run compact target verify's ratio 1 and 2 compressors through the fused kernels` | perf | ? | - |
 | - | [#48833](https://github.com/sgl-project/sglang/pull/48833) `[Perf] dspark: Build the compact verify window and stage its padded layout in one launch each` | infra,perf | ? | - |
-| - | [#48840](https://github.com/sgl-project/sglang/pull/48840) `[Fix] hisparse: disambiguate __ffsll for HIP's dual overloads` | bug,infra,perf,rocm | main | - |
-| - | [#48846](https://github.com/sgl-project/sglang/pull/48846) `[Feat] hisparse: reject unvalidated speculative algorithms by name` | infra | ? | - |
-| - | [#48852](https://github.com/sgl-project/sglang/pull/48852) `[Perf] mem_cache: Defer reuse of freed unified pages instead of waiting on every free` | perf | ? | - |
+| P0 | [#48840](https://github.com/sgl-project/sglang/pull/48840) `[Fix] hisparse: disambiguate __ffsll for HIP's dual overloads` | bug,infra,perf,rocm | main | - |
+| P1 | [#48846](https://github.com/sgl-project/sglang/pull/48846) `[Feat] hisparse: reject unvalidated speculative algorithms by name` | infra | ? | - |
+| P1 | [#48852](https://github.com/sgl-project/sglang/pull/48852) `[Perf] mem_cache: Defer reuse of freed unified pages instead of waiting on every free` | perf | ? | - |
 | - | [#48853](https://github.com/sgl-project/sglang/pull/48853) `[Chore] flash-attn: Remove the kernels-hub FA3 loader and the kernels dependency` | infra,nvidia,perf | ? | - |
 | - | [#48856](https://github.com/sgl-project/sglang/pull/48856) `[HiCache] Linker: Drop the shared PCP namespace from the Mooncake direct linker` |  | ? | - |
 | - | [#48857](https://github.com/sgl-project/sglang/pull/48857) `[Doc] cookbook: Refresh SemiAnalysis AgentX launches to InferenceX main ce35bc93` |  | ? | - |
-| - | [#48860](https://github.com/sgl-project/sglang/pull/48860) `[Fix] cuda_graph: Retain capture inputs for full graph replay` | bug,infra | ? | - |
+| P1 | [#48860](https://github.com/sgl-project/sglang/pull/48860) `[Fix] cuda_graph: Retain capture inputs for full graph replay` | bug,infra | ? | - |
 | - | [#48868](https://github.com/sgl-project/sglang/pull/48868) `[Feat] kimi-k3.1: Sync the prefill-CP review fixes from the port PRs` | perf | ? | - |
 | - | [#48871](https://github.com/sgl-project/sglang/pull/48871) `[Fix] modelopt_fp4: Skip swizzled NVFP4 MoE blockscales on Marlin paths` | bug,infra,nvidia,quant | ? | - |
 | - | [#48877](https://github.com/sgl-project/sglang/pull/48877) `[Feat] kimi-k3.1: HiCache under decode context parallelism` |  | ? | - |
@@ -3008,7 +3008,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49402](https://github.com/sgl-project/sglang/pull/49402) `[Refactor] graph: Introduce device-neutral graph backend bases (1/3)` | infra | ? | - |
 | - | [#49405](https://github.com/sgl-project/sglang/pull/49405) `[Feat] diffusion/sana-video2: Support sequence parallelism` | infra,perf | ? | - |
 | - | [#49410](https://github.com/sgl-project/sglang/pull/49410) `[CI] docker: Follow Mega main for nightly and pin releases` | infra | ? | - |
-| - | [#49411](https://github.com/sgl-project/sglang/pull/49411) `[Feat] kernels: Kimi-K3.1 kernel changes split out of #48414` | bug,perf | ? | - |
+| - | [#49411](https://github.com/sgl-project/sglang/pull/49411) `[Feat] kernels: Kimi-K3.1 kernel changes split out of #48414` | bug,perf | main | - |
 | - | [#49414](https://github.com/sgl-project/sglang/pull/49414) `[Fix] logprobs: Bound top_logprobs to [0,vocab_size]` | bug,infra | ? | - |
 | - | [#49417](https://github.com/sgl-project/sglang/pull/49417) `[Perf] [NVIDIA] diffusion/joy: Enable packed-image QK normalization and RoPE on SM103` | infra,nvidia,perf | ? | - |
 | - | [#49420](https://github.com/sgl-project/sglang/pull/49420) `[Fix] [NVIDIA] jit: Build sm_107a on CC 10.7, keeping sm_100f only for modules that use CUTLASS` | bug,infra,nvidia,perf | ? | - |
@@ -3047,7 +3047,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49538](https://github.com/sgl-project/sglang/pull/49538) `[Refactor] moe: Remove the SM120 top-22 small-M router path` | infra,nvidia,perf | ? | - |
 | - | [#49544](https://github.com/sgl-project/sglang/pull/49544) `[Test] [NPU] qwen3.6-27b: enable expandable_segments for 1080p perf case` | perf | ? | - |
 | - | [#49549](https://github.com/sgl-project/sglang/issues/49549) `[Bug] [NPU] Ascend 950: SelfAttentionOperation CreateOperation failed on Qwen3-0.6B` |  | ? | - |
-| - | [#49552](https://github.com/sgl-project/sglang/pull/49552) `[Feat] diffusion/model: Support MiniMaxAI/MiniMax-H3-Image` | infra,perf | ? | - |
+| - | [#49552](https://github.com/sgl-project/sglang/pull/49552) `[Feat] diffusion/model: Support MiniMaxAI/MiniMax-H3-Image` | infra,perf | main | - |
 | - | [#49564](https://github.com/sgl-project/sglang/pull/49564) `[CI] diffusion: Stabilize test execution and resource usage` | infra,perf | ? | - |
 | - | [#49567](https://github.com/sgl-project/sglang/pull/49567) `[Perf] [AMD] aiter: write the breakable-graph attention output in place` | infra,perf,rocm | ? | - |
 | - | [#49568](https://github.com/sgl-project/sglang/pull/49568) `[Doc] skills: One implementation per kernel contract, plus JIT kernel style rules` | infra,perf | ? | - |
@@ -3066,7 +3066,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49615](https://github.com/sgl-project/sglang/pull/49615) `[CI] [AMD] nightly: Drop the MiniCPM 2.6 models from the VLM MMMU test` | infra,rocm | ? | - |
 | - | [#49616](https://github.com/sgl-project/sglang/pull/49616) `[Fix] dsa: Give each FlashMLA decode graph its own schedule for native-head kernels` | bug,infra,nvidia,perf | ? | - |
 | - | [#49620](https://github.com/sgl-project/sglang/pull/49620) `[CI] [AMD] nightly: Drop models older than the latest two generations` | infra,rocm | ? | - |
-| - | [#49621](https://github.com/sgl-project/sglang/pull/49621) `[Feat] dflash: Serve the Kimi-K3.1 DFlash2 sliding-window MLA draft` | infra,nvidia,rocm | ? | - |
+| - | [#49621](https://github.com/sgl-project/sglang/pull/49621) `[Feat] dflash: Serve the Kimi-K3.1 DFlash2 sliding-window MLA draft` | infra,nvidia,rocm | main | - |
 | - | [#49622](https://github.com/sgl-project/sglang/pull/49622) `[Fix] sgl-router: pass a streaming prefill's in-band 4xx through to the client` | bug,infra | ? | - |
 | - | [#49623](https://github.com/sgl-project/sglang/pull/49623) `[Refactor] scheduler: Each request records the list that holds it` | infra | ? | - |
 | - | [#49631](https://github.com/sgl-project/sglang/pull/49631) `[Perf] srt: Encode the load snapshot before taking the shared-memory file lock` | infra,perf | ? | - |
@@ -3228,114 +3228,114 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#47410](https://github.com/sgl-project/sglang/pull/47410) `[Perf] deterministic: Launch a fixed number of Triton decode blocks for large split budgets` | infra,perf,rocm | main | - |
-| - | [#47412](https://github.com/sgl-project/sglang/pull/47412) `[Fix] [AMD] deterministic: Run block-FP8 linears through Triton on ROCm` | bug,quant,rocm | main | - |
-| - | [#47414](https://github.com/sgl-project/sglang/pull/47414) `[Fix] [AMD] deterministic: Run FP8 MoE experts through the Triton runner on ROCm` | bug,quant,rocm | main | - |
-| - | [#47418](https://github.com/sgl-project/sglang/pull/47418) `[Perf] [AMD] DFlash: FP8 KV and tuned launch for draft SWA verify` | perf,quant,rocm | main | - |
-| - | [#47430](https://github.com/sgl-project/sglang/pull/47430) `[Perf] [AMD] aiter: FP8 Q for EAGLE target_verify and draft_extend attention with an FP8 KV cache` | perf,quant,rocm | main | - |
-| - | [#47434](https://github.com/sgl-project/sglang/pull/47434) `[Fix] spec: Greedy requests keep the argmax prefill draft under rejection sampling` | bug | main | - |
-| - | [#47439](https://github.com/sgl-project/sglang/pull/47439) `[Fix] [AMD] Keep QK-norm RoPE shuffles within logical warps` | bug,perf,rocm | main | - |
-| - | [#47809](https://github.com/sgl-project/sglang/pull/47809) `[Fix] attention: Honor custom masks past the causal tile in Triton extend` | bug,perf,rocm | main | - |
-| - | [#47813](https://github.com/sgl-project/sglang/pull/47813) `[Fix] [AMD] aiter: Decode DCP over a non-fp8 KV cache on Gluon instead of the asm kernel` | bug,perf,quant,rocm | main | - |
-| - | [#47872](https://github.com/sgl-project/sglang/pull/47872) `[Perf] [AMD] dsa: Opt-in single-pass Triton top-k for long-context decode rows` | infra,perf,rocm | main | - |
-| - | [#47886](https://github.com/sgl-project/sglang/pull/47886) `[Fix] [AMD] w8a8_fp8: Load and run per-channel FP8 DeepSeek-V4 checkpoints on ROCm` | bug,quant,rocm | main | - |
-| - | [#47888](https://github.com/sgl-project/sglang/pull/47888) `[Perf] [AMD] dsv4: Token-parallel prefill on ROCm (opt-in)` | perf,rocm | main | - |
-| - | [#47897](https://github.com/sgl-project/sglang/pull/47897) `[Perf] [AMD] dsa: In-tree gfx950 paged MQA logits for decode / MTP-verify rows` | infra,perf,rocm | main | - |
-| - | [#47938](https://github.com/sgl-project/sglang/pull/47938) `[Fix] [AMD] dsv4: transfer unified C4 state by request-local rows` | bug,rocm | main | - |
-| - | [#48084](https://github.com/sgl-project/sglang/pull/48084) `[Fix] sampling: Make penalizer execution order deterministic` | bug | main | - |
-| - | [#48139](https://github.com/sgl-project/sglang/pull/48139) `[Fix] models: Set k/v_scale_float when loading KV cache scales from file` | bug,perf,quant | main | - |
-| - | [#48302](https://github.com/sgl-project/sglang/pull/48302) `[Fix] [AMD] dsa: One decode graph variant on every attention-DP rank, one verify graph` | bug,infra,rocm | main | - |
-| - | [#48356](https://github.com/sgl-project/sglang/issues/48356) `[Bug] disaggregation: Qwen EAGLE PD decode can produce corrupted output after retraction` | risk | ? | - |
-| - | [#48425](https://github.com/sgl-project/sglang/pull/48425) `[Fix] deterministic: replay hybrid Mamba prefix instead of restoring donated state` | bug | main | - |
-| - | [#48500](https://github.com/sgl-project/sglang/pull/48500) `[Fix] deepseek_v4: floor amax before the division in the V4.1 fp8 KV scale` | bug,perf,quant | main | - |
-| - | [#48620](https://github.com/sgl-project/sglang/pull/48620) `[Fix] [AMD] JIT: Port per-token group FP8 quantization v2 to ROCm` | bug,perf,quant,rocm | main | - |
-| - | [#48649](https://github.com/sgl-project/sglang/pull/48649) `[Perf] [AMD] qsa: Faster decode MQA logits on ROCm (padded Q, group-strided launch)` | infra,perf,rocm | main | - |
-| - | [#48700](https://github.com/sgl-project/sglang/pull/48700) `[Fix] [AMD] aiter: Reserve the decode workspace in the automatic mem_fraction_static` | bug,infra,rocm | main | - |
-| - | [#48747](https://github.com/sgl-project/sglang/issues/48747) `[Bug] FlashInfer and Triton apply checkpoint KV-cache scales to a BF16 KV cache, so decode output is garbage (` | nvidia,perf,quant,risk,rocm | ? | - |
-| - | [#48748](https://github.com/sgl-project/sglang/pull/48748) `[Fix] attention: do not apply KV-cache scales to a BF16 KV cache in FlashInfer and Triton` | bug,nvidia,perf,quant,rocm | main | - |
+| P0 | [#47410](https://github.com/sgl-project/sglang/pull/47410) `[Perf] deterministic: Launch a fixed number of Triton decode blocks for large split budgets` | infra,perf,rocm | main | - |
+| P0 | [#47412](https://github.com/sgl-project/sglang/pull/47412) `[Fix] [AMD] deterministic: Run block-FP8 linears through Triton on ROCm` | bug,quant,rocm | main | - |
+| P0 | [#47414](https://github.com/sgl-project/sglang/pull/47414) `[Fix] [AMD] deterministic: Run FP8 MoE experts through the Triton runner on ROCm` | bug,quant,rocm | main | - |
+| P0 | [#47418](https://github.com/sgl-project/sglang/pull/47418) `[Perf] [AMD] DFlash: FP8 KV and tuned launch for draft SWA verify` | perf,quant,rocm | main | - |
+| P0 | [#47430](https://github.com/sgl-project/sglang/pull/47430) `[Perf] [AMD] aiter: FP8 Q for EAGLE target_verify and draft_extend attention with an FP8 KV cache` | perf,quant,rocm | main | - |
+| P0 | [#47434](https://github.com/sgl-project/sglang/pull/47434) `[Fix] spec: Greedy requests keep the argmax prefill draft under rejection sampling` | bug | main | - |
+| P0 | [#47439](https://github.com/sgl-project/sglang/pull/47439) `[Fix] [AMD] Keep QK-norm RoPE shuffles within logical warps` | bug,perf,rocm | main | - |
+| P0 | [#47809](https://github.com/sgl-project/sglang/pull/47809) `[Fix] attention: Honor custom masks past the causal tile in Triton extend` | bug,perf,rocm | main | - |
+| P0 | [#47813](https://github.com/sgl-project/sglang/pull/47813) `[Fix] [AMD] aiter: Decode DCP over a non-fp8 KV cache on Gluon instead of the asm kernel` | bug,perf,quant,rocm | main | - |
+| P0 | [#47872](https://github.com/sgl-project/sglang/pull/47872) `[Perf] [AMD] dsa: Opt-in single-pass Triton top-k for long-context decode rows` | infra,perf,rocm | main | - |
+| P0 | [#47886](https://github.com/sgl-project/sglang/pull/47886) `[Fix] [AMD] w8a8_fp8: Load and run per-channel FP8 DeepSeek-V4 checkpoints on ROCm` | bug,quant,rocm | main | - |
+| P0 | [#47888](https://github.com/sgl-project/sglang/pull/47888) `[Perf] [AMD] dsv4: Token-parallel prefill on ROCm (opt-in)` | perf,rocm | main | - |
+| P0 | [#47897](https://github.com/sgl-project/sglang/pull/47897) `[Perf] [AMD] dsa: In-tree gfx950 paged MQA logits for decode / MTP-verify rows` | infra,perf,rocm | main | - |
+| P0 | [#47938](https://github.com/sgl-project/sglang/pull/47938) `[Fix] [AMD] dsv4: transfer unified C4 state by request-local rows` | bug,rocm | main | - |
+| P0 | [#48084](https://github.com/sgl-project/sglang/pull/48084) `[Fix] sampling: Make penalizer execution order deterministic` | bug | main | - |
+| P0 | [#48139](https://github.com/sgl-project/sglang/pull/48139) `[Fix] models: Set k/v_scale_float when loading KV cache scales from file` | bug,perf,quant | main | - |
+| P0 | [#48302](https://github.com/sgl-project/sglang/pull/48302) `[Fix] [AMD] dsa: One decode graph variant on every attention-DP rank, one verify graph` | bug,infra,rocm | main | - |
+| P0 | [#48356](https://github.com/sgl-project/sglang/issues/48356) `[Bug] disaggregation: Qwen EAGLE PD decode can produce corrupted output after retraction` | risk | ? | - |
+| P0 | [#48425](https://github.com/sgl-project/sglang/pull/48425) `[Fix] deterministic: replay hybrid Mamba prefix instead of restoring donated state` | bug | main | - |
+| P0 | [#48500](https://github.com/sgl-project/sglang/pull/48500) `[Fix] deepseek_v4: floor amax before the division in the V4.1 fp8 KV scale` | bug,perf,quant | main | - |
+| P0 | [#48620](https://github.com/sgl-project/sglang/pull/48620) `[Fix] [AMD] JIT: Port per-token group FP8 quantization v2 to ROCm` | bug,perf,quant,rocm | main | - |
+| P0 | [#48649](https://github.com/sgl-project/sglang/pull/48649) `[Perf] [AMD] qsa: Faster decode MQA logits on ROCm (padded Q, group-strided launch)` | infra,perf,rocm | main | - |
+| P0 | [#48700](https://github.com/sgl-project/sglang/pull/48700) `[Fix] [AMD] aiter: Reserve the decode workspace in the automatic mem_fraction_static` | bug,infra,rocm | main | - |
+| P0 | [#48747](https://github.com/sgl-project/sglang/issues/48747) `[Bug] FlashInfer and Triton apply checkpoint KV-cache scales to a BF16 KV cache, so decode output is garbage (` | nvidia,perf,quant,risk,rocm | ? | - |
+| P0 | [#48748](https://github.com/sgl-project/sglang/pull/48748) `[Fix] attention: do not apply KV-cache scales to a BF16 KV cache in FlashInfer and Triton` | bug,nvidia,perf,quant,rocm | main | - |
 | - | [#48759](https://github.com/sgl-project/sglang/pull/48759) `[Fix] qwen4_exp: decode the fp8 PLE table on SM80` | bug,quant | ? | - |
 | - | [#48760](https://github.com/sgl-project/sglang/pull/48760) `[Perf] rotary_embedding: Short-circuit absent modality token scans in M-RoPE get_rope_index` | perf | ? | - |
 | - | [#48763](https://github.com/sgl-project/sglang/pull/48763) `[Feat] dflash: Serve MoE FFN drafts for DFlash and DSpark` | infra | ? | - |
-| - | [#48764](https://github.com/sgl-project/sglang/pull/48764) `[Fix] cache: Register UMBP GPU buffers with device metadata` | bug,perf | ? | - |
+| P1 | [#48764](https://github.com/sgl-project/sglang/pull/48764) `[Fix] cache: Register UMBP GPU buffers with device metadata` | bug,perf | ? | - |
 | - | [#48765](https://github.com/sgl-project/sglang/pull/48765) `[Fix] anthropic: Preserve Kimi Messages stream usage` | bug | ? | - |
 | - | [#48766](https://github.com/sgl-project/sglang/issues/48766) `[Feature] Support SID-based generative retrieval with constrained decoding and optimized beam search` | perf | ? | - |
 | - | [#48767](https://github.com/sgl-project/sglang/pull/48767) `[Perf] [AMD] diffusion: Mount the Wan FFN linear+GELU site on gfx1250 with a bit-exact GELU` | infra,perf,rocm | ? | - |
-| - | [#48768](https://github.com/sgl-project/sglang/pull/48768) `[Perf] [AMD] diffusion: Let aiter RMSNorm read strided Q/K rows instead of copying them` | infra,perf,rocm | ? | - |
+| P1 | [#48768](https://github.com/sgl-project/sglang/pull/48768) `[Perf] [AMD] diffusion: Let aiter RMSNorm read strided Q/K rows instead of copying them` | infra,perf,rocm | ? | - |
 | - | [#48769](https://github.com/sgl-project/sglang/pull/48769) `[Perf] [AMD] diffusion: Build the ROCm batched-Conv2D VAE input in one Triton pass` | infra,perf,rocm | ? | - |
-| - | [#48770](https://github.com/sgl-project/sglang/pull/48770) `[Perf] [AMD] DeepSeek-V4.1: Exchange only the indexer selection part attention reads under the HIP row shard` | bug,perf,rocm | ? | - |
-| - | [#48771](https://github.com/sgl-project/sglang/pull/48771) `[Perf] [AMD] DeepSeek-V4.1: Opt-in SDMA exchange for the HIP indexer row shard` | bug,perf,rocm | ? | - |
-| - | [#48772](https://github.com/sgl-project/sglang/pull/48772) `[Perf] [AMD] DeepSeek-V4.1: Faster HIP dense prefill indexer (row-group scoring, |s| epilogue, tile-gated top-` | perf,rocm | ? | - |
-| - | [#48774](https://github.com/sgl-project/sglang/pull/48774) `[Perf] attention: Parallelize MLA chunked-prefix KV index construction` | perf | ? | - |
+| P1 | [#48770](https://github.com/sgl-project/sglang/pull/48770) `[Perf] [AMD] DeepSeek-V4.1: Exchange only the indexer selection part attention reads under the HIP row shard` | bug,perf,rocm | ? | - |
+| P1 | [#48771](https://github.com/sgl-project/sglang/pull/48771) `[Perf] [AMD] DeepSeek-V4.1: Opt-in SDMA exchange for the HIP indexer row shard` | bug,perf,rocm | ? | - |
+| P1 | [#48772](https://github.com/sgl-project/sglang/pull/48772) `[Perf] [AMD] DeepSeek-V4.1: Faster HIP dense prefill indexer (row-group scoring, \|s\| epilogue, tile-gated top-` | perf,rocm | ? | - |
+| P1 | [#48774](https://github.com/sgl-project/sglang/pull/48774) `[Perf] attention: Parallelize MLA chunked-prefix KV index construction` | perf | ? | - |
 | - | [#48780](https://github.com/sgl-project/sglang/pull/48780) `[Feature] Add bitsandbytes support for Qwen3-VL / Qwen3-VL-MoE` |  | ? | - |
 | - | [#48782](https://github.com/sgl-project/sglang/pull/48782) `[Fix] hicache: Wait for overlapping write-through acknowledgements` | bug,perf | ? | - |
 | - | [#48783](https://github.com/sgl-project/sglang/pull/48783) `[Perf] [NVIDIA] bf16-gemm: SM107 split-K and cute_ext tactics` | nvidia,perf,quant | ? | - |
 | - | [#48787](https://github.com/sgl-project/sglang/pull/48787) `[Perf] [XPU] fp8: Run FP8 dense layers weight-only (W8A16) through sgl_kernel.fp8_linear` | infra,nvidia,perf,quant | ? | - |
-| - | [#48788](https://github.com/sgl-project/sglang/pull/48788) `[Fix] kimi-k3: Rebuild derived weights in place on weight updates` | bug | ? | - |
+| P1 | [#48788](https://github.com/sgl-project/sglang/pull/48788) `[Fix] kimi-k3: Rebuild derived weights in place on weight updates` | bug | ? | - |
 | - | [#48791](https://github.com/sgl-project/sglang/issues/48791) `[Bug] Reasoning parser splits on first occurrence of closing think tag: quoted </think> inside reasoning trunc` | risk | ? | - |
 | - | [#48792](https://github.com/sgl-project/sglang/pull/48792) `[Perf] [XPU] vae-layernorm-silu: add Xpu triton path to replace torch` | nvidia,perf,rocm | ? | - |
 | - | [#48793](https://github.com/sgl-project/sglang/issues/48793) `[Bug] Model gateway silently drops `cache_salt` on chat completions` | risk | ? | - |
 | - | [#48795](https://github.com/sgl-project/sglang/pull/48795) `[Fix] responses: Merge a commentary preamble with its tool calls when replaying history` | bug | ? | - |
 | - | [#48796](https://github.com/sgl-project/sglang/pull/48796) `[Feat] cp: Add Qwen3.5/Qwen3.8 prefill with Symm and MegaMoE` | infra,nvidia,perf | ? | - |
 | - | [#48802](https://github.com/sgl-project/sglang/issues/48802) `[Bug] Decode HiCache restore returns HTTP 500 under host-cache pressure with GLM-5.3-Flash` | perf | ? | - |
-| - | [#48806](https://github.com/sgl-project/sglang/pull/48806) `[Perf] [AMD] GLM5.3: Allow an FP8 E4M3 KV cache for Triton sparse attention on gfx950` | infra,perf,quant,rocm | ? | - |
-| - | [#48811](https://github.com/sgl-project/sglang/pull/48811) `[Fix] disaggregation: Fail a prefill KV transfer whose decode never completes it` | bug | ? | - |
+| P1 | [#48806](https://github.com/sgl-project/sglang/pull/48806) `[Perf] [AMD] GLM5.3: Allow an FP8 E4M3 KV cache for Triton sparse attention on gfx950` | infra,perf,quant,rocm | ? | - |
+| P1 | [#48811](https://github.com/sgl-project/sglang/pull/48811) `[Fix] disaggregation: Fail a prefill KV transfer whose decode never completes it` | bug | ? | - |
 | - | [#48813](https://github.com/sgl-project/sglang/pull/48813) `[Fix] disaggregation: Advance a Mamba request's unpublished KV under a write-through cache` | bug,perf | ? | - |
 | - | [#48814](https://github.com/sgl-project/sglang/pull/48814) `[Feat] simulator: Add source-bound staged execution` | infra | ? | - |
 | - | [#48819](https://github.com/sgl-project/sglang/issues/48819) `[Bug] SAIL/PPU memory capacity query incorrectly invokes nvidia-smi and warns about NVIDIA drivers` | nvidia | ? | - |
-| - | [#48820](https://github.com/sgl-project/sglang/pull/48820) `[Feat] linker: Support async lookup in prefetch mode` | infra,perf | ? | - |
+| P1 | [#48820](https://github.com/sgl-project/sglang/pull/48820) `[Feat] linker: Support async lookup in prefetch mode` | infra,perf | ? | - |
 | - | [#48822](https://github.com/sgl-project/sglang/issues/48822) `[RFC] Add NPU RLHF Lifecycle Tests` |  | ? | - |
 | - | [#48823](https://github.com/sgl-project/sglang/pull/48823) `[Feat] linker: Support lmcache external linker` | perf | ? | - |
-| - | [#48824](https://github.com/sgl-project/sglang/pull/48824) `[Fix] dp-attention: Preserve original forward mode in prefill graph replay` | bug | ? | - |
+| P1 | [#48824](https://github.com/sgl-project/sglang/pull/48824) `[Fix] dp-attention: Preserve original forward mode in prefill graph replay` | bug | ? | - |
 | - | [#48825](https://github.com/sgl-project/sglang/pull/48825) `[Fix] [SAIL] utils: Use device properties for memory capacity` | bug | ? | - |
 | - | [#48826](https://github.com/sgl-project/sglang/pull/48826) `[Feat] speculative: Report completed adaptive round execution by tier` |  | ? | - |
 | - | [#48834](https://github.com/sgl-project/sglang/pull/48834) `[Fix] grpc: preserve Prometheus metric names` | bug | ? | - |
 | - | [#48835](https://github.com/sgl-project/sglang/pull/48835) `[Fix] [NPU] eplb: Preserve expert storage and reuse TP communication` | bug | ? | - |
 | - | [#48836](https://github.com/sgl-project/sglang/pull/48836) `[Fix] [SAIL] utils: Query device memory without nvidia-smi` | bug,nvidia | ? | - |
 | - | [#48837](https://github.com/sgl-project/sglang/issues/48837) `[Bug] PD decode server fails to start with CUDA OOM on hybrid mamba models: mamba memory budget ignores decode` | nvidia | ? | - |
-| - | [#48838](https://github.com/sgl-project/sglang/pull/48838) `[Fix] mem_cache: charge PD decode pre-allocated slots in the mamba memory budget` | bug,infra | ? | - |
+| P1 | [#48838](https://github.com/sgl-project/sglang/pull/48838) `[Fix] mem_cache: charge PD decode pre-allocated slots in the mamba memory budget` | bug,infra | ? | - |
 | - | [#48842](https://github.com/sgl-project/sglang/pull/48842) `[Feat] dflash: Support sliding-window draft KV pools for NIXL PD` |  | ? | - |
 | - | [#48843](https://github.com/sgl-project/sglang/pull/48843) `[Fix] distributed: Isolate local SHM writer ports by rank` | bug | ? | - |
 | - | [#48845](https://github.com/sgl-project/sglang/pull/48845) `[Fix] sgl-model-gateway: Preserve cache_salt on chat completions` | bug | ? | - |
 | - | [#48847](https://github.com/sgl-project/sglang/pull/48847) `[Perf] [XPU] graph: Support full prefill graph for GDN/Mamba and Gemma models` | nvidia,perf | ? | - |
-| - | [#48848](https://github.com/sgl-project/sglang/pull/48848) `[Fix] HiCache: Wait for decode prefetch before publishing prefix length` | bug | ? | - |
+| P1 | [#48848](https://github.com/sgl-project/sglang/pull/48848) `[Fix] HiCache: Wait for decode prefetch before publishing prefix length` | bug | ? | - |
 | - | [#48850](https://github.com/sgl-project/sglang/pull/48850) `[Fix] deepseek_v4: Capture decoder-tail graphs at startup, never on a step a DP rank skips` | bug | ? | - |
 | - | [#48854](https://github.com/sgl-project/sglang/pull/48854) `[CI] [AMD] ci: Run 16 kernel tests per PR on AMD, as CUDA does` | infra,nvidia,perf,quant,rocm | ? | - |
 | - | [#48855](https://github.com/sgl-project/sglang/pull/48855) `[Perf]cosmos3: Explore opt-in BF16 DiT CUDA Graphs` | nvidia,perf | ? | - |
 | - | [#48858](https://github.com/sgl-project/sglang/pull/48858) `[Feat] simulator: Simulate prefill-decode disaggregation with modelled KV transfer` | infra | ? | - |
 | - | [#48861](https://github.com/sgl-project/sglang/pull/48861) `[Perf] [CPU] graph: Move SWA index translation into Intel AMX attention kernels and prune masked prefix loads` | infra,perf | ? | - |
-| - | [#48862](https://github.com/sgl-project/sglang/pull/48862) `[Fix] [AMD] all-reduce: Check quick reduce before custom AR so ROCM_QUICK_REDUCE_QUANTIZATION takes effect` | bug,infra,quant,rocm | ? | - |
-| - | [#48863](https://github.com/sgl-project/sglang/pull/48863) `[Perf] [AMD] dsa: Use a spill-free BF16 tile for the triton sparse-MLA split-K decode on gfx950` | perf,rocm | ? | - |
-| - | [#48864](https://github.com/sgl-project/sglang/pull/48864) `[Perf] [AMD] kda: Row-streamed chunked verify for ReplaySSM ring mode on gfx950` | perf,rocm | ? | - |
-| - | [#48865](https://github.com/sgl-project/sglang/pull/48865) `[Perf] [AMD] deepseek-v4.1: Reuse the low-ratio identity extend fill across the layers of a ratio` | infra,perf,rocm | ? | - |
-| - | [#48866](https://github.com/sgl-project/sglang/pull/48866) `[Perf] [AMD] deepseek-v4: Fill a run of identity prefill requests in one batched write` | infra,perf,rocm | ? | - |
+| P1 | [#48862](https://github.com/sgl-project/sglang/pull/48862) `[Fix] [AMD] all-reduce: Check quick reduce before custom AR so ROCM_QUICK_REDUCE_QUANTIZATION takes effect` | bug,infra,quant,rocm | ? | - |
+| P1 | [#48863](https://github.com/sgl-project/sglang/pull/48863) `[Perf] [AMD] dsa: Use a spill-free BF16 tile for the triton sparse-MLA split-K decode on gfx950` | perf,rocm | ? | - |
+| P1 | [#48864](https://github.com/sgl-project/sglang/pull/48864) `[Perf] [AMD] kda: Row-streamed chunked verify for ReplaySSM ring mode on gfx950` | perf,rocm | ? | - |
+| P1 | [#48865](https://github.com/sgl-project/sglang/pull/48865) `[Perf] [AMD] deepseek-v4.1: Reuse the low-ratio identity extend fill across the layers of a ratio` | infra,perf,rocm | ? | - |
+| P1 | [#48866](https://github.com/sgl-project/sglang/pull/48866) `[Perf] [AMD] deepseek-v4: Fill a run of identity prefill requests in one batched write` | infra,perf,rocm | ? | - |
 | - | [#48870](https://github.com/sgl-project/sglang/pull/48870) `[Perf] utils: Avoid per-element list allocation in flatten_hidden for flat float rows` | perf | ? | - |
-| - | [#48872](https://github.com/sgl-project/sglang/pull/48872) `[Fix] disaggregation: Make the KV checksum digest each state component's own transfer payload` | bug | ? | - |
+| P1 | [#48872](https://github.com/sgl-project/sglang/pull/48872) `[Fix] disaggregation: Make the KV checksum digest each state component's own transfer payload` | bug | ? | - |
 | - | [#48874](https://github.com/sgl-project/sglang/pull/48874) `[Fix] [NPU] mooncake: Pair DSV4 and MLA KV buffers by global layer ID` | bug,infra,nvidia,perf,quant,rocm | ? | - |
-| - | [#48875](https://github.com/sgl-project/sglang/pull/48875) `[Fix] [AMD] GLM-5.3-Flash: Let breakable prefill graphs replay cached-prefix extends, with HIP KDA` | bug,infra,perf,rocm | main | - |
+| P0 | [#48875](https://github.com/sgl-project/sglang/pull/48875) `[Fix] [AMD] GLM-5.3-Flash: Let breakable prefill graphs replay cached-prefix extends, with HIP KDA` | bug,infra,perf,rocm | main | - |
 | - | [#48876](https://github.com/sgl-project/sglang/pull/48876) `[Perf] qwen2.5-vl: Avoid empty vision windows` | perf | ? | - |
-| - | [#48878](https://github.com/sgl-project/sglang/pull/48878) `[Perf] [AMD] kimi-k3: Write the fp8-Q asm verify query in the fused Q/cache launch` | infra,perf,quant,rocm | ? | - |
+| P1 | [#48878](https://github.com/sgl-project/sglang/pull/48878) `[Perf] [AMD] kimi-k3: Write the fp8-Q asm verify query in the fused Q/cache launch` | infra,perf,quant,rocm | ? | - |
 | - | [#48881](https://github.com/sgl-project/sglang/pull/48881) `[Perf] multimodal: Avoid CPU thread-pool fanout in SHM copy` | perf | ? | - |
 | - | [#48884](https://github.com/sgl-project/sglang/pull/48884) `[Fix] multimodal: Preserve processor options when splitting requests` | bug | ? | - |
 | - | [#48887](https://github.com/sgl-project/sglang/pull/48887) `[Fix] sampling: Validate parallel sample counts before batch expansion` | bug | ? | - |
 | - | [#48890](https://github.com/sgl-project/sglang/pull/48890) `[Feat] diffusion: Add LoRA merge mode disabled` | perf | ? | - |
-| - | [#48893](https://github.com/sgl-project/sglang/pull/48893) `[Perf] [AMD] attention: fused prefix K and FP8 MLA prefill attention via ASM FMHA on gfx1250` | infra,perf,quant,rocm | ? | - |
-| - | [#48897](https://github.com/sgl-project/sglang/pull/48897) `[Perf] [AMD] aiter: Opt unified verify out of the host seq_lens mirror for spec-v2 overlap` | perf,rocm | ? | - |
+| P1 | [#48893](https://github.com/sgl-project/sglang/pull/48893) `[Perf] [AMD] attention: fused prefix K and FP8 MLA prefill attention via ASM FMHA on gfx1250` | infra,perf,quant,rocm | ? | - |
+| P1 | [#48897](https://github.com/sgl-project/sglang/pull/48897) `[Perf] [AMD] aiter: Opt unified verify out of the host seq_lens mirror for spec-v2 overlap` | perf,rocm | ? | - |
 | - | [#48898](https://github.com/sgl-project/sglang/pull/48898) `[Feat] [NVIDIA] DSA: Add FlashInfer GVR V2 top-k backend` | nvidia,perf | ? | - |
 | - | [#48899](https://github.com/sgl-project/sglang/pull/48899) `[Feat] hisparse: support DFLASH speculative decoding` | infra | ? | - |
-| - | [#48900](https://github.com/sgl-project/sglang/pull/48900) `[Feat] quantization: Route named layers to a second online quantization format` | perf,quant | ? | - |
-| - | [#48901](https://github.com/sgl-project/sglang/pull/48901) `[Fix] speculative: Preserve repetition penalties in DFLASH and DSPARK` | bug | ? | - |
-| - | [#48904](https://github.com/sgl-project/sglang/issues/48904) `[Bug] Qwen3, Qwen3-VL, Qwen3-VL-MoE, Qwen3-Omni-MoE, Qwen3-ASR and Qwen3 rerankers ignore checkpoint FP8 KV-ca` | perf,quant | ? | - |
+| P1 | [#48900](https://github.com/sgl-project/sglang/pull/48900) `[Feat] quantization: Route named layers to a second online quantization format` | perf,quant | ? | - |
+| P1 | [#48901](https://github.com/sgl-project/sglang/pull/48901) `[Fix] speculative: Preserve repetition penalties in DFLASH and DSPARK` | bug | ? | - |
+| P0 | [#48904](https://github.com/sgl-project/sglang/issues/48904) `[Bug] Qwen3, Qwen3-VL, Qwen3-VL-MoE, Qwen3-Omni-MoE, Qwen3-ASR and Qwen3 rerankers ignore checkpoint FP8 KV-ca` | perf,quant | ? | - |
 | - | [#48906](https://github.com/sgl-project/sglang/issues/48906) `[Bug] NVFP4 Marlin path (default on SM80-SM90) decodes E4M3 subnormal block scales as 0 with bfloat16 activati` | nvidia,quant | ? | - |
 | - | [#48907](https://github.com/sgl-project/sglang/pull/48907) `[Fix] marlin: Decode E4M3 subnormal NVFP4 block scales exactly with bfloat16 activations` | bug,nvidia,perf,quant | ? | - |
 | - | [#48908](https://github.com/sgl-project/sglang/pull/48908) `[Perf] [NVIDIA] deepseek_v4: Token-shard SM90 sparse-MLA prefill under attention TP` | nvidia,perf | ? | - |
 | - | [#48909](https://github.com/sgl-project/sglang/pull/48909) `[Feat] [Ascend] Add A3 MegaMoE support for SwiGLU/SiTU and BF16/INT experts` |  | ? | - |
 | - | [#48910](https://github.com/sgl-project/sglang/pull/48910) `[Perf] [XPU] minimax-h3: Use bit-exact fused XPU kernels in the DiT` | nvidia,perf | ? | - |
-| - | [#48911](https://github.com/sgl-project/sglang/issues/48911) `[Bug] More model loaders drop checkpoint FP8 KV-cache scales (Qwen1.5/2-MoE, Qwen2.5-VL, Qwen3-Next, AFMoE, Ge` | perf,quant | ? | - |
-| - | [#48912](https://github.com/sgl-project/sglang/pull/48912) `[Fix] models: map checkpoint KV-cache scale names in more model loaders` | bug,perf,quant | ? | - |
-| - | [#48913](https://github.com/sgl-project/sglang/issues/48913) `[Bug] Gemma 4 and Gemma 3n KV-shared layers read the FP8 KV cache with scale 1.0 instead of the writing layer'` | perf,quant | ? | - |
-| - | [#48914](https://github.com/sgl-project/sglang/pull/48914) `[Fix] gemma: KV-shared layers use the KV-cache scales of the layer whose cache they read` | bug,perf,quant | ? | - |
-| - | [#48915](https://github.com/sgl-project/sglang/pull/48915) `[Fix] spec: load FP8 KV-cache scales in the DFlash and LLaMA EAGLE-3 draft loaders` | bug,perf,quant | ? | - |
-| - | [#48916](https://github.com/sgl-project/sglang/pull/48916) `[Fix] parser: split reasoning on last think end token` | bug | ? | - |
+| P1 | [#48911](https://github.com/sgl-project/sglang/issues/48911) `[Bug] More model loaders drop checkpoint FP8 KV-cache scales (Qwen1.5/2-MoE, Qwen2.5-VL, Qwen3-Next, AFMoE, Ge` | perf,quant | ? | - |
+| P1 | [#48912](https://github.com/sgl-project/sglang/pull/48912) `[Fix] models: map checkpoint KV-cache scale names in more model loaders` | bug,perf,quant | ? | - |
+| P1 | [#48913](https://github.com/sgl-project/sglang/issues/48913) `[Bug] Gemma 4 and Gemma 3n KV-shared layers read the FP8 KV cache with scale 1.0 instead of the writing layer'` | perf,quant | ? | - |
+| P1 | [#48914](https://github.com/sgl-project/sglang/pull/48914) `[Fix] gemma: KV-shared layers use the KV-cache scales of the layer whose cache they read` | bug,perf,quant | ? | - |
+| P1 | [#48915](https://github.com/sgl-project/sglang/pull/48915) `[Fix] spec: load FP8 KV-cache scales in the DFlash and LLaMA EAGLE-3 draft loaders` | bug,perf,quant | ? | - |
+| P1 | [#48916](https://github.com/sgl-project/sglang/pull/48916) `[Fix] parser: split reasoning on last think end token` | bug | ? | - |
 | - | [#48917](https://github.com/sgl-project/sglang/issues/48917) `[Bug] TorchNativeLlamaForCausalLM / TorchNativePhi3ForCausalLM load no checkpoint tensors and no KV-cache scal` | perf,quant | ? | - |
 | - | [#48918](https://github.com/sgl-project/sglang/pull/48918) `[Fix] torch_native_llama: load checkpoint tensors and KV-cache scales` | bug,perf,quant | ? | - |
 | - | [#48919](https://github.com/sgl-project/sglang/issues/48919) `[Bug] NVFP4 W4A4 linear keeps the largest weight global scale of fused q/k/v and gate/up layers without a chec` | perf,quant | ? | - |
@@ -3437,7 +3437,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49108](https://github.com/sgl-project/sglang/issues/49108) `[Bug] Rust extension loader: cargo --version probe can deadlock in launcher spawn context (defensive timeout s` | risk | ? | - |
 | - | [#49109](https://github.com/sgl-project/sglang/pull/49109) `[Fix] glm47: Keep string-typed tool-call argument values verbatim` | bug | ? | - |
 | - | [#49111](https://github.com/sgl-project/sglang/pull/49111) `[Feat] server: Allow cache flushes to retain allocator memory` | perf | ? | - |
-| - | [#49113](https://github.com/sgl-project/sglang/pull/49113) `[Fix] [AMD] dsv4: Read preshuffled indexer keys in TileLang` | bug,perf,rocm | ? | - |
+| P1 | [#49113](https://github.com/sgl-project/sglang/pull/49113) `[Fix] [AMD] dsv4: Read preshuffled indexer keys in TileLang` | bug,perf,rocm | ? | - |
 | - | [#49114](https://github.com/sgl-project/sglang/pull/49114) `[Fix] model_runner: Cast input_embeds to the model dtype` | bug,infra | ? | - |
 | - | [#49115](https://github.com/sgl-project/sglang/issues/49115) `[Bug] Kimi-K3.1-Pro: PP output relay stalls while pickling nested tensor metadata` |  | ? | - |
 | - | [#49116](https://github.com/sgl-project/sglang/pull/49116) `[Fix] pp: Materialize nested output metadata before serialization` | bug | ? | - |
@@ -3537,14 +3537,14 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49271](https://github.com/sgl-project/sglang/pull/49271) `[Feat] [NPU] dcp: Switch MLA and DSA to token sharding` |  | ? | - |
 | - | [#49272](https://github.com/sgl-project/sglang/pull/49272) `[Fix] HiCache: whole-page Mooncake IO with mixed-result preservation and staging safety` | bug | ? | - |
 | - | [#49273](https://github.com/sgl-project/sglang/pull/49273) `[Fix] [XPU] graph: fake registration for optional MLA kernels` | bug,nvidia,perf | ? | - |
-| - | [#49274](https://github.com/sgl-project/sglang/issues/49274) `Silent deterministic output corruption: first token id 0 ("!") then [PAD] (id 163839) loop, spec accept-length` | infra,quant,risk,rocm | ? | - |
+| P0 | [#49274](https://github.com/sgl-project/sglang/issues/49274) `Silent deterministic output corruption: first token id 0 ("!") then [PAD] (id 163839) loop, spec accept-length` | infra,quant,risk,rocm | ? | - |
 | - | [#49275](https://github.com/sgl-project/sglang/pull/49275) `[Perf] [NVIDIA] quantization: Add tuned channelwise FP8 GEMM tile configs for RTX PRO 5000` | infra,nvidia,perf,quant | ? | - |
 | - | [#49276](https://github.com/sgl-project/sglang/pull/49276) `[Perf] ASR: Lazily encode cumulative WAV prefixes on demand in split_audio_chunks` | perf | ? | - |
-| - | [#49278](https://github.com/sgl-project/sglang/pull/49278) `[Fix] [AMD] moe: Stop declaring zero-filled A8W4 intermediate padding` | bug,rocm | main | - |
-| - | [#49280](https://github.com/sgl-project/sglang/pull/49280) `[Perf] [AMD] distributed: Run QuickReduce ahead of the custom all-reduce from a size threshold` | perf,rocm | ? | - |
+| P0 | [#49278](https://github.com/sgl-project/sglang/pull/49278) `[Fix] [AMD] moe: Stop declaring zero-filled A8W4 intermediate padding` | bug,rocm | main | - |
+| P1 | [#49280](https://github.com/sgl-project/sglang/pull/49280) `[Perf] [AMD] distributed: Run QuickReduce ahead of the custom all-reduce from a size threshold` | perf,rocm | ? | - |
 | - | [#49281](https://github.com/sgl-project/sglang/pull/49281) `[Perf] [AMD] dspark: Accept on target vocab shards in verify` | perf,rocm | ? | - |
-| - | [#49282](https://github.com/sgl-project/sglang/pull/49282) `[Perf] [AMD] dsa: Prefill rope-free bf16 KV pools with aiter's OPUS sparse kernel` | perf,rocm | main | - |
-| - | [#49283](https://github.com/sgl-project/sglang/pull/49283) `[Perf] [AMD] deepseek-v4.1: Run the closed mHC seams through Mega-mHC in prefill` | perf,rocm | ? | - |
+| P0 | [#49282](https://github.com/sgl-project/sglang/pull/49282) `[Perf] [AMD] dsa: Prefill rope-free bf16 KV pools with aiter's OPUS sparse kernel` | perf,rocm | main | - |
+| P1 | [#49283](https://github.com/sgl-project/sglang/pull/49283) `[Perf] [AMD] deepseek-v4.1: Run the closed mHC seams through Mega-mHC in prefill` | perf,rocm | ? | - |
 | - | [#49284](https://github.com/sgl-project/sglang/pull/49284) `[Perf] [AMD] deepseek-v4.1: Run the DSpark draft's mHC seams through Mega-mHC` | perf,rocm | ? | - |
 | - | [#49285](https://github.com/sgl-project/sglang/pull/49285) `[Perf] deepseek_v4: Score the DeepSeek-V4.1 prefill indexer on Hopper…` | nvidia,perf | ? | - |
 | - | [#49286](https://github.com/sgl-project/sglang/pull/49286) `[Fix] [AMD] quark: do not declare the MiniMax-M3 TP8 MoE pad to CK-Tile` | bug,rocm | ? | - |
@@ -3561,7 +3561,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49306](https://github.com/sgl-project/sglang/pull/49306) `[Fix] scheduler: Prevent pool accounting desync on finished_len trim` | bug | ? | - |
 | - | [#49313](https://github.com/sgl-project/sglang/pull/49313) `[Doc] multimodal_gen: Drop docstring params the functions do not take` | perf | ? | - |
 | - | [#49314](https://github.com/sgl-project/sglang/issues/49314) `[Feature] Support single-worker Replay simulation on Apple Silicon macOS` |  | ? | - |
-| - | [#49315](https://github.com/sgl-project/sglang/pull/49315) `[Fix] [AMD] kimi-k3: Give AITER's A16W4 SiTU MoE the separated w13 la…` | bug,quant,rocm | main | - |
+| P0 | [#49315](https://github.com/sgl-project/sglang/pull/49315) `[Fix] [AMD] kimi-k3: Give AITER's A16W4 SiTU MoE the separated w13 la…` | bug,quant,rocm | main | - |
 | - | [#49316](https://github.com/sgl-project/sglang/pull/49316) `[Feat] [Apple] simulator: Support single-worker Replay simulation on macOS` |  | ? | - |
 | - | [#49319](https://github.com/sgl-project/sglang/pull/49319) `[Perf] attention: Let SM12x FA4 split KV outside the architecture decode policy` | nvidia,perf | ? | - |
 | - | [#49322](https://github.com/sgl-project/sglang/pull/49322) `[Fix] RL: Flush cache after partial distributed weight update` | bug,perf | ? | - |
@@ -3571,7 +3571,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49326](https://github.com/sgl-project/sglang/pull/49326) `[Feat] hisparse: Share prompt prefixes on the decode host-tier radix cache` | perf | ? | - |
 | - | [#49327](https://github.com/sgl-project/sglang/issues/49327) `[ROCm][AMD] DeepSeek-V4.1-Flash gfx950 / MI355X Performance Optimization (SGLang)` | perf,rocm | ? | - |
 | - | [#49329](https://github.com/sgl-project/sglang/pull/49329) `[Perf] hicache: Add an opt-in O_DIRECT path to the fast_file backend` | infra,perf | ? | - |
-| - | [#49330](https://github.com/sgl-project/sglang/pull/49330) `[Perf] [AMD] deepseek-v4.1: Opt into Mega-mHC on decode and verify steps` | perf,rocm | ? | - |
+| P1 | [#49330](https://github.com/sgl-project/sglang/pull/49330) `[Perf] [AMD] deepseek-v4.1: Opt into Mega-mHC on decode and verify steps` | perf,rocm | ? | - |
 | - | [#49331](https://github.com/sgl-project/sglang/pull/49331) `[Fix] cohere_command4: Strip an echoed think-start and keep same-chunk answers in streaming` | bug | ? | - |
 | - | [#49332](https://github.com/sgl-project/sglang/pull/49332) `[Perf] [AMD] mori: Read MORI EPv2 AsyncLL segmented receive in place, skipping the receive copy` | perf,rocm | ? | - |
 | - | [#49333](https://github.com/sgl-project/sglang/pull/49333) `[Feat] models: add public registration for runtime classes` |  | ? | - |
@@ -3652,7 +3652,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49494](https://github.com/sgl-project/sglang/issues/49494) `[Bug] scheduler_0 crashes with exit code -3 (SIGQUIT) during normal decode operation — no Python exception log` | bug | ? | - |
 | - | [#49495](https://github.com/sgl-project/sglang/pull/49495) `[Doc] [Apple] apple_metal: Make pyproject swap safe to re-run` | infra | ? | - |
 | - | [#49498](https://github.com/sgl-project/sglang/pull/49498) `[Perf] hicache: Overlap PD-prefill write_back eviction backups with the in-flight forward` | perf | ? | - |
-| - | [#49500](https://github.com/sgl-project/sglang/pull/49500) `[Fix] [AMD] dsv4: Use the gfx942 FP4 indexer kernels` | bug,perf,quant,rocm | ? | - |
+| P1 | [#49500](https://github.com/sgl-project/sglang/pull/49500) `[Fix] [AMD] dsv4: Use the gfx942 FP4 indexer kernels` | bug,perf,quant,rocm | ? | - |
 | - | [#49502](https://github.com/sgl-project/sglang/pull/49502) `[Feat] [NPU] dsa: Store the DSA MLA KV cache as INT8 on Ascend A2` | perf,quant | ? | - |
 | - | [#49503](https://github.com/sgl-project/sglang/pull/49503) `[Perf] [NPU] DCP: Optimize DSA Verify preparation and communication` | perf | ? | - |
 | - | [#49505](https://github.com/sgl-project/sglang/pull/49505) `[Perf] [AMD] fp8: Opt-in per-channel requant of block-FP8 dense linears on gfx950` | infra,perf,quant,rocm | ? | - |
@@ -3688,7 +3688,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49547](https://github.com/sgl-project/sglang/pull/49547) `[Feat] [NPU] DSpark: GLM-5.2 support DSpark compact mode` | perf,quant | ? | - |
 | - | [#49550](https://github.com/sgl-project/sglang/issues/49550) `[Bug] /v1/responses: late system/developer messages are moved to the top of the prompt, so the prefix cache mi` | perf | ? | - |
 | - | [#49551](https://github.com/sgl-project/sglang/pull/49551) `[Quantization] Fix vision layer ignore-list renaming for Gemma 3 / Mistral 3` | bug,quant | ? | - |
-| - | [#49554](https://github.com/sgl-project/sglang/pull/49554) `[Perf] [AMD] batch-invariant: Faster small-M launch for the segmented bf16 matmul on gfx950` | infra,perf,rocm | ? | - |
+| P1 | [#49554](https://github.com/sgl-project/sglang/pull/49554) `[Perf] [AMD] batch-invariant: Faster small-M launch for the segmented bf16 matmul on gfx950` | infra,perf,rocm | ? | - |
 | - | [#49556](https://github.com/sgl-project/sglang/pull/49556) `[CI] [NPU] ci: Cap acc-2 nightly partition concurrency` | infra | ? | - |
 | - | [#49557](https://github.com/sgl-project/sglang/pull/49557) `[Fix] kernels/jit: Honor the unified cache root` | bug,perf | ? | - |
 | - | [#49558](https://github.com/sgl-project/sglang/pull/49558) `[Perf] qwen3-vl: Bound vision MLP activation memory for large patch batches` | perf | ? | - |
@@ -3737,7 +3737,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49672](https://github.com/sgl-project/sglang/pull/49672) `[Perf] server_args: leave the ModelConfig memo out of a pickled record` | perf | ? | - |
 | - | [#49674](https://github.com/sgl-project/sglang/pull/49674) `[Fix] processor: Preserve reasoning content in Rust renderers` | bug | ? | - |
 | - | [#49676](https://github.com/sgl-project/sglang/issues/49676) `[Feature] Share GPU memory between the KV pool and the mamba/linear-attention state pool instead of a static s` |  | ? | - |
-| - | [#49679](https://github.com/sgl-project/sglang/pull/49679) `[Fix] [AMD] quantization: Keep ROCm UE8M0 group-32 FP8 quant on the v2 kernel` | bug,perf,quant,rocm | ? | - |
+| P1 | [#49679](https://github.com/sgl-project/sglang/pull/49679) `[Fix] [AMD] quantization: Keep ROCm UE8M0 group-32 FP8 quant on the v2 kernel` | bug,perf,quant,rocm | ? | - |
 | - | [#49680](https://github.com/sgl-project/sglang/pull/49680) `[Fix] mistral_eagle: Use mm_input_embeds in the draft's prefill for multimodal requests` | bug,infra | ? | - |
 | - | [#49681](https://github.com/sgl-project/sglang/pull/49681) `[Feat] models: Public attention-layer lookup and FA kernel hooks for external models` | perf | ? | - |
 | - | [#49682](https://github.com/sgl-project/sglang/pull/49682) `[Fix] serving_chat: Avoid a second BOS on multimodal text-only chats` | bug | ? | - |
@@ -3806,7 +3806,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49795](https://github.com/sgl-project/sglang/pull/49795) `[Feat] [NVIDIA] moe: Add opt-in cuTile NVFP4 support for MiniMax on SM12x` | nvidia,quant | ? | - |
 | - | [#49797](https://github.com/sgl-project/sglang/pull/49797) `[Feature] Add pipeline-parallel EAGLE support for PD decode` |  | ? | - |
 | - | [#49799](https://github.com/sgl-project/sglang/issues/49799) `[Feature] [Intel] weight-cache: Support the weight cache daemon on Intel XPU` | nvidia,perf | ? | - |
-| - | [#49800](https://github.com/sgl-project/sglang/pull/49800) `[Feat] [AMD] qwen4_exp: Use the packed PLE prefill short conv on ROCm` | perf,rocm | ? | - |
+| P1 | [#49800](https://github.com/sgl-project/sglang/pull/49800) `[Feat] [AMD] qwen4_exp: Use the packed PLE prefill short conv on ROCm` | perf,rocm | ? | - |
 | - | [#49801](https://github.com/sgl-project/sglang/issues/49801) `[Bug] dsv4: Eager SWA bounded replay masks valid TP-to-EP tail rows` |  | ? | - |
 | - | [#49802](https://github.com/sgl-project/sglang/pull/49802) `[Fix] dsv4: Rebind eager replay tail and MoE shard counts` | bug | ? | - |
 | - | [#49804](https://github.com/sgl-project/sglang/pull/49804) `[Fix] compressed-tensors: Treat actorder aliases like their canonical form in WNA16 MoE` | bug,quant | ? | - |
@@ -3815,7 +3815,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49809](https://github.com/sgl-project/sglang/pull/49809) `[Fix] kv-cache: Ignore checkpoint k/v scales when the KV cache is 16-bit` | bug,perf,quant | ? | - |
 | - | [#49810](https://github.com/sgl-project/sglang/pull/49810) `[Perf] [NVIDIA] fp8: keep K%128!=0 block-fp8 linears on the Triton kernel under the MXFP8 view` | nvidia,perf,quant,rocm | ? | - |
 | - | [#49811](https://github.com/sgl-project/sglang/pull/49811) `[Perf] openai: Cache stable chunks within long chat segments` | perf | ? | - |
-| - | [#49812](https://github.com/sgl-project/sglang/pull/49812) `[Fix] [AMD] deterministic: Batch-invariant mHC pre for GLM-5.3 on ROCm` | bug,perf,rocm | main | - |
+| P0 | [#49812](https://github.com/sgl-project/sglang/pull/49812) `[Fix] [AMD] deterministic: Batch-invariant mHC pre for GLM-5.3 on ROCm` | bug,perf,rocm | main | - |
 | - | [#49813](https://github.com/sgl-project/sglang/pull/49813) `[Fix] function_call: Accept underscore-prefixed Pythonic identifiers` | bug | ? | - |
 | - | [#49814](https://github.com/sgl-project/sglang/pull/49814) `[Fix] deterministic: Put DSA k-pool prefill chunk ends on the chunked-prefill grid` | bug | ? | - |
 | - | [#49815](https://github.com/sgl-project/sglang/pull/49815) `[Fix] deterministic: Deterministic k-pool top-k for the DSA indexer` | bug | ? | - |
@@ -3831,7 +3831,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#49845](https://github.com/sgl-project/sglang/pull/49845) `[Perf] Z-Image: Batch CFG branches in eager inference` | perf | ? | - |
 | - | [#49849](https://github.com/sgl-project/sglang/pull/49849) `[Test] attention_unittest: Dead code clean up. Drop the duplicated draft-extend prefix-len helper` |  | ? | - |
 | - | [#49850](https://github.com/sgl-project/sglang/pull/49850) `[Fix] deepseek-v4: Pass expert offloader_kwargs so --offload-group-size works` | bug | ? | - |
-| - | [#49852](https://github.com/sgl-project/sglang/pull/49852) `[Perf] [AMD] quark: Pad W4A4 MXFP4 MoE to 128 columns for AITER FlyDSL` | perf,quant,rocm | ? | - |
+| P1 | [#49852](https://github.com/sgl-project/sglang/pull/49852) `[Perf] [AMD] quark: Pad W4A4 MXFP4 MoE to 128 columns for AITER FlyDSL` | perf,quant,rocm | ? | - |
 | - | [#49853](https://github.com/sgl-project/sglang/pull/49853) `[Fix] EPLB: Support pipeline-parallel EPLB with TP-Group` | bug | ? | - |
 | - | [#49854](https://github.com/sgl-project/sglang/pull/49854) `[Refactor] scheduler: Name the forward-on-its-own-stream condition once` | infra | ? | - |
 | - | [#49855](https://github.com/sgl-project/sglang/pull/49855) `[Refactor] scheduler: Move a retract's release work into RequestRetirer.retract` | infra | ? | - |
@@ -3909,7 +3909,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50017](https://github.com/sgl-project/sglang/pull/50017) `[Feat] attention: Add ag_delay_reduce DCP backend for MLA and Triton GQA` | perf,rocm | ? | - |
 | - | [#50020](https://github.com/sgl-project/sglang/pull/50020) `[Fix] [XPU] bailing: Do not force the CUDA rope kernel in DsV3MLA on XPU` | bug,nvidia,perf | ? | - |
 | - | [#50021](https://github.com/sgl-project/sglang/pull/50021) `[Fix] nemotron: Apply the NemotronH defaults to Nemotron 3 Nano Omni` | bug,infra | ? | - |
-| - | [#50024](https://github.com/sgl-project/sglang/pull/50024) `[Perf] [AMD] Qwen3.8-Flash-Next: Pack the FP8 GDN input projections on ROCm` | infra,perf,quant,rocm | ? | - |
+| P1 | [#50024](https://github.com/sgl-project/sglang/pull/50024) `[Perf] [AMD] Qwen3.8-Flash-Next: Pack the FP8 GDN input projections on ROCm` | infra,perf,quant,rocm | ? | - |
 | - | [#50025](https://github.com/sgl-project/sglang/pull/50025) `[Feat] Engram: Serve native tables from Mooncake MNNVL EGM` |  | ? | - |
 | - | [#50026](https://github.com/sgl-project/sglang/pull/50026) `[Fix] diffusion: Restrict served post-processing model paths to an operator allowlist` | bug,perf | ? | - |
 | - | [#50028](https://github.com/sgl-project/sglang/pull/50028) `[Chore] rust: Bump sglang-api-types to 0.1.1` | infra | ? | - |
@@ -3929,7 +3929,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50049](https://github.com/sgl-project/sglang/pull/50049) `[Perf] dspark: Fold the static verify epilogue's commits into the accept tail and trim the verify-to-draft glu` | infra,perf | ? | - |
 | - | [#50050](https://github.com/sgl-project/sglang/pull/50050) `[Perf] [AMD] muse-spark: Optimize prefill performance` | perf,rocm | ? | - |
 | - | [#50051](https://github.com/sgl-project/sglang/pull/50051) `[Perf] scheduler: Send a finished request's last output before its prefix-cache insert and free its prompt ids` | infra,perf | ? | - |
-| - | [#50054](https://github.com/sgl-project/sglang/pull/50054) `[AMD] Fix cross-layer KV sharing on ROCm: consumers zero the provider's cache` | bug,infra,perf,rocm | ? | - |
+| P1 | [#50054](https://github.com/sgl-project/sglang/pull/50054) `[AMD] Fix cross-layer KV sharing on ROCm: consumers zero the provider's cache` | bug,infra,perf,rocm | ? | - |
 | - | [#50057](https://github.com/sgl-project/sglang/issues/50057) `tuning_block_wise_kernel.py cannot tune the [32, 32] block recipe (empty search space) and times candidates wi` | perf | ? | - |
 | - | [#50058](https://github.com/sgl-project/sglang/pull/50058) `[Feat] [PPU] moe: Add Triton autotune configs for T-HEAD SAIL (PPU-ZW810E / ZW-M890P)` | perf,rocm | ? | - |
 | - | [#50060](https://github.com/sgl-project/sglang/pull/50060) `[Feat] MLA: Enable combined PCP and DCP for DeepSeek dense MLA` |  | ? | - |
@@ -3953,7 +3953,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50079](https://github.com/sgl-project/sglang/pull/50079) `[Fix] [PPU] deep_gemm: adapt to T-HEAD SAIL DeepGEMM API surface` | bug | ? | - |
 | - | [#50080](https://github.com/sgl-project/sglang/pull/50080) `[Fix] [AMD] deterministic: Run MXFP4 MoE experts through AITER's deterministic fused_moe` | bug,perf,quant,rocm | ? | - |
 | - | [#50082](https://github.com/sgl-project/sglang/pull/50082) `[Fix] [PPU] flashmla: size MLA split buffers for SAIL and reject dense FP8` | bug,nvidia,quant | ? | - |
-| - | [#50083](https://github.com/sgl-project/sglang/issues/50083) `[Tracking] Deterministic inference for GLM-5.3 on AMD MI350X / MI355X` | rocm | ? | - |
+| P1 | [#50083](https://github.com/sgl-project/sglang/issues/50083) `[Tracking] Deterministic inference for GLM-5.3 on AMD MI350X / MI355X` | rocm | ? | - |
 | - | [#50084](https://github.com/sgl-project/sglang/pull/50084) `[Perf] [NVIDIA] dflash: Batch native context KV writes across draft layers` | nvidia,perf | ? | - |
 | - | [#50086](https://github.com/sgl-project/sglang/pull/50086) `[Feat] [PPU] quantization: add MXFP4 downcast kernels for T-HEAD SAIL` | perf,quant | ? | - |
 | - | [#50087](https://github.com/sgl-project/sglang/issues/50087) `[Feature] Non-intrusive dumps cannot distinguish draft vs target model under DSPARK (both are TARGET_VERIFY)` |  | ? | - |
@@ -3965,7 +3965,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50093](https://github.com/sgl-project/sglang/pull/50093) `[Perf] [NVIDIA] diffusion/convrot: Fuse INT8 projection and rounded SwiGLU on SM120` | nvidia,perf,quant | ? | - |
 | - | [#50094](https://github.com/sgl-project/sglang/pull/50094) `[Perf] [NVIDIA] mhc: allow the SM120 decode band on the compensated bf16x3 projection` | nvidia,perf | ? | - |
 | - | [#50095](https://github.com/sgl-project/sglang/pull/50095) `[Fix] tuning_block_wise_kernel: Tune [32, 32] block recipes on CUDA` | bug,nvidia,perf | ? | - |
-| - | [#50099](https://github.com/sgl-project/sglang/pull/50099) `[Perf] [AMD] deterministic: Allow AITER MLA decode on gfx950 with a fixed KV split count` | perf,rocm | ? | - |
+| P1 | [#50099](https://github.com/sgl-project/sglang/pull/50099) `[Perf] [AMD] deterministic: Allow AITER MLA decode on gfx950 with a fixed KV split count` | perf,rocm | ? | - |
 | - | [#50100](https://github.com/sgl-project/sglang/issues/50100) `[Bug] Host validation accepts unsupported shapes in sigmoid_gate_topk_renorm, causing Triton static_assert fai` | rocm | ? | - |
 | - | [#50103](https://github.com/sgl-project/sglang/issues/50103) `[Bug] Qwen3-VL on Hopper: the default prefill_decode_interval=22 lowers request throughput on long-prompt and ` | nvidia,perf | ? | - |
 | - | [#50104](https://github.com/sgl-project/sglang/pull/50104) `AdaFlash 适配 SGLang NPU` | perf | ? | - |
@@ -3975,7 +3975,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50111](https://github.com/sgl-project/sglang/pull/50111) `[Feat] HiCache: Support page_unified for DeepSeek V4/V4.1 and DSA pools` | infra | ? | - |
 | - | [#50113](https://github.com/sgl-project/sglang/pull/50113) `[Perf] [AMD] smallm_moe_gfx950: MXFP4 kernels at 128 columns per rank` | perf,quant,rocm | ? | - |
 | - | [#50116](https://github.com/sgl-project/sglang/pull/50116) `[Fix] mem_cache: Fix explicit HND initialization` | bug,infra | ? | - |
-| - | [#50119](https://github.com/sgl-project/sglang/issues/50119) `[Bug] GLM-5.3 low/high reasoning_effort emits <|assistant|> after final answer and continues generating` |  | ? | - |
+| - | [#50119](https://github.com/sgl-project/sglang/issues/50119) `[Bug] GLM-5.3 low/high reasoning_effort emits <\|assistant\|> after final answer and continues generating` |  | ? | - |
 | - | [#50120](https://github.com/sgl-project/sglang/pull/50120) `[Perf] MiniMax-H3: overlap SubBlock attention with Ulysses communication` | infra,perf | ? | - |
 | - | [#50121](https://github.com/sgl-project/sglang/pull/50121) `[Fix] openai: Accept MCP tools without descriptions` | bug | ? | - |
 | - | [#50125](https://github.com/sgl-project/sglang/pull/50125) `[Fix] router: set TCP_NODELAY on accepted client sockets` | bug | ? | - |
@@ -4072,7 +4072,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50261](https://github.com/sgl-project/sglang/pull/50261) `[Perf] sampler: Sum the captured probabilities without re-masking them` | perf | ? | - |
 | - | [#50262](https://github.com/sgl-project/sglang/pull/50262) `[Perf] pooler: Avoid per-request GPU scalar reads in cross-encoder pooling` | perf | ? | - |
 | - | [#50264](https://github.com/sgl-project/sglang/pull/50264) `[Fix][CPU] graph: Warm up eager model in prefill capture and register intel amx handler` | bug | ? | - |
-| - | [#50265](https://github.com/sgl-project/sglang/pull/50265) `[Perf] [AMD] aiter: FP8 ASM prefill for GQA ratios the kernel lacks (e.g. 6) via KV-head repeat` | perf,quant,rocm | main | - |
+| P0 | [#50265](https://github.com/sgl-project/sglang/pull/50265) `[Perf] [AMD] aiter: FP8 ASM prefill for GQA ratios the kernel lacks (e.g. 6) via KV-head repeat` | perf,quant,rocm | main | - |
 | - | [#50269](https://github.com/sgl-project/sglang/pull/50269) `[Doc] [Intel] minimax-h3: add arch pro b70 recipe` |  | ? | - |
 | - | [#50270](https://github.com/sgl-project/sglang/pull/50270) `[Feat] spec: support DMTP speculative decoding` |  | ? | - |
 | - | [#50271](https://github.com/sgl-project/sglang/pull/50271) `[Perf] [AMD] multimodal_gen: opt-in Triton matmul for large bf16 linears on gfx1151` | perf,rocm | ? | - |
@@ -4108,13 +4108,13 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50305](https://github.com/sgl-project/sglang/pull/50305) `ci(npu): run the NPU PR stages on the sglang fed runner labels` | infra | ? | - |
 | - | [#50312](https://github.com/sgl-project/sglang/pull/50312) `[Fix] preprocessing: Account for retained buffers in cache budgets` | bug,perf | ? | - |
 | - | [#50314](https://github.com/sgl-project/sglang/pull/50314) `[Perf] [NVIDIA] gdn: Use tuned chunk-H stages for long H20 prefill` | nvidia,perf | ? | - |
-| - | [#50316](https://github.com/sgl-project/sglang/pull/50316) `[Fix] tokenizer: Register <|assistant|> as stop token ID for GLM-5.3` | bug | ? | - |
+| - | [#50316](https://github.com/sgl-project/sglang/pull/50316) `[Fix] tokenizer: Register <\|assistant\|> as stop token ID for GLM-5.3` | bug | ? | - |
 | - | [#50317](https://github.com/sgl-project/sglang/pull/50317) `[Feat] moe: Support tensor parallelism for Paged Experts` | infra | ? | - |
 | - | [#50319](https://github.com/sgl-project/sglang/pull/50319) `[Fix] modelopt: reject incompatible mixed-precision shared-expert fusion` | bug,nvidia,perf,quant | ? | - |
 | - | [#50320](https://github.com/sgl-project/sglang/pull/50320) `[Perf] all_reduce_fusion: Compile the cluster-size variants in parallel` | perf | ? | - |
 | - | [#50322](https://github.com/sgl-project/sglang/pull/50322) `[Perf] engram: Extend all-to-all lookup to prefill CP` | perf | ? | - |
 | - | [#50326](https://github.com/sgl-project/sglang/pull/50326) `[Perf] multimodal: Batch multi-span items across requests in one encoder call` | perf | ? | - |
-| - | [#50327](https://github.com/sgl-project/sglang/pull/50327) `[Fix] [AMD] kvcache: Write V with its own head size in reshape_and_cache_flash` | bug,perf,rocm | main | - |
+| P0 | [#50327](https://github.com/sgl-project/sglang/pull/50327) `[Fix] [AMD] kvcache: Write V with its own head size in reshape_and_cache_flash` | bug,perf,rocm | main | - |
 | - | [#50328](https://github.com/sgl-project/sglang/pull/50328) `[Fix] scheduler: Credit releasable private KV in priority preemption` | bug | ? | - |
 | - | [#50329](https://github.com/sgl-project/sglang/pull/50329) `[Fix] gateway: Honor separate prefill and decode policies in gRPC PD routing` | bug | ? | - |
 | - | [#50330](https://github.com/sgl-project/sglang/pull/50330) `[CI] [NPU] diffusion: Add MindIE-SD dependencies and RainFusion E2E coverage` | infra,perf | ? | - |
@@ -4124,7 +4124,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#50334](https://github.com/sgl-project/sglang/pull/50334) `[Perf] minimax_m3: Default prefill CUDA graphs to 8192 tokens` | nvidia,perf | ? | - |
 | - | [#50335](https://github.com/sgl-project/sglang/pull/50335) `[Perf] [AMD] kimi-k3: Prefill-only FP8 copies of the dense BF16 linears` | perf,quant,rocm | ? | - |
 | - | [#50336](https://github.com/sgl-project/sglang/issues/50336) `[RFC] Optimizing Large-Scale MoE Inference with Multi-GPU Partial Expert Offload` | perf,quant | ? | - |
-| - | [#50337](https://github.com/sgl-project/sglang/pull/50337) `[Perf] [AMD] kimi-k3: Default SGLANG_K3_TARGET_DENSE_FP8 to wide on gfx950` | perf,rocm | ? | - |
+| P1 | [#50337](https://github.com/sgl-project/sglang/pull/50337) `[Perf] [AMD] kimi-k3: Default SGLANG_K3_TARGET_DENSE_FP8 to wide on gfx950` | perf,rocm | ? | - |
 | - | [#50338](https://github.com/sgl-project/sglang/pull/50338) `[Perf] minimax_m3: Default MXFP8 dense GEMMs to prebuilt CUTLASS outside decode servers` | nvidia,perf,quant | ? | - |
 | - | [#50339](https://github.com/sgl-project/sglang/pull/50339) `[Feat] dsa: Run prims_ts over a 352 B/token NVFP4 KV cache` | nvidia,perf,quant | ? | - |
 | - | [#50340](https://github.com/sgl-project/sglang/pull/50340) `[Fix] [AMD] all_reduce_mhc_hip: Import AITER CustomAllreduce only for type checking` | bug,infra,perf,rocm | ? | - |
@@ -4166,24 +4166,24 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#26](https://github.com/sgl-project/sgl-amd-mono/pull/26) `[Feat] [MI355X] muse_spark: Whole-layer monokernels for Muse Spark` | rocm | main | - |
-| - | [#65](https://github.com/sgl-project/sgl-amd-mono/pull/65) `[Fix] deepseek_v41: Pass input_ids to SGLang's Engram so image rows stay in its gate` | bug | main | - |
-| - | [#71](https://github.com/sgl-project/sgl-amd-mono/pull/71) `[Feat] [MI355X] glm53_flash: Serve MTP verify steps on the monokernel` | rocm | main | - |
+| P0 | [#26](https://github.com/sgl-project/sgl-amd-mono/pull/26) `[Feat] [MI355X] muse_spark: Whole-layer monokernels for Muse Spark` | rocm | main | - |
+| P0 | [#65](https://github.com/sgl-project/sgl-amd-mono/pull/65) `[Fix] deepseek_v41: Pass input_ids to SGLang's Engram so image rows stay in its gate` | bug | main | - |
+| P0 | [#71](https://github.com/sgl-project/sgl-amd-mono/pull/71) `[Feat] [MI355X] glm53_flash: Serve MTP verify steps on the monokernel` | rocm | main | - |
 | - | [#83](https://github.com/sgl-project/sgl-amd-mono/pull/83) `[Feat] [MI355X] qwen38_a95b_mxfp4: Run each decoder layer's tail as one K2 launch` | quant,rocm | ? | - |
-| - | [#91](https://github.com/sgl-project/sgl-amd-mono/pull/91) `[Perf] [MI355X] deepseek_v41: Push gathered rows in whole 128 B lines` | perf,rocm | main | - |
-| - | [#94](https://github.com/sgl-project/sgl-amd-mono/pull/94) `[Fix] glm53_flash: Read the KDA layer cache from the linear-attention backend` | bug,perf | main | - |
-| - | [#97](https://github.com/sgl-project/sgl-amd-mono/pull/97) `[Fix] [MI355X] glm53_flash: Stop the sparse-attention fault on rows past 262,144 tokens` | bug,rocm | main | - |
-| - | [#98](https://github.com/sgl-project/sgl-amd-mono/pull/98) `[Feat] [MI355X] glm53_flash: Run verify steps of up to 16 rows on the monokernel` | rocm | main | - |
-| - | [#100](https://github.com/sgl-project/sgl-amd-mono/pull/100) `[Perf] [MI355X] glm53_flash: Score a verify request's index tiles once for its rows` | perf,rocm | main | - |
+| P0 | [#91](https://github.com/sgl-project/sgl-amd-mono/pull/91) `[Perf] [MI355X] deepseek_v41: Push gathered rows in whole 128 B lines` | perf,rocm | main | - |
+| P0 | [#94](https://github.com/sgl-project/sgl-amd-mono/pull/94) `[Fix] glm53_flash: Read the KDA layer cache from the linear-attention backend` | bug,perf | main | - |
+| P0 | [#97](https://github.com/sgl-project/sgl-amd-mono/pull/97) `[Fix] [MI355X] glm53_flash: Stop the sparse-attention fault on rows past 262,144 tokens` | bug,rocm | main | - |
+| P0 | [#98](https://github.com/sgl-project/sgl-amd-mono/pull/98) `[Feat] [MI355X] glm53_flash: Run verify steps of up to 16 rows on the monokernel` | rocm | main | - |
+| P0 | [#100](https://github.com/sgl-project/sgl-amd-mono/pull/100) `[Perf] [MI355X] glm53_flash: Score a verify request's index tiles once for its rows` | perf,rocm | main | - |
 | - | [#107](https://github.com/sgl-project/sgl-amd-mono/pull/107) `[CI] ci: Run the PR review guideline's checks on dedicated MI355X nodes, per PR and nightly` | infra,rocm | ? | - |
-| - | [#108](https://github.com/sgl-project/sgl-amd-mono/pull/108) `[Fix] [MI355X] kimi_k3: Size the warmup bank for the block-write row` | bug,rocm | main | - |
-| - | [#110](https://github.com/sgl-project/sgl-amd-mono/pull/110) `[Fix] [MI355X] glm53: Keep uv's output tile inside the declared LDS` | bug,rocm | main | - |
-| - | [#111](https://github.com/sgl-project/sgl-amd-mono/pull/111) `[Perf] [MI355X] kimi_k31: Make the routed experts' top-k, sort and mxfp8 quant in the wide launch` | perf,quant,rocm | ? | - |
-| - | [#112](https://github.com/sgl-project/sgl-amd-mono/pull/112) `[Fix] [MI355X] kimi_k31: Follow SGLang's column-tail row cap in the wide launch's exit` | bug,rocm | ? | - |
-| - | [#113](https://github.com/sgl-project/sgl-amd-mono/pull/113) `[Fix] [MI355X] kimi_k3/kimi_k31: Find a KDA layer's state through the backend's state_layer` | bug,rocm | ? | - |
+| P0 | [#108](https://github.com/sgl-project/sgl-amd-mono/pull/108) `[Fix] [MI355X] kimi_k3: Size the warmup bank for the block-write row` | bug,rocm | main | - |
+| P0 | [#110](https://github.com/sgl-project/sgl-amd-mono/pull/110) `[Fix] [MI355X] glm53: Keep uv's output tile inside the declared LDS` | bug,rocm | main | - |
+| P1 | [#111](https://github.com/sgl-project/sgl-amd-mono/pull/111) `[Perf] [MI355X] kimi_k31: Make the routed experts' top-k, sort and mxfp8 quant in the wide launch` | perf,quant,rocm | ? | - |
+| P1 | [#112](https://github.com/sgl-project/sgl-amd-mono/pull/112) `[Fix] [MI355X] kimi_k31: Follow SGLang's column-tail row cap in the wide launch's exit` | bug,rocm | ? | - |
+| P1 | [#113](https://github.com/sgl-project/sgl-amd-mono/pull/113) `[Fix] [MI355X] kimi_k3/kimi_k31: Find a KDA layer's state through the backend's state_layer` | bug,rocm | ? | - |
 | - | [#114](https://github.com/sgl-project/sgl-amd-mono/pull/114) `[Refactor] [MI355X] kimi_k31: Drop the wide launch's debug checks and A/B switches` | rocm | ? | - |
-| - | [#116](https://github.com/sgl-project/sgl-amd-mono/pull/116) `[Perf] [MI355X] kimi_k31: Feed aiter's BM16 presort from the wide launch (aux16)` | perf,rocm | main | - |
-| - | [#118](https://github.com/sgl-project/sgl-amd-mono/pull/118) `[Fix] deepseek_v41: Run the DSpark draft sampler and simulated accept on current SGLang` | bug | ? | - |
+| P0 | [#116](https://github.com/sgl-project/sgl-amd-mono/pull/116) `[Perf] [MI355X] kimi_k31: Feed aiter's BM16 presort from the wide launch (aux16)` | perf,rocm | main | - |
+| P1 | [#118](https://github.com/sgl-project/sgl-amd-mono/pull/118) `[Fix] deepseek_v41: Run the DSpark draft sampler and simulated accept on current SGLang` | bug | ? | - |
 | - | [#119](https://github.com/sgl-project/sgl-amd-mono/pull/119) `[CI] ci: Add the CI maintainers as code owners of the workflows and scripts/ci` | infra | ? | - |
 | - | [#121](https://github.com/sgl-project/sgl-amd-mono/pull/121) `[Fix] kimi_k3: Import require_mlp_sync from dp_attention on current SGLang` | bug | ? | - |
 | - | [#124](https://github.com/sgl-project/sgl-amd-mono/pull/124) `[Fix] test: Import get_tokenizer and patch require_mlp_sync where current SGLang defines them` | bug | ? | - |
@@ -4193,87 +4193,87 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#87](https://github.com/sgl-project/sgl-amd-mono/pull/87) `[Perf] [MI355X] deepseek_v41: Pipeline routed FFN-down FP4 weight loads through double-buffered LDS at TP2` | perf,quant,rocm | main | - |
-| - | [#101](https://github.com/sgl-project/sgl-amd-mono/pull/101) `[Feat] common: Check each compiled kernel's residency and scratch where a runner builds it` | perf | main | - |
+| P0 | [#87](https://github.com/sgl-project/sgl-amd-mono/pull/87) `[Perf] [MI355X] deepseek_v41: Pipeline routed FFN-down FP4 weight loads through double-buffered LDS at TP2` | perf,quant,rocm | main | - |
+| P0 | [#101](https://github.com/sgl-project/sgl-amd-mono/pull/101) `[Feat] common: Check each compiled kernel's residency and scratch where a runner builds it` | perf | main | - |
 | - | [#109](https://github.com/sgl-project/sgl-amd-mono/pull/109) `[CI] ci: Pin the PR test's two runners to Crusoe v3-060 and v3-123` | infra | ? | - |
-| - | [#115](https://github.com/sgl-project/sgl-amd-mono/pull/115) `[Perf] [MI355X] deepseek_v41: Cheaper attention and seam hand-offs, a lighter wo_b all-reduce, fewer index lau` | perf,rocm | main | - |
-| - | [#117](https://github.com/sgl-project/sgl-amd-mono/pull/117) `[Perf] [MI355X] deepseek_v41: Run TP4 decode and verify steps of 49-256 rows on vLLM's asm layer kernels` | perf,rocm | kevin/dsv41-flags-engram-pv-tp8 | - |
-| - | [#120](https://github.com/sgl-project/sgl-amd-mono/pull/120) `[Fix] deepseek_v41: Build the one-launch top-k against SGLang's top-k modes` | bug,infra | ? | - |
-| - | [#122](https://github.com/sgl-project/sgl-amd-mono/pull/122) `[Fix] kimi_k3: Refuse a MoE front that is not bf16, such as SGLang's static FP8 front` | bug,perf,quant | main | - |
+| P0 | [#115](https://github.com/sgl-project/sgl-amd-mono/pull/115) `[Perf] [MI355X] deepseek_v41: Cheaper attention and seam hand-offs, a lighter wo_b all-reduce, fewer index lau` | perf,rocm | main | - |
+| P0 | [#117](https://github.com/sgl-project/sgl-amd-mono/pull/117) `[Perf] [MI355X] deepseek_v41: Run TP4 decode and verify steps of 49-256 rows on vLLM's asm layer kernels` | perf,rocm | kevin/dsv41-flags-engram-pv-tp8 | - |
+| P1 | [#120](https://github.com/sgl-project/sgl-amd-mono/pull/120) `[Fix] deepseek_v41: Build the one-launch top-k against SGLang's top-k modes` | bug,infra | ? | - |
+| P0 | [#122](https://github.com/sgl-project/sgl-amd-mono/pull/122) `[Fix] kimi_k3: Refuse a MoE front that is not bf16, such as SGLang's static FP8 front` | bug,perf,quant | main | - |
 | - | [#127](https://github.com/sgl-project/sgl-amd-mono/pull/127) `[Feat] [MI355X] kimi_k3: Read the MoE front from bf16 copies kept at load when SGLang's is static FP8` | quant,rocm | ? | - |
-| - | [#128](https://github.com/sgl-project/sgl-amd-mono/pull/128) `[Perf] [MI355X] deepseek_v41: Per-row MoE at TP8 and TP4, flagless wo_a/wo_b and q hand-offs, warmed kernargs,` | perf,rocm | ? | - |
-| - | [#129](https://github.com/sgl-project/sgl-amd-mono/pull/129) `[Feat] [MI355X] glm53: Serve GLM-5.3 at TP2 (32 heads a rank), steps of up to 4 rows` | rocm | ? | - |
-| - | [#132](https://github.com/sgl-project/sgl-amd-mono/pull/132) `[Feat] [MI355X] kimi_k3: Support FP8 attention and bf16 ReplaySSM state safely` | quant,rocm | ? | - |
-| - | [#133](https://github.com/sgl-project/sgl-amd-mono/pull/133) `[Feat] [MI355X] glm53: Run verify steps of up to 16 rows on the monokernel` | rocm | main | - |
-| - | [#134](https://github.com/sgl-project/sgl-amd-mono/pull/134) `[Fix] kimi_k31: Reject non-float32 SSM state for the wide monokernel` | bug | main | - |
+| P1 | [#128](https://github.com/sgl-project/sgl-amd-mono/pull/128) `[Perf] [MI355X] deepseek_v41: Per-row MoE at TP8 and TP4, flagless wo_a/wo_b and q hand-offs, warmed kernargs,` | perf,rocm | ? | - |
+| P1 | [#129](https://github.com/sgl-project/sgl-amd-mono/pull/129) `[Feat] [MI355X] glm53: Serve GLM-5.3 at TP2 (32 heads a rank), steps of up to 4 rows` | rocm | ? | - |
+| P1 | [#132](https://github.com/sgl-project/sgl-amd-mono/pull/132) `[Feat] [MI355X] kimi_k3: Support FP8 attention and bf16 ReplaySSM state safely` | quant,rocm | ? | - |
+| P0 | [#133](https://github.com/sgl-project/sgl-amd-mono/pull/133) `[Feat] [MI355X] glm53: Run verify steps of up to 16 rows on the monokernel` | rocm | main | - |
+| P0 | [#134](https://github.com/sgl-project/sgl-amd-mono/pull/134) `[Fix] kimi_k31: Reject non-float32 SSM state for the wide monokernel` | bug | main | - |
 
 ### ATOM — Merged / closed (145 items)
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
 | - | [#1400](https://github.com/ROCm/ATOM/issues/1400) `[Issue]: DeepSeek-V4-Flash Memory access fault under 64/128 concurrency with 3000+ requests` |  | ? | - |
-| - | [#2364](https://github.com/ROCm/ATOM/pull/2364) `feat(sp): add Ulysses sequence parallelism and optimize M3 prefill communication` | infra,perf | ? | - |
+| P1 | [#2364](https://github.com/ROCm/ATOM/pull/2364) `feat(sp): add Ulysses sequence parallelism and optimize M3 prefill communication` | infra,perf | ? | - |
 | - | [#2453](https://github.com/ROCm/ATOM/pull/2453) `[1/3 entrypoint refactor] [feat(mesh)]: unify multi-API ingress for HTTP and ext-proc` | infra | ? | - |
-| - | [#2489](https://github.com/ROCm/ATOM/pull/2489) `[gfx1250] Add ATOM_MLA_ABSORB_BF16: keep MLA-absorb weights in BF16` | rocm | main | - |
+| P0 | [#2489](https://github.com/ROCm/ATOM/pull/2489) `[gfx1250] Add ATOM_MLA_ABSORB_BF16: keep MLA-absorb weights in BF16` | rocm | main | - |
 | - | [#2581](https://github.com/ROCm/ATOM/pull/2581) `feat(kimi-k3): DFlash GQA speculative draft model` | infra | ? | - |
 | - | [#2582](https://github.com/ROCm/ATOM/pull/2582) `feat(spec-decode): probability-ratio rejection sampling behind draft_probs` | infra | ? | - |
 | - | [#2598](https://github.com/ROCm/ATOM/pull/2598) `DeepSeek-V4.1-Flash: LMCache tier offload through the MP server (vLLM plugin)` | infra | ? | - |
-| - | [#2655](https://github.com/ROCm/ATOM/pull/2655) `fix(qwen4-exp): register the QSA FP8 scale planes for KV offload` | bug,infra,quant | lingzha/qwen38-lmcache | - |
-| - | [#2663](https://github.com/ROCm/ATOM/pull/2663) `feat(spec): capture the Qwen3.8 MTP draft steps in CUDA graphs (MRoPE)` | infra,nvidia | ? | - |
+| P0 | [#2655](https://github.com/ROCm/ATOM/pull/2655) `fix(qwen4-exp): register the QSA FP8 scale planes for KV offload` | bug,infra,quant | lingzha/qwen38-lmcache | - |
+| P1 | [#2663](https://github.com/ROCm/ATOM/pull/2663) `feat(spec): capture the Qwen3.8 MTP draft steps in CUDA graphs (MRoPE)` | infra,nvidia | ? | - |
 | - | [#2668](https://github.com/ROCm/ATOM/pull/2668) `fix(offload): refresh state images in LMCache's LRU on every tier hit and keep the index consistent` | bug,infra | ? | - |
-| - | [#2691](https://github.com/ROCm/ATOM/pull/2691) `fix(mxfp4): pad an MLP pair's K inside the parallel linears; refuse an unaligned K at load` | bug,perf,quant | main | - |
-| - | [#2707](https://github.com/ROCm/ATOM/pull/2707) `perf(qwen3.5): Triton top-k router + pad the 513-row MoE router weight to 528` | infra,perf,rocm | ? | - |
+| P0 | [#2691](https://github.com/ROCm/ATOM/pull/2691) `fix(mxfp4): pad an MLP pair's K inside the parallel linears; refuse an unaligned K at load` | bug,perf,quant | main | - |
+| P1 | [#2707](https://github.com/ROCm/ATOM/pull/2707) `perf(qwen3.5): Triton top-k router + pad the 513-row MoE router weight to 528` | infra,perf,rocm | ? | - |
 | - | [#2709](https://github.com/ROCm/ATOM/pull/2709) `feat(kimi-k3): PP8 P/D prefill 1/4 — PAGE-backed state checkpoints under PP` | infra | ? | - |
-| - | [#2715](https://github.com/ROCm/ATOM/pull/2715) `[MLA] Plan a padded sparse MTP verify's work over the real tokens only` |  | ? | - |
+| P1 | [#2715](https://github.com/ROCm/ATOM/pull/2715) `[MLA] Plan a padded sparse MTP verify's work over the real tokens only` |  | ? | - |
 | - | [#2721](https://github.com/ROCm/ATOM/pull/2721) `[MiniMax-M3.1] P/D from a PP4 prefill into a TP4 decode (1/2: KV transfer)` | infra | ? | - |
 | - | [#2752](https://github.com/ROCm/ATOM/pull/2752) `[Offload] Support M3 PAGE layouts in Mooncake Store` | infra | ? | - |
 | - | [#2755](https://github.com/ROCm/ATOM/pull/2755) `feat(dp): prefix-spread DP routing with native Mooncake Store recovery` | infra | ? | - |
 | - | [#2762](https://github.com/ROCm/ATOM/pull/2762) `review-pr: port the automated PR-review pipeline from aiter as rocm-atom-bot (P0)` | infra,rocm | ? | - |
-| - | [#2771](https://github.com/ROCm/ATOM/pull/2771) `perf(qwen4_exp): keep the PLE n-gram table in page-locked host memory, read over UVA` | infra,perf | ? | - |
+| P1 | [#2771](https://github.com/ROCm/ATOM/pull/2771) `perf(qwen4_exp): keep the PLE n-gram table in page-locked host memory, read over UVA` | infra,perf | ? | - |
 | - | [#2808](https://github.com/ROCm/ATOM/pull/2808) `feat(deepseek_v41): fuse DSpark context-KV main_norm + group32 quantize_fp8` | perf,quant | ? | - |
 | - | [#2809](https://github.com/ROCm/ATOM/pull/2809) `feat(indexer): migrate V4 and V4.1 FP4 scoring to the OPUS config API` | infra,quant | ? | - |
 | - | [#2831](https://github.com/ROCm/ATOM/pull/2831) `feat(dsv41): fuse wo_a->wo_b mxfp8 quant into the batched GEMM epilogue` | perf,quant | ? | - |
-| - | [#2847](https://github.com/ROCm/ATOM/pull/2847) `perf(qwen4_exp): Qwen3.8-Flash-Next TP prefill follow-ups: drafter FlyDSL QSA, row-sharded indexer selection, ` | infra,perf,rocm | ? | - |
-| - | [#2864](https://github.com/ROCm/ATOM/issues/2864) `V4.1 compatibility: API completion, beta endpoints, and image support` |  | ? | - |
-| - | [#2869](https://github.com/ROCm/ATOM/pull/2869) `[Qwen3.5] Fix NaN decoding from stale PAGE checkpoint bytes reused as KV` | bug,risk | alizaidy/gfx1250-qwen-support | - |
-| - | [#2932](https://github.com/ROCm/ATOM/pull/2932) `fix(engram): serialize UVA registration across DP ranks and register in 1 GiB chunks` | bug,infra | ? | - |
-| - | [#2933](https://github.com/ROCm/ATOM/pull/2933) `fix(dsv41): quantize the fused shared-expert activation for native MX w2` | bug,infra,perf,quant | ? | - |
-| - | [#2938](https://github.com/ROCm/ATOM/pull/2938) `perf(kimi-k3): read a strided AttnRes block residual without copying it` | perf | ? | - |
-| - | [#2962](https://github.com/ROCm/ATOM/pull/2962) `[MiniMax-M3.1] MXFP4 index cache and MXFP4 KV cache (--index-cache-dtype fp4, --kv-cache-dtype fp4)` | infra,perf,quant | ? | - |
-| - | [#2985](https://github.com/ROCm/ATOM/pull/2985) `fix(ci): one local-model completeness check for SGLang/vLLM accuracy; new prefill CP flags; wait for SGLang wa` | bug,infra,risk | ? | - |
-| - | [#2986](https://github.com/ROCm/ATOM/pull/2986) `fix(ci): run DeepSeek-V3.2-FP8 DP/EP on SGLang with ATOM_FUSE_SHARED_EXPERT=0` | bug,infra,perf,quant | ? | - |
+| P1 | [#2847](https://github.com/ROCm/ATOM/pull/2847) `perf(qwen4_exp): Qwen3.8-Flash-Next TP prefill follow-ups: drafter FlyDSL QSA, row-sharded indexer selection, ` | infra,perf,rocm | ? | - |
+| P1 | [#2864](https://github.com/ROCm/ATOM/issues/2864) `V4.1 compatibility: API completion, beta endpoints, and image support` |  | ? | - |
+| P0 | [#2869](https://github.com/ROCm/ATOM/pull/2869) `[Qwen3.5] Fix NaN decoding from stale PAGE checkpoint bytes reused as KV` | bug,risk | alizaidy/gfx1250-qwen-support | - |
+| P1 | [#2932](https://github.com/ROCm/ATOM/pull/2932) `fix(engram): serialize UVA registration across DP ranks and register in 1 GiB chunks` | bug,infra | ? | - |
+| P1 | [#2933](https://github.com/ROCm/ATOM/pull/2933) `fix(dsv41): quantize the fused shared-expert activation for native MX w2` | bug,infra,perf,quant | ? | - |
+| P1 | [#2938](https://github.com/ROCm/ATOM/pull/2938) `perf(kimi-k3): read a strided AttnRes block residual without copying it` | perf | ? | - |
+| P1 | [#2962](https://github.com/ROCm/ATOM/pull/2962) `[MiniMax-M3.1] MXFP4 index cache and MXFP4 KV cache (--index-cache-dtype fp4, --kv-cache-dtype fp4)` | infra,perf,quant | ? | - |
+| P1 | [#2985](https://github.com/ROCm/ATOM/pull/2985) `fix(ci): one local-model completeness check for SGLang/vLLM accuracy; new prefill CP flags; wait for SGLang wa` | bug,infra,risk | ? | - |
+| P1 | [#2986](https://github.com/ROCm/ATOM/pull/2986) `fix(ci): run DeepSeek-V3.2-FP8 DP/EP on SGLang with ATOM_FUSE_SHARED_EXPERT=0` | bug,infra,perf,quant | ? | - |
 | - | [#2987](https://github.com/ROCm/ATOM/pull/2987) `[ATOMesh][CI] Enable Kimi K3 WideEP DPA16/EP16 with MoRI EP and add MoRI cases into nightly runs` | infra | ? | - |
 | - | [#2993](https://github.com/ROCm/ATOM/pull/2993) `fix(qwen38): mono draft fallback without a RoPE cache; QSA RoPE at ATOM's MRoPE positions` | bug,infra,perf | ? | - |
-| - | [#3020](https://github.com/ROCm/ATOM/pull/3020) `perf(dsv41): fold the shared-expert add into the MoE TP all-reduce via HIP Lamport kernel` | infra,perf,rocm | ? | - |
-| - | [#3023](https://github.com/ROCm/ATOM/pull/3023) `[fix] Kimi-K3.1 DSpark under PP: share the target's embedding on the last stage` | bug,infra | ? | - |
-| - | [#3027](https://github.com/ROCm/ATOM/pull/3027) `fix(offload): key multimodal prompts by media, one LMCache engine id per server; a native MP restore has its o` | bug,infra | ? | - |
-| - | [#3029](https://github.com/ROCm/ATOM/issues/3029) `vLLM plugin + ATOM offload: multimodal LMCache keys ignore the media, and two servers on one host share an eng` |  | ? | - |
-| - | [#3034](https://github.com/ROCm/ATOM/pull/3034) `feat(minimax-m3): enable native 1x32 MXFP8 preshuffle GEMM` | infra,quant | main | - |
+| P1 | [#3020](https://github.com/ROCm/ATOM/pull/3020) `perf(dsv41): fold the shared-expert add into the MoE TP all-reduce via HIP Lamport kernel` | infra,perf,rocm | ? | - |
+| P1 | [#3023](https://github.com/ROCm/ATOM/pull/3023) `[fix] Kimi-K3.1 DSpark under PP: share the target's embedding on the last stage` | bug,infra | ? | - |
+| P1 | [#3027](https://github.com/ROCm/ATOM/pull/3027) `fix(offload): key multimodal prompts by media, one LMCache engine id per server; a native MP restore has its o` | bug,infra | ? | - |
+| P0 | [#3029](https://github.com/ROCm/ATOM/issues/3029) `vLLM plugin + ATOM offload: multimodal LMCache keys ignore the media, and two servers on one host share an eng` |  | ? | - |
+| P0 | [#3034](https://github.com/ROCm/ATOM/pull/3034) `feat(minimax-m3): enable native 1x32 MXFP8 preshuffle GEMM` | infra,quant | main | - |
 | - | [#3036](https://github.com/ROCm/ATOM/pull/3036) `feat(api): add DeepSeek's beta FIM and assistant-prefix completion` | infra | ? | - |
-| - | [#3038](https://github.com/ROCm/ATOM/pull/3038) `[MiniMax-M3.1] P/D from a PP4 prefill into a TP4 decode (2/2: DSpark)` | infra | ? | - |
-| - | [#3048](https://github.com/ROCm/ATOM/pull/3048) `[DCP] Add a `mailbox` decode merge backend on aiter's FlyDSL `dcp_lse_combine`` | infra,rocm | main | - |
-| - | [#3051](https://github.com/ROCm/ATOM/issues/3051) `[Kimi-K3.1][DCP8] Long decodes collapse into repeated token 0 (`!!!!`) and later lose the prompt under TP8 + D` |  | ? | - |
-| - | [#3052](https://github.com/ROCm/ATOM/pull/3052) `fix(attention): accept optional explicit FlyDSL plans` | bug,infra,rocm | ? | - |
-| - | [#3059](https://github.com/ROCm/ATOM/pull/3059) `[Lumen-RL] Pause and resume generation; preempt before the KV pool or the weights change` | bug | ? | - |
+| P1 | [#3038](https://github.com/ROCm/ATOM/pull/3038) `[MiniMax-M3.1] P/D from a PP4 prefill into a TP4 decode (2/2: DSpark)` | infra | ? | - |
+| P0 | [#3048](https://github.com/ROCm/ATOM/pull/3048) `[DCP] Add a `mailbox` decode merge backend on aiter's FlyDSL `dcp_lse_combine`` | infra,rocm | main | - |
+| P0 | [#3051](https://github.com/ROCm/ATOM/issues/3051) `[Kimi-K3.1][DCP8] Long decodes collapse into repeated token 0 (`!!!!`) and later lose the prompt under TP8 + D` |  | ? | - |
+| P1 | [#3052](https://github.com/ROCm/ATOM/pull/3052) `fix(attention): accept optional explicit FlyDSL plans` | bug,infra,rocm | ? | - |
+| P1 | [#3059](https://github.com/ROCm/ATOM/pull/3059) `[Lumen-RL] Pause and resume generation; preempt before the KV pool or the weights change` | bug | ? | - |
 | - | [#3060](https://github.com/ROCm/ATOM/pull/3060) `fix(qwen3): tie the LM head to the embedding's Parameter` | bug | ? | - |
-| - | [#3061](https://github.com/ROCm/ATOM/pull/3061) `feat(api): hold Kimi-K3 tool calls to their schemas with the structured-output grammar` |  | ? | - |
-| - | [#3062](https://github.com/ROCm/ATOM/pull/3062) `fix(ci): read the SGLang benchmark matrix from a file in the summary job` | bug,infra,perf | ? | - |
-| - | [#3063](https://github.com/ROCm/ATOM/pull/3063) `fix(kimi-k3.1): include DSA index keys in offload` | bug,infra | main | - |
-| - | [#3071](https://github.com/ROCm/ATOM/pull/3071) `ci: remove Atomesh TW weekly schedule` | infra | ? | - |
-| - | [#3072](https://github.com/ROCm/ATOM/pull/3072) `fix(config): key the compile cache on max_num_batched_tokens and kv_cache_dtype` | bug,infra,perf | ? | - |
-| - | [#3073](https://github.com/ROCm/ATOM/pull/3073) `fix(compile): format Inductor's implicit-fallback log text only when emitted` | bug,infra | ? | - |
-| - | [#3075](https://github.com/ROCm/ATOM/pull/3075) `fix(moe): drop the missing-route clear from comm-fused MoE` | bug,infra,perf | ? | - |
-| - | [#3076](https://github.com/ROCm/ATOM/pull/3076) `fix(moe): preserve invalid DP rows when reassigning shared experts` | bug,infra | ? | - |
-| - | [#3078](https://github.com/ROCm/ATOM/issues/3078) `[Issue]: Scheduled regression reruns skip labelled benchmark variants and can suppress the [Perf Regression] i` | bug,perf | ? | - |
+| P1 | [#3061](https://github.com/ROCm/ATOM/pull/3061) `feat(api): hold Kimi-K3 tool calls to their schemas with the structured-output grammar` |  | ? | - |
+| P1 | [#3062](https://github.com/ROCm/ATOM/pull/3062) `fix(ci): read the SGLang benchmark matrix from a file in the summary job` | bug,infra,perf | ? | - |
+| P0 | [#3063](https://github.com/ROCm/ATOM/pull/3063) `fix(kimi-k3.1): include DSA index keys in offload` | bug,infra | main | - |
+| P1 | [#3071](https://github.com/ROCm/ATOM/pull/3071) `ci: remove Atomesh TW weekly schedule` | infra | ? | - |
+| P1 | [#3072](https://github.com/ROCm/ATOM/pull/3072) `fix(config): key the compile cache on max_num_batched_tokens and kv_cache_dtype` | bug,infra,perf | ? | - |
+| P1 | [#3073](https://github.com/ROCm/ATOM/pull/3073) `fix(compile): format Inductor's implicit-fallback log text only when emitted` | bug,infra | ? | - |
+| P1 | [#3075](https://github.com/ROCm/ATOM/pull/3075) `fix(moe): drop the missing-route clear from comm-fused MoE` | bug,infra,perf | ? | - |
+| P1 | [#3076](https://github.com/ROCm/ATOM/pull/3076) `fix(moe): preserve invalid DP rows when reassigning shared experts` | bug,infra | ? | - |
+| P1 | [#3078](https://github.com/ROCm/ATOM/issues/3078) `[Issue]: Scheduled regression reruns skip labelled benchmark variants and can suppress the [Perf Regression] i` | bug,perf | ? | - |
 | - | [#3080](https://github.com/ROCm/ATOM/pull/3080) `[gfx1250][GDN] Prefill chain: conv1d, fused KKT+inverse, chunk_h, chunk_o closer to roofline` | perf,rocm | ? | - |
 | - | [#3083](https://github.com/ROCm/ATOM/pull/3083) `feat(sampler): opt in to independent per-row sampling noise` |  | ? | - |
 | - | [#3090](https://github.com/ROCm/ATOM/pull/3090) `feat(api): strict function tools on /beta/chat/completions (BETA-03)` | infra | ? | - |
-| - | [#3091](https://github.com/ROCm/ATOM/pull/3091) `[DeepSeek-V4.1] High-interactivity monokernel decode for DeepSeek-V4.1-Flash on MI355X (TP4, DSpark)` | infra,rocm | ? | - |
+| P1 | [#3091](https://github.com/ROCm/ATOM/pull/3091) `[DeepSeek-V4.1] High-interactivity monokernel decode for DeepSeek-V4.1-Flash on MI355X (TP4, DSpark)` | infra,rocm | ? | - |
 | - | [#3092](https://github.com/ROCm/ATOM/issues/3092) `ATOM main broken by aiter PR#6952: pa_mqa_logits_mxfp4_plan removed` | quant,rocm | ? | - |
-| - | [#3098](https://github.com/ROCm/ATOM/pull/3098) `fix(dspark): allocate k draft KV positions for block drafters, not k-1` | bug | main | - |
+| P0 | [#3098](https://github.com/ROCm/ATOM/pull/3098) `fix(dspark): allocate k draft KV positions for block drafters, not k-1` | bug | main | - |
 | - | [#3105](https://github.com/ROCm/ATOM/pull/3105) `Fix delayed P/D KV completion reporting during empty engine steps` | bug,infra | ? | - |
 | - | [#3106](https://github.com/ROCm/ATOM/pull/3106) `fix(scheduler): stop bounding the delayer's fill probe by prompt length` | bug | ? | - |
-| - | [#3108](https://github.com/ROCm/ATOM/pull/3108) `fix(attention): drop the FlyDSL paged-decode API probe` | bug,rocm | main | - |
+| P0 | [#3108](https://github.com/ROCm/ATOM/pull/3108) `fix(attention): drop the FlyDSL paged-decode API probe` | bug,rocm | main | - |
 | - | [#3109](https://github.com/ROCm/ATOM/pull/3109) `[DSV4.1][gfx1250] Single-launch decode step (FlyDSL)` | rocm | ? | - |
 | - | [#3110](https://github.com/ROCm/ATOM/pull/3110) `[DSV4.1] Quantize the MXFP8 query 8 heads a program in the rope/window seam` | infra,quant | ? | - |
 | - | [#3111](https://github.com/ROCm/ATOM/pull/3111) `fix(api): check and load Chat images in the server (IMAGE-03/04)` | bug,infra | ? | - |
@@ -4294,7 +4294,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3155](https://github.com/ROCm/ATOM/pull/3155) `fix(k3-offload): fence the in-process state store on the slot->PAGE copy` | bug | ? | - |
 | - | [#3157](https://github.com/ROCm/ATOM/issues/3157) `Warm routed AITER plugin ops before capture_cudagraph(): decode-only ops are never reached by warmup_model()` | rocm | ? | - |
 | - | [#3160](https://github.com/ROCm/ATOM/issues/3160) `Qwen3.8 QSA prefill: 'context_lens must contain N entries' at concurrency > 6 since #3136` |  | ? | - |
-| - | [#3167](https://github.com/ROCm/ATOM/pull/3167) `fix(qwen4_exp): page QSA through the scheduled requests' block-table rows` | bug,infra | ? | - |
+| P1 | [#3167](https://github.com/ROCm/ATOM/pull/3167) `fix(qwen4_exp): page QSA through the scheduled requests' block-table rows` | bug,infra | ? | - |
 | - | [#3168](https://github.com/ROCm/ATOM/pull/3168) `docs(readme): add the ATOM Meets Mooncake blog to News` |  | ? | - |
 | - | [#3169](https://github.com/ROCm/ATOM/pull/3169) `fix(v4): run V4's TBO comm stream at high priority` | bug,infra | ? | - |
 | - | [#3170](https://github.com/ROCm/ATOM/pull/3170) `docs(readme): add the FlyDSL mono kernels blog to News` | perf,rocm | ? | - |
@@ -4302,21 +4302,21 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3177](https://github.com/ROCm/ATOM/issues/3177) `DSV4.1-Flash crash on gfx1250: hidden_states is None in postprocess after V4.1 single-launch step` | bug,rocm | ? | - |
 | - | [#3181](https://github.com/ROCm/ATOM/pull/3181) `docker: bump Mooncake to kvcache-ai/Mooncake@206d634 (THP-backed RDMA Store segments)` | infra | ? | - |
 | - | [#3182](https://github.com/ROCm/ATOM/pull/3182) `test(dspark): pass the block pass to _stage_anchors in the served-step test` |  | ? | - |
-| - | [#3184](https://github.com/ROCm/ATOM/pull/3184) `fix(qwen38): mono target and draft programs write the QSA RoPE position cache` | bug,perf | main | - |
+| P0 | [#3184](https://github.com/ROCm/ATOM/pull/3184) `fix(qwen38): mono target and draft programs write the QSA RoPE position cache` | bug,perf | main | - |
 | - | [#3185](https://github.com/ROCm/ATOM/pull/3185) `[DSV4.1][gfx1250] Fix the crash on a single-launch served step: no hidden states for the drafter's ids (#3177)` | bug,infra,rocm | ? | - |
-| - | [#3189](https://github.com/ROCm/ATOM/pull/3189) `fix(plugin): start DeepSeek-V4.1 on the vLLM plugin again after #3136` | bug | ? | - |
-| - | [#3192](https://github.com/ROCm/ATOM/issues/3192) `[Qwen3.8 mono] With FlyDSL 0.5.0, every MonoKernel.launch re-traces the whole program, so decode is ~300x slow` | perf,rocm | ? | - |
+| P1 | [#3189](https://github.com/ROCm/ATOM/pull/3189) `fix(plugin): start DeepSeek-V4.1 on the vLLM plugin again after #3136` | bug | ? | - |
+| P0 | [#3192](https://github.com/ROCm/ATOM/issues/3192) `[Qwen3.8 mono] With FlyDSL 0.5.0, every MonoKernel.launch re-traces the whole program, so decode is ~300x slow` | perf,rocm | ? | - |
 | - | [#3204](https://github.com/ROCm/ATOM/pull/3204) `docs(recipes): refresh the DeepSeek-V4.1-Flash agentic recipe settings` |  | ? | - |
 | - | [#3216](https://github.com/ROCm/ATOM/pull/3216) `dp_routing follow-up: prefix_spread single lookup walk + radix re-merge, dp_routing package` |  | ? | - |
 | - | [#3217](https://github.com/ROCm/ATOM/pull/3217) `scheduler: re-rank waiting only on a load event; preempt and parked partials queue behind settled offload resu` | infra | ? | - |
 | - | [#3218](https://github.com/ROCm/ATOM/pull/3218) `ci: run the agentic benchmarks on the pitt MI350X pool` | infra,perf,rocm | ? | - |
-| - | [#3226](https://github.com/ROCm/ATOM/pull/3226) `fix(mono): launch the Qwen3.8 and DeepSeek-V4.1 hi programs through their compiled functions` | bug | main | - |
+| P0 | [#3226](https://github.com/ROCm/ATOM/pull/3226) `fix(mono): launch the Qwen3.8 and DeepSeek-V4.1 hi programs through their compiled functions` | bug | main | - |
 | - | [#3229](https://github.com/ROCm/ATOM/pull/3229) `prefix_spread: trim/evict counters and the budget trade-off (follow-up to #3216)` | infra | ? | - |
 | - | [#3230](https://github.com/ROCm/ATOM/pull/3230) `ci(vllm): benchmark the PR CI models at the SGLang concurrencies, drop GLM-5.2-MXFP4-MTP` | infra,perf,quant | ? | - |
 | - | [#3232](https://github.com/ROCm/ATOM/pull/3232) `ci(mesh): skip the mocker benchmark and empty accuracy runs on PRs, fix the mocker cargo cache` | bug,infra,perf,risk | ? | - |
 | - | [#3233](https://github.com/ROCm/ATOM/pull/3233) `docs(recipes): match the DeepSeek-V4.1-Flash agentic recipe to the InferenceX config` | infra | ? | - |
-| - | [#3237](https://github.com/ROCm/ATOM/pull/3237) `fix(qwen38): use aiter's FlyDSL QSA prefill scorer instead of the vendored copy` | bug,rocm | ? | - |
-| - | [#3240](https://github.com/ROCm/ATOM/issues/3240) `Kimi-K3.1 prefill: a 16K chunk as fast as SGLang's (1164 ms vs 837 ms)` |  | ? | - |
+| P1 | [#3237](https://github.com/ROCm/ATOM/pull/3237) `fix(qwen38): use aiter's FlyDSL QSA prefill scorer instead of the vendored copy` | bug,rocm | ? | - |
+| P1 | [#3240](https://github.com/ROCm/ATOM/issues/3240) `Kimi-K3.1 prefill: a 16K chunk as fast as SGLang's (1164 ms vs 837 ms)` |  | ? | - |
 | - | [#3241](https://github.com/ROCm/ATOM/issues/3241) `Bring ROCm/ATOM#3042 and #3099 into whx/k31-perf for recipe F8` | perf,rocm | ? | - |
 | - | [#3242](https://github.com/ROCm/ATOM/issues/3242) `Kimi-K3.1 16K prefill benchmark harness` | perf | ? | - |
 | - | [#3243](https://github.com/ROCm/ATOM/issues/3243) `Kimi-K3.1 DCP sparse prefill at its native 96 heads` |  | ? | - |
@@ -4339,10 +4339,10 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3281](https://github.com/ROCm/ATOM/pull/3281) `Row-shard Kimi-K3.1's latent MoE tail on large prefill steps` |  | ? | - |
 | - | [#3282](https://github.com/ROCm/ATOM/pull/3282) `Plan Kimi-K3.1 DCP sparse prefill MLA work once a forward` |  | ? | - |
 | - | [#3283](https://github.com/ROCm/ATOM/pull/3283) `Fuse Kimi-K3 KDA decode conv1d, f_b_proj and ReplaySSM into one kernel` | perf | ? | - |
-| - | [#3284](https://github.com/ROCm/ATOM/pull/3284) `Store a flushing ReplaySSM step's k / g records after every V slice replays them` |  | whx/k31-perf | - |
+| P0 | [#3284](https://github.com/ROCm/ATOM/pull/3284) `Store a flushing ReplaySSM step's k / g records after every V slice replays them` |  | whx/k31-perf | - |
 | - | [#3285](https://github.com/ROCm/ATOM/issues/3285) `DSV4.1-Flash DEP4 crash: hipErrorInvalidValue in DSPark compute_draft_kv on gfx1250` | bug,rocm | ? | - |
 | - | [#3286](https://github.com/ROCm/ATOM/pull/3286) `Send the Kimi-K3.1 DCP sparse prefill output to the all-to-all head-major` |  | ? | - |
-| - | [#3287](https://github.com/ROCm/ATOM/pull/3287) `Row-shard Kimi-K3.1's latent MoE tail only from 8192 tokens` |  | ? | - |
+| P1 | [#3287](https://github.com/ROCm/ATOM/pull/3287) `Row-shard Kimi-K3.1's latent MoE tail only from 8192 tokens` |  | ? | - |
 | - | [#3288](https://github.com/ROCm/ATOM/pull/3288) `Row-shard Kimi-K3.1's attention residual before each MoE on large prefill steps` |  | ? | - |
 | - | [#3291](https://github.com/ROCm/ATOM/pull/3291) `Gather the DCP decode top-k candidates on the last dim` |  | ? | - |
 | - | [#3292](https://github.com/ROCm/ATOM/pull/3292) `review-pr: make a failed review's notice prove it landed` |  | ? | - |
@@ -4351,7 +4351,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3303](https://github.com/ROCm/ATOM/pull/3303) `Allocate Kimi-K3.1's block-residual bank once per forward` |  | ? | - |
 | - | [#3314](https://github.com/ROCm/ATOM/pull/3314) `Send the DCP sparse prefill output all-to-all in FP8 behind ATOM_DCP_PREFILL_A2A_FP8` | quant | ? | - |
 | - | [#3317](https://github.com/ROCm/ATOM/pull/3317) `Leave the row-sharded MoE layers' zero addends unwritten` |  | ? | - |
-| - | [#3319](https://github.com/ROCm/ATOM/pull/3319) `Overlap the DSA indexer's top-k exchange with the q path` | bug,perf | ? | - |
+| P1 | [#3319](https://github.com/ROCm/ATOM/pull/3319) `Overlap the DSA indexer's top-k exchange with the q path` | bug,perf | ? | - |
 | - | [#3320](https://github.com/ROCm/ATOM/pull/3320) `Run Kimi-K3.1's MoE front linears as one BF16 GEMM` |  | ? | - |
 | - | [#3327](https://github.com/ROCm/ATOM/pull/3327) `Hoist the DCP indexer FP4 staging's OPUS scale index into the metadata builder` | quant | ? | - |
 | - | [#3329](https://github.com/ROCm/ATOM/pull/3329) `Reduce Kimi-K3.1's latent and shared MoE partials with one all-reduce` |  | ? | - |
@@ -4361,16 +4361,16 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#2842](https://github.com/ROCm/ATOM/pull/2842) `fix(state checkpoints): keep block 0 a zero null page and zero released PAGE units` | bug,infra | main | - |
-| - | [#2980](https://github.com/ROCm/ATOM/pull/2980) `feat(k3-mono): read FP8 dense projections in place` | quant | main | - |
-| - | [#3046](https://github.com/ROCm/ATOM/pull/3046) `[API] Offloaded chat preparation reuses a session's earlier turns (ATOM_API_OFFLOAD_TOKENIZE_CACHE_MB)` |  | ? | - |
-| - | [#3047](https://github.com/ROCm/ATOM/issues/3047) `[Perf Regression] 23 config(s) regressed @ 64412f10` | bug,perf | ? | - |
-| - | [#3049](https://github.com/ROCm/ATOM/pull/3049) `perf(minimax-m3): quantize the dense MLP activation in the SwiGLU kernel` | perf,quant | ? | - |
-| - | [#3053](https://github.com/ROCm/ATOM/pull/3053) `feat(kimi-k3): fuse o_proj's E8M0 activation quant into the KDA gated norm` | perf,quant | ? | - |
-| - | [#3054](https://github.com/ROCm/ATOM/pull/3054) `feat(kimi-k3): fold the consumer's E8M0 activation quant into the attention residual` | quant | ? | - |
-| - | [#3064](https://github.com/ROCm/ATOM/pull/3064) `[MiniMax-M3.1] Windowed DSpark draft KV (1/4): the scheduler's window pool` |  | ? | - |
-| - | [#3065](https://github.com/ROCm/ATOM/pull/3065) `[MiniMax-M3.1] Windowed DSpark draft KV (2/4): the block pass reads and writes through a windowed table` |  | ? | - |
-| - | [#3066](https://github.com/ROCm/ATOM/pull/3066) `[MiniMax-M3.1] Windowed DSpark draft KV (3/4): send only the consumer's window over Mooncake P/D` |  | ? | - |
+| P0 | [#2842](https://github.com/ROCm/ATOM/pull/2842) `fix(state checkpoints): keep block 0 a zero null page and zero released PAGE units` | bug,infra | main | - |
+| P0 | [#2980](https://github.com/ROCm/ATOM/pull/2980) `feat(k3-mono): read FP8 dense projections in place` | quant | main | - |
+| P1 | [#3046](https://github.com/ROCm/ATOM/pull/3046) `[API] Offloaded chat preparation reuses a session's earlier turns (ATOM_API_OFFLOAD_TOKENIZE_CACHE_MB)` |  | ? | - |
+| P1 | [#3047](https://github.com/ROCm/ATOM/issues/3047) `[Perf Regression] 23 config(s) regressed @ 64412f10` | bug,perf | ? | - |
+| P1 | [#3049](https://github.com/ROCm/ATOM/pull/3049) `perf(minimax-m3): quantize the dense MLP activation in the SwiGLU kernel` | perf,quant | ? | - |
+| P1 | [#3053](https://github.com/ROCm/ATOM/pull/3053) `feat(kimi-k3): fuse o_proj's E8M0 activation quant into the KDA gated norm` | perf,quant | ? | - |
+| P1 | [#3054](https://github.com/ROCm/ATOM/pull/3054) `feat(kimi-k3): fold the consumer's E8M0 activation quant into the attention residual` | quant | ? | - |
+| P1 | [#3064](https://github.com/ROCm/ATOM/pull/3064) `[MiniMax-M3.1] Windowed DSpark draft KV (1/4): the scheduler's window pool` |  | ? | - |
+| P1 | [#3065](https://github.com/ROCm/ATOM/pull/3065) `[MiniMax-M3.1] Windowed DSpark draft KV (2/4): the block pass reads and writes through a windowed table` |  | ? | - |
+| P1 | [#3066](https://github.com/ROCm/ATOM/pull/3066) `[MiniMax-M3.1] Windowed DSpark draft KV (3/4): send only the consumer's window over Mooncake P/D` |  | ? | - |
 | - | [#3081](https://github.com/ROCm/ATOM/pull/3081) `[DO NOT MERGE] [gfx1250][GDN] Prefill chain: conv1d, fused KKT+inverse, chunk_h, chunk_o closer to roofline` | perf,rocm | ? | - |
 | - | [#3082](https://github.com/ROCm/ATOM/pull/3082) `Share the DeepSeek-V4 target with SGLang's DSpark draft` |  | ? | - |
 | - | [#3084](https://github.com/ROCm/ATOM/pull/3084) `[SP] Fuse the MiniMax-M3 QKV GEMM with the Ulysses exchange via AITER gemm_fusion` | bug,perf,rocm | ? | - |
@@ -4378,16 +4378,16 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3086](https://github.com/ROCm/ATOM/pull/3086) `[Engine] ATOM_EARLY_PREFILL_SCHEDULE on independent DP ranks (measured slower on Qwen3.5 DP4; flag stays off)` | perf | ? | - |
 | - | [#3087](https://github.com/ROCm/ATOM/pull/3087) `refactor(mono): set FlyDSL's target arch through FLYDSL_GPU_ARCH only` | infra,rocm | ? | - |
 | - | [#3088](https://github.com/ROCm/ATOM/pull/3088) `[Docs] Add contributing guide, area contacts and review guide` |  | ? | - |
-| - | [#3089](https://github.com/ROCm/ATOM/issues/3089) `[Perf Regression] 11 config(s) regressed @ 6d22f7db` | bug,perf | ? | - |
+| P1 | [#3089](https://github.com/ROCm/ATOM/issues/3089) `[Perf Regression] 11 config(s) regressed @ 6d22f7db` | bug,perf | ? | - |
 | - | [#3093](https://github.com/ROCm/ATOM/pull/3093) `[Qwen3.5 MTP] Decode-step trims: host token split, one-shot split reduce, one-kernel verify epilogue, Gluon sa` | perf,rocm | ? | - |
-| - | [#3094](https://github.com/ROCm/ATOM/issues/3094) `[Perf Regression] 13 config(s) regressed @ 6d22f7db` | bug,perf | ? | - |
-| - | [#3095](https://github.com/ROCm/ATOM/issues/3095) `[Issue]: [DeepSeek-V4] TP ranks select MoE experts from their own replicated router logits and can disagree on` | rocm | ? | - |
+| P0 | [#3094](https://github.com/ROCm/ATOM/issues/3094) `[Perf Regression] 13 config(s) regressed @ 6d22f7db` | bug,perf | ? | - |
+| P0 | [#3095](https://github.com/ROCm/ATOM/issues/3095) `[Issue]: [DeepSeek-V4] TP ranks select MoE experts from their own replicated router logits and can disagree on` | rocm | ? | - |
 | - | [#3096](https://github.com/ROCm/ATOM/issues/3096) `[Perf Regression] 7 config(s) regressed @ 6d22f7db` | bug,perf | ? | - |
 | - | [#3100](https://github.com/ROCm/ATOM/pull/3100) `[kv_transfer] lmcache_mp: pass optional LMCache ATOM adapter arguments` | infra | ? | - |
 | - | [#3101](https://github.com/ROCm/ATOM/pull/3101) `[feature] add leapquant gdn ` | quant | ? | - |
-| - | [#3102](https://github.com/ROCm/ATOM/pull/3102) `feat(dsv41): DeepSeek-V4.1-Flash on MI308X (gfx942)` | infra,rocm | ? | - |
+| P1 | [#3102](https://github.com/ROCm/ATOM/pull/3102) `feat(dsv41): DeepSeek-V4.1-Flash on MI308X (gfx942)` | infra,rocm | ? | - |
 | - | [#3114](https://github.com/ROCm/ATOM/pull/3114) `feat(gemm_fusion): route MiniMax-M3 SP QKV through aiter.sp_qkv_fused (on #3084)` | perf,rocm | ? | - |
-| - | [#3120](https://github.com/ROCm/ATOM/issues/3120) `GLM-5.3-Flash with bf16 KV: aiter MLA decode misreads KV stored past 4 GiB of a layer's cache` | perf,rocm | ? | - |
+| P0 | [#3120](https://github.com/ROCm/ATOM/issues/3120) `GLM-5.3-Flash with bf16 KV: aiter MLA decode misreads KV stored past 4 GiB of a layer's cache` | perf,rocm | ? | - |
 | - | [#3123](https://github.com/ROCm/ATOM/issues/3123) `[Bug] Qwen3.8-Flash-Next (qwen4_exp) image prompts crash on a prefix-cache hit inside or past an image` | bug,perf | ? | - |
 | - | [#3124](https://github.com/ROCm/ATOM/pull/3124) `fix(api): keep structured-output extras optional at startup` | bug | ? | - |
 | - | [#3125](https://github.com/ROCm/ATOM/pull/3125) `[kv_transfer] lmcache_mp: name prompts by LMCache chunk hashes, not tokens` | infra | ? | - |
@@ -4398,19 +4398,19 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3145](https://github.com/ROCm/ATOM/pull/3145) `[MI355X] feat(diffusion): Wan2.1 VAE with conv3d dispatched to AITER FlyDSL` | perf,rocm | ? | - |
 | - | [#3149](https://github.com/ROCm/ATOM/issues/3149) `[ROCm Product Quality Control]: Weekly Kimi Vendor Verifier (KVV) accuracy regression testing on AMD ATOM` | bug,risk,rocm | ? | - |
 | - | [#3151](https://github.com/ROCm/ATOM/pull/3151) `[Config] Resolve parallel mapping before worker initialization` | infra | ? | - |
-| - | [#3156](https://github.com/ROCm/ATOM/pull/3156) `feat(dsv41): run gfx942 post seams on AITER's ASM mHC seam` | rocm | ? | - |
-| - | [#3159](https://github.com/ROCm/ATOM/pull/3159) `fix(api): take Kimi-K3 chat prompt ids from its tokenizer's segment encoder` | bug | ? | - |
-| - | [#3164](https://github.com/ROCm/ATOM/pull/3164) `[DSV4.1] Fuse the FP8 shared expert into the MXFP4 MoE under ATOM_FUSE_MXFP8_SHARED_INTO_MXFP4` | perf,quant | ? | - |
-| - | [#3175](https://github.com/ROCm/ATOM/issues/3175) `[Perf Regression] 3 config(s) regressed @ 724f7bf4` | bug,perf | ? | - |
+| P1 | [#3156](https://github.com/ROCm/ATOM/pull/3156) `feat(dsv41): run gfx942 post seams on AITER's ASM mHC seam` | rocm | ? | - |
+| P1 | [#3159](https://github.com/ROCm/ATOM/pull/3159) `fix(api): take Kimi-K3 chat prompt ids from its tokenizer's segment encoder` | bug | ? | - |
+| P1 | [#3164](https://github.com/ROCm/ATOM/pull/3164) `[DSV4.1] Fuse the FP8 shared expert into the MXFP4 MoE under ATOM_FUSE_MXFP8_SHARED_INTO_MXFP4` | perf,quant | ? | - |
+| P0 | [#3175](https://github.com/ROCm/ATOM/issues/3175) `[Perf Regression] 3 config(s) regressed @ 724f7bf4` | bug,perf | ? | - |
 | - | [#3176](https://github.com/ROCm/ATOM/pull/3176) `[DSV4.1][gfx1250] Extend single-launch decode to C16 with FP8 KV / FP4 index caches` | quant,rocm | ? | - |
 | - | [#3178](https://github.com/ROCm/ATOM/pull/3178) `[Qwen3.5] FHMoE: the shared expert inside the gfx1250 grouped MoE (flag off; stacked on #3093)` | rocm | ? | - |
 | - | [#3186](https://github.com/ROCm/ATOM/pull/3186) `feat(dsv41): EPLB on the layers before the decoder` | infra | ? | - |
-| - | [#3187](https://github.com/ROCm/ATOM/pull/3187) `[MoE] MegaMoE: let AITER pick small/large/staged routes from the DP-group max rows; single-stream shared exper` | rocm | main | - |
+| P0 | [#3187](https://github.com/ROCm/ATOM/pull/3187) `[MoE] MegaMoE: let AITER pick small/large/staged routes from the DP-group max rows; single-stream shared exper` | rocm | main | - |
 | - | [#3188](https://github.com/ROCm/ATOM/pull/3188) `perf(engram): tune quantized UVA lookup geometry on gfx1250` | perf,quant,rocm | ? | - |
 | - | [#3190](https://github.com/ROCm/ATOM/issues/3190) `vLLM plugin refactor: design` |  | ? | - |
 | - | [#3193](https://github.com/ROCm/ATOM/pull/3193) `perf(dcp): merge decode partials with aiter's fused DCP merge when the group has one` | perf,rocm | ? | - |
 | - | [#3194](https://github.com/ROCm/ATOM/pull/3194) `[Offload] umbp_store: KV offload over a Mori UMBP standalone server` | infra | ? | - |
-| - | [#3195](https://github.com/ROCm/ATOM/pull/3195) `[MiniMax-M3.1] One-launch decode router (GEMV + top-4 gate + MoE sort) on gfx950` | rocm | ? | - |
+| P1 | [#3195](https://github.com/ROCm/ATOM/pull/3195) `[MiniMax-M3.1] One-launch decode router (GEMV + top-4 gate + MoE sort) on gfx950` | rocm | ? | - |
 | - | [#3196](https://github.com/ROCm/ATOM/pull/3196) `fix(scheduler): a DP prefill rank whose cost sets the step's target prefills its chunk whole` | bug | ? | - |
 | - | [#3197](https://github.com/ROCm/ATOM/pull/3197) `fix(graphs): a token-graph recording keeps no argument its region takes live` | bug | ? | - |
 | - | [#3198](https://github.com/ROCm/ATOM/pull/3198) `[MiniMax-M3.1] Fuse SwiGLU-OAI with the MXFP8 quant of down_proj input` | perf,quant | ? | - |
@@ -4422,7 +4422,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3206](https://github.com/ROCm/ATOM/pull/3206) `[WIP]feat(mesh): session affinity 1/2 — a configurable session table, dp_sticky on it` | infra | ? | - |
 | - | [#3207](https://github.com/ROCm/ATOM/pull/3207) `feat(minimax-m3): fold the M3.1 shared expert output into the routed GEMM2` |  | ? | - |
 | - | [#3214](https://github.com/ROCm/ATOM/pull/3214) `feat(minimax-m3): run the M3.1 shared gate_up GEMM inside the router launch` |  | ? | - |
-| - | [#3219](https://github.com/ROCm/ATOM/pull/3219) `fix(mla): pass the Triton decode only the sequences that own rows of q` | bug,rocm | ? | - |
+| P1 | [#3219](https://github.com/ROCm/ATOM/pull/3219) `fix(mla): pass the Triton decode only the sequences that own rows of q` | bug,rocm | ? | - |
 | - | [#3220](https://github.com/ROCm/ATOM/pull/3220) `feat(mla): packed FP4 KV cache (MXFP4 / NVFP4) for the gfx1250 Triton decode` | perf,quant,rocm | ? | - |
 | - | [#3222](https://github.com/ROCm/ATOM/issues/3222) `--kv_cache_dtype fp4 not supported on public main (required by DSV4.1-Flash DEP4 recipe)` | bug,quant | ? | - |
 | - | [#3224](https://github.com/ROCm/ATOM/pull/3224) `perf(dspark): probabilistic verify reads the target logits rows in place` | infra,perf | ? | - |
@@ -4448,27 +4448,27 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3311](https://github.com/ROCm/ATOM/pull/3311) `Cut Kimi-K3.1's DCP sparse prefill overhead in its DSA layers` |  | ? | - |
 | - | [#3312](https://github.com/ROCm/ATOM/pull/3312) `Speed up Kimi-K3.1 prefill around its KDA in_proj and latent MoE collectives` | perf | ? | - |
 | - | [#3315](https://github.com/ROCm/ATOM/pull/3315) `fix(dsv41 mono): check the hi programs in every FP4 index layout they serve` | bug,quant | ? | - |
-| - | [#3316](https://github.com/ROCm/ATOM/pull/3316) `feat(dsv41 mono): serve the hi monokernel decode at TP2` |  | main | - |
+| P0 | [#3316](https://github.com/ROCm/ATOM/pull/3316) `feat(dsv41 mono): serve the hi monokernel decode at TP2` |  | main | - |
 | - | [#3321](https://github.com/ROCm/ATOM/pull/3321) `feat(dsa mono): serve an FP4 index cache` | infra,perf,quant | ? | - |
-| - | [#3322](https://github.com/ROCm/ATOM/issues/3322) `[Perf Regression] 20 config(s) regressed @ 5b744ee3` | bug,perf | ? | - |
+| P1 | [#3322](https://github.com/ROCm/ATOM/issues/3322) `[Perf Regression] 20 config(s) regressed @ 5b744ee3` | bug,perf | ? | - |
 | - | [#3323](https://github.com/ROCm/ATOM/pull/3323) `Ready-suffix priority and cold-partial slice for Store restores (split from #3097)` | infra | ? | - |
 | - | [#3325](https://github.com/ROCm/ATOM/pull/3325) `[Qwen3.5 MTP] Speculative rejection sampling for MTP drafts (flag off; stacked on #3093)` |  | ? | - |
 | - | [#3326](https://github.com/ROCm/ATOM/pull/3326) `[Qwen3.5 recipe] mkcfg.py: SUBMISSION_RULESET binds the client to a ruleset's published seeds` |  | ? | - |
 | - | [#3330](https://github.com/ROCm/ATOM/pull/3330) `KDA ReplaySSM: optional HIP decode / verify step (ATOM_REPLAYSSM_KDA_HIP)` | rocm | ? | - |
 | - | [#3332](https://github.com/ROCm/ATOM/pull/3332) `Kimi-K3: KDA prefill on the state pool in place (FlashKDA paged state cache)` | perf | ? | - |
-| - | [#3333](https://github.com/ROCm/ATOM/pull/3333) `fix(dspark): pass aiter's new _UAParams fields in the Kimi-K3 DSpark GQA draft` | bug,infra,rocm | main | - |
+| P0 | [#3333](https://github.com/ROCm/ATOM/pull/3333) `fix(dspark): pass aiter's new _UAParams fields in the Kimi-K3 DSpark GQA draft` | bug,infra,rocm | main | - |
 
 ### ATOM — Closed unmerged (1 items)
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#3040](https://github.com/ROCm/ATOM/pull/3040) `fix(dspark): allocate the draft block's last KV row (lookahead mtp_k, not mtp_k - 1)` | bug | main | - |
+| P0 | [#3040](https://github.com/ROCm/ATOM/pull/3040) `fix(dspark): allocate the draft block's last KV row (lookahead mtp_k, not mtp_k - 1)` | bug | main | - |
 
 ### tokenspeed — Merged / closed (292 items)
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#1373](https://github.com/lightseekorg/tokenspeed/issues/1373) `nccl weight transfer reports success without transferring: /update_weights returns 200 and loads uninitialised` | nvidia | ? | - |
+| P1 | [#1373](https://github.com/lightseekorg/tokenspeed/issues/1373) `nccl weight transfer reports success without transferring: /update_weights returns 200 and loads uninitialised` | nvidia | ? | - |
 | - | [#2517](https://github.com/lightseekorg/tokenspeed/issues/2517) `min_new_tokens is accepted by SamplingParams.verify() but never enforced` |  | ? | - |
 | - | [#2575](https://github.com/lightseekorg/tokenspeed/issues/2575) `[Feature] Muse Spark Open: speculative decoding with its DFlash2 draft` |  | ? | - |
 | - | [#2576](https://github.com/lightseekorg/tokenspeed/issues/2576) `[Bug] Triton FP8 channel MoE misses its FP64 check on SM90 above 512 tokens` | nvidia,quant,rocm | ? | - |
@@ -4477,40 +4477,40 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#2758](https://github.com/lightseekorg/tokenspeed/issues/2758) `[Feature] EAGLE-4 / EAGLE-Harness on AMD MI355X (gfx950): summary and open items` | rocm | ? | - |
 | - | [#2763](https://github.com/lightseekorg/tokenspeed/pull/2763) `perf(kernel): size FP8 QSA decode grids by wave count with the N16 head tile` | perf,quant | ? | - |
 | - | [#2770](https://github.com/lightseekorg/tokenspeed/pull/2770) `perf(kernel): stream QSA FP8 decode tiles through a staged-id cp.async ring` | perf,quant | ? | - |
-| - | [#2775](https://github.com/lightseekorg/tokenspeed/pull/2775) `perf(amd): reduce packed FP8 MoE alignment overhead` | perf,quant,rocm | main | - |
+| P0 | [#2775](https://github.com/lightseekorg/tokenspeed/pull/2775) `perf(amd): reduce packed FP8 MoE alignment overhead` | perf,quant,rocm | main | - |
 | - | [#2777](https://github.com/lightseekorg/tokenspeed/pull/2777) `perf(qwen3.5): fold the routed MoE finalize into the shared-expert gate add` | perf | ? | - |
 | - | [#2778](https://github.com/lightseekorg/tokenspeed/pull/2778) `perf(kernel): pipeline the GDN replay commit through a cp.async state ring` | perf | ? | - |
-| - | [#2779](https://github.com/lightseekorg/tokenspeed/pull/2779) `perf(sampling): reduce top-k work for greedy rows` | perf | main | - |
+| P0 | [#2779](https://github.com/lightseekorg/tokenspeed/pull/2779) `perf(sampling): reduce top-k work for greedy rows` | perf | main | - |
 | - | [#2794](https://github.com/lightseekorg/tokenspeed/issues/2794) `[Feature] support embedding model` |  | ? | - |
 | - | [#2809](https://github.com/lightseekorg/tokenspeed/pull/2809) `feat(amd): run the EAGLE-Harness tree and policy kernels on gfx950 with Triton` | perf,rocm | ? | - |
 | - | [#2812](https://github.com/lightseekorg/tokenspeed/pull/2812) `fix(cache): wait for Host load-backs in every cache accessor and per captured prefill-graph segment` | bug,perf | ? | - |
-| - | [#2868](https://github.com/lightseekorg/tokenspeed/pull/2868) `fix(amd): keep ROCr's InterceptQueue out of serving processes` | bug,rocm | main | - |
-| - | [#2871](https://github.com/lightseekorg/tokenspeed/pull/2871) `perf(kvp): gather MLA prefix history with a fused all-gather on GB300` | nvidia,perf | ? | - |
+| P0 | [#2868](https://github.com/lightseekorg/tokenspeed/pull/2868) `fix(amd): keep ROCr's InterceptQueue out of serving processes` | bug,rocm | main | - |
+| P1 | [#2871](https://github.com/lightseekorg/tokenspeed/pull/2871) `perf(kvp): gather MLA prefix history with a fused all-gather on GB300` | nvidia,perf | ? | - |
 | - | [#2892](https://github.com/lightseekorg/tokenspeed/pull/2892) `feat(spec): verify sampled DFlash2 drafts by rejection sampling on triton` | rocm | ? | - |
-| - | [#2893](https://github.com/lightseekorg/tokenspeed/pull/2893) `perf(spec): drop redundant launches from each DFLASH decode step` | perf | ? | - |
-| - | [#2895](https://github.com/lightseekorg/tokenspeed/pull/2895) `fix(amd): stop gfx950 mha prefill and extend from compiling while serving` | bug,rocm | ? | - |
-| - | [#2896](https://github.com/lightseekorg/tokenspeed/pull/2896) `perf(amd): speed up gfx950 mha extend over long cached prefixes` | perf,rocm | ? | - |
-| - | [#2897](https://github.com/lightseekorg/tokenspeed/pull/2897) `fix(amd): make gfx950 mha attention over fp8 caches accurate and faster` | bug,perf,quant,rocm | main | - |
-| - | [#2898](https://github.com/lightseekorg/tokenspeed/pull/2898) `perf(amd): balance gfx950 mha verify splits by request length` | perf,rocm | ? | - |
-| - | [#2899](https://github.com/lightseekorg/tokenspeed/pull/2899) `perf(amd): pick gfx950 MoE, router and dense GEMMs by row count` | perf,rocm | ? | - |
-| - | [#2900](https://github.com/lightseekorg/tokenspeed/pull/2900) `perf(muse): cut copies and RCCL fallbacks from Muse Spark communication` | perf,rocm | ? | - |
-| - | [#2901](https://github.com/lightseekorg/tokenspeed/pull/2901) `perf(amd): reduce Muse expert TP8 routes on their token owners` | perf,rocm | ? | - |
-| - | [#2902](https://github.com/lightseekorg/tokenspeed/pull/2902) `perf(amd): split Muse expert TP8 prefill down projection by columns` | perf,rocm | ? | - |
-| - | [#2903](https://github.com/lightseekorg/tokenspeed/pull/2903) `perf(amd): fuse the Muse expert TP8 decode route all-reduce and norm` | perf,rocm | ? | - |
+| P1 | [#2893](https://github.com/lightseekorg/tokenspeed/pull/2893) `perf(spec): drop redundant launches from each DFLASH decode step` | perf | ? | - |
+| P1 | [#2895](https://github.com/lightseekorg/tokenspeed/pull/2895) `fix(amd): stop gfx950 mha prefill and extend from compiling while serving` | bug,rocm | ? | - |
+| P1 | [#2896](https://github.com/lightseekorg/tokenspeed/pull/2896) `perf(amd): speed up gfx950 mha extend over long cached prefixes` | perf,rocm | ? | - |
+| P0 | [#2897](https://github.com/lightseekorg/tokenspeed/pull/2897) `fix(amd): make gfx950 mha attention over fp8 caches accurate and faster` | bug,perf,quant,rocm | main | - |
+| P1 | [#2898](https://github.com/lightseekorg/tokenspeed/pull/2898) `perf(amd): balance gfx950 mha verify splits by request length` | perf,rocm | ? | - |
+| P1 | [#2899](https://github.com/lightseekorg/tokenspeed/pull/2899) `perf(amd): pick gfx950 MoE, router and dense GEMMs by row count` | perf,rocm | ? | - |
+| P1 | [#2900](https://github.com/lightseekorg/tokenspeed/pull/2900) `perf(muse): cut copies and RCCL fallbacks from Muse Spark communication` | perf,rocm | ? | - |
+| P1 | [#2901](https://github.com/lightseekorg/tokenspeed/pull/2901) `perf(amd): reduce Muse expert TP8 routes on their token owners` | perf,rocm | ? | - |
+| P1 | [#2902](https://github.com/lightseekorg/tokenspeed/pull/2902) `perf(amd): split Muse expert TP8 prefill down projection by columns` | perf,rocm | ? | - |
+| P1 | [#2903](https://github.com/lightseekorg/tokenspeed/pull/2903) `perf(amd): fuse the Muse expert TP8 decode route all-reduce and norm` | perf,rocm | ? | - |
 | - | [#2916](https://github.com/lightseekorg/tokenspeed/pull/2916) `feat(attn): add Qwen FP8 attention projections support` | quant | ? | - |
 | - | [#2921](https://github.com/lightseekorg/tokenspeed/issues/2921) `[Feature] Intel GPU (XPU) platform support — Data Center GPU D-series` | nvidia | ? | - |
-| - | [#2925](https://github.com/lightseekorg/tokenspeed/pull/2925) `perf(kernel): end FP8 QSA prefix loops at the last valid tile` | perf,quant | ? | - |
+| P1 | [#2925](https://github.com/lightseekorg/tokenspeed/pull/2925) `perf(kernel): end FP8 QSA prefix loops at the last valid tile` | perf,quant | ? | - |
 | - | [#2926](https://github.com/lightseekorg/tokenspeed/pull/2926) `perf(gdn): capture Qwen4-Exp GDN layers inside prefill graphs` | perf | ? | - |
-| - | [#2933](https://github.com/lightseekorg/tokenspeed/pull/2933) `perf(qsa): run large FP8 prefill calls on a BF16 KV scratch` | perf,quant | ? | - |
-| - | [#2941](https://github.com/lightseekorg/tokenspeed/pull/2941) `fix(amd): run short prefill requests through the regular tile path on gfx950` | bug,rocm | main | - |
-| - | [#2942](https://github.com/lightseekorg/tokenspeed/pull/2942) `perf(gfx950): stop recompiling MHA prefill kernels per batch size` | perf,rocm | main | - |
-| - | [#2956](https://github.com/lightseekorg/tokenspeed/pull/2956) `fix(pd): keep KV pages until PD transfers stop` | bug | ? | - |
-| - | [#2957](https://github.com/lightseekorg/tokenspeed/pull/2957) `fix(amd): wait for every wave's stores to reach L2 before a release` | bug,infra,rocm | ? | - |
+| P1 | [#2933](https://github.com/lightseekorg/tokenspeed/pull/2933) `perf(qsa): run large FP8 prefill calls on a BF16 KV scratch` | perf,quant | ? | - |
+| P0 | [#2941](https://github.com/lightseekorg/tokenspeed/pull/2941) `fix(amd): run short prefill requests through the regular tile path on gfx950` | bug,rocm | main | - |
+| P0 | [#2942](https://github.com/lightseekorg/tokenspeed/pull/2942) `perf(gfx950): stop recompiling MHA prefill kernels per batch size` | perf,rocm | main | - |
+| P1 | [#2956](https://github.com/lightseekorg/tokenspeed/pull/2956) `fix(pd): keep KV pages until PD transfers stop` | bug | ? | - |
+| P1 | [#2957](https://github.com/lightseekorg/tokenspeed/pull/2957) `fix(amd): wait for every wave's stores to reach L2 before a release` | bug,infra,rocm | ? | - |
 | - | [#2961](https://github.com/lightseekorg/tokenspeed/pull/2961) `feat(scheduler): opt-in prefill chunk yield on the P role` |  | ? | - |
-| - | [#2962](https://github.com/lightseekorg/tokenspeed/pull/2962) `perf(layernorm): run GemmaRMSNorm through fused Triton kernels on AMD` | perf,rocm | main | - |
+| P0 | [#2962](https://github.com/lightseekorg/tokenspeed/pull/2962) `perf(layernorm): run GemmaRMSNorm through fused Triton kernels on AMD` | perf,rocm | main | - |
 | - | [#2966](https://github.com/lightseekorg/tokenspeed/pull/2966) `fix(scheduler): register every KV-event boundary a restored request republishes` | bug | ? | - |
 | - | [#2972](https://github.com/lightseekorg/tokenspeed/pull/2972) `perf(mha): draft tree lanes: run the lane prefix as one Triton decode per request, with batch-shaped key split` | perf,rocm | ? | - |
-| - | [#2973](https://github.com/lightseekorg/tokenspeed/pull/2973) `fix(kernel): address MLA token offsets past 2**31 elements in int64` | bug,perf | main | - |
+| P0 | [#2973](https://github.com/lightseekorg/tokenspeed/pull/2973) `fix(kernel): address MLA token offsets past 2**31 elements in int64` | bug,perf | main | - |
 | - | [#2980](https://github.com/lightseekorg/tokenspeed/pull/2980) `perf(spec): replay the Eagle drafter's prefill work from CUDA graphs` | nvidia,perf | ? | - |
 | - | [#2981](https://github.com/lightseekorg/tokenspeed/pull/2981) `feat(scheduler): drop short prompt-end checkpoints on prefill servers` |  | ? | - |
 | - | [#2982](https://github.com/lightseekorg/tokenspeed/pull/2982) `feat(scheduler): demote superseded in-forward State checkpoints` |  | ? | - |
@@ -4518,27 +4518,27 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#2993](https://github.com/lightseekorg/tokenspeed/pull/2993) `perf(kda): verify speculative windows with a CuTe DSL kernel on Blackwell` | nvidia,perf | ? | - |
 | - | [#3006](https://github.com/lightseekorg/tokenspeed/pull/3006) `refactor(kernel): centralize optional-package probes in tokenspeed_kernel._optional` | perf | ? | - |
 | - | [#3007](https://github.com/lightseekorg/tokenspeed/pull/3007) `refactor(layers): table-driven rope scaling construction in get_rope` |  | ? | - |
-| - | [#3010](https://github.com/lightseekorg/tokenspeed/pull/3010) `perf(dsv41): speed up the decode attention projections` | perf | ? | - |
-| - | [#3016](https://github.com/lightseekorg/tokenspeed/pull/3016) `perf(moe): stage MegaMoE inputs several tokens per program, with PDL` | perf | ? | - |
-| - | [#3018](https://github.com/lightseekorg/tokenspeed/pull/3018) `fix(glm53-flash): dequantize an FP8 indexer wk into the fused projection` | bug,perf,quant | ? | - |
-| - | [#3019](https://github.com/lightseekorg/tokenspeed/pull/3019) `fix(moe): keep the SM90 FP8 per-channel MoE on exact tiles above 512 tokens` | bug,nvidia,quant | ? | - |
+| P1 | [#3010](https://github.com/lightseekorg/tokenspeed/pull/3010) `perf(dsv41): speed up the decode attention projections` | perf | ? | - |
+| P1 | [#3016](https://github.com/lightseekorg/tokenspeed/pull/3016) `perf(moe): stage MegaMoE inputs several tokens per program, with PDL` | perf | ? | - |
+| P1 | [#3018](https://github.com/lightseekorg/tokenspeed/pull/3018) `fix(glm53-flash): dequantize an FP8 indexer wk into the fused projection` | bug,perf,quant | ? | - |
+| P1 | [#3019](https://github.com/lightseekorg/tokenspeed/pull/3019) `fix(moe): keep the SM90 FP8 per-channel MoE on exact tiles above 512 tokens` | bug,nvidia,quant | ? | - |
 | - | [#3028](https://github.com/lightseekorg/tokenspeed/pull/3028) `perf(moe): run the DSV4.1 shared expert inside the MegaMoE launch` | perf | ? | - |
 | - | [#3057](https://github.com/lightseekorg/tokenspeed/pull/3057) `feat(scheduler): add a prefill/decode interval` |  | ? | - |
 | - | [#3058](https://github.com/lightseekorg/tokenspeed/pull/3058) `feat(runtime): add --prefill-decode-interval` |  | ? | - |
 | - | [#3061](https://github.com/lightseekorg/tokenspeed/pull/3061) `docs(recipes): update muse spark amd recipe` | rocm | ? | - |
-| - | [#3063](https://github.com/lightseekorg/tokenspeed/pull/3063) `feat(mla): add native MLA prefill kernel` | perf | ? | - |
+| P1 | [#3063](https://github.com/lightseekorg/tokenspeed/pull/3063) `feat(mla): add native MLA prefill kernel` | perf | ? | - |
 | - | [#3064](https://github.com/lightseekorg/tokenspeed/pull/3064) `fix(npu): honor selected devices in EPD transfer runtime` | bug | ? | - |
 | - | [#3065](https://github.com/lightseekorg/tokenspeed/pull/3065) `fix(cache): compact a lone request's packed-group blocks when eviction alone cannot fund its admission` | bug,perf | ? | - |
-| - | [#3067](https://github.com/lightseekorg/tokenspeed/pull/3067) `perf(dsv41): gather Engram host rows straight into wkv's MXFP8 input` | perf,quant | ? | - |
-| - | [#3069](https://github.com/lightseekorg/tokenspeed/pull/3069) `fix(mla): align DSpark KV dtype and fix workspace overflow` | bug,risk | main | - |
-| - | [#3070](https://github.com/lightseekorg/tokenspeed/pull/3070) `perf(kernel): run small-weight decode BF16 GEMMs on pinned FlashInfer TGV tiles` | infra,nvidia,perf | ? | - |
+| P1 | [#3067](https://github.com/lightseekorg/tokenspeed/pull/3067) `perf(dsv41): gather Engram host rows straight into wkv's MXFP8 input` | perf,quant | ? | - |
+| P0 | [#3069](https://github.com/lightseekorg/tokenspeed/pull/3069) `fix(mla): align DSpark KV dtype and fix workspace overflow` | bug,risk | main | - |
+| P1 | [#3070](https://github.com/lightseekorg/tokenspeed/pull/3070) `perf(kernel): run small-weight decode BF16 GEMMs on pinned FlashInfer TGV tiles` | infra,nvidia,perf | ? | - |
 | - | [#3071](https://github.com/lightseekorg/tokenspeed/pull/3071) `fix(scheduler): publish hybrid KV cache events from Full/history residency` | bug,perf | ? | - |
 | - | [#3073](https://github.com/lightseekorg/tokenspeed/pull/3073) `fix(cuda): exclude compiler stubs from runtime library lookup` | bug,nvidia | ? | - |
 | - | [#3074](https://github.com/lightseekorg/tokenspeed/pull/3074) `fix(cache): export private P/D partial-prefix destinations` | bug,perf | ? | - |
-| - | [#3075](https://github.com/lightseekorg/tokenspeed/pull/3075) `perf(dsv41): clean only the live tiles of each indexer score row` | perf | ? | - |
-| - | [#3078](https://github.com/lightseekorg/tokenspeed/pull/3078) `perf(dsv41): upload block-table row spans and rebuild them on the device` | perf | ? | - |
+| P1 | [#3075](https://github.com/lightseekorg/tokenspeed/pull/3075) `perf(dsv41): clean only the live tiles of each indexer score row` | perf | ? | - |
+| P1 | [#3078](https://github.com/lightseekorg/tokenspeed/pull/3078) `perf(dsv41): upload block-table row spans and rebuild them on the device` | perf | ? | - |
 | - | [#3081](https://github.com/lightseekorg/tokenspeed/pull/3081) `perf(runtime): pad every state group's stopped rows in one launch` | perf | ? | - |
-| - | [#3083](https://github.com/lightseekorg/tokenspeed/pull/3083) `perf(kimi-k31): trim four launches from each DSA layer's decode prologue` | perf | ? | - |
+| P1 | [#3083](https://github.com/lightseekorg/tokenspeed/pull/3083) `perf(kimi-k31): trim four launches from each DSA layer's decode prologue` | perf | ? | - |
 | - | [#3084](https://github.com/lightseekorg/tokenspeed/pull/3084) `fix(test): expect the gfx950 DSA prefill adapters to forward the warmup flag` | bug,rocm | ? | - |
 | - | [#3085](https://github.com/lightseekorg/tokenspeed/pull/3085) `fix(test): parse the cached Muse Spark checkpoint with its own quantization format` | bug,quant | ? | - |
 | - | [#3086](https://github.com/lightseekorg/tokenspeed/pull/3086) `feat(moe): add distributed weight data parallel prefill` |  | ? | - |
@@ -4548,12 +4548,12 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3092](https://github.com/lightseekorg/tokenspeed/pull/3092) `build: require tokenspeed-mla 2.0.8` | infra,perf | ? | - |
 | - | [#3093](https://github.com/lightseekorg/tokenspeed/pull/3093) `feat(rl): support rl` |  | ? | - |
 | - | [#3094](https://github.com/lightseekorg/tokenspeed/pull/3094) `test(dsv41): give the mega-MoE stand-in a shared_expert_fused field` | perf | ? | - |
-| - | [#3097](https://github.com/lightseekorg/tokenspeed/pull/3097) `perf(mla): unroll fixed FP8 decode MMA loops` | perf,quant | ? | - |
+| P1 | [#3097](https://github.com/lightseekorg/tokenspeed/pull/3097) `perf(mla): unroll fixed FP8 decode MMA loops` | perf,quant | ? | - |
 | - | [#3098](https://github.com/lightseekorg/tokenspeed/pull/3098) `feat(lm-head): support tensor parallel heads across attention DP groups` |  | ? | - |
 | - | [#3099](https://github.com/lightseekorg/tokenspeed/pull/3099) `chore: upgrade FlashInfer to 0.7.3` | nvidia | ? | - |
 | - | [#3100](https://github.com/lightseekorg/tokenspeed/pull/3100) `feat(numerics): add blockwise logprob subtraction modes` |  | ? | - |
 | - | [#3101](https://github.com/lightseekorg/tokenspeed/pull/3101) `perf: build forward block tables from live windows` | infra,perf | ? | - |
-| - | [#3102](https://github.com/lightseekorg/tokenspeed/pull/3102) `perf: fuse V4.1 decode attention with FP8 output` | perf,quant | ? | - |
+| P1 | [#3102](https://github.com/lightseekorg/tokenspeed/pull/3102) `perf: fuse V4.1 decode attention with FP8 output` | perf,quant | ? | - |
 | - | [#3104](https://github.com/lightseekorg/tokenspeed/pull/3104) `fix(runtime): separate input token bounds from output vocabulary` | bug | ? | - |
 | - | [#3105](https://github.com/lightseekorg/tokenspeed/pull/3105) `fix(pd): isolate registrations and drain cancelled transfers` | bug | ? | - |
 | - | [#3106](https://github.com/lightseekorg/tokenspeed/pull/3106) `feat(runtime): receive complete WeightStore snapshots` |  | ? | - |
@@ -4566,11 +4566,11 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3113](https://github.com/lightseekorg/tokenspeed/pull/3113) `docs(readme): add Kimi K3.1 Pro day-0 news entry` |  | ? | - |
 | - | [#3114](https://github.com/lightseekorg/tokenspeed/pull/3114) `fix: adapt the FlashInfer adapters and callers to 0.7.3` | bug,nvidia | ? | - |
 | - | [#3115](https://github.com/lightseekorg/tokenspeed/pull/3115) `perf(mha): target verify: fold the verify rows per request in the Triton MHA decode` | perf,rocm | ? | - |
-| - | [#3118](https://github.com/lightseekorg/tokenspeed/pull/3118) `fix: close warmup gaps and gate gfx950 inline asm` | bug,rocm | main | - |
+| P0 | [#3118](https://github.com/lightseekorg/tokenspeed/pull/3118) `fix: close warmup gaps and gate gfx950 inline asm` | bug,rocm | main | - |
 | - | [#3119](https://github.com/lightseekorg/tokenspeed/pull/3119) `perf(amd): pipeline the gfx950 sliding-window split decode and expose it to fused kernels` | perf,rocm | ? | - |
-| - | [#3120](https://github.com/lightseekorg/tokenspeed/pull/3120) `perf(amd): fuse muse spark's decode layer boundaries into fewer launches` | perf,rocm | efric/muse-area/attention | - |
-| - | [#3121](https://github.com/lightseekorg/tokenspeed/pull/3121) `perf(amd): stream gfx950 mxfp4 moe decode weights at few rows` | perf,quant,rocm | main | - |
-| - | [#3122](https://github.com/lightseekorg/tokenspeed/pull/3122) `perf(spec): shorten the dflash2 draft step and keep sampling vocab-sharded` | perf | ? | - |
+| P0 | [#3120](https://github.com/lightseekorg/tokenspeed/pull/3120) `perf(amd): fuse muse spark's decode layer boundaries into fewer launches` | perf,rocm | efric/muse-area/attention | - |
+| P0 | [#3121](https://github.com/lightseekorg/tokenspeed/pull/3121) `perf(amd): stream gfx950 mxfp4 moe decode weights at few rows` | perf,quant,rocm | main | - |
+| P1 | [#3122](https://github.com/lightseekorg/tokenspeed/pull/3122) `perf(spec): shorten the dflash2 draft step and keep sampling vocab-sharded` | perf | ? | - |
 | - | [#3123](https://github.com/lightseekorg/tokenspeed/pull/3123) `docs(recipes): set muse spark's mi355x cap and prefill/decode interval by concurrency` | rocm | ? | - |
 | - | [#3126](https://github.com/lightseekorg/tokenspeed/pull/3126) `perf(dsv41): batch prefill indexer requests into one call` | perf | ? | - |
 | - | [#3127](https://github.com/lightseekorg/tokenspeed/pull/3127) `perf(inkling): store ShortConv hidden checkpoints on the KV planes` | perf | ? | - |
@@ -4583,7 +4583,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3135](https://github.com/lightseekorg/tokenspeed/pull/3135) `perf(dsv41): batch prefill attention requests into one call` | perf | ? | - |
 | - | [#3139](https://github.com/lightseekorg/tokenspeed/pull/3139) `perf(dsv41): fuse prefill attention FP8 output, DeepGEMM front GEMMs` | perf,quant | ? | - |
 | - | [#3140](https://github.com/lightseekorg/tokenspeed/issues/3140) `[Bug] DeepSeek V4 Triton attention overflows token row offsets` | risk,rocm | ? | - |
-| - | [#3141](https://github.com/lightseekorg/tokenspeed/pull/3141) `fix(dsv4): prevent Triton token row offset overflow` | bug,risk,rocm | main | - |
+| P0 | [#3141](https://github.com/lightseekorg/tokenspeed/pull/3141) `fix(dsv4): prevent Triton token row offset overflow` | bug,risk,rocm | main | - |
 | - | [#3144](https://github.com/lightseekorg/tokenspeed/pull/3144) `fix(test): pass rows_aligned in the Qwen4 exp delta-layer replay test` | bug | ? | - |
 | - | [#3145](https://github.com/lightseekorg/tokenspeed/pull/3145) `fix(test): pass the query shard device in the drafter prefill graph test` | bug | ? | - |
 | - | [#3146](https://github.com/lightseekorg/tokenspeed/pull/3146) `perf(beam): run the fused SSMax Q/K norm at TP2 and TP4` | perf | ? | - |
@@ -4659,7 +4659,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3244](https://github.com/lightseekorg/tokenspeed/pull/3244) `fix(communication): check the device before importing Iris in the residual-norm predicate` | bug | ? | - |
 | - | [#3245](https://github.com/lightseekorg/tokenspeed/pull/3245) `feat(sampling): sample speculative drafts from the draft head's vocabulary shard` |  | ? | - |
 | - | [#3246](https://github.com/lightseekorg/tokenspeed/pull/3246) `test(engine): agree fake PD transfer retirement across ranks` |  | ? | - |
-| - | [#3247](https://github.com/lightseekorg/tokenspeed/pull/3247) `fix(dsv41): keep cache gather output offsets 64-bit` | bug,perf | main | - |
+| P0 | [#3247](https://github.com/lightseekorg/tokenspeed/pull/3247) `fix(dsv41): keep cache gather output offsets 64-bit` | bug,perf | main | - |
 | - | [#3248](https://github.com/lightseekorg/tokenspeed/issues/3248) `Please help to enable Triton PRs so I can add Windows support.` | rocm | ? | - |
 | - | [#3249](https://github.com/lightseekorg/tokenspeed/pull/3249) `test(qsa): isolate the int32 prefill fallback runner` |  | ? | - |
 | - | [#3252](https://github.com/lightseekorg/tokenspeed/pull/3252) `fix(dsv41): compute the remaining cache and query copy offsets in int64` | bug,perf | ? | - |
@@ -4672,7 +4672,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3260](https://github.com/lightseekorg/tokenspeed/pull/3260) `fix(mla): wait for the TMEM correction-record load before releasing its stage` | bug | ? | - |
 | - | [#3261](https://github.com/lightseekorg/tokenspeed/pull/3261) `fix(kernel): acquire the cluster mailboxes at cluster scope` | bug,perf | ? | - |
 | - | [#3262](https://github.com/lightseekorg/tokenspeed/pull/3262) `feat(cache): expose shared-prefix publication and group ownership` | perf | ? | - |
-| - | [#3263](https://github.com/lightseekorg/tokenspeed/pull/3263) `perf(scheduler): keep the active LCM block count in the block tables` | perf | ? | - |
+| P1 | [#3263](https://github.com/lightseekorg/tokenspeed/pull/3263) `perf(scheduler): keep the active LCM block count in the block tables` | perf | ? | - |
 | - | [#3264](https://github.com/lightseekorg/tokenspeed/pull/3264) `refactor(runtime): externalize the WeightStore receiver` |  | ? | - |
 | - | [#3265](https://github.com/lightseekorg/tokenspeed/pull/3265) `feat: trace request lifecycles, first output latency and prefix cache hits` | perf | ? | - |
 | - | [#3266](https://github.com/lightseekorg/tokenspeed/pull/3266) `ts-control: report decode admission wait instead of a negative prefill_ms on decode nodes` |  | ? | - |
@@ -4742,7 +4742,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3371](https://github.com/lightseekorg/tokenspeed/pull/3371) `feat(model): day 0 support for Inkling 2 Small` |  | ? | - |
 | - | [#3373](https://github.com/lightseekorg/tokenspeed/pull/3373) `test: initialize device in Mooncake weight-update runner fixture` |  | ? | - |
 | - | [#3376](https://github.com/lightseekorg/tokenspeed/pull/3376) `fix(kernel): repair FP32 projection linkage and NVIDIA test guards` | bug,nvidia,perf | ? | - |
-| - | [#3377](https://github.com/lightseekorg/tokenspeed/pull/3377) `fix(scheduler): stop reallocating a block table's ParentRefs on every append` | bug | main | - |
+| P0 | [#3377](https://github.com/lightseekorg/tokenspeed/pull/3377) `fix(scheduler): stop reallocating a block table's ParentRefs on every append` | bug | main | - |
 | - | [#3378](https://github.com/lightseekorg/tokenspeed/pull/3378) `fix(kimi): answer stores_capture_taps from the multimodal wrappers` | bug | ? | - |
 | - | [#3379](https://github.com/lightseekorg/tokenspeed/pull/3379) `fix(dsa): preserve top-k candidates after a partial init window` | bug | ? | - |
 | - | [#3380](https://github.com/lightseekorg/tokenspeed/pull/3380) `test(dspark): pass the anchor policy when sizing the context-write router` |  | ? | - |
@@ -4767,22 +4767,22 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | --- | --- | --- | --- | --- |
 | - | [#3088](https://github.com/lightseekorg/tokenspeed/pull/3088) `fix(ci): allow pinned CUTLASS DSL companion in cu129 installs` | bug,infra,nvidia | ? | - |
 | - | [#3095](https://github.com/lightseekorg/tokenspeed/pull/3095) `fix(streaming): flush output when a decode step crosses the interval` | bug | ? | - |
-| - | [#3125](https://github.com/lightseekorg/tokenspeed/pull/3125) `perf(scheduler): keep slid-out sliding-window pages and evict them first` | perf | main | - |
+| P0 | [#3125](https://github.com/lightseekorg/tokenspeed/pull/3125) `perf(scheduler): keep slid-out sliding-window pages and evict them first` | perf | main | - |
 | - | [#3142](https://github.com/lightseekorg/tokenspeed/issues/3142) `[Bug] Failed weight updates leave inference enabled without memory saver` |  | ? | - |
 | - | [#3143](https://github.com/lightseekorg/tokenspeed/pull/3143) `fix(runtime): guard weight validity without memory saver` | bug | ? | - |
 | - | [#3180](https://github.com/lightseekorg/tokenspeed/pull/3180) `refactor(qcp): separate query shard layout from per-forward tensor inputs` |  | ? | - |
 | - | [#3181](https://github.com/lightseekorg/tokenspeed/pull/3181) `fix(dsa): require host row-start support during initialization` | bug | ? | - |
 | - | [#3189](https://github.com/lightseekorg/tokenspeed/pull/3189) `refactor(npu): clarify MLA and DSA execution and resource boundaries` |  | ? | - |
 | - | [#3191](https://github.com/lightseekorg/tokenspeed/pull/3191) `feat(scheduler): KV cache events carry the groups that hold a boundary` | perf | ? | - |
-| - | [#3203](https://github.com/lightseekorg/tokenspeed/pull/3203) `perf(attention): skip Triton decode reduction for a single KV split` | perf,rocm | main | - |
+| P0 | [#3203](https://github.com/lightseekorg/tokenspeed/pull/3203) `perf(attention): skip Triton decode reduction for a single KV split` | perf,rocm | main | - |
 | - | [#3218](https://github.com/lightseekorg/tokenspeed/pull/3218) `feat(pd): let a prefill compute before its decode allocation (opt-in)` |  | ? | - |
-| - | [#3219](https://github.com/lightseekorg/tokenspeed/pull/3219) `feat(sampling): speculative sampling on the triton backend` | rocm | ? | - |
+| P1 | [#3219](https://github.com/lightseekorg/tokenspeed/pull/3219) `feat(sampling): speculative sampling on the triton backend` | rocm | ? | - |
 | - | [#3220](https://github.com/lightseekorg/tokenspeed/pull/3220) `feat(ple): share host embedding tables across local ranks` |  | ? | - |
-| - | [#3224](https://github.com/lightseekorg/tokenspeed/pull/3224) `perf(engram): sort and dedup large MXFP8 host-table gathers` | perf,quant | ? | - |
+| P1 | [#3224](https://github.com/lightseekorg/tokenspeed/pull/3224) `perf(engram): sort and dedup large MXFP8 host-table gathers` | perf,quant | ? | - |
 | - | [#3227](https://github.com/lightseekorg/tokenspeed/pull/3227) `fix(client): end the stream when the client aborts a request` | bug | ? | - |
-| - | [#3231](https://github.com/lightseekorg/tokenspeed/pull/3231) `feat(mha): serve an FP8 E4M3 KV cache through the portable Triton MHA kernels on AMD, draft trees included` | perf,quant,rocm | main | - |
+| P0 | [#3231](https://github.com/lightseekorg/tokenspeed/pull/3231) `feat(mha): serve an FP8 E4M3 KV cache through the portable Triton MHA kernels on AMD, draft trees included` | perf,quant,rocm | main | - |
 | - | [#3237](https://github.com/lightseekorg/tokenspeed/pull/3237) `perf(mla): remove extra V.contiguous() buffer during prefill` | perf | ? | - |
-| - | [#3251](https://github.com/lightseekorg/tokenspeed/pull/3251) `feat(kernel): opt-in online autotune of gfx950 BF16 GEMV routing` | perf,rocm | ? | - |
+| P1 | [#3251](https://github.com/lightseekorg/tokenspeed/pull/3251) `feat(kernel): opt-in online autotune of gfx950 BF16 GEMV routing` | perf,rocm | ? | - |
 | - | [#3255](https://github.com/lightseekorg/tokenspeed/pull/3255) `feat(scheduler): fill the budget a holding prefill chunk leaves` |  | ? | - |
 | - | [#3312](https://github.com/lightseekorg/tokenspeed/pull/3312) `perf(gdn): optimized FlashInfer backend when ReplaySSM chain is disabled` | nvidia,perf | ? | - |
 | - | [#3321](https://github.com/lightseekorg/tokenspeed/pull/3321) `perf(sampling): draw each request's coins in one call per row` | perf | ? | - |
@@ -4796,7 +4796,7 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 | - | [#3347](https://github.com/lightseekorg/tokenspeed/pull/3347) `feat(ascend): serve a speculative verify window in MHA decode` |  | ? | - |
 | - | [#3351](https://github.com/lightseekorg/tokenspeed/pull/3351) `perf(dsv41): enable independent encoder and decoder prefill graphs` | perf | ? | - |
 | - | [#3360](https://github.com/lightseekorg/tokenspeed/pull/3360) `feat(benchmark): simulate fixed-state model forwards` | perf | ? | - |
-| - | [#3363](https://github.com/lightseekorg/tokenspeed/pull/3363) `perf(rdna4): faster low-batch Qwen3.8-27B Quark MXFP4 decode` | perf,quant,rocm | ? | - |
+| P1 | [#3363](https://github.com/lightseekorg/tokenspeed/pull/3363) `perf(rdna4): faster low-batch Qwen3.8-27B Quark MXFP4 decode` | perf,quant,rocm | ? | - |
 | - | [#3375](https://github.com/lightseekorg/tokenspeed/pull/3375) `fix(ci): keep stale Ascend NPU reruns from superseding fresh checks` | bug,infra | ? | - |
 | - | [#3381](https://github.com/lightseekorg/tokenspeed/pull/3381) `perf(ple): optimize rank-local host gather and verify state writes` | perf | ? | - |
 | - | [#3394](https://github.com/lightseekorg/tokenspeed/pull/3394) `feat(pd): let a prefill compute before its decode allocation (opt-in)` |  | ? | - |
@@ -4805,5 +4805,5 @@ Every cached item, unfiltered and unranked, for completeness. The curated digest
 
 | # | item | tags | base | claim |
 | --- | --- | --- | --- | --- |
-| - | [#2927](https://github.com/lightseekorg/tokenspeed/pull/2927) `perf(qsa): share K across ragged prefill rows in block scoring` | perf | main | - |
-| - | [#3048](https://github.com/lightseekorg/tokenspeed/pull/3048) `perf(amd): reuse stage 1's route grouping in the mxfp4 route-tile stage 2` | perf,quant,rocm | efric/muse-moe/01-stage1-k-tiles | - |
+| P0 | [#2927](https://github.com/lightseekorg/tokenspeed/pull/2927) `perf(qsa): share K across ragged prefill rows in block scoring` | perf | main | - |
+| P0 | [#3048](https://github.com/lightseekorg/tokenspeed/pull/3048) `perf(amd): reuse stage 1's route grouping in the mxfp4 route-tile stage 2` | perf,quant,rocm | efric/muse-moe/01-stage1-k-tiles | - |
